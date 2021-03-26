@@ -1,7 +1,14 @@
 # Tecnologías usadas en el desarrollo de ACS
 
-La aplicación de ACS fue desarrollada por el equipo de tecnología de Placetopay Evertec, en el lenguaje de PHP, en la versión 7.4. 
-También se utilizó el framework de Laravel en su versión 6. 
+La aplicación de ACS fue desarrollada por el equipo de tecnología de Placetopay Evertec utilizando las siguientes tecnologías.
 
-Para la interfaz gráfica de usuario se utilizaron funcionalidades de JavaScript, Vue, CSS y Bootstrap 5.
 
+Backend                                        | Frontend B           | Infraestructura  |
+-----------------------------------------------|----------------------|------------------|
+ PHP 7.4                                       |  HTML                | Servidor AWS     |
+ Laravel 6 y superior                          | Javascript           |  --              |    
+ Extensión de calendario (ext-calendar)        | Vue JS 2.6           |  --              |
+ Extensión de internacionalización (ext-intl)  | Boostrap 5           |  --              |
+ Extensión Openssl (ext-openssl)               | --                   |  --              |
+ Extensión Sodium (ext-sodium)                 | --                   |  --              |
+ Extensión Precisión Múltiple de GNU (ext-gmp) | --                   |  --              |
