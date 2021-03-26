@@ -7,7 +7,12 @@ title: ¿Qué es el Protocolo 3-D Secure?
 
 El protocolo 3-D Secure es un documento que describe la infraestructura y los componentes del EMV 3-D Secure para la autenticación del tarjetahabiente durante una transacción de comercio electrónico. Fue creado por EMVCo, un organismo global que busca la interoperabilidad en transacciones electrónicas de modo seguro.
 
-El protocolo de autenticación 3-D Secure se basa en un modelo de tres dominios, en el que el Domini
+El protocolo de autenticación 3-D Secure se basa en un modelo de tres dominios, en el que el Dominio del Adquirente y el Dominio del Emisor están conectados por el Dominio de Interoperabilidad a través de una serie de mensajes, con el fin de autenticar a un tarjetahabiente durante una transacción de comercio electrónico (e-commerce) o para verificar la identidad o la cuenta del tarjetahabiente en autenticaciones de no pago.
+
+El protocolo cuenta actualmente con dos versiones activas, la versión 2.10 y la versión 2.2O. La principal diferencia entre ambas versiones es que en la 2.10, la autenticación del tarjetahabiente siempre va a requerir de un reto para comprobar su identidad, el cual consiste en aportar información personal adicional o en la verificación de un código o similares. Mientras que en la versión 2.20, se implementó el flujo de autenticación sin reto o challenge, dado cuando el tarjetahabiente aporta datos completos y seguros; además se creó para esta versión otro tipo de autenticación nombrada como desacoplada.
+
+De esta forma, el proceso de autenticación puede darse mediante un flujo sin fricción o con fricción, entendiendo la fricción como el reto para autenticarse, y es el componente ACS el cual decide cual de estos flujos es el requerido en una autenticación, dependiendo del nivel de legitimidad evaluado en la información provista por el tarjetabiente y de la versión utilizada del protocolo.
+
 
 <!--
 type: tab
@@ -21,7 +26,7 @@ Así mismo, estos dominios poseen una serie de componentes en cada uno, los cual
 
 Los dominios son los siguientes:
 
-**1. Dominio Adquiriente: ** Inicia el flujo de autenticación. 
+**1. Dominio Adquiriente: ** Inicia y finaliza el flujo de autenticación. 
 
   El dominio Adquiriente tiene los siguientes componentes:
         
@@ -33,7 +38,7 @@ Los dominios son los siguientes:
   - Integrador 3DS (3DS Integrator)
   - Adquiriente (Acquirer)
 
-**2. Dominio de Interoperabilidad:** Conecta al dominio Adquiriente y Emisor a través de los mensajes que contienen información acerca de la autenticación.
+**2. Dominio de Interoperabilidad:** Conecta al dominio Adquiriente y Emisor a través de los mensajes que recibe y envía entre uno y otro componente y los cuales contienen información acerca de la autenticación.
 
 El dominio de Interoperabilidad tiene los siguientes componentes:
       
@@ -41,13 +46,15 @@ El dominio de Interoperabilidad tiene los siguientes componentes:
 - Autoridad de Certificación del Servidor de Directorio (Directory Server Certificate Authority, DS CA)
 - Sistema de autorización (Authorisation System)
 
-**3. Dominio Emisor: ** Las transacciones se autentican en este dominio. 
+**3. Dominio Emisor: ** Las transacciones se autentican en este dominio, es el que decide si una autenticación es satisfactoria o no. 
 El dominio Emisor tiene los siguientes componentes:
        
 - Titular de la tarjeta (Cardholder)
 - Dispositivo de consumo (Consumer Device)
 - Emisor (Issuer)
 - Servidor de Control de Acceso (Access Control Server, ACS)
+
+> Este dominio está representado por la aplicación de ACS.
 
 <!--
 type: tab
@@ -102,9 +109,9 @@ El protocolo 3-D Secure define una serie de mensajes de petición y de respuesta
 
 ---
 
-> El componente 3DS Server crea los mensajes AReq, RRes, PReq y Erro.
+> El componente ACS crea los mensajes ARes, CRes, RReq y Erro.
 
-> El componente 3DS Server valida los mensajes ARes, RReq y PRes.
+> El componente ACS valida los mensajes AReq, CReq y RRes.
 
 <!--
 type: tab
@@ -149,7 +156,7 @@ El protocolo 3-D Secure contiene dos posibles flujos para el proceso de autentic
 
 - **Flujo sin fricción:**
       
-  El flujo sin fricción o sin challenge, no requiere interacción adicional por parte del tarjetahabiente para lograr una autenticación exitosa con 3-D Secure, ya que se evalúa la información obtenida del tarjetahabiente como legítima y de bajo riesgo. Se considera información de bajo riesgo por ejemplo cuando el tarjetabiente registra los mismos datos personales que suele registrar.
+  El flujo sin fricción o sin challenge, no requiere interacción adicional por parte del tarjetahabiente para lograr una autenticación exitosa con 3-D Secure, ya que se evalúa la información obtenida del tarjetahabiente como legítima, muy completa y de bajo riesgo. Se considera información de bajo riesgo por ejemplo cuando el tarjetabiente registra los mismos datos personales que suele registrar o cuando diligencia los campos opcionales de la autenticación.
       
   Este flujo inicia el proceso de autenticación de 3-D Secure y consiste en el envío de un mensaje de petición de autenticación (AReq) y posteriormente, un mensaje de respuesta a la autenticación (ARes).
 
@@ -163,11 +170,11 @@ El protocolo 3-D Secure contiene dos posibles flujos para el proceso de autentic
       
 ### Los tipos de challenge posibles son:
   
-  - **Autenticación con challenge:** Se suele presentar al tarjetahabiente un formulario de preguntas sobre su información personal.
+  - **Autenticación con challenge:** Se suele presentar al tarjetahabiente un formulario de preguntas sobre información personal adicional a la aportada, verificación de clave u OTP (autenticación con contraseña de un solo uso).
 
   - **Autenticación desacoplada:** En esta autenticación el flujo se pone en pausa y es el emisor de la tarjeta el que se comunica con el tarjetabiente para comprobar los datos dados y lo hace a través de un proceso manual.
           
-  - **Autenticación fuera de banda:** El proceso de comprobación de los datos del tarjetabiente queda a cargo del emisor de la tarjeta. Puede incluir otros medios de autenticación como un QR, un código enviado a una app, entre otros.
+  - **Autenticación fuera de banda:** El proceso de comprobación de los datos del tarjetabiente queda a cargo del emisor de la tarjeta. Puede incluir otros medios de autenticación como un QR, un código enviado a una app, autenticación por biometría.
       
 > En cuanto a los mensajes presentes en este tipo de flujo, en adición a los mensajes AReq y ARes que comprenden el flujo sin fricción. El flujo con fricción o challenge comprende los mensajes CReq y CRes (excepto en el caso de una autenticación desacoplada) y los mensajes RReq y RRes.
   
