@@ -7,17 +7,22 @@
     },
     {
       "type": "item",
+      "title": "Generalidades del Protocolo 3DS",
+      "uri": "docs/Introduction.md"
+    },
+    {
+      "type": "item",
       "title": "Tecnologías usadas en el desarrollo de ACS",
       "uri": "docs/Technologies.md"
     },
     {
       "type": "item",
-      "title": "Base de datos de ACS",
+      "title": "Gestión de los datos en ACS",
       "uri": "docs/Database.md"
     },
     {
       "type": "item",
-      "title": "Servicios Externos",
+      "title": "Implementación de servicios externos",
       "uri": "docs/Services.md"
     }
   ]
