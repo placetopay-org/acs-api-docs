@@ -65,6 +65,8 @@ title: Mensajes del Procolo 3-D Secure
 
 El protocolo 3-D Secure define una serie de mensajes de petición y de respuesta, para ofrecer información acerca del estado del proceso de autenticación y del tipo de flujo en el que se encuentra.
 
+> El componente ACS crea los mensajes ARes, CRes, RReq y Erro.
+
 ### Mensajes de autenticación:
 
 **AReq (Authentication Request Message): **
@@ -108,8 +110,6 @@ El protocolo 3-D Secure define una serie de mensajes de petición y de respuesta
       Los mensajes de error proporcionan información adicional sobre un error que se produjo durante el procesamiento de un mensaje. Estos pueden originarse en cualquiera de los componentes del 3-D Secure.
 
 ---
-
-> El componente ACS crea los mensajes ARes, CRes, RReq y Erro.
 
 > El componente ACS valida los mensajes AReq, CReq y RRes.
 
