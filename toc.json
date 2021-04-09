@@ -22,6 +22,11 @@
     },
     {
       "type": "item",
+      "title": "Estados de la Autenticación",
+      "uri": "docs/AuthenticationStatus.md"
+    },
+    {
+      "type": "item",
       "title": "Tecnologías usadas en el desarrollo de ACS",
       "uri": "docs/Technologies.md"
     },
@@ -29,6 +34,11 @@
       "type": "item",
       "title": "Gestión de los datos en ACS",
       "uri": "docs/Database.md"
+    },
+    {
+      "type": "item",
+      "title": "Principales funcionabilidades de ACS",
+      "uri": "docs/ACSFunctionalities.md"
     },
     {
       "type": "item",
