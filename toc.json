@@ -7,8 +7,18 @@
     },
     {
       "type": "item",
+      "title": "Términos y Definiciones",
+      "uri": "docs/TermsAndDefinitions.md"
+    },
+    {
+      "type": "item",
       "title": "Generalidades del Protocolo 3DS",
       "uri": "docs/3DSSecureProtocol.md"
+    },
+    {
+      "type": "item",
+      "title": "Acerca del componente ACS",
+      "uri": "docs/ACSComponent.md"
     },
     {
       "type": "item",
