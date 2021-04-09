@@ -11,3 +11,5 @@ Las siguientes definiciones pretenden dar claridad sobre la información present
 - **3RI:** 3DS Requestor Initiated, es un tipo de canal por el cual se origina una transacción. 
 Las transacciones realizadas por este canal, tienen como finalidad confirmar la información de la cuenta sin necesidad de la presencia del tarjetabiente. 
 Por ejemplo, un comerciante de comercio electrónico basado en suscripción usaría este tipo de canal para confirmar que una cuenta sigue siendo válida. Estas transacciones son no pago y no tienen interfaz de usuario.
+
+- **Emisor:** Es una institución financiera que emite tarjetas de pago y servicios relacionados con las tarjetas. Los emisores determinan la elegibilidad de los tarjetahabientes para participar en el 3-D Secure, aportando los rangos de números de tarjeta elegibles.
