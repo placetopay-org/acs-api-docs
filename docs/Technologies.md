@@ -3,7 +3,7 @@
 La aplicación de ACS fue desarrollada por el equipo de tecnología de Placetopay Evertec utilizando las siguientes tecnologías.
 
 
-Backend                                        | Frontend B           | Infraestructura  |
+Backend                                        | Frontend             | Infraestructura  |
 -----------------------------------------------|----------------------|------------------|
  PHP versión 7.4                               | HTML                 | Servidor AWS     |
  Laravel versión 6 y superior                  | Javascript           |  --              | 
