@@ -6,9 +6,10 @@ La aplicación de ACS fue desarrollada por el equipo de tecnología de Placetopa
 Backend                                        | Frontend B           | Infraestructura  |
 -----------------------------------------------|----------------------|------------------|
  PHP versión 7.4                               | HTML                 | Servidor AWS     |
- Laravel versión 6 y superior                  | Javascript           |  --              |    
- Extensión de calendario (ext-calendar)        | Vue JS versión 2.6   |  --              |
- Extensión de internacionalización (ext-intl)  | Boostrap versión 5   |  --              |
+ Laravel versión 6 y superior                  | Javascript           |  --              | 
+ **Extensiones PHP**                           | Vue JS versión 2.6   |  --              |
+ Extensión de calendario (ext-calendar)        | Boostrap versión 5   |  --              |
+ Extensión de internacionalización (ext-intl)  | --                   |  --              |
  Extensión Openssl (ext-openssl)               | --                   |  --              |
  Extensión Sodium (ext-sodium)                 | --                   |  --              |
  Extensión Precisión Múltiple de GNU (ext-gmp) | --                   |  --              |
