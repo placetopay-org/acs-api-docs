@@ -84,5 +84,26 @@ Esta métrica muestra en una gráfica el monto de las transacciones procesadas p
 Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
 
 
+<!--
+type: tab
+title: Emisores
+-->
+
+# Emisores
+
+En la sección de emisores se encuentran diferentes funcionabilidades relacionadas con estos.
+
+### Configuraciones:
+En este apartado se encuentra toda la gestión de configuración de campos para un banco emisor, puede ver los detalles de cada uno, qué función desempeña, puede editarlos, deshabilitarlos y habilitarlos según se requiera. 
+
+También, en la pestaña *Services*, se encuentran las estrategias disponibles para ejecutar los servicios para el emisor.
+
+- otpStrategy, información acerca de cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso).
+
+- cardholderStrategy, nformación acerca de cómo se va a implementar el servicio de información del tarjetabiente.
+
+### Gestionar Bines:
+Aquí se gestionan los bines del adquiriente, se puede crear un BIN, un rango de bines y también se puede importar un archivo con un conjunto de bines. Para la importación se aceptan los formatos de archivo .csv, .tsv y .txt.
+
 <!-- type: tab-end -->
 
