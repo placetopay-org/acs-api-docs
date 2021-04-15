@@ -15,3 +15,9 @@ Por ejemplo, un comerciante de comercio electrónico basado en suscripción usar
 - **Emisor:** Es una institución financiera que emite tarjetas de pago y servicios relacionados con las tarjetas. Los emisores determinan la elegibilidad de los tarjetahabientes para participar en el 3-D Secure, aportando los rangos de números de tarjeta elegibles.
 
 - **OTP:** Los códigos OTP (One Time Password) son códigos numéricos de un solo uso que se utilizan para una sola transacción. Se suelen enviar a un tarjetahabiente a través de un SMS en el teléfono móvil cada vez que se quiera hacer una transacción bancaria.
+
+- **Logs:** Hacen referencia a un historial que se encarga de grabar y registrar secuencialmente, en un archivo o en una base de datos, todos los acontecimientos que afectan a un proceso particular. 
+
+- **Certificado SSL:** Es un título digital que autentifica la identidad de un sitio web y cifra con tecnología SSL (Secure Sockets Layer o capa de conexión segura), la información que se envía al servidor, permitiendo la transferencia de datos cifrados entre un navegador y un servidor web.
+
+- **Slug:** Se nombra así a la parte final de la URL que identifica una página dentro de un sitio web.
