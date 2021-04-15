@@ -108,8 +108,39 @@ También, en la pestaña *Services*, se encuentran las estrategias disponibles p
 
 - cardholderStrategy, nformación acerca de cómo se va a implementar el servicio de información del tarjetabiente.
 
-### Gestionar Bines:
+### Gestión de rangos de tarjetas:
+En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico.
+
+### Gestión de bines:
 Aquí se gestionan los bines del adquiriente, se puede crear un BIN, un rango de bines y también se puede importar un archivo con un conjunto de bines. Para la importación se aceptan los formatos de archivo .csv, .tsv y .txt.
+
+### Gestión del control de fraude:
+Estas funcionabilidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de los grupos donde están contenidas, las cuales permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
+
+<!--
+type: tab
+title: Franquicias
+-->
+
+# Franquicias
+
+Aquí se gestionan las franquicias que funcionan en ACS, siendo la franquicia una compañía aliada con los bancos emisores de tarjetas de crédito, las cuales proveen diversos beneficios bancarios a sus clientes.
+
+En esta sección se visualiza el listado de franquicias, los detalles de cada una, se pueden editar, habilitar y deshabilitar.
+
+Para crear una franquicia, la aplicación solicita la siguiente información:
+
+- **Marca,** Nombre de la franquicia, por ejemplo Matercard, VISA...
+
+- **Patrón,** Se ingresa un patrón basado en una expresión regular, con este se valida que el número de tarjeta que llegue al ACS, sea válido según los estándares propios de cada franquicia.
+
+- **Algoritmo para el CAVV,** El Cardholder Authentication Verification Value (CAVV), es un valor de verificación de autenticación del titular de la tarjeta. Aquí se debe seleccionar un algoritmo que valide este valor, el cual resulta de hacer una transacción. En el momento ACS cuenta con un algoritmo para VISA y otro para MASTERCARD.
+
+- **Algoritmo para el ECI,** El Electronic Commerce
+Indicator (ECI), es un valor para indicar los resultados del intento de autenticación. En ACS hay tres algoritmos disponibles, para las franquicias de VISA, MASTERCARD y JCB.
+
+- **Logo,** Puede adjuntar una imagen con el logo de la franquicia.
+
 
 <!--
 type: tab
@@ -135,10 +166,14 @@ La solicitud o creación del certificado consta de tres partes:
 
 - **EC,** es una llave basada en la Criptografía de curva elíptica (ECC), la cual promete una seguridad más fuerte y mejor rendimiento ya que utiliza claves más cortas. El sistema criptográfico utilizado está basado en las matemáticas de curvas elípticas.
 
-
 > La llave es la que permite al usuario autenticarse por medio de la conexión SSH al servidor web. Para esto deberá contar con una llave privada y una llave pública que contiene el servidor y con la cual se va a conectar. 
 
-2. Selección del tipo de cifrador para la llave.
+2. Selección del tipo de cifrador para el certificado. Se debe seleccionar dependiendo del tipo de conexión y están disponibles dos tipos:
+
+- **AES_128_CBC:** Es un tipo de cifrado, donde Advanced Encryption Standard (AES), es un esquema de cifrado por bloques y Cipher Block Chaining (CBC), es un modo de operación para una unidad de cifrado por bloques. Este tipo de cifrado tiene un tamaño de 128 bytes. Es el más utilizado.
+
+- **AES_256_CBC:** Es un tipo de cifrado por bloques, que utiliza el modo de operación CBC. Este tipo de cifrado tiene un tamaño de 256 bytes.
+
 
 3. Tamaño de la llave en bits.
 
@@ -164,6 +199,16 @@ Aquí se registran los datos de información general sobre el solicitante de la 
 #### Información de rastreo:
 
 Permite la identificación a partir de un slug, el cual forma parte de la URL que se va a consultar para acceder al servidor mediante el certificado.
+
+
+<!--
+type: tab
+title: Importaciones
+-->
+
+# Importes de rangos de tarjetas
+
+En esta sección se puede visualizar el listado de rangos de tarjetas importados para cada emisor.
 
 
 <!--
