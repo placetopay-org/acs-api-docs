@@ -1,47 +1,12 @@
 <!--
 type: tab
-title: Motor Antifraude
--->
-
-# Motor de Control de Fraude
-
-La principal funcionabilidad de ACS es el motor de control antifraude, este permite validar la información que se recibe en la petición de autenticación, a través de un conjunto de reglas que se procesan mediante grupos específicos creados para validar las autenticaciones de cada emisor registrado.
-
-Esta funcionabilidad se gestiona desde la sección de Emisores de la aplicación.
-
-### Grupos de control antifraude:
-
-Para cada banco emisor registrado en el ACS, se creará un grupo predeterminado conformado por una serie de reglas antifraude que permiten validar las solicitudes de autenticación. Además de este grupo prederteminado, se podrán agregar otros nuevos al emisor.
-
-### Reglas antifraude:
-
-Los grupos de control antifraude están conformados por reglas que permiten hacer las validaciones de los datos recibidos en las autenticaciones. Estas reglas evalúan la coincidencia de las condiciones contenidas en la regla y de los datos obtenidos en la solicitud de autenticación.
-
-### Acciones de las reglas: 
-Al crear una regla se le define un tipo de acción específica que va a ejecutar. Estas acciones permiten definir el transStatus (estado de autenticación de la transacción). Las acciones permitidas son las siguientes:
-
-- **Autenticar:** Las reglas que contengan esta acción, permitirán validar la solicitud de autenticación y aprobarla automáticamente, generando un estatus Y (autenticación satisfactoria). Por ejemplo una regla de tipo *BinRange* va a contener un rango mínimo y máximo de BIN, las tarjetas cuyo BIN entren en este rango, podrán ser autenticadas automáticamente, creando una especie de lista blanca de datos.
-
-- **Realizar desafío:** Las reglas cuya acción es realizar desafío, al validarse generarán el estatus C (requiere desafío), con este estatus el tarjetahabiente será direccionado a una interfaz de usuario en la cual se le pedirá aceptar un desafío para validar su identidad. 
-
-- **Desafío desacoplado:** Las reglas que contengan esta acción, al validarse generarán un estatus D y la petición de autenticación se pondrá en pausa y el emisor se encargará de realizar el desafío manualmente con el tarjetahabiente.
- 
-- **No autenticar:** Las reglas con acción de no autenticar, al cumplirse la validación, lanzarán automáticamente un estado *N* (Autenticación fallida). Los datos incluídos en estas reglas se conciben con un alto grado de riesgo o posible fraude. Las reglas con esta acción pemriten crear un tipo de lista negra de datos.
-
-- **Ejecutar un grupo:** Las reglas creadas con esta acción pueden ejecutar todo las reglas contenidas en otro grupo de reglas del emisor.
-
-- **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado).
-
-> La función de ejecutar un grupo de reglas permitirá hacer validaciones no secuenciales entre los diferentes grupos registrados para un emisor.
-
-<!--
-type: tab
 title: Autenticaciones
 -->
 
 # Autenticaciones
 
 En esta módulo se registra la información de todas las autenticaciones procesadas por el ACS. Contienen el estado de la autenticación además de la información básica de la transacción, la información del tarjetahabiente, del comercio, la ubicación en el mapa de dónde se generó la transacción, los datos de entrega y una línea de tiempo con los detalles de todo el proceso de autenticación y de la información captada por cada uno de los mensajes presentes en el proceso y correspondientes al protocolo 3-D Secure.
+
 
 <!--
 type: tab
@@ -52,6 +17,7 @@ title: Autenticaciones Desacopladas
 
 En esta sección registran las autenticaciones que entraron a un proceso de desafío desacoplado a cargo del banco emisor para corroborar la identidad del tarjetabiente. 
 Se detalla la fecha, el emisor, el BIN, número de tarjeta, monto y tiempo restante para la aprobación de la autenticación. Aquí se da la opción de resolver las autenticaciones manualmente, con base en el análisis de la información dada.
+
 
 <!--
 type: tab
@@ -89,7 +55,6 @@ Esta métrica muestra en una gráfica el monto de las transacciones procesadas p
 
 Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
 
-
 <!--
 type: tab
 title: Emisores
@@ -99,23 +64,144 @@ title: Emisores
 
 En la sección de emisores se encuentran diferentes funcionabilidades relacionadas con los emisores, siendo estos las instituciones financieras que se encargan de emitir tarjetas de pago y servicios relacionados con estas tarjetas.
 
+En la siguiente imagen se visualiza un ejemplo de la vista de *Detalles del emisor*, además se puede editar y habilitar o deshabilitar con el menú lateral derecho.
+
+![](../assets/images/issuers.png)
+
+
 ### Configuraciones:
 En este apartado se encuentra toda la gestión de configuración de campos para un banco emisor, puede ver los detalles de cada uno, qué función desempeña, puede editarlos, deshabilitarlos y habilitarlos según se requiera. 
+
+![](../assets/images/issuers-configurations.png)
 
 También, en la pestaña *Services*, se encuentran las estrategias disponibles para ejecutar los servicios para el emisor.
 
 - otpStrategy, información acerca de cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso).
 
-- cardholderStrategy, nformación acerca de cómo se va a implementar el servicio de información del tarjetabiente.
+- cardholderStrategy, información acerca de cómo se va a implementar el servicio de información del tarjetabiente.
+
+#### Campos de configuración:
+
+Estas configuraciones se gestionan desde la sección *Campos de configuración* del ACS. Allí se encuentra un listado de los campos creados para configurar los emisores, puede habilitarlos, deshabilitarlos, editarlos y ver sus detalles.
+
+![](../assets/images/configurations-actions.png)
+
+Además, con el botón *Crear*, puede adicionar nuevos campos con diferentes tipos de datos a recibir:
+
+- **SELECT:** Recibe un dato que se ha seleccionado de una lista de valores disponibles.
+
+- **BOOLEAN:** Recibe únicamente las opciones de falso y verdadero.
+
+- **DATE:** Recibe una fecha con un formato dado.
+
+- **NUMERIC:** Recibe valores numéricos.
+
+- **STRING:** Recibe un dato que puede incluir cadena de texto, números y signos.
+
+- **PASSWORD:** El dato que se recibe en este campo es guardado de forma segura. SU valor original suele reemplazarse con carácteres especiales o con un algoritmo de criptografía.
+
+- **TRANSLATABLE:** Recibe un dato que puede ser traducido.
+
+![](../assets/images/configuration-fields.png)
+
+
 
 ### Gestión de rangos de tarjetas:
 En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico.
 
 ### Gestión de bines:
-Aquí se gestionan los bines del adquiriente, se puede crear un BIN, un rango de bines y también se puede importar un archivo con un conjunto de bines. Para la importación se aceptan los formatos de archivo .csv, .tsv y .txt.
+Aquí se gestionan los bines del adquiriente. En primer lugar obtendrá un listado de los bines creados anteriormente para el emisor, además puede crear otros bines nuevos, editarlos y eliminarlos.
+
+![](../assets/images/bines.png)
+
+Al dar clic en el botón *Crear* como ilustra la imagen, tendrá tres opciones para crear bines:
+
+- Crear un único BIN para el emisor.
+- Crear un rango de bines para el emisor, el cuál contendrá un valor mínimo y un valor máximo de bines, creando así un grupo de números de tarjetas de crédito a gestionar.
+- Crear importación, para la importación se aceptan los formatos de archivo .csv, .tsv y .txt
 
 ### Gestión del control de fraude:
 Estas funcionabilidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de los grupos donde están contenidas, las cuales permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
+
+
+<!--
+type: tab
+title: Motor Antifraude
+-->
+
+# Motor de Control de Fraude
+
+La principal funcionabilidad de ACS es el motor de control antifraude, este permite validar la información que se recibe en la petición de autenticación, a través de un conjunto de reglas que se procesan mediante grupos específicos creados para validar las autenticaciones de cada emisor registrado.
+
+Esta funcionabilidad se gestiona desde la sección de Emisores de la aplicación.
+
+### Grupos de control antifraude:
+
+Para cada banco emisor registrado en el ACS, se creará un grupo predeterminado conformado por una serie de reglas antifraude que permiten validar las solicitudes de autenticación. Además de este grupo prederteminado, se podrán agregar otros nuevos al emisor.
+
+En la imagen se muestra el listado de grupos de control de fraude de un emisor. En esta vista se pueden crear nuevos grupos con el botón *Crear* y se pueden visualizar los detalles y las reglas de cada grupo dando clic en la opción *Ver*.
+
+En la imagen ejemplo, se visualizan dos grupos, uno llamado *Lista blanca*, donde se podrían incluir por ejemplo números de tarjetas y datos de clientes con bajo riesgo de fraude y las acciones de las reglas podrían ser en su mayoría *Autenticar*. El otro grupo se llama *Lista negra*, aquí se podrían agregar los números de tarjeta e información personal asociada a clientes con historiales o reportes y la acción de las reglas podría ser *No autenticar*.
+
+![](../assets/images/fraud-groups.png)
+
+### Reglas antifraude:
+
+Los grupos de control antifraude están conformados por reglas que permiten hacer las validaciones de los datos recibidos en las autenticaciones. Estas reglas evalúan la coincidencia de las condiciones contenidas en la regla y de los datos obtenidos en la solicitud de autenticación.
+
+Al presionar la opción *Ver* de un grupo de control antifraude, le mostrará una vista similar a esta.
+
+![](../assets/images/group-details.png)
+
+Aquí se encuentran los detalles del grupo seleccionado, puede habilitarlo o deshabilitarlo en el menú lateral derecho. Además, encontrará el listado de reglas correspondientes al grupo, la acción que ejecutan, puede habilitarlas o deshabilitarlas y puede visualizar los detalles y condiciones de la misma.
+
+En la pestaña *Solicitudes de reglas*, se pueden visualizar las peticiones de creación, actualización o eliminación de reglas, las cuales se encuentran pendientes por aprobar o denegar. También, puede crear una petición de reglas nueva, haciendo clic en el botón *Crear petición de regla*.
+
+![](../assets/images/rule-create.png)
+
+Luego visualizará una ventana como esta, dónde le solicitan la acción que desea hacer con la regla.
+
+![](../assets/images/rule-create-actions.png)
+
+Para crear una petición de regla, debe seleccionar la opción *Crear*, y se desplegará una vista como la siguiente:
+
+![](../assets/images/conditions-rule.png)
+
+Los datos requeridos son:
+- **Nombre:** ¿Cómo desea nombrar la regla a crear?
+- **Acción:** Se refiere a la función que va a cumplir la regla en el proceso de autenticación. Estas acciones se describen detalladamente en el siguiente título.
+- **Tipo de regla:** Hace referencia al tipo de regla que desea crear, por ejemplo es una regla que valida números de tarjeta de crédito, o valida emails, o rangos de bines...
+- **Valor:** Es el valor que requiere una regla para validar y comparar los datos presentes en la misma y en la solicitud de autenticación.
+
+> Puede además agregar otras condiciones para una misma regla.
+
+También hay otros tipos de reglas que ofrecen más posibilidades, en la siguiente imagen puede visualizar una regla donde puede escoger que el valor tenga un rango, un valor mínimo o máximo por ejemplo.
+
+![](../assets/images/others-rule-conditions.png)
+
+Luego de enviar la solicitud de regla, esta se agregará al listado de *Solicitudes de regla*, allí tiene la opción de *Aceptar* o *Denegar*, con los botones de la parte lateral derecha.
+
+![](../assets/images/accept-deny.png)
+
+> Hasta que no acepte la solicitud de regla, esta no podrá visualizarse ni utilizarse en producción. Luego de aceptarla recuerde habilitarla.
+
+### Acciones de las reglas: 
+Al crear una regla se le define un tipo de acción específica que va a ejecutar. Estas acciones permiten definir el transStatus (estado de autenticación de la transacción). Las acciones permitidas son las siguientes:
+
+- **Autenticar:** Las reglas que contengan esta acción, permitirán validar la solicitud de autenticación y aprobarla automáticamente, generando un estatus Y (autenticación satisfactoria). Por ejemplo una regla de tipo *BinRange* va a contener un rango mínimo y máximo de BIN, las tarjetas cuyo BIN entren en este rango, podrán ser autenticadas automáticamente, creando una especie de lista blanca de datos.
+
+- **Realizar desafío:** Las reglas cuya acción es realizar desafío, al validarse generarán el estatus C (requiere desafío), con este estatus el tarjetahabiente será direccionado a una interfaz de usuario en la cual se le pedirá aceptar un desafío para validar su identidad. 
+
+- **Desafío desacoplado:** Las reglas que contengan esta acción, al validarse generarán un estatus D y la petición de autenticación se pondrá en pausa y el emisor se encargará de realizar el desafío manualmente con el tarjetahabiente.
+ 
+- **No autenticar:** Las reglas con acción de no autenticar, al cumplirse la validación, lanzarán automáticamente un estado *N* (Autenticación fallida). Los datos incluídos en estas reglas se conciben con un alto grado de riesgo o posible fraude. Las reglas con esta acción pemriten crear un tipo de lista negra de datos.
+
+- **Ejecutar un grupo:** Las reglas creadas con esta acción pueden ejecutar todo las reglas contenidas en otro grupo de reglas del emisor.
+
+- **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado).
+
+> La función de ejecutar un grupo de reglas permitirá hacer validaciones no secuenciales entre los diferentes grupos registrados para un emisor.
+
 
 <!--
 type: tab
