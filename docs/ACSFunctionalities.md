@@ -5,7 +5,47 @@ title: Autenticaciones
 
 # Autenticaciones
 
-En esta módulo se registra la información de todas las autenticaciones procesadas por el ACS. Contienen el estado de la autenticación además de la información básica de la transacción, la información del tarjetahabiente, del comercio, la ubicación en el mapa de dónde se generó la transacción, los datos de entrega y una línea de tiempo con los detalles de todo el proceso de autenticación y de la información captada por cada uno de los mensajes presentes en el proceso y correspondientes al protocolo 3-D Secure.
+En este módulo se registra la información de todas las autenticaciones procesadas por el ACS. En la primera vista se encuentra el listado de las transacciones, con fecha,estado y otros datos importantes. También, puede desplegar más información de cada transacción con el botón desplegable ubicado antes del botón *Ver*.
+
+![](../assets/images/auth-index.png)
+
+## Filtros:
+
+Para buscar un listado o una transacción en específico puede utilizar los filtros. ACS cuenta con dos tipos de filtros para las autenticaciones, uno básico y otro avanzado para hacer consultas más rigurosas.
+
+Para acceder a la funcionabilidad, dé clic en el botón *Filtrar* ubicado en la parte lateral superior izquierda de la vista:
+
+#### Filtros básicos:
+
+![](../assets/images/auth-filters.png)
+
+La búsqueda se hace por:
+
+- **Rango de fecha:** Debe dar clic en una fecha inicial del calendario y luego en otra fecha posterior a la primera, luego dé clic en el botón negro para guardar el rango de fechas.
+
+- **ID de la transacción:** Aquí se registra el identificador único de la transacción.
+
+
+#### Filtros avanzados:
+
+![](../assets/images/advanced-filters.png)
+
+Al desplegar los filtros básicos, hay una opción *Ver filtros avanzados*, seleccionela y se desplegará una vista como la siguiente:
+
+Aquí además de los dos filtros básicos, se pueden agregar más datos de búsqueda, tales como:
+
+- BIN
+- Últimos 4 dígitos del número de tarjeta
+- Número de tarjeta
+- Banco emisor
+- Estado de la transacción
+
+
+## Detalle de la transacción:
+
+En el detalle de la transacción, el cual se puede visualizar dando clic en el botón *Ver* de una transacción, se encuentra información esencial del proceso de autenticación, como el estado de la autenticación, la información básica de la transacción, la información del tarjetahabiente, del comercio, la ubicación en el mapa de dónde se generó la transacción, los datos de entrega y una línea de tiempo con los detalles de todo el proceso de autenticación y de la información captada por cada uno de los mensajes presentes en el proceso y correspondientes al protocolo 3-D Secure.
+
+![](../assets/images/auth-details.png)
 
 
 <!--
