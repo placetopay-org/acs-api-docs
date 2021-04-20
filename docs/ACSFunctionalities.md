@@ -47,6 +47,18 @@ En el detalle de la transacción, el cual se puede visualizar dando clic en el b
 
 ![](../assets/images/auth-details.png)
 
+### Traza de la autenticación:
+
+Cada autenticación tiene una traza, la cual se entiende en ACS como una línea secuencial que registra los pasos realizados en el proceso de autenticación, los datos que recibe, las peticiones y respuestas de los tipos de mensaje que procesa, los estados y descripción de errores si se presentan.
+
+Este es un ejemplo de una traza de una autenticación exitosa:
+
+![](../assets/images/auth-trace.png)
+
+Además, cada paso tiene la opción *Ver más*, la cual muestra la estructura de la petición o la respuesta con sus respectivos datos. Un ejemplo de este detalle es el siguiente:
+
+![](../assets/images/trace-detail.png)
+
 
 <!--
 type: tab
@@ -58,24 +70,9 @@ title: Autenticaciones Desacopladas
 En esta sección registran las autenticaciones que entraron a un proceso de desafío desacoplado a cargo del banco emisor para corroborar la identidad del tarjetabiente. 
 Se detalla la fecha, el emisor, el BIN, número de tarjeta, monto y tiempo restante para la aprobación de la autenticación. Aquí se da la opción de resolver las autenticaciones manualmente, con base en el análisis de la información dada.
 
+La siguiente es un ejemplo de vista inicial para la sección de autenticaciones desacopladadas:
 
-<!--
-type: tab
-title: Reportes
--->
-
-# Reportes de Autenticaciones
-
-El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte.
-
-# Reportes de Abandonos 
-
-Con este reporte se generan los datos de las autenticaciones que son abandonadas en el ACS. Para el reporte se puede definir un rango de fechas y el banco emisor.
-
-## Tipos de archivos generados para los reportes
-- Archivo separado por comas.
-- Archivo separado por tabuladores.
-- Archivo de Excel
+![](../assets/images/decoupled-auth.png)
 
 <!--
 type: tab
@@ -86,12 +83,28 @@ title: Métricas
 
 Las métricas son estadísticas que reportan el comportamiento de la aplicación. En ACS se cuenta actualmente con los siguientes dos tipos de métricas:
 
-# Métricas por monto de transacción
+## Filtros:
+
+Para mostrar en la gráfica de la métrica los datos específicos que se requieran, se debe hacer un filtro de las autenticaciones. Para el filtro se pueden agregar los siguientes datos:
+
+- Rango de fecha, seleccione una fecha inicial y una posterior en el calendario. Luego de clic en el botón negro para guardar el rango.
+
+- Periodo.
+
+- Moneda, divisa utilizada para las transacciones.
+
+- Emisor, banco emisor que por el cual se procesó el grupo de transacciones.
+
+
+![](../assets/images/filter-metrics.png)
+
+
+## Métricas por monto de transacción
 
 Esta métrica muestra en una gráfica el monto de las transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
 
 
-# Métricas por estado de transacción
+## Métricas por estado de transacción
 
 Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
 
@@ -254,7 +267,10 @@ Aquí se gestionan las franquicias que funcionan en ACS, siendo la franquicia un
 
 En esta sección se visualiza el listado de franquicias, los detalles de cada una, se pueden editar, habilitar y deshabilitar.
 
-Para crear una franquicia, la aplicación solicita la siguiente información:
+![](../assets/images/franchise-index.png)
+
+
+Para crear una franquicia, haga clic en el botón crear y diligencia los datos teniendo en cuenta la siguiente información:
 
 - **Marca,** Nombre de la franquicia, por ejemplo Matercard, VISA...
 
@@ -267,6 +283,10 @@ Indicator (ECI), es un valor para indicar los resultados del intento de autentic
 
 - **Logo,** Puede adjuntar una imagen con el logo de la franquicia.
 
+En la siguientes imagen se puede visualizar un ejemplo de creación de franquicia:
+
+![](../assets/images/create-franchise.png)
+
 
 <!--
 type: tab
@@ -278,13 +298,21 @@ title: Certificados
 En esta sección se crean los certificados SSL, los cuales son títulos digitales que vinculan digitalmente una clave criptográfica con los datos de una organización. Los certificados SSL permiten autenticar la identidad de un sitio web y cifrar la información que se envía al servidor.
 El certificado permite que cuando un usuario intente enviar información de las credenciales al servidor web, el navegador del usuario accede al certificado digital del servidor y establece una conexión segura. De esta forma, estos certificados proveen en esencia seguridad de los datos manejados en ACS.
 
+La siguiente imagen muestra un ejemplo de la vista de un índice de certificados:
 
-### Solicitud del certificado:
-La solicitud o creación del certificado consta de tres partes:
+![](../assets/images/certificates-index.png)
 
-#### Creación de la llave privada:
+Los certificados se pueden editar y visualizar los detalles del mismo. 
 
-1. Solicitud del tipo de llave con el cual se va a cifrar el certificado, están disponibles los siguientes tipos de llaves:
+## Creación de un certificado:
+
+Para crear un nuevo certificado haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
+
+#### 1. Creación de la llave privada:
+
+![](../assets/images/step-one.png)
+
+1.1. Solicitud del tipo de llave con el cual se va a cifrar el certificado, están disponibles los siguientes tipos de llaves:
 
 - **RSA,** es una llave creada a partir del algoritmo RSA, un sistema criptográfico de clave pública que utiliza factorización de números enteros y cifra bloques de datos. Es el algoritmo más utilizado para crear estas llaves.
 
@@ -294,7 +322,7 @@ La solicitud o creación del certificado consta de tres partes:
 
 > La llave es la que permite al usuario autenticarse por medio de la conexión SSH al servidor web. Para esto deberá contar con una llave privada y una llave pública que contiene el servidor y con la cual se va a conectar. 
 
-2. Selección del tipo de cifrador para el certificado. Se debe seleccionar dependiendo del tipo de conexión y están disponibles dos tipos:
+1.2. Selección del tipo de cifrador para el certificado. Se debe seleccionar dependiendo del tipo de conexión y están disponibles dos tipos:
 
 - **AES_128_CBC:** Es un tipo de cifrado, donde Advanced Encryption Standard (AES), es un esquema de cifrado por bloques y Cipher Block Chaining (CBC), es un modo de operación para una unidad de cifrado por bloques. Este tipo de cifrado tiene un tamaño de 128 bytes. Es el más utilizado.
 
@@ -312,24 +340,46 @@ La solicitud o creación del certificado consta de tres partes:
 7. Tipo de franquicia.
 
 
-#### Solicitud de firma del certificado:
+#### 2. Solicitud de firma del certificado:
+
+![](../assets/images/step-two.png)
 
 Aquí se registran los datos de información general sobre el solicitante de la llave:
 
 - Ubicación.
 - Organización.
-- Nombre
+- Nombre, debe ser un dominio.
 - Correo electrónico.
 
 
-#### Información de rastreo:
+#### 3. Información de rastreo:
+
+![](../assets/images/step-three.png)
 
 Permite la identificación a partir de un slug, el cual forma parte de la URL que se va a consultar para acceder al servidor mediante el certificado.
 
 
+## Registro y firma del certificado:
+
+Una vez creado el certificado, le mostrará los datos que diligenció en el formulario. Además, de eso creará una solicitud de firma de certificado, como la siguiente:
+
+![](../assets/images/signature-certificate-request.png)
+
+Debe copiar este bloque incluidas las etiquetas de BEGIN y END CERTIFICATE REQUEST. Con esta información debe proceder a crear su llave privada y a firmar el certificado.
+
+Una vez tenga su certificado firmado, obtendrá otro bloque similar al de la imagen, debe copiarlo incluyendo también las etiquetas de BEGIN y END CERTIFICATE REQUEST.
+
+Luego, en el detalle del certificado, al final encontrará la opción de registrar su certificado:
+
+![](../assets/images/request.png)
+
+Haga clic allí, lo llevará a la siguiente vista, donde debe pegar su certificado en el campo *Certificado*, así:
+
+![](../assets/images/register-certificate.png)
+
 <!--
 type: tab
-title: Importaciones
+title: Importes
 -->
 
 # Importes de rangos de tarjetas
@@ -339,14 +389,65 @@ En esta sección se puede visualizar el listado de rangos de tarjetas importados
 
 <!--
 type: tab
+title: Reportes
+-->
+
+# Reportes
+
+Los reportes son archivos que contienen registros de las autenticaciones procesadas por ACS. La siguiente imagen muestra un ejemplo de la vista con el índice de reportes generados. Estos reportes se pueden ver y descargar.
+
+![](../assets/images/report-index.png)
+
+Para crear un nuevo reporte haga clic en el botón *Crear*. 
+Actualmente se manejan dos tipos de reportes:
+
+## Reportes de Autenticaciones
+
+El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. El siguiente es un ejemplo de creación de un reporte de autenticaciones:
+
+![](../assets/images/auth-report.png)
+
+## Reportes de Abandonos 
+
+Con este reporte se generan los datos de las autenticaciones que son abandonadas en el ACS. Para el reporte se puede definir un rango de fechas y el banco emisor. El siguiente es un ejemplo de creación de un reporte de abandonos:
+
+![](../assets/images/abandoned-report.png)
+
+
+## Tipos de archivos generados para los reportes
+- Archivo separado por comas.
+- Archivo separado por tabuladores.
+- Archivo de Excel
+
+
+<!--
+type: tab
 title: Logs
 -->
 
 # Logs de Seguridad
 
-En esta sección se registran los movimientos y actualizaciones que se realizan en la aplicación de ACS. Los logs permiten tener un control de los cambios y de lo que sucede en la aplicación. En la sección de logs se encuentra un listado de los mismos, con una descripción y la fecha y hora en que fue registrado el movimiento. En los detalles de cada log, puede visualizar el usuario que realizó el movimiento, la dirección IP, el sistema operativo y un detalle del cambio con un antes y después.
+En esta sección se registran los movimientos y actualizaciones que se realizan en la aplicación de ACS. Los logs permiten tener un control de los cambios y de lo que sucede en la aplicación. 
+En la sección de logs se encuentra un listado de los mismos,con una descripción y la fecha y hora en que fue registrado el movimiento. Un ejemplo de un índice de logs es el siguiente:
+
+![](../assets/images/logs-index.png)
+
+
+En los detalles de cada log, puede visualizar el usuario que realizó el movimiento, la dirección IP, el sistema operativo y un detalle del cambio con un antes y después.
+
+![](../assets/images/logs-detail.png)
+
 
 Para esta funcionabilidad también están disponibles los filtros de búsqueda por rango de fechas y usuario. Además, se pueden eliminar, exportar en un reporte de logs,  visualizar y descargar los reportes de logs creados.
+
+![](../assets/images/logs-actions.png)
+
+### Filtros:
+
+Puede hacer búsquedas de logs registrados. Puede filtrar por rango de fechas y por el correo electrónico del usuario que realizó el cambio o movimiento:
+
+![](../assets/images/logs-filters.png)
+
 
 
 <!-- type: tab-end -->
