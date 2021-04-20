@@ -157,11 +157,6 @@ Además, con el botón *Crear*, puede adicionar nuevos campos con diferentes tip
 
 ![](../assets/images/configuration-fields.png)
 
-
-
-### Gestión de rangos de tarjetas:
-En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico.
-
 ### Gestión de bines:
 Aquí se gestionan los bines del adquiriente. En primer lugar obtendrá un listado de los bines creados anteriormente para el emisor, además puede crear otros bines nuevos, editarlos y eliminarlos.
 
@@ -172,6 +167,45 @@ Al dar clic en el botón *Crear* como ilustra la imagen, tendrá tres opciones p
 - Crear un único BIN para el emisor.
 - Crear un rango de bines para el emisor, el cuál contendrá un valor mínimo y un valor máximo de bines, creando así un grupo de números de tarjetas de crédito a gestionar.
 - Crear importación, para la importación se aceptan los formatos de archivo .csv, .tsv y .txt
+
+
+### Gestión de rangos de tarjetas:
+En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico. Puede ver los detalles de cada rango, editarlos y eliminarlos.
+
+![](../assets/images/card-ranges-index.png)
+
+Al dar clic en el botón *Crear*, se desplegarán dos opciones para crear rangos:
+
+- **Crear un rango de tarjetas,** este permite crear un rango de forma manual, se solicitará el BIN para el rango, el cual debe ser de 8 dígitos, el valor inicial y el final, la franquicia y la clase o tipo de las tarjetas asociadas al rango.
+
+- **Crear importación,** para crear una importación visualizará un formulario similar al siguiente:
+
+![](../assets/images/create-import-ranges.png)
+
+Debe seleccionar la franquicia para la cual se van a cargar los rangos y un archivo de tipo CSV (archivo de valores separados por comas) que contenga la información de los rangos. Un ejemplo del archivo es este:
+
+![](../assets/images/file-import-example.png)
+
+El archivo debe contener cuatro títulos separados por comas en minúscula:
+
+1. **start_range**: Indica el valor inicial para el rango de tarjetas.
+
+2. **end_range**: Indica el valor final para el rango de tarjetas.
+
+3. **class**: Hace referencia a la clase o tipo de tarjeta utilizada, por ejemplo si es Gold, Platinum.
+
+4. **action**: Debe indicar qué acción se debe ejecutar para el rango indicado, las acciones posibles y sus indicadores son los siguientes:
+
+    **I**: Indicador para acción de insertar rango.
+
+    **U**: Indicador para acción de actualizar rango .
+
+    **D**: Indicador para acción de eliminar rango.
+
+
+Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, igualmente separados por comas, sin espacios.
+
+> Para visualizar el formato de un archivo CSV de ejemplo, haga clic en la opción *Descargar* que aparece en el lado izquierdo del formulario.
 
 ### Gestión del control de fraude:
 Estas funcionabilidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de los grupos donde están contenidas, las cuales permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
@@ -254,6 +288,78 @@ Al crear una regla se le define un tipo de acción específica que va a ejecutar
 - **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado).
 
 > La función de ejecutar un grupo de reglas permitirá hacer validaciones no secuenciales entre los diferentes grupos registrados para un emisor.
+
+### Listas de control de fraude:
+
+Las listas de control de fraude
+
+![](../assets/images/fraud-list-index.png)
+
+Para crear una lista de control se direccionará a un formulario como este:
+
+![](../assets/images/create-fraud-list.png)
+
+Se solicitará:
+
+- **Fecha de inicio:**
+- **Fecha de finalización:**
+- **Tipo de lista:** ACS dispone de dos tipos de listas:
+    - PERMISSIVE
+    - RESTRICTIVE
+- **Tipo de valor:**
+- **Valor:**    
+
+<!--
+type: tab
+title: Importes
+-->
+
+# Importes de rangos de tarjetas
+
+En esta sección se pueden visualizar las importaciones de archivos realizadas en ACS, por ejemplo se encuentran los archivos que importan un listado de rangos de tarjetas para un emisor.
+
+En este índice de importes puede visualizar los detalles de cada importe y el estado en el cual se encuentra la importanción.
+
+Los estados posibles son:
+
+- Completado
+- Fallido
+- Pendiente
+
+![](../assets/images/imports-index.png)
+
+
+<!--
+type: tab
+title: Reportes
+-->
+
+# Reportes
+
+Los reportes son archivos que contienen registros de las autenticaciones procesadas por ACS. La siguiente imagen muestra un ejemplo de la vista con el índice de reportes generados. Estos reportes se pueden ver y descargar.
+
+![](../assets/images/report-index.png)
+
+Para crear un nuevo reporte haga clic en el botón *Crear*. 
+Actualmente se manejan dos tipos de reportes:
+
+## Reportes de Autenticaciones
+
+El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. El siguiente es un ejemplo de creación de un reporte de autenticaciones:
+
+![](../assets/images/auth-report.png)
+
+## Reportes de Abandonos 
+
+Con este reporte se generan los datos de las autenticaciones que son abandonadas en el ACS. Para el reporte se puede definir un rango de fechas y el banco emisor. El siguiente es un ejemplo de creación de un reporte de abandonos:
+
+![](../assets/images/abandoned-report.png)
+
+
+## Tipos de archivos generados para los reportes
+- Archivo separado por comas.
+- Archivo separado por tabuladores.
+- Archivo de Excel
 
 
 <!--
@@ -379,46 +485,38 @@ Haga clic allí, lo llevará a la siguiente vista, donde debe pegar su certifica
 
 <!--
 type: tab
-title: Importes
+title: Roles
 -->
 
-# Importes de rangos de tarjetas
+# Roles
 
-En esta sección se puede visualizar el listado de rangos de tarjetas importados para cada emisor.
+Aquí se gestionan los roles de usuario de la aplicación. Inicialmente se tiene una vista con la lista de roles creados, los cuales se pueden ver, editar y eliminar. Ademáss se pueden crear nuevos roles diligenciando un nombre y opcionalmente una descripción para el mismo.
 
+![](../assets/images/roles-index.png)
 
-<!--
-type: tab
-title: Reportes
--->
+### Asignación de permisos:
 
-# Reportes
+Al dar clic en la opción *Ver* de un rol, se presentarán los detalles del rol seleccionado y en la parte inferior de la pantalla encontrará un menú como el siguiente:
 
-Los reportes son archivos que contienen registros de las autenticaciones procesadas por ACS. La siguiente imagen muestra un ejemplo de la vista con el índice de reportes generados. Estos reportes se pueden ver y descargar.
+![](../assets/images/permissions.png)
 
-![](../assets/images/report-index.png)
-
-Para crear un nuevo reporte haga clic en el botón *Crear*. 
-Actualmente se manejan dos tipos de reportes:
-
-## Reportes de Autenticaciones
-
-El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. El siguiente es un ejemplo de creación de un reporte de autenticaciones:
-
-![](../assets/images/auth-report.png)
-
-## Reportes de Abandonos 
-
-Con este reporte se generan los datos de las autenticaciones que son abandonadas en el ACS. Para el reporte se puede definir un rango de fechas y el banco emisor. El siguiente es un ejemplo de creación de un reporte de abandonos:
-
-![](../assets/images/abandoned-report.png)
+Aquí puede buscar permisos referentes a diversas funcionabilidades de ACS, seleccionarlos, denegarlos y concederlos. Estos permisos determinan a qué funcionabilidades y acciones tiene acceso el rol específico.
 
 
-## Tipos de archivos generados para los reportes
-- Archivo separado por comas.
-- Archivo separado por tabuladores.
-- Archivo de Excel
+# Perfiles
 
+Los roles se asocian con los perfiles. El siguiente es un ejemplo de un índice de perfiles, en el cual puede ver, editar, habilitar o deshabilitar un perfil, haciendo clic en el menú lateral derecho. 
+
+![](../assets/images/profiles-index.png)
+
+Para crear un nuevo perfil se solicitará:
+
+- Nombre para el perfil.
+- Descripción (opcional).
+- Rol, debe seleccionar el rol que se asociará al perfil.
+- Compartido, puede habilitar o deshabilitar esta opción.
+
+![](../assets/images/profile-create.png)
 
 <!--
 type: tab
