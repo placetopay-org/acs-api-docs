@@ -41,11 +41,43 @@ Aquí además de los dos filtros básicos, se pueden agregar más datos de búsq
 - Estado de la transacción
 
 
-## Detalle de la transacción:
+## Detalle de la autenticación:
 
-En el detalle de la transacción, el cual se puede visualizar dando clic en el botón *Ver* de una transacción, se encuentra información esencial del proceso de autenticación, como el estado de la autenticación, la información básica de la transacción, la información del tarjetahabiente, del comercio, la ubicación en el mapa de dónde se generó la transacción, los datos de entrega y una línea de tiempo con los detalles de todo el proceso de autenticación y de la información captada por cada uno de los mensajes presentes en el proceso y correspondientes al protocolo 3-D Secure.
+En el detalle de la autenticación, el cual se puede visualizar dando clic en el botón *Ver* de una autenticación, se encuentra información esencial del proceso de autenticación, como el estado de la autenticación, la información básica de la transacción, la información del tarjetahabiente, del comercio, los datos de entrega y una línea de tiempo con los detalles de todo el proceso de autenticación y de la información captada por cada uno de los mensajes presentes en el proceso y correspondientes al protocolo 3-D Secure.
 
 ![](../assets/images/auth-details.png)
+
+### Calificación:
+
+Algunas autenticaciones cuentan con calificaciones que permiten darle un puntaje de seguridad. Este puntaje determina el nivel de riesgo de la transacción, teniendo en cuenta el historial de transacciones que poseen características similares.
+
+![](../assets/images/scores.png)
+
+### Información de entrega:
+
+Aquí se visualiza la información relacionada con la ubicación en la cual se va a entregar el bien o servicio adquirido con la transacción. También, se puede visualizar un mapa con la ubicación.
+
+![](../assets/images/delivery-data.png)
+
+### Disputas:
+
+Las disputas son reclamaciones que realiza el cliente registrado con una autenticación en ACS, en la cual puede existir un caso de fraude. 
+
+Para crear una disputa, al inicio de la vista del detalle de la autenticación, haga clic en el botón *Generar nueva disputa*, posterior a esto se agregará a la autenticación un caso de disputa abierta, el detalle de la disputa se puede visualizar en el detalle de la autenticación:
+
+![](../assets/images/dispute.png)
+
+En el detalle se puede desplegar el historial de la disputa con su respectivo estado. También, haciendo clic en el botón *Anular*, se despliega una ventana para que ingrese el motivo de la anulación de la disputa. Por el contrario, al dar clic en el botón *Resolver*, se presentará un formulario como el siguiente, en el cual debe registrar los motivos para la resolución de la disputa.
+
+![](../assets/images/resolve-dispute.png)
+
+Diligencie el formulario teniendo en cuenta los siguientes datos:
+
+- **Agente responsable:** Hace referencia al agente responsable de la causa que originó la disputa.
+
+- **Resultado de disputa:** Este resultado se basa en la respuesta que ofrecen las instituciones encargadas de evaluar la disputa. Si el resultado dado no registra en la lista de opciones, debe elegir la opción *Otro* y describir el resultado al que se refiere.
+
+- **Acción:** Aquí se debe seleccionar el agente que se va a hacer cargo de los resultados de la disputa.
 
 ### Traza de la autenticación:
 
@@ -58,6 +90,27 @@ Este es un ejemplo de una traza de una autenticación exitosa:
 Además, cada paso tiene la opción *Ver más*, la cual muestra la estructura de la petición o la respuesta con sus respectivos datos. Un ejemplo de este detalle es el siguiente:
 
 ![](../assets/images/trace-detail.png)
+
+<!--
+type: tab
+title: Disputas
+-->
+
+# Disputas
+
+En esta sección se registran y listan las disputas que se procesaron para deversas autenticaciones. Aquí se pueden visualizar los detalles y descargar las disputas como un PDF.
+
+![](../assets/images/disputes-index.png)
+
+### Reporte de disputas:
+
+El archivo PDF generado para una disputa contiene el estado y el historial de la disputa, información básica de esta, información del tarjetahabiente, las trazas o pasos de la autenticación con sus respectivas peticiones y respuestas.
+
+### Filtros:
+
+Este módulo contiene también filtros que permitirán hacer búsquedas de disputas específicas, filtrando por agentes, acciones, identificadores de transacción, entre otros.
+
+![](../assets/images/disputes-filters.png)
 
 
 <!--
@@ -106,7 +159,9 @@ Esta métrica muestra en una gráfica el monto de las transacciones procesadas p
 
 ## Métricas por estado de transacción
 
-Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
+Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación. Un ejemplo de métrica se presenta a continuación:
+
+![](../assets/images/metric.png)
 
 <!--
 type: tab
@@ -218,9 +273,39 @@ title: Motor Antifraude
 
 # Motor de Control de Fraude
 
-La principal funcionabilidad de ACS es el motor de control antifraude, este permite validar la información que se recibe en la petición de autenticación, a través de un conjunto de reglas que se procesan mediante grupos específicos creados para validar las autenticaciones de cada emisor registrado.
+La principal funcionabilidad de ACS es el motor de control antifraude, este permite validar la información que se recibe en la petición de autenticación, a través de un conjunto de reglas que validan las autenticaciones de cada emisor registrado.
 
 Esta funcionabilidad se gestiona desde la sección de Emisores de la aplicación.
+
+### Listas de control de fraude:
+
+Las listas de control de fraude son el primer filtro que puede validar una autenticación. Estas listas son temporales y se dividen en dos clases:
+
+- **Permisivas:** Estas listas van a crear un filtro que va a permitir que las autenticaciones que cumplan con los valores registrados en estas, puedan eximirse de la ejecución de los grupos de reglas y continúe con el proceso de autenticación.
+
+- **Restrictivas:** Por el contrario, este tipo de listas, al evaluar que los datos de la autenticación coinciden con los datos de la lista, enviará las autenticaciones directamente a evaluar los grupos de reglas.
+
+> Las listas de control antifraude se ejecutan antes de los grupos de control antifraude y según los resultados que obtenga de sus validaciones, puede evitar que una autenticación tenga que pasar por las validaciones de los grupos de reglas.
+
+![](../assets/images/fraud-list-index.png)
+
+Para crear una lista de control se direccionará a un formulario como este:
+
+![](../assets/images/create-fraud-list.png)
+
+Se solicitará:
+
+- **Fecha de inicio:** Fecha en la que se va a iniciar la validación de la lista de reglas.
+
+- **Fecha de finalización:** Fecha en la que se va a finalizar la validación de la lista de reglas.
+
+- **Tipo de lista:** ACS dispone de dos tipos de listas:
+    - PERMISSIVE
+    - RESTRICTIVE
+
+- **Tipo de valor:** Aquí se selecciona el parámetro por el cual se van a hacer los filtros de las autenticaciones. 
+
+- **Valor:** Corresponde al valor del tipo de parámetro seleccionado en el campo anterior. Con este valor se procede a hacer las validaciones y a verificar la coincidencia del dato con los recibidos en la autenticación.
 
 ### Grupos de control antifraude:
 
@@ -288,26 +373,6 @@ Al crear una regla se le define un tipo de acción específica que va a ejecutar
 - **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado).
 
 > La función de ejecutar un grupo de reglas permitirá hacer validaciones no secuenciales entre los diferentes grupos registrados para un emisor.
-
-### Listas de control de fraude:
-
-Las listas de control de fraude
-
-![](../assets/images/fraud-list-index.png)
-
-Para crear una lista de control se direccionará a un formulario como este:
-
-![](../assets/images/create-fraud-list.png)
-
-Se solicitará:
-
-- **Fecha de inicio:**
-- **Fecha de finalización:**
-- **Tipo de lista:** ACS dispone de dos tipos de listas:
-    - PERMISSIVE
-    - RESTRICTIVE
-- **Tipo de valor:**
-- **Valor:**    
 
 <!--
 type: tab
@@ -393,6 +458,53 @@ En la siguientes imagen se puede visualizar un ejemplo de creación de franquici
 
 ![](../assets/images/create-franchise.png)
 
+<!--
+type: tab
+title: Invitaciones
+-->
+
+# Invitaciones de usuarios
+
+En este módulo se gestionan las invitaciones que realiza un usuario registrado en ACS a otro usuario que desea utilizar la aplicación.
+
+Es a través de una invitación que se pueden crear nuevos usuarios, esta se envía a un correo y allí redirecciona al usuario al inicio de sesión gestionado por la aplicación de Accounts, creada en PlacetoPay, en esta redirección el usuario podrá registrarse y acceder.
+
+> Los datos que registre deben ser los mismos que se utilizaron para enviar la invitación.
+
+Para crear una invitación, haga clic en el botón *Crear* del módulo de invitaciones, visualizará un formulario como el siguiente:
+
+![](../assets/images/create-invitation.png)
+
+Datos a diligenciar:
+
+- **Nombre:** Corresponde al nombre que va a identificar al nuevo usuario.
+
+- **Correo electrónico:** Debe ser un correo válido porque allí es dónde se enviará la invitación.
+
+- **Perfil:** Seleccione el perfil que desea otorgarle al nuevo usuario.
+
+<!--
+type: tab
+title: Monedas
+-->
+
+# Monedas utilizadas en ACS
+
+En esta sección se visualizan las monedas creadas para utilizarse en ACS, pueden visualizarse los detalles, editar,habilitar o deshabilitar según las necesidades y requerimientos del cliente.
+
+Para crear una nueva moneda, debe diligenciar un formulario similar al siguiente:
+
+![](../assets/images/create-currency.png)
+
+Datos a diligenciar:
+
+- **Nombre:** Nombre por el cual se reconoce a la divisa que va a crear.
+
+- **Código alfabético:** Para este campo debe buscar el código alfabético correspondiente a la moneda que va a crear. El código debe ser el establecido por el estándar internacional ISO. Este contiene tres carácteres.
+
+- **Código numérico:** Para este campo debe buscar el código numérico correspondiente a la moneda que va a crear. El código debe ser el establecido por el estándar internacional ISO y consta de tres dígitos.
+
+- **Unidad menor:** Ingrese un número que indique la menor denominación o el menor valor que puede tener la moneda que está creando.
 
 <!--
 type: tab
@@ -490,7 +602,7 @@ title: Roles
 
 # Roles
 
-Aquí se gestionan los roles de usuario de la aplicación. Inicialmente se tiene una vista con la lista de roles creados, los cuales se pueden ver, editar y eliminar. Ademáss se pueden crear nuevos roles diligenciando un nombre y opcionalmente una descripción para el mismo.
+Aquí se gestionan los roles de usuario de la aplicación. Inicialmente se tiene una vista con la lista de roles creados, los cuales se pueden ver, editar y eliminar. Además, se pueden crear nuevos roles diligenciando un nombre y opcionalmente una descripción para el mismo.
 
 ![](../assets/images/roles-index.png)
 
@@ -500,8 +612,16 @@ Al dar clic en la opción *Ver* de un rol, se presentarán los detalles del rol 
 
 ![](../assets/images/permissions.png)
 
-Aquí puede buscar permisos referentes a diversas funcionabilidades de ACS, seleccionarlos, denegarlos y concederlos. Estos permisos determinan a qué funcionabilidades y acciones tiene acceso el rol específico.
+Aquí puede buscar permisos referentes a diversas funcionabilidades de ACS, seleccionarlos, denegarlos y concederlos. Estos permisos determinan las funcionabilidades y acciones a las cuales tiene acceso el rol.
 
+### Roles ancestros:
+
+Aquí registran los roles que están utilizando el rol actual. Esto puede darse cuando se le concede un rol a otro rol en el menú de *Permisos*.
+
+<!--
+type: tab
+title: Perfiles
+-->
 
 # Perfiles
 
@@ -514,9 +634,41 @@ Para crear un nuevo perfil se solicitará:
 - Nombre para el perfil.
 - Descripción (opcional).
 - Rol, debe seleccionar el rol que se asociará al perfil.
-- Compartido, puede habilitar o deshabilitar esta opción.
+- Compartido, puede habilitar o deshabilitar esta opción. Un perfil compartido se da cuando el perfil está siendo utilizado por otros roles.
 
 ![](../assets/images/profile-create.png)
+
+### ACL:
+
+El ACL (Access Control List), es un módulo de gestión de permisos y reglas desarrollado en PlacetoPay y utilizado por ACS. Este se encarga de gestionar los permisos y accesos de los diferentes roles y perfiles creados en ACS. 
+
+Estos permisos y reglas de acceso, se diferencian de los permisos básicos registrados en los roles, en que estos son más específicos y ofrecen una capa de seguridad extra a los datos manejados en la aplicación, ya que estos permisos permiten que se visualice la información que corresponde solo a un cliente en específico y que no se filtre otra información que pertenece a otros clientes u organizaciones.
+
+La lista de reglas se puede visualizar en el detalle de un perfil, en una vista similar a la siguiente:
+
+![](../assets/images/acl-list.png)
+
+### Crear reglas ACL:
+
+Para crear una regla ACL, haga clic en el botón *Crear*, se presentará un formulario como el siguiente:
+
+![](../assets/images/acl-create.png)
+
+#### Información general:
+
+Las reglas tienen dos opciones disponibles:
+- Permitir accesos
+- Denegar accesos
+
+En el campo entidad, debe seleccionar el la entidad que gestional el módulo al cual quiere aplicarle las condiciones que va a crear.
+
+#### Condicionales:
+
+- Atributo: Seleccione el campo correspondiente a la entidad seleccionada previamente y al cual desea validar.
+
+- Operador: Permite hacer las comparaciones de los datos.
+
+- Valor: Ingrese uno o varios valores que debería contener el atributo seleccionado.
 
 <!--
 type: tab
