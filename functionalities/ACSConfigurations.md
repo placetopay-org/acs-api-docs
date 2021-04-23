@@ -320,6 +320,25 @@ Datos a diligenciar:
 
 <!--
 type: tab
+title: Usuarios
+-->
+
+# Listado de usuarios
+
+En este módulo se puede visualizar el listado de usuarios con acceso a ACS. El listado contiene el nombre y el correo electrónico asociado al usuario.
+
+> Es importante recordar que los usuarios se crean a través del módulo invitaciones y solo aparece en este módulo, cuando haya aceptado la invitación para unirse a ACS, creado el usuario y haya iniciado sesión sin conflicto alguno.
+
+El siguiente es un ejemplo de una vista del módulo usuarios.
+
+![](../assets/images/users-index.png)
+
+<!-- theme: warning -->
+
+> Los usuarios no se pueden eliminar ni editar.
+
+<!--
+type: tab
 title: Monedas
 -->
 
@@ -340,6 +359,34 @@ Datos a diligenciar:
 - **Código numérico:** Para este campo debe buscar el código numérico correspondiente a la moneda que va a crear. El código debe ser el establecido por el estándar internacional ISO y consta de tres dígitos.
 
 - **Unidad menor:** Ingrese un número que indique la menor denominación o el menor valor que puede tener la moneda que está creando.
+
+<!--
+type: tab
+title: Códigos del comercio
+-->
+
+# Códigos de categoría del comercio
+
+En este módulo se encuentran registrados todos los códigos relacionados con las categorías de los comercios a los cuales ACS les procesa autenticaciones. Este módulo se pone a disposición del cliente a modo informativo y aclaratorio, ya que las autenticaciones en la recepción del mensaje *AReq* procesa un campo llamado *mcc* (Merchant Category Code), el cual contiene el código de categoría del comercio, un valor numérico de 4 dígitos que por sí mismo no es muy claro, así que este listado de códigos va a facilitar la aclaración del tipo de comercio y la descripción a la cual hace referencia el código.
+
+![](../assets/images/merchant-codes-index.png)
+
+La anterior imagen muestra un ejemplo de la vista del módulo, las funcionabilidades que están disponibles son:
+
+- **Búsqueda de códigos:** Mediante el recuadro de búsqueda ubicado en la parte superior izquierda de la pantalla, podrá buscar un código específico, puede buscar con un fragmento del código, el código completo o un fragmento de la descripción del código.
+
+- **Edición y Eliminación:** En el menú ubicado al final de cada código se despliega una lista con los botones de editar y eliminar el código. Esta funcionabilidad se utiliza según los requerimientos del cliente.
+
+- **Creación de un nuevo código:** Para crear un nuevo código, haga clic en el botón *Crear* ubicado en la parte lateral derecha de la pantalla. Se presentará un formulario como el siguiente:
+
+![](../assets/images/merchant-code-create.png)
+
+Diligencie teniendo en cuenta lo siguiente:
+
+- **Código:** Ingrese un valor numérico de 4 dígitos que esté incluído en el listado en el ISO 18245, el cual es una normatividad encargada de la asignación de códigos de categoría de comerciantes para utilizarse en servicios financieros.
+
+- **Descripción:** Se presentan dos campos, en el que contiene el prefijo *en*, ingrese la descripción en inglés para el código a crear, y en el campo con prefijo *es*, ingrese la misma descripción en español.
+
 
 <!--
 type: tab

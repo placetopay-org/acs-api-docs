@@ -81,23 +81,33 @@ title: Logs
 # Logs de Seguridad
 
 En esta sección se registran los movimientos y actualizaciones que se realizan en la aplicación de ACS. Los logs permiten tener un control de los cambios y de lo que sucede en la aplicación. 
-En la sección de logs se encuentra un listado de los mismos,con una descripción y la fecha y hora en que fue registrado el movimiento. Un ejemplo de un índice de logs es el siguiente:
+En la sección de logs se encuentra un listado de los mismos, con una descripción, la fecha y hora en que fue registrado el movimiento. 
+
+Un ejemplo de un índice de logs es el siguiente:
 
 ![](../assets/images/logs-index.png)
 
+### Acciones:
 
-En los detalles de cada log, puede visualizar el usuario que realizó el movimiento, la dirección IP, el sistema operativo y un detalle del cambio con un antes y después.
+Para visualizar las acciones disponibles para el listado de los logs, haga clic en el menú ubicado en la parte superior lateral derecha y se desplegarán las siguientes acciones:
 
-![](../assets/images/logs-detail.png)
+- **Eliminar:** Esta opción eliminará toda la lista de logs registrados. 
 
+- **Reportes:** Redirecciona al listado de reportes de logs que se han exportado.
 
-Para esta funcionabilidad también están disponibles los filtros de búsqueda por rango de fechas y usuario. Además, se pueden eliminar, exportar en un reporte de logs,  visualizar y descargar los reportes de logs creados.
+- **Exportar:** Exportará un documento en el cual registran todos los logs listados.
 
 ![](../assets/images/logs-actions.png)
 
+### Detalles de un log:
+
+Puede visualizar los detalles de cada log haciendo clic en el botón *Ver*, ubicado al final de cada registro. Allí puede visualizar el usuario que realizó el movimiento, la dirección IP, el sistema operativo y un detalle del cambio con un antes y después.
+
+![](../assets/images/logs-detail.png)
+
 ### Filtros:
 
-Puede hacer búsquedas de logs registrados. Puede filtrar por rango de fechas y por el correo electrónico del usuario que realizó el cambio o movimiento:
+Para hacer búsquedas de los logs registrados utilice la sección de filtros. Haga clic en el botón *Filtros*, ubicado en la parte lateral izquierda, se desplegará un módulo para filtrar por rango de fechas y por el correo electrónico del usuario que realizó el cambio o movimiento:
 
 ![](../assets/images/logs-filters.png)
 

@@ -59,7 +59,7 @@ Aquí se visualiza la información relacionada con la ubicación en la cual se v
 
 ![](../assets/images/delivery-data.png)
 
-### Disputas:
+### Gestión de disputas:
 
 Las disputas son reclamaciones que realiza el cliente registrado con una autenticación en ACS, en la cual puede existir un caso de fraude. 
 
@@ -98,7 +98,11 @@ title: Disputas
 
 # Disputas
 
-En esta sección se registran y listan las disputas que se procesaron para deversas autenticaciones. Aquí se pueden visualizar los detalles y descargar las disputas como un PDF.
+Como se menciona en el módulo de Autenticaciones, las disputas son reclamaciones que realiza un cliente por un posible caso de fraude en una transacción.
+
+En esta sección se registran y listan las disputas que se procesaron para diversas autenticaciones. 
+
+Aquí se pueden visualizar los detalles y descargar las disputas como un PDF.
 
 ![](../assets/images/disputes-index.png)
 
@@ -108,7 +112,7 @@ El archivo PDF generado para una disputa contiene el estado y el historial de la
 
 ### Filtros:
 
-Este módulo contiene también filtros que permitirán hacer búsquedas de disputas específicas, filtrando por agentes, acciones, identificadores de transacción, entre otros.
+Este módulo contiene también filtros que permitirán hacer búsquedas de disputas específicas, filtrando por agentes responsables de las disputas, acciones, identificadores de transacción, entre otros.
 
 ![](../assets/images/disputes-filters.png)
 
@@ -134,11 +138,13 @@ title: Métricas
 
 # Métricas
 
-Las métricas son estadísticas que reportan el comportamiento de la aplicación. En ACS se cuenta actualmente con los siguientes dos tipos de métricas:
+Las métricas son estadísticas que reportan el comportamiento de la aplicación conforme al flujo de transacciones procesadas.
 
 ## Filtros:
 
-Para mostrar en la gráfica de la métrica los datos específicos que se requieran, se debe hacer un filtro de las autenticaciones. Para el filtro se pueden agregar los siguientes datos:
+Para mostrar en la gráfica de la métrica los datos específicos que se requieran, se debe hacer un filtro de las autenticaciones. Para acceder a los filtros haga clic en el botón *Filtrar*, ubicado en la parte superior lateral izquierda.
+
+Para filtrar las transacciones se requieren los siguientes datos:
 
 - Rango de fecha, seleccione una fecha inicial y una posterior en el calendario. Luego de clic en el botón negro para guardar el rango.
 
@@ -152,6 +158,8 @@ Para mostrar en la gráfica de la métrica los datos específicos que se requier
 ![](../assets/images/filter-metrics.png)
 
 
+ACS cuenta actualmente con los siguientes dos tipos de métricas:
+
 ## Métricas por monto de transacción
 
 Esta métrica muestra en una gráfica el monto de las transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
@@ -159,10 +167,15 @@ Esta métrica muestra en una gráfica el monto de las transacciones procesadas p
 
 ## Métricas por estado de transacción
 
-Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación. Un ejemplo de métrica se presenta a continuación:
+Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación. 
+
+Un ejemplo de métrica por estado de transacción, se presenta a continuación:
 
 ![](../assets/images/metric.png)
 
+En la parte inferior puede visualizarse el rango de fecha con el cual se obtuvo la métrica y la cantidad de transacciones que cumplieron con los filtros.
+
+> Para generar nuevas métricas, haga clic en el botón *Limpiar filtros* y genera un nuevo rango de fechas, moneda y emisor.
 
 <!-- type: tab-end -->
 
