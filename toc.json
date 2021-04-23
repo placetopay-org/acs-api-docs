@@ -42,17 +42,17 @@
         {
           "type": "item",
           "title": "Funcionalidades",
-          "uri": "docs/functionalities/ACSFunctionalities.md"
+          "uri": "docs/ACSFunctionalities.md"
         },
         {
           "type": "item",
           "title": "Configuración",
-          "uri": "docs/functionalities/ACSConfigurations.md"
+          "uri": "docs/ACSConfigurations.md"
         },
         {
           "type": "item",
           "title": "Seguridad",
-          "uri": "docs/functionalities/ACSSecurity.md"
+          "uri": "docs/ACSSecurity.md"
         }
       ]
     },
