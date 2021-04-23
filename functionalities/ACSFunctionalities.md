@@ -13,7 +13,7 @@ En este módulo se registra la información de todas las autenticaciones procesa
 
 Para buscar un listado o una transacción en específico puede utilizar los filtros. ACS cuenta con dos tipos de filtros para las autenticaciones, uno básico y otro avanzado para hacer consultas más rigurosas.
 
-Para acceder a la funcionabilidad, dé clic en el botón *Filtrar* ubicado en la parte lateral superior izquierda de la vista:
+Para acceder a la funcionalidad, dé clic en el botón *Filtrar* ubicado en la parte lateral superior izquierda de la vista:
 
 #### Filtros básicos:
 

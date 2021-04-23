@@ -15,7 +15,7 @@ Al dar clic en la opción *Ver* de un rol, se presentarán los detalles del rol 
 
 ![](../assets/images/permissions.png)
 
-Aquí puede buscar permisos referentes a diversas funcionabilidades de ACS, seleccionarlos, denegarlos y concederlos. Estos permisos determinan las funcionabilidades y acciones a las cuales tiene acceso el rol.
+Aquí puede buscar permisos referentes a diversas funcionalidades de ACS, seleccionarlos, denegarlos y concederlos. Estos permisos determinan las funcionalidades y acciones a las cuales tiene acceso el rol.
 
 ### Roles ancestros:
 

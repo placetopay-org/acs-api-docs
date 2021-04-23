@@ -5,7 +5,7 @@ title: Emisores
 
 # Emisores
 
-En la sección de emisores se encuentran diferentes funcionabilidades relacionadas con los emisores, siendo estos las instituciones financieras que se encargan de emitir tarjetas de pago y servicios relacionados con estas tarjetas.
+En la sección de emisores se encuentran diferentes funcionalidades relacionadas con los emisores, siendo estos las instituciones financieras que se encargan de emitir tarjetas de pago y servicios relacionados con estas tarjetas.
 
 En la siguiente imagen se visualiza un ejemplo de la vista de *Detalles del emisor*, además se puede editar y habilitar o deshabilitar con el menú lateral derecho.
 
@@ -98,7 +98,7 @@ Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, i
 > Para visualizar el formato de un archivo CSV de ejemplo, haga clic en la opción *Descargar* que aparece en el lado izquierdo del formulario.
 
 ### Gestión del control de fraude:
-Estas funcionabilidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de los grupos donde están contenidas, las cuales permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
+Estas funcionalidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de los grupos donde están contenidas, las cuales permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
 
 
 <!--
@@ -108,9 +108,9 @@ title: Motor Antifraude
 
 # Motor de Control de Fraude
 
-La principal funcionabilidad de ACS es el motor de control antifraude, este permite validar la información que se recibe en la petición de autenticación, a través de un conjunto de reglas que validan las autenticaciones de cada emisor registrado.
+La principal funcionalidad de ACS es el motor de control antifraude, este permite validar la información que se recibe en la petición de autenticación, a través de un conjunto de reglas que validan las autenticaciones de cada emisor registrado.
 
-Esta funcionabilidad se gestiona desde la sección de Emisores de la aplicación.
+Esta funcionalidad se gestiona desde la sección de Emisores de la aplicación.
 
 ### Listas de control de fraude:
 
@@ -371,11 +371,11 @@ En este módulo se encuentran registrados todos los códigos relacionados con la
 
 ![](../assets/images/merchant-codes-index.png)
 
-La anterior imagen muestra un ejemplo de la vista del módulo, las funcionabilidades que están disponibles son:
+La anterior imagen muestra un ejemplo de la vista del módulo, las funcionalidades que están disponibles son:
 
 - **Búsqueda de códigos:** Mediante el recuadro de búsqueda ubicado en la parte superior izquierda de la pantalla, podrá buscar un código específico, puede buscar con un fragmento del código, el código completo o un fragmento de la descripción del código.
 
-- **Edición y Eliminación:** En el menú ubicado al final de cada código se despliega una lista con los botones de editar y eliminar el código. Esta funcionabilidad se utiliza según los requerimientos del cliente.
+- **Edición y Eliminación:** En el menú ubicado al final de cada código se despliega una lista con los botones de editar y eliminar el código. Esta funcionalidad se utiliza según los requerimientos del cliente.
 
 - **Creación de un nuevo código:** Para crear un nuevo código, haga clic en el botón *Crear* ubicado en la parte lateral derecha de la pantalla. Se presentará un formulario como el siguiente:
 
