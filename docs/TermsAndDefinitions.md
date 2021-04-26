@@ -56,3 +56,9 @@ Indica el canal a través del cual la transacción es autorizada. Los canales so
   - App-based (01-APP)
   - Browser-based (02-BRW)
   - 3DS Requestor Initiated (03-3RI)
+
+- **Dominio emisor:** Esta compuesto por los sistemas y funciones del emisor y sus cardholders.
+
+- **Dominio adquiriente:** Esta compuesto por los sistemas y funciones del 3DS Requestor Environment.
+
+- **Dominio interoperabilidad:** El componente de 3DS que facilita la transferencia de información entre el dominio emisor y los sistemas del dominio adquirente.
