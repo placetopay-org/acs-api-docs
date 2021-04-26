@@ -402,11 +402,11 @@ La siguiente imagen muestra un ejemplo de la vista de un índice de certificados
 
 ![](../assets/images/certificates-index.png)
 
-Los certificados se pueden editar y visualizar los detalles del mismo. 
+Los certificados se pueden editar y visualizar los detalles del mismo, haciendo clic en el menú con tres puntos ubicado en la parte lateral derecha de cada certificado.
 
 ## Creación de un certificado:
 
-Para crear un nuevo certificado haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
+Para crear un nuevo certificado en ACS, haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
 
 #### 1. Creación de la llave privada:
 
@@ -446,10 +446,13 @@ Para crear un nuevo certificado haga clic en el botón *Crear*. La solicitud o c
 
 Aquí se registran los datos de información general sobre el solicitante de la llave:
 
-- Ubicación.
-- Organización.
-- Nombre, debe ser un dominio.
-- Correo electrónico.
+- **País:** Seleccione el país donde se crea el certificado de la lista desplegable.
+- **Estado:** Ingrese el nombre del estado del país en el cual está ubicado.
+- **Localidad:** Ingrese el nombre de la ciudad en el cual está ubicado.
+- **Nombre de la organización:** Ingrese el nombre de la organización para la cual se crea el certificado.
+- **Nombre de la unidad organizacional:** Ingrese el nombre del área de la organización para la cual se genera el certificado.
+- **Nombre común:** Ingrese un nombre de dominio válido, siendo este el título o nombre de la página web de la organización.
+- **Correo electrónico:** Ingrese la dirección de correo electrónico del solicitante del certificado.
 
 
 #### 3. Información de rastreo:
@@ -461,21 +464,30 @@ Permite la identificación a partir de un slug, el cual forma parte de la URL qu
 
 ## Registro y firma del certificado:
 
-Una vez creado el certificado, le mostrará los datos que diligenció en el formulario. Además, de eso creará una solicitud de firma de certificado, como la siguiente:
+Una vez creado el certificado, le mostrará los datos que diligenció en el formulario.
+
+Un ejemplo es el siguiente:
+
+![](../assets/images/certificate-detail.png)
+
+#### ¿Cómo firmar el certificado?
+
+1. Debe copiar este bloque, correspondiente a la solicitud de firma del certificado. Copie el bloque incluyendo las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
 
 ![](../assets/images/signature-certificate-request.png)
 
-Debe copiar este bloque incluidas las etiquetas de BEGIN y END CERTIFICATE REQUEST. Con esta información debe proceder a crear su llave privada y a firmar el certificado.
+2. Cree su llave privada y firme el certificado con el bloque de texto que copió.
 
-Una vez tenga su certificado firmado, obtendrá otro bloque similar al de la imagen, debe copiarlo incluyendo también las etiquetas de BEGIN y END CERTIFICATE REQUEST.
+3. Al finalizar el proceso de creación de llaves y firma del certificado, obtendrá un bloque de texto similar al primero que copió. Copie este bloque, incluyendo también las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
 
-Luego, en el detalle del certificado, al final encontrará la opción de registrar su certificado:
+4. En el detalle del certificado, al final encontrará la opción de registrar su certificado, haga clic en el enlace con el nombre *Aquí!*.
 
 ![](../assets/images/request.png)
 
-Haga clic allí, lo llevará a la siguiente vista, donde debe pegar su certificado en el campo *Certificado*, así:
+5. Esto lo direccionará a la siguiente vista, donde debe pegar el segundo bloque de texto que copió, el cual corresponde a su certificado, en el campo *Certificado*, así:
 
 ![](../assets/images/register-certificate.png)
 
+6. Haga clic en guardar y con esto obtiene un certificado firmado válido para asegurar la transferencia de información con ACS.
 
 <!-- type: tab-end -->

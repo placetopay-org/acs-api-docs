@@ -5,21 +5,40 @@ title: Roles
 
 # Roles
 
-Aquí se gestionan los roles de usuario de la aplicación. Inicialmente se tiene una vista con la lista de roles creados, los cuales se pueden ver, editar y eliminar. Además, se pueden crear nuevos roles diligenciando un nombre y opcionalmente una descripción para el mismo.
+Para acceder a este módulo y a los demás comprendidos en la categoria seguridad, dírijase al menú ubicado en la parte lateral izquierda, y despliegue la opción de *Seguridad*.
+
+![](../assets/images/security-menu.png)
+
+En este módulo se gestionan los roles de usuario de la aplicación. Inicialmente se tiene una vista con la lista de roles creados, los cuales se pueden ver, editar y eliminar haciendo clic en las opciones del menú desplegable ubicado en la parte lateral derecha. 
 
 ![](../assets/images/roles-index.png)
 
-### Asignación de permisos:
+### Crear nuevo rol:
+
+Además, se pueden crear nuevos roles mediante el botón *Crear*, ubicado en la parte lateral derecha. Se debe diligenciar un nombre y opcionalmente una descripción para el mismo.
+
+![](../assets/images/create-role.png)
+
+En la parte inferior de los detalles de un rol se puede visualizar una sección con tres pestañas que direccionan a tres funcionalidades diferentes:
+
+### 1. Permisos:
 
 Al dar clic en la opción *Ver* de un rol, se presentarán los detalles del rol seleccionado y en la parte inferior de la pantalla encontrará un menú como el siguiente:
 
 ![](../assets/images/permissions.png)
 
-Aquí puede buscar permisos referentes a diversas funcionalidades de ACS, seleccionarlos, denegarlos y concederlos. Estos permisos determinan las funcionalidades y acciones a las cuales tiene acceso el rol.
+Aquí se pueden buscar permisos referentes a diversas funcionalidades de ACS, seleccionarlos, denegarlos y concederlos. Estos permisos determinan las funcionalidades y acciones a las cuales tiene acceso el rol.
+Además, se pueden conceder y denegar otros roles al actual.
 
-### Roles ancestros:
+### 2. Roles ancestros:
 
-Aquí registran los roles que están utilizando el rol actual. Esto puede darse cuando se le concede un rol a otro rol en el menú de *Permisos*.
+Aquí registran los roles que están utilizando el rol actual. Esto puede darse cuando se le concede un rol a otro rol en el menú de *Permisos*. 
+
+> Al crear roles hijos, se permite extender funcionalidades y permisos de un rol padre sin necesidad de volver a asignar una lista de permisos.
+
+### 3. Usado por:
+
+En esta sección se listan los usuarios que usan el rol que seleccionó.
 
 <!--
 type: tab
@@ -28,9 +47,30 @@ title: Perfiles
 
 # Perfiles
 
-Los roles se asocian con los perfiles. El siguiente es un ejemplo de un índice de perfiles, en el cual puede ver, editar, habilitar o deshabilitar un perfil, haciendo clic en el menú lateral derecho. 
+Los roles se asocian con los perfiles. El siguiente es un ejemplo de un índice de perfiles.
+
+Para acceder a este módulo, el usuario con los permisos necesarios para crear los perfiles, ingresa a través del menú despegable ubicado en la izquierda del panel, en la pestaña de seguridad.
+
+Al ingresar al módulo, la plataforma muestra una tabla con los campos del nombre, descripción, rol y fechas de creación y actualización del perfil.
 
 ![](../assets/images/profiles-index.png)
+
+Cada perfil cuenta con unas opciones para ser gestionado como son la opción de ver, editar o deshabilitar.
+
+![](../assets/images/options-profile.png)
+
+- **Opción *Ver*:** Permite visualizar una información más detallada del perfil como son el nombre, si es un perfil compartido o no, la fecha de creación, actualización, y el usuario que lo creó, al igual que los permisos que el perfil tiene a disposición o los que desea agregar. 
+
+Un ejemplo de una vista de detalle de un perfil es el siguiente:
+
+![](../assets/images/detail-profile.png)
+
+- **Opción *Editar*:** Permite actualizar el nombre, descripción, rol y la opción de compartido.
+
+> Es importante tener en cuenta que un perfil no se puede eliminar, ya que existen actividades que se hanrealizado en nombre de ese perfil y si se pudiera eliminar, se puede producir un error. Por esta razón, la aplicación tiene la opción de deshabilitar el perfil para denegar el acceso.
+
+
+### Crear nuevo perfil:
 
 Para crear un nuevo perfil se solicitará:
 
@@ -40,6 +80,7 @@ Para crear un nuevo perfil se solicitará:
 - Compartido, puede habilitar o deshabilitar esta opción. Un perfil compartido se da cuando el perfil está siendo utilizado por otros roles.
 
 ![](../assets/images/profile-create.png)
+
 
 ### ACL:
 
