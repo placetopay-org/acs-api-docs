@@ -228,6 +228,9 @@ Los estados posibles son:
 
 ![](../assets/images/imports-index.png)
 
+El siguiente es un ejemplo del detalle de una importación de rangos de tarjeta en estado pendiente:
+
+![](../assets/images/card-range-import-detail.png)
 
 <!--
 type: tab
@@ -245,9 +248,12 @@ Actualmente se manejan dos tipos de reportes:
 
 ## Reportes de Autenticaciones
 
-El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. El siguiente es un ejemplo de creación de un reporte de autenticaciones:
+El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. 
+
+El siguiente es un ejemplo de creación de un reporte de autenticaciones:
 
 ![](../assets/images/auth-report.png)
+
 
 ## Reportes de Abandonos 
 
@@ -271,12 +277,12 @@ title: Franquicias
 
 Aquí se gestionan las franquicias que funcionan en ACS, siendo la franquicia una compañía aliada con los bancos emisores de tarjetas de crédito, las cuales proveen diversos beneficios bancarios a sus clientes.
 
-En esta sección se visualiza el listado de franquicias, los detalles de cada una, se pueden editar, habilitar y deshabilitar.
+En esta sección se visualiza el listado de franquicias con los detalles de cada una. Las franquicias se pueden editar, habilitar y deshabilitar, accediendo al menú con tres puntos ubicado en la parte lateral derecha de cada franquicia.
 
 ![](../assets/images/franchise-index.png)
 
 
-Para crear una franquicia, haga clic en el botón crear y diligencia los datos teniendo en cuenta la siguiente información:
+Para crear una franquicia, haga clic en el botón *Crear* y diligencie los datos teniendo en cuenta la siguiente información:
 
 - **Marca,** Nombre de la franquicia, por ejemplo Matercard, VISA...
 
@@ -289,7 +295,7 @@ Indicator (ECI), es un valor para indicar los resultados del intento de autentic
 
 - **Logo,** Puede adjuntar una imagen con el logo de la franquicia.
 
-En la siguientes imagen se puede visualizar un ejemplo de creación de franquicia:
+En la siguiente imagen se puede visualizar un ejemplo de creación de franquicia:
 
 ![](../assets/images/create-franchise.png)
 
@@ -402,11 +408,11 @@ La siguiente imagen muestra un ejemplo de la vista de un índice de certificados
 
 ![](../assets/images/certificates-index.png)
 
-Los certificados se pueden editar y visualizar los detalles del mismo. 
+Los certificados se pueden editar y visualizar los detalles del mismo, haciendo clic en el menú con tres puntos ubicado en la parte lateral derecha de cada certificado.
 
 ## Creación de un certificado:
 
-Para crear un nuevo certificado haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
+Para crear un nuevo certificado en ACS, haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
 
 #### 1. Creación de la llave privada:
 
@@ -446,10 +452,13 @@ Para crear un nuevo certificado haga clic en el botón *Crear*. La solicitud o c
 
 Aquí se registran los datos de información general sobre el solicitante de la llave:
 
-- Ubicación.
-- Organización.
-- Nombre, debe ser un dominio.
-- Correo electrónico.
+- **País:** Seleccione el país donde se crea el certificado de la lista desplegable.
+- **Estado:** Ingrese el nombre del estado del país en el cual está ubicado.
+- **Localidad:** Ingrese el nombre de la ciudad en el cual está ubicado.
+- **Nombre de la organización:** Ingrese el nombre de la organización para la cual se crea el certificado.
+- **Nombre de la unidad organizacional:** Ingrese el nombre del área de la organización para la cual se genera el certificado.
+- **Nombre común:** Ingrese un nombre de dominio válido, siendo este básicamente, la dirección de una página web sin el prefijo "www".
+- **Correo electrónico:** Ingrese la dirección de correo electrónico del solicitante del certificado.
 
 
 #### 3. Información de rastreo:
@@ -461,21 +470,30 @@ Permite la identificación a partir de un slug, el cual forma parte de la URL qu
 
 ## Registro y firma del certificado:
 
-Una vez creado el certificado, le mostrará los datos que diligenció en el formulario. Además, de eso creará una solicitud de firma de certificado, como la siguiente:
+Una vez creado el certificado, le mostrará los datos que diligenció en el formulario.
+
+Un ejemplo es el siguiente:
+
+![](../assets/images/certificate-detail.png)
+
+#### ¿Cómo firmar el certificado?
+
+1. Debe copiar este bloque, correspondiente a la solicitud de firma del certificado. Copie el bloque incluyendo las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
 
 ![](../assets/images/signature-certificate-request.png)
 
-Debe copiar este bloque incluidas las etiquetas de BEGIN y END CERTIFICATE REQUEST. Con esta información debe proceder a crear su llave privada y a firmar el certificado.
+2. Cree su llave pública y privada con su entidad de certificación y firme el certificado con el bloque de texto que copió.
 
-Una vez tenga su certificado firmado, obtendrá otro bloque similar al de la imagen, debe copiarlo incluyendo también las etiquetas de BEGIN y END CERTIFICATE REQUEST.
+3. Al finalizar el proceso de creación de llaves y firma del certificado, obtendrá un bloque de texto similar al primero que copió. Copie este bloque, incluyendo también las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
 
-Luego, en el detalle del certificado, al final encontrará la opción de registrar su certificado:
+4. En el detalle del certificado, al final encontrará la opción de registrar su certificado, haga clic en el enlace con el nombre *Aquí!*.
 
 ![](../assets/images/request.png)
 
-Haga clic allí, lo llevará a la siguiente vista, donde debe pegar su certificado en el campo *Certificado*, así:
+5. Esto lo direccionará a la siguiente vista, donde debe pegar el segundo bloque de texto que copió, el cual corresponde a su certificado, en el campo *Certificado*, así:
 
 ![](../assets/images/register-certificate.png)
 
+6. Haga clic en guardar y con esto obtiene un certificado firmado válido para asegurar la transferencia de información con ACS.
 
 <!-- type: tab-end -->
