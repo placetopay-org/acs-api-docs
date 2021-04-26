@@ -228,6 +228,9 @@ Los estados posibles son:
 
 ![](../assets/images/imports-index.png)
 
+El siguiente es un ejemplo del detalle de una importación de rangos de tarjeta en estado pendiente:
+
+![](../assets/images/card-range-import-detail.png)
 
 <!--
 type: tab
@@ -245,9 +248,12 @@ Actualmente se manejan dos tipos de reportes:
 
 ## Reportes de Autenticaciones
 
-El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. El siguiente es un ejemplo de creación de un reporte de autenticaciones:
+El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. 
+
+El siguiente es un ejemplo de creación de un reporte de autenticaciones:
 
 ![](../assets/images/auth-report.png)
+
 
 ## Reportes de Abandonos 
 
@@ -271,12 +277,12 @@ title: Franquicias
 
 Aquí se gestionan las franquicias que funcionan en ACS, siendo la franquicia una compañía aliada con los bancos emisores de tarjetas de crédito, las cuales proveen diversos beneficios bancarios a sus clientes.
 
-En esta sección se visualiza el listado de franquicias, los detalles de cada una, se pueden editar, habilitar y deshabilitar.
+En esta sección se visualiza el listado de franquicias con los detalles de cada una. Las franquicias se pueden editar, habilitar y deshabilitar, accediendo al menú con tres puntos ubicado en la parte lateral derecha de cada franquicia.
 
 ![](../assets/images/franchise-index.png)
 
 
-Para crear una franquicia, haga clic en el botón crear y diligencia los datos teniendo en cuenta la siguiente información:
+Para crear una franquicia, haga clic en el botón *Crear* y diligencie los datos teniendo en cuenta la siguiente información:
 
 - **Marca,** Nombre de la franquicia, por ejemplo Matercard, VISA...
 
@@ -289,7 +295,7 @@ Indicator (ECI), es un valor para indicar los resultados del intento de autentic
 
 - **Logo,** Puede adjuntar una imagen con el logo de la franquicia.
 
-En la siguientes imagen se puede visualizar un ejemplo de creación de franquicia:
+En la siguiente imagen se puede visualizar un ejemplo de creación de franquicia:
 
 ![](../assets/images/create-franchise.png)
 
@@ -451,7 +457,7 @@ Aquí se registran los datos de información general sobre el solicitante de la 
 - **Localidad:** Ingrese el nombre de la ciudad en el cual está ubicado.
 - **Nombre de la organización:** Ingrese el nombre de la organización para la cual se crea el certificado.
 - **Nombre de la unidad organizacional:** Ingrese el nombre del área de la organización para la cual se genera el certificado.
-- **Nombre común:** Ingrese un nombre de dominio válido, siendo este el título o nombre de la página web de la organización.
+- **Nombre común:** Ingrese un nombre de dominio válido, siendo este básicamente, la dirección de una página web sin el prefijo "www".
 - **Correo electrónico:** Ingrese la dirección de correo electrónico del solicitante del certificado.
 
 
@@ -476,7 +482,7 @@ Un ejemplo es el siguiente:
 
 ![](../assets/images/signature-certificate-request.png)
 
-2. Cree su llave privada y firme el certificado con el bloque de texto que copió.
+2. Cree su llave pública y privada con su entidad de certificación y firme el certificado con el bloque de texto que copió.
 
 3. Al finalizar el proceso de creación de llaves y firma del certificado, obtendrá un bloque de texto similar al primero que copió. Copie este bloque, incluyendo también las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
 
