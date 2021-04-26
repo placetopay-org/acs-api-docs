@@ -28,3 +28,37 @@ Por ejemplo, un comerciante de comercio electrónico basado en suscripción usar
 - **Expresión regular:**, denominada también como regex, se define como una  secuencia de caracteres que conforma un patrón de búsqueda. Estas expresiones funcionan a modo de patrón y permiten analizar y validar cadenas de datos recibidas.
 
 - **Logs:** Hacen referencia a un historial que se encarga de grabar y registrar secuencialmente, en un archivo o en una base de datos, todos los acontecimientos que afectan a un proceso particular. 
+
+- **3DS:** Es un protocolo de mensajería antifraude que le permite a los consumidores autenticarse a sí mismos con el emisor de su tarjeta de pago en el momento de la realización de transacciones no presenciales.
+
+- **ACS:** Access Control Server (ACS) es el componente del protocolo 3DS que opera en el dominio del emisor y tiene como finalidad autenticar al cardholder.
+
+- **Adquiriente:** Es una institución financiera que establece un contrato con los comercios con el objetivo aceptar pagos con tarjeta. En el contexto de 3DS, el Adquirente también tiene la potestad de determinar si un comercio es elegible para participar el protocolo 3DS.
+
+- **Authentication Value:** Un valor criptográfico generado por el ACS que puede ser reconocido por el sistema de autorización para validar la integridad del resultado de la autenticación. El algoritmo para el Authentication Value es definido por cada sistema de pago.
+
+- **Autorizacion:** Es el proceso mediante el cual un emisor o procesador aprueba una transacción de pago.
+
+- **Sistema de autorizacion:** Son los sistemas y servicios a través de los cuales un sistema de pagos brinda servicios de procesamiento, autorización y liquidación de pagos en línea a emisores y adquirentes.
+
+- **Bank Identification Number (BIN):** Los primeros seis dígitos del número de una tarjeta.
+
+- **Cardholder:** Un individuo que posee una tarjeta que fue emitida y autorizada para su uso.
+
+- **Certificado:** Un documento electrónico que contiene una llave pública legalizada o atestiguada por una Autoridad de Certificación (CA). Esta legalización consiste en la firma con la llave privada de la CA.
+
+- **Challenge:** Proceso mediante el cual el ACS se comunica el con 3DS Client para obtener información adicional a través de la interacción con el cardholder.
+
+- **Dispositivo de consumo:** El dispositivo usado por el cardholder (smartphone, laptop, tablet) como conducto para realizar las operaciones de pago (autenticación y compra).
+
+- **Device channel:** Device Channel
+Indica el canal a través del cual la transacción es autorizada. Los canales son:
+  - App-based (01-APP)
+  - Browser-based (02-BRW)
+  - 3DS Requestor Initiated (03-3RI)
+
+- **Dominio emisor:** Esta compuesto por los sistemas y funciones del emisor y sus cardholders.
+
+- **Dominio adquiriente:** Esta compuesto por los sistemas y funciones del 3DS Requestor Environment.
+
+- **Dominio interoperabilidad:** El componente de 3DS que facilita la transferencia de información entre el dominio emisor y los sistemas del dominio adquirente.
