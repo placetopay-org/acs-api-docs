@@ -13,7 +13,7 @@ En este módulo se registra la información de todas las autenticaciones procesa
 
 Para buscar un listado o una transacción en específico puede utilizar los filtros. ACS cuenta con dos tipos de filtros para las autenticaciones, uno básico y otro avanzado para hacer consultas más rigurosas.
 
-Para acceder a la funcionabilidad, dé clic en el botón *Filtrar* ubicado en la parte lateral superior izquierda de la vista:
+Para acceder a la funcionalidad, dé clic en el botón *Filtrar* ubicado en la parte lateral superior izquierda de la vista:
 
 #### Filtros básicos:
 
@@ -59,15 +59,43 @@ Aquí se visualiza la información relacionada con la ubicación en la cual se v
 
 ![](../assets/images/delivery-data.png)
 
-### Disputas:
+### Gestión de disputas:
 
 Las disputas son reclamaciones que realiza el cliente registrado con una autenticación en ACS, en la cual puede existir un caso de fraude. 
 
-Para crear una disputa, al inicio de la vista del detalle de la autenticación, haga clic en el botón *Generar nueva disputa*, posterior a esto se agregará a la autenticación un caso de disputa abierta, el detalle de la disputa se puede visualizar en el detalle de la autenticación:
+#### Crear una disputa:
 
-![](../assets/images/dispute.png)
+Para crear una disputa, al inicio del detalle de una autenticación, haga clic en el botón *Generar nueva disputa*.
 
-En el detalle se puede desplegar el historial de la disputa con su respectivo estado. También, haciendo clic en el botón *Anular*, se despliega una ventana para que ingrese el motivo de la anulación de la disputa. Por el contrario, al dar clic en el botón *Resolver*, se presentará un formulario como el siguiente, en el cual debe registrar los motivos para la resolución de la disputa.
+![](../assets/images/create-dispute.png)
+
+Posterior a esto, se agregará a la autenticación un caso de disputa abierta. Se visualizará como esta imagen:
+
+![](../assets/images/open-dispute.png)
+
+#### Detalle de una disputa:
+
+Para visualizar el detalle de la disputa creada, de clic en la opción *Ver más*. Se direccionará a una sección de la misma vista, donde se gestionan las disputas para esa autenticación. 
+
+Un ejemplo de detalle de una disputa es el siguiente:
+
+![](../assets/images/dispute-detail.png)
+
+#### Historial de una disputa:
+En el detalle de la disputa, en la parte lateral derecha, se puede visualizar el historial de la disputa haciendo clic en el botón desplegable *Historial*. Se mostrarán todos los movimientos que ha tenido una disputa, con sus respectivos estados, el agente responsable, la acción, la justificación y la fecha de apertura y actualización.
+
+#### Reporte de disputas:
+Puede descargar un reporte en formarto PDF con el histórico de las disputas y toda la información relacionada con la transacción y el proceso de autenticación. Para ello, haga clic en el botón *Descargar reporte*, que se encuentra en los detalles de la disputa en la parte lateral derecha.
+
+#### Acciones para una disputa abierta:
+
+Para una disputa en estado **Abierta**, se pueden tomar estas acciones: 
+
+1. **Anular:** Haciendo clic en el botón *Anular*, se despliega una ventana para ingresar el motivo de la anulación de la disputa. Esta opción se toma cuando la disputa no es válida por algún motivo que se dejará registrado.
+
+![](../assets/images/cancel-dispute.png)
+
+2. **Resolver:** Haciendo clic en el botón *Resolver*, se presentará un formulario como el siguiente, en el cual debe registrar los motivos para la resolución de la disputa. Esta opción se toma cuando ya se ha dado una respuesta por parte del banco emisor encargado de analizar el caso de disputa.
 
 ![](../assets/images/resolve-dispute.png)
 
@@ -78,6 +106,17 @@ Diligencie el formulario teniendo en cuenta los siguientes datos:
 - **Resultado de disputa:** Este resultado se basa en la respuesta que ofrecen las instituciones encargadas de evaluar la disputa. Si el resultado dado no registra en la lista de opciones, debe elegir la opción *Otro* y describir el resultado al que se refiere.
 
 - **Acción:** Aquí se debe seleccionar el agente que se va a hacer cargo de los resultados de la disputa.
+
+- **Justificación:** En el cuadro de texto puede diligenciar las razones para la resolución de la disputa o información adicional que desee que quede registrada para el caso.
+
+#### Acciones para disputas anuladas o cerradas:
+
+Para una disputa en estado **Cerrada** o **Anulada**, se pueden tomar la siguiente acción: 
+
+1. **Reabrir:** Esta acción esta disponible para disputas que se encuentren en los estados: Cerrada o Anulada. Al dar clic en esta opción, la disputa se pondrá nuevamente en estado Abierta y tendrá la posibilidad de anularla o resolverla.
+
+![](../assets/images/reopen-dispute.png)
+
 
 ### Traza de la autenticación:
 
@@ -98,7 +137,11 @@ title: Disputas
 
 # Disputas
 
-En esta sección se registran y listan las disputas que se procesaron para deversas autenticaciones. Aquí se pueden visualizar los detalles y descargar las disputas como un PDF.
+Como se menciona en el módulo de Autenticaciones, las disputas son reclamaciones que realiza un cliente por un posible caso de fraude en una transacción.
+
+En esta sección se registran y listan las disputas que se procesaron para diversas autenticaciones. 
+
+Aquí se pueden visualizar los detalles y descargar las disputas como un PDF.
 
 ![](../assets/images/disputes-index.png)
 
@@ -108,7 +151,7 @@ El archivo PDF generado para una disputa contiene el estado y el historial de la
 
 ### Filtros:
 
-Este módulo contiene también filtros que permitirán hacer búsquedas de disputas específicas, filtrando por agentes, acciones, identificadores de transacción, entre otros.
+Este módulo contiene también filtros que permitirán hacer búsquedas de disputas específicas, filtrando por agentes responsables de las disputas, acciones, identificadores de transacción, entre otros.
 
 ![](../assets/images/disputes-filters.png)
 
@@ -120,12 +163,132 @@ title: Autenticaciones Desacopladas
 
 # Autenticaciones Desacopladas
 
-En esta sección registran las autenticaciones que entraron a un proceso de desafío desacoplado a cargo del banco emisor para corroborar la identidad del tarjetabiente. 
-Se detalla la fecha, el emisor, el BIN, número de tarjeta, monto y tiempo restante para la aprobación de la autenticación. Aquí se da la opción de resolver las autenticaciones manualmente, con base en el análisis de la información dada.
+En esta sección registran las autenticaciones que entraron a un proceso de desacople a cargo del banco
+emisor para corroborar la identidad del tarjetabiente.
 
-La siguiente es un ejemplo de vista inicial para la sección de autenticaciones desacopladadas:
+La sesion de *Autenticaciones desacopladas*, se divide en tres modulos, en los cuales se gestiona una
+autenticación dependiendo de la acción que se va a realizar.
 
-![](../assets/images/decoupled-auth.png)
+1. **Módulo Autenticaciones desacopladas:** En este módulo ingresan todas las autenticaciones que aún no se han desacoplado y están en espera de ser solucionadas por un usuario con permisos.
+
+3. **Módulo Mis autenticaciones:** Cuando un usuario selecciona una autenticación del módulo de *Autenticaciones desacopladas*, estas se ubican en el presente módulo, permitiendo así, tener una buena organización y gestionar mejor las autenticaciones, al poder identificar fácilmente aquellas en las cuales ha trabajado. 
+
+3. **Módulo Autenticaciones seleccionadas por otros usuarios:** Este módulo permite observar las autenticaciones seleccionadas por otro usuario. Aquí se debe tener en cuenta que una autenticación solo la puede resolver un usuario, aún así, pueden ser observadas por varios usuarios con el permiso de autenticar.
+
+> La división de las autenticaciones desacopladas permite que los usuarios que las vayan a resolver tengan
+una mayor organización, y no se presenten conflictos en el momento de resolverlas.
+
+
+## Autenticación sin un usuario asignado
+
+En el módulo de *Autenticaciones desacopladas*, se muestran las autenticaciones que no han sido seleccionadas por algún usuario. Por lo cual, para ser asignada, el usuario debe ingresar a la información de la autenticación, y el sistema se la asignará de manera automática para ser resuelta.
+
+### Liberación de autenticaciones desacopladas:
+
+Se debe tener en cuenta que si el usuario no desea resolverla, tendrá que liberarla a través de un clic en
+el botón ubicado en el extremo derecho, con el nombre *Liberar*, así otro usuario la podrá resolver.
+
+Cada autenticación cuenta con un tiempo promedio para ser resuelta, tiempo que se configura con el banco emisor. Si una autenticación no es resuelta en este tiempo, cambiará a un estado *U* = Autenticación no realizada. Se presentó un error técnico durante el proceso.
+
+![](../assets/images/deocupled-1.png)
+
+### Resolver autenticación:
+La acción de resolver una autenticación la debe realizar un usuario con el conocimiento y permisos, teniendo en cuenta que el sistema solo muestra los datos de la transacción e información de ella.
+
+Para autenticarla o no autenticar, se debe ingresar a través de un click en el botón de *Resolver autenticación*.
+La aplicación muestra una ventana emergente con las dos opciones, el usuario selecciona uno de los
+dos estados, luego envía su respuesta, el sistema reconoce la acción y cambia su estado e informa con un mensaje el cambio en la autenticación.
+
+![](../assets/images/decoupled-2.png)
+
+La aplicación muestra la información de la autenticación, con el cambio del estado en la parte superior
+izquierda.
+
+![](../assets/images/decoupled-3.png)
+
+### Información de una autenticación:
+
+#### Información básica: 
+
+Dentro de este módulo se muestra la información básica de una autenticación. Esta es:
+
+- Estado actual de la autenticación
+- Número de la tarjeta (oculto), teniendo en cuenta que el usuario autorizado puede verla, sin embargo, el sistema informa al administrador principal la acción a través de un
+correo, y guardando un log con la información del usuario.
+- Bin del adquiriente
+- Monto
+- Emisor
+- Dispositivo del canal
+- Categoría del mensaje
+
+![](../assets/images/decoupled-4.png)
+
+#### Titular de la tarjeta:
+
+- Correo electrónico
+- Teléfono de la casa
+- Teléfono móvil
+- Teléfono del trabajo
+
+![](../assets/images/decoupled-5.png)
+
+#### Información del comercio:
+
+- Nombre del comercio
+- Código de categoría de comercio
+- Nombre del código de categoría de comercio
+- País
+
+![](../assets/images/decoupled-6.png)
+
+## Autenticación Relacionada
+
+El presente módulo solo se puede observar cuando la autenticación se encuentra en un estado desacoplada, teniendo en cuenta que es información con datos comunes y sirve como historial de una autenticación semejante, por eso se muestra como una tabla, porque son
+varias autenticaciones como respaldo de la actual. En algunos casos toda información es común, como en
+otros casos solo tienen un dato en común.
+
+La tabla se divide en:
+- Comercio
+- Emisor
+- Monto
+- Número de la tarjeta parcialmente oculto
+- Correo electrónico
+- Dispositivo del canal
+- Flujo
+- Estado
+
+![](../assets/images/decoupled-7.png)
+
+### Información de la cuenta del titular de la tarjeta:
+
+Como el anterior módulo, este también solo se muestra en las
+autenticaciones desacopladas. Contiene información del banco emisor como:
+
+- Fecha de creación de la cuenta del titular de la tarjeta
+- Indicador de edad de la cuenta del titular de la tarjeta
+- Cambio de cuenta del titular de la tarjeta
+- Cambio de contraseña de cuenta de titular de tarjeta
+- Edad de cuenta de pago
+- Indicador de edad de la cuenta de pago
+- Indicador de cambio de cuenta del titular de la tarjeta
+- Cantidad de transacciones por día
+- Cantidad de transacciones por año
+- Indicador de cambio de contraseña de cuenta del titular de la tarjeta
+- Uso de la dirección de envío
+- Cuenta de compra de la cuenta del titular de la tarjeta
+- Indicador de nombre de envío
+- Indicador de uso de la dirección de envío
+- Número de intentos de aprovisionamiento por día
+- Actividad de cuenta sospechosa
+
+![](../assets/images/decoupled-8.png)
+
+## Traza de la autenticación
+
+En este módulo se presentan los mensajes de petición y de respuesta que se han presentado durante todo el flujo de la autenticación.
+
+![](../assets/images/decoupled-9.png)
+
 
 <!--
 type: tab
@@ -134,11 +297,13 @@ title: Métricas
 
 # Métricas
 
-Las métricas son estadísticas que reportan el comportamiento de la aplicación. En ACS se cuenta actualmente con los siguientes dos tipos de métricas:
+Las métricas son estadísticas que reportan el comportamiento de la aplicación conforme al flujo de transacciones procesadas.
 
 ## Filtros:
 
-Para mostrar en la gráfica de la métrica los datos específicos que se requieran, se debe hacer un filtro de las autenticaciones. Para el filtro se pueden agregar los siguientes datos:
+Para mostrar en la gráfica de la métrica los datos específicos que se requieran, se debe hacer un filtro de las autenticaciones. Para acceder a los filtros haga clic en el botón *Filtrar*, ubicado en la parte superior lateral izquierda.
+
+Para filtrar las transacciones se requieren los siguientes datos:
 
 - Rango de fecha, seleccione una fecha inicial y una posterior en el calendario. Luego de clic en el botón negro para guardar el rango.
 
@@ -152,6 +317,8 @@ Para mostrar en la gráfica de la métrica los datos específicos que se requier
 ![](../assets/images/filter-metrics.png)
 
 
+ACS cuenta actualmente con los siguientes dos tipos de métricas:
+
 ## Métricas por monto de transacción
 
 Esta métrica muestra en una gráfica el monto de las transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
@@ -159,546 +326,15 @@ Esta métrica muestra en una gráfica el monto de las transacciones procesadas p
 
 ## Métricas por estado de transacción
 
-Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación. Un ejemplo de métrica se presenta a continuación:
+Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación. 
+
+Un ejemplo de métrica por estado de transacción, se presenta a continuación:
 
 ![](../assets/images/metric.png)
 
-<!--
-type: tab
-title: Emisores
--->
+En la parte inferior puede visualizarse el rango de fecha con el cual se obtuvo la métrica y la cantidad de transacciones que cumplieron con los filtros.
 
-# Emisores
-
-En la sección de emisores se encuentran diferentes funcionabilidades relacionadas con los emisores, siendo estos las instituciones financieras que se encargan de emitir tarjetas de pago y servicios relacionados con estas tarjetas.
-
-En la siguiente imagen se visualiza un ejemplo de la vista de *Detalles del emisor*, además se puede editar y habilitar o deshabilitar con el menú lateral derecho.
-
-![](../assets/images/issuers.png)
-
-
-### Configuraciones:
-En este apartado se encuentra toda la gestión de configuración de campos para un banco emisor, puede ver los detalles de cada uno, qué función desempeña, puede editarlos, deshabilitarlos y habilitarlos según se requiera. 
-
-![](../assets/images/issuers-configurations.png)
-
-También, en la pestaña *Services*, se encuentran las estrategias disponibles para ejecutar los servicios para el emisor.
-
-- otpStrategy, información acerca de cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso).
-
-- cardholderStrategy, información acerca de cómo se va a implementar el servicio de información del tarjetabiente.
-
-#### Campos de configuración:
-
-Estas configuraciones se gestionan desde la sección *Campos de configuración* del ACS. Allí se encuentra un listado de los campos creados para configurar los emisores, puede habilitarlos, deshabilitarlos, editarlos y ver sus detalles.
-
-![](../assets/images/configurations-actions.png)
-
-Además, con el botón *Crear*, puede adicionar nuevos campos con diferentes tipos de datos a recibir:
-
-- **SELECT:** Recibe un dato que se ha seleccionado de una lista de valores disponibles.
-
-- **BOOLEAN:** Recibe únicamente las opciones de falso y verdadero.
-
-- **DATE:** Recibe una fecha con un formato dado.
-
-- **NUMERIC:** Recibe valores numéricos.
-
-- **STRING:** Recibe un dato que puede incluir cadena de texto, números y signos.
-
-- **PASSWORD:** El dato que se recibe en este campo es guardado de forma segura. SU valor original suele reemplazarse con carácteres especiales o con un algoritmo de criptografía.
-
-- **TRANSLATABLE:** Recibe un dato que puede ser traducido.
-
-![](../assets/images/configuration-fields.png)
-
-### Gestión de bines:
-Aquí se gestionan los bines del adquiriente. En primer lugar obtendrá un listado de los bines creados anteriormente para el emisor, además puede crear otros bines nuevos, editarlos y eliminarlos.
-
-![](../assets/images/bines.png)
-
-Al dar clic en el botón *Crear* como ilustra la imagen, tendrá tres opciones para crear bines:
-
-- Crear un único BIN para el emisor.
-- Crear un rango de bines para el emisor, el cuál contendrá un valor mínimo y un valor máximo de bines, creando así un grupo de números de tarjetas de crédito a gestionar.
-- Crear importación, para la importación se aceptan los formatos de archivo .csv, .tsv y .txt
-
-
-### Gestión de rangos de tarjetas:
-En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico. Puede ver los detalles de cada rango, editarlos y eliminarlos.
-
-![](../assets/images/card-ranges-index.png)
-
-Al dar clic en el botón *Crear*, se desplegarán dos opciones para crear rangos:
-
-- **Crear un rango de tarjetas,** este permite crear un rango de forma manual, se solicitará el BIN para el rango, el cual debe ser de 8 dígitos, el valor inicial y el final, la franquicia y la clase o tipo de las tarjetas asociadas al rango.
-
-- **Crear importación,** para crear una importación visualizará un formulario similar al siguiente:
-
-![](../assets/images/create-import-ranges.png)
-
-Debe seleccionar la franquicia para la cual se van a cargar los rangos y un archivo de tipo CSV (archivo de valores separados por comas) que contenga la información de los rangos. Un ejemplo del archivo es este:
-
-![](../assets/images/file-import-example.png)
-
-El archivo debe contener cuatro títulos separados por comas en minúscula:
-
-1. **start_range**: Indica el valor inicial para el rango de tarjetas.
-
-2. **end_range**: Indica el valor final para el rango de tarjetas.
-
-3. **class**: Hace referencia a la clase o tipo de tarjeta utilizada, por ejemplo si es Gold, Platinum.
-
-4. **action**: Debe indicar qué acción se debe ejecutar para el rango indicado, las acciones posibles y sus indicadores son los siguientes:
-
-    **I**: Indicador para acción de insertar rango.
-
-    **U**: Indicador para acción de actualizar rango .
-
-    **D**: Indicador para acción de eliminar rango.
-
-
-Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, igualmente separados por comas, sin espacios.
-
-> Para visualizar el formato de un archivo CSV de ejemplo, haga clic en la opción *Descargar* que aparece en el lado izquierdo del formulario.
-
-### Gestión del control de fraude:
-Estas funcionabilidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de los grupos donde están contenidas, las cuales permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
-
-
-<!--
-type: tab
-title: Motor Antifraude
--->
-
-# Motor de Control de Fraude
-
-La principal funcionabilidad de ACS es el motor de control antifraude, este permite validar la información que se recibe en la petición de autenticación, a través de un conjunto de reglas que validan las autenticaciones de cada emisor registrado.
-
-Esta funcionabilidad se gestiona desde la sección de Emisores de la aplicación.
-
-### Listas de control de fraude:
-
-Las listas de control de fraude son el primer filtro que puede validar una autenticación. Estas listas son temporales y se dividen en dos clases:
-
-- **Permisivas:** Estas listas van a crear un filtro que va a permitir que las autenticaciones que cumplan con los valores registrados en estas, puedan eximirse de la ejecución de los grupos de reglas y continúe con el proceso de autenticación.
-
-- **Restrictivas:** Por el contrario, este tipo de listas, al evaluar que los datos de la autenticación coinciden con los datos de la lista, enviará las autenticaciones directamente a evaluar los grupos de reglas.
-
-> Las listas de control antifraude se ejecutan antes de los grupos de control antifraude y según los resultados que obtenga de sus validaciones, puede evitar que una autenticación tenga que pasar por las validaciones de los grupos de reglas.
-
-![](../assets/images/fraud-list-index.png)
-
-Para crear una lista de control se direccionará a un formulario como este:
-
-![](../assets/images/create-fraud-list.png)
-
-Se solicitará:
-
-- **Fecha de inicio:** Fecha en la que se va a iniciar la validación de la lista de reglas.
-
-- **Fecha de finalización:** Fecha en la que se va a finalizar la validación de la lista de reglas.
-
-- **Tipo de lista:** ACS dispone de dos tipos de listas:
-    - PERMISSIVE
-    - RESTRICTIVE
-
-- **Tipo de valor:** Aquí se selecciona el parámetro por el cual se van a hacer los filtros de las autenticaciones. 
-
-- **Valor:** Corresponde al valor del tipo de parámetro seleccionado en el campo anterior. Con este valor se procede a hacer las validaciones y a verificar la coincidencia del dato con los recibidos en la autenticación.
-
-### Grupos de control antifraude:
-
-Para cada banco emisor registrado en el ACS, se creará un grupo predeterminado conformado por una serie de reglas antifraude que permiten validar las solicitudes de autenticación. Además de este grupo prederteminado, se podrán agregar otros nuevos al emisor.
-
-En la imagen se muestra el listado de grupos de control de fraude de un emisor. En esta vista se pueden crear nuevos grupos con el botón *Crear* y se pueden visualizar los detalles y las reglas de cada grupo dando clic en la opción *Ver*.
-
-En la imagen ejemplo, se visualizan dos grupos, uno llamado *Lista blanca*, donde se podrían incluir por ejemplo números de tarjetas y datos de clientes con bajo riesgo de fraude y las acciones de las reglas podrían ser en su mayoría *Autenticar*. El otro grupo se llama *Lista negra*, aquí se podrían agregar los números de tarjeta e información personal asociada a clientes con historiales o reportes y la acción de las reglas podría ser *No autenticar*.
-
-![](../assets/images/fraud-groups.png)
-
-### Reglas antifraude:
-
-Los grupos de control antifraude están conformados por reglas que permiten hacer las validaciones de los datos recibidos en las autenticaciones. Estas reglas evalúan la coincidencia de las condiciones contenidas en la regla y de los datos obtenidos en la solicitud de autenticación.
-
-Al presionar la opción *Ver* de un grupo de control antifraude, le mostrará una vista similar a esta.
-
-![](../assets/images/group-details.png)
-
-Aquí se encuentran los detalles del grupo seleccionado, puede habilitarlo o deshabilitarlo en el menú lateral derecho. Además, encontrará el listado de reglas correspondientes al grupo, la acción que ejecutan, puede habilitarlas o deshabilitarlas y puede visualizar los detalles y condiciones de la misma.
-
-En la pestaña *Solicitudes de reglas*, se pueden visualizar las peticiones de creación, actualización o eliminación de reglas, las cuales se encuentran pendientes por aprobar o denegar. También, puede crear una petición de reglas nueva, haciendo clic en el botón *Crear petición de regla*.
-
-![](../assets/images/rule-create.png)
-
-Luego visualizará una ventana como esta, dónde le solicitan la acción que desea hacer con la regla.
-
-![](../assets/images/rule-create-actions.png)
-
-Para crear una petición de regla, debe seleccionar la opción *Crear*, y se desplegará una vista como la siguiente:
-
-![](../assets/images/conditions-rule.png)
-
-Los datos requeridos son:
-- **Nombre:** ¿Cómo desea nombrar la regla a crear?
-- **Acción:** Se refiere a la función que va a cumplir la regla en el proceso de autenticación. Estas acciones se describen detalladamente en el siguiente título.
-- **Tipo de regla:** Hace referencia al tipo de regla que desea crear, por ejemplo es una regla que valida números de tarjeta de crédito, o valida emails, o rangos de bines...
-- **Valor:** Es el valor que requiere una regla para validar y comparar los datos presentes en la misma y en la solicitud de autenticación.
-
-> Puede además agregar otras condiciones para una misma regla.
-
-También hay otros tipos de reglas que ofrecen más posibilidades, en la siguiente imagen puede visualizar una regla donde puede escoger que el valor tenga un rango, un valor mínimo o máximo por ejemplo.
-
-![](../assets/images/others-rule-conditions.png)
-
-Luego de enviar la solicitud de regla, esta se agregará al listado de *Solicitudes de regla*, allí tiene la opción de *Aceptar* o *Denegar*, con los botones de la parte lateral derecha.
-
-![](../assets/images/accept-deny.png)
-
-> Hasta que no acepte la solicitud de regla, esta no podrá visualizarse ni utilizarse en producción. Luego de aceptarla recuerde habilitarla.
-
-### Acciones de las reglas: 
-Al crear una regla se le define un tipo de acción específica que va a ejecutar. Estas acciones permiten definir el transStatus (estado de autenticación de la transacción). Las acciones permitidas son las siguientes:
-
-- **Autenticar:** Las reglas que contengan esta acción, permitirán validar la solicitud de autenticación y aprobarla automáticamente, generando un estatus Y (autenticación satisfactoria). Por ejemplo una regla de tipo *BinRange* va a contener un rango mínimo y máximo de BIN, las tarjetas cuyo BIN entren en este rango, podrán ser autenticadas automáticamente, creando una especie de lista blanca de datos.
-
-- **Realizar desafío:** Las reglas cuya acción es realizar desafío, al validarse generarán el estatus C (requiere desafío), con este estatus el tarjetahabiente será direccionado a una interfaz de usuario en la cual se le pedirá aceptar un desafío para validar su identidad. 
-
-- **Desafío desacoplado:** Las reglas que contengan esta acción, al validarse generarán un estatus D y la petición de autenticación se pondrá en pausa y el emisor se encargará de realizar el desafío manualmente con el tarjetahabiente.
- 
-- **No autenticar:** Las reglas con acción de no autenticar, al cumplirse la validación, lanzarán automáticamente un estado *N* (Autenticación fallida). Los datos incluídos en estas reglas se conciben con un alto grado de riesgo o posible fraude. Las reglas con esta acción pemriten crear un tipo de lista negra de datos.
-
-- **Ejecutar un grupo:** Las reglas creadas con esta acción pueden ejecutar todo las reglas contenidas en otro grupo de reglas del emisor.
-
-- **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado).
-
-> La función de ejecutar un grupo de reglas permitirá hacer validaciones no secuenciales entre los diferentes grupos registrados para un emisor.
-
-<!--
-type: tab
-title: Importes
--->
-
-# Importes de rangos de tarjetas
-
-En esta sección se pueden visualizar las importaciones de archivos realizadas en ACS, por ejemplo se encuentran los archivos que importan un listado de rangos de tarjetas para un emisor.
-
-En este índice de importes puede visualizar los detalles de cada importe y el estado en el cual se encuentra la importanción.
-
-Los estados posibles son:
-
-- Completado
-- Fallido
-- Pendiente
-
-![](../assets/images/imports-index.png)
-
-
-<!--
-type: tab
-title: Reportes
--->
-
-# Reportes
-
-Los reportes son archivos que contienen registros de las autenticaciones procesadas por ACS. La siguiente imagen muestra un ejemplo de la vista con el índice de reportes generados. Estos reportes se pueden ver y descargar.
-
-![](../assets/images/report-index.png)
-
-Para crear un nuevo reporte haga clic en el botón *Crear*. 
-Actualmente se manejan dos tipos de reportes:
-
-## Reportes de Autenticaciones
-
-El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. El siguiente es un ejemplo de creación de un reporte de autenticaciones:
-
-![](../assets/images/auth-report.png)
-
-## Reportes de Abandonos 
-
-Con este reporte se generan los datos de las autenticaciones que son abandonadas en el ACS. Para el reporte se puede definir un rango de fechas y el banco emisor. El siguiente es un ejemplo de creación de un reporte de abandonos:
-
-![](../assets/images/abandoned-report.png)
-
-
-## Tipos de archivos generados para los reportes
-- Archivo separado por comas.
-- Archivo separado por tabuladores.
-- Archivo de Excel
-
-
-<!--
-type: tab
-title: Franquicias
--->
-
-# Franquicias
-
-Aquí se gestionan las franquicias que funcionan en ACS, siendo la franquicia una compañía aliada con los bancos emisores de tarjetas de crédito, las cuales proveen diversos beneficios bancarios a sus clientes.
-
-En esta sección se visualiza el listado de franquicias, los detalles de cada una, se pueden editar, habilitar y deshabilitar.
-
-![](../assets/images/franchise-index.png)
-
-
-Para crear una franquicia, haga clic en el botón crear y diligencia los datos teniendo en cuenta la siguiente información:
-
-- **Marca,** Nombre de la franquicia, por ejemplo Matercard, VISA...
-
-- **Patrón,** Se ingresa un patrón basado en una expresión regular, con este se valida que el número de tarjeta que llegue al ACS, sea válido según los estándares propios de cada franquicia.
-
-- **Algoritmo para el CAVV,** El Cardholder Authentication Verification Value (CAVV), es un valor de verificación de autenticación del titular de la tarjeta. Aquí se debe seleccionar un algoritmo que valide este valor, el cual resulta de hacer una transacción. En el momento ACS cuenta con un algoritmo para VISA y otro para MASTERCARD.
-
-- **Algoritmo para el ECI,** El Electronic Commerce
-Indicator (ECI), es un valor para indicar los resultados del intento de autenticación. En ACS hay tres algoritmos disponibles, para las franquicias de VISA, MASTERCARD y JCB.
-
-- **Logo,** Puede adjuntar una imagen con el logo de la franquicia.
-
-En la siguientes imagen se puede visualizar un ejemplo de creación de franquicia:
-
-![](../assets/images/create-franchise.png)
-
-<!--
-type: tab
-title: Invitaciones
--->
-
-# Invitaciones de usuarios
-
-En este módulo se gestionan las invitaciones que realiza un usuario registrado en ACS a otro usuario que desea utilizar la aplicación.
-
-Es a través de una invitación que se pueden crear nuevos usuarios, esta se envía a un correo y allí redirecciona al usuario al inicio de sesión gestionado por la aplicación de Accounts, creada en PlacetoPay, en esta redirección el usuario podrá registrarse y acceder.
-
-> Los datos que registre deben ser los mismos que se utilizaron para enviar la invitación.
-
-Para crear una invitación, haga clic en el botón *Crear* del módulo de invitaciones, visualizará un formulario como el siguiente:
-
-![](../assets/images/create-invitation.png)
-
-Datos a diligenciar:
-
-- **Nombre:** Corresponde al nombre que va a identificar al nuevo usuario.
-
-- **Correo electrónico:** Debe ser un correo válido porque allí es dónde se enviará la invitación.
-
-- **Perfil:** Seleccione el perfil que desea otorgarle al nuevo usuario.
-
-<!--
-type: tab
-title: Monedas
--->
-
-# Monedas utilizadas en ACS
-
-En esta sección se visualizan las monedas creadas para utilizarse en ACS, pueden visualizarse los detalles, editar,habilitar o deshabilitar según las necesidades y requerimientos del cliente.
-
-Para crear una nueva moneda, debe diligenciar un formulario similar al siguiente:
-
-![](../assets/images/create-currency.png)
-
-Datos a diligenciar:
-
-- **Nombre:** Nombre por el cual se reconoce a la divisa que va a crear.
-
-- **Código alfabético:** Para este campo debe buscar el código alfabético correspondiente a la moneda que va a crear. El código debe ser el establecido por el estándar internacional ISO. Este contiene tres carácteres.
-
-- **Código numérico:** Para este campo debe buscar el código numérico correspondiente a la moneda que va a crear. El código debe ser el establecido por el estándar internacional ISO y consta de tres dígitos.
-
-- **Unidad menor:** Ingrese un número que indique la menor denominación o el menor valor que puede tener la moneda que está creando.
-
-<!--
-type: tab
-title: Certificados
--->
-
-# Certificados SSL
-
-En esta sección se crean los certificados SSL, los cuales son títulos digitales que vinculan digitalmente una clave criptográfica con los datos de una organización. Los certificados SSL permiten autenticar la identidad de un sitio web y cifrar la información que se envía al servidor.
-El certificado permite que cuando un usuario intente enviar información de las credenciales al servidor web, el navegador del usuario accede al certificado digital del servidor y establece una conexión segura. De esta forma, estos certificados proveen en esencia seguridad de los datos manejados en ACS.
-
-La siguiente imagen muestra un ejemplo de la vista de un índice de certificados:
-
-![](../assets/images/certificates-index.png)
-
-Los certificados se pueden editar y visualizar los detalles del mismo. 
-
-## Creación de un certificado:
-
-Para crear un nuevo certificado haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
-
-#### 1. Creación de la llave privada:
-
-![](../assets/images/step-one.png)
-
-1.1. Solicitud del tipo de llave con el cual se va a cifrar el certificado, están disponibles los siguientes tipos de llaves:
-
-- **RSA,** es una llave creada a partir del algoritmo RSA, un sistema criptográfico de clave pública que utiliza factorización de números enteros y cifra bloques de datos. Es el algoritmo más utilizado para crear estas llaves.
-
-> Una llave privada solo puede descifrarla la llave pública que se crea y que es asociada a una única llave privada.
-
-- **EC,** es una llave basada en la Criptografía de curva elíptica (ECC), la cual promete una seguridad más fuerte y mejor rendimiento ya que utiliza claves más cortas. El sistema criptográfico utilizado está basado en las matemáticas de curvas elípticas.
-
-> La llave es la que permite al usuario autenticarse por medio de la conexión SSH al servidor web. Para esto deberá contar con una llave privada y una llave pública que contiene el servidor y con la cual se va a conectar. 
-
-1.2. Selección del tipo de cifrador para el certificado. Se debe seleccionar dependiendo del tipo de conexión y están disponibles dos tipos:
-
-- **AES_128_CBC:** Es un tipo de cifrado, donde Advanced Encryption Standard (AES), es un esquema de cifrado por bloques y Cipher Block Chaining (CBC), es un modo de operación para una unidad de cifrado por bloques. Este tipo de cifrado tiene un tamaño de 128 bytes. Es el más utilizado.
-
-- **AES_256_CBC:** Es un tipo de cifrado por bloques, que utiliza el modo de operación CBC. Este tipo de cifrado tiene un tamaño de 256 bytes.
-
-
-3. Tamaño de la llave en bits.
-
-4. Contraseña de la llave.
-
-5. Tipo de llave. La llave va a funcionar para un cliente, un servidor o un SDK.
-
-6. Banco emisor.
-
-7. Tipo de franquicia.
-
-
-#### 2. Solicitud de firma del certificado:
-
-![](../assets/images/step-two.png)
-
-Aquí se registran los datos de información general sobre el solicitante de la llave:
-
-- Ubicación.
-- Organización.
-- Nombre, debe ser un dominio.
-- Correo electrónico.
-
-
-#### 3. Información de rastreo:
-
-![](../assets/images/step-three.png)
-
-Permite la identificación a partir de un slug, el cual forma parte de la URL que se va a consultar para acceder al servidor mediante el certificado.
-
-
-## Registro y firma del certificado:
-
-Una vez creado el certificado, le mostrará los datos que diligenció en el formulario. Además, de eso creará una solicitud de firma de certificado, como la siguiente:
-
-![](../assets/images/signature-certificate-request.png)
-
-Debe copiar este bloque incluidas las etiquetas de BEGIN y END CERTIFICATE REQUEST. Con esta información debe proceder a crear su llave privada y a firmar el certificado.
-
-Una vez tenga su certificado firmado, obtendrá otro bloque similar al de la imagen, debe copiarlo incluyendo también las etiquetas de BEGIN y END CERTIFICATE REQUEST.
-
-Luego, en el detalle del certificado, al final encontrará la opción de registrar su certificado:
-
-![](../assets/images/request.png)
-
-Haga clic allí, lo llevará a la siguiente vista, donde debe pegar su certificado en el campo *Certificado*, así:
-
-![](../assets/images/register-certificate.png)
-
-<!--
-type: tab
-title: Roles
--->
-
-# Roles
-
-Aquí se gestionan los roles de usuario de la aplicación. Inicialmente se tiene una vista con la lista de roles creados, los cuales se pueden ver, editar y eliminar. Además, se pueden crear nuevos roles diligenciando un nombre y opcionalmente una descripción para el mismo.
-
-![](../assets/images/roles-index.png)
-
-### Asignación de permisos:
-
-Al dar clic en la opción *Ver* de un rol, se presentarán los detalles del rol seleccionado y en la parte inferior de la pantalla encontrará un menú como el siguiente:
-
-![](../assets/images/permissions.png)
-
-Aquí puede buscar permisos referentes a diversas funcionabilidades de ACS, seleccionarlos, denegarlos y concederlos. Estos permisos determinan las funcionabilidades y acciones a las cuales tiene acceso el rol.
-
-### Roles ancestros:
-
-Aquí registran los roles que están utilizando el rol actual. Esto puede darse cuando se le concede un rol a otro rol en el menú de *Permisos*.
-
-<!--
-type: tab
-title: Perfiles
--->
-
-# Perfiles
-
-Los roles se asocian con los perfiles. El siguiente es un ejemplo de un índice de perfiles, en el cual puede ver, editar, habilitar o deshabilitar un perfil, haciendo clic en el menú lateral derecho. 
-
-![](../assets/images/profiles-index.png)
-
-Para crear un nuevo perfil se solicitará:
-
-- Nombre para el perfil.
-- Descripción (opcional).
-- Rol, debe seleccionar el rol que se asociará al perfil.
-- Compartido, puede habilitar o deshabilitar esta opción. Un perfil compartido se da cuando el perfil está siendo utilizado por otros roles.
-
-![](../assets/images/profile-create.png)
-
-### ACL:
-
-El ACL (Access Control List), es un módulo de gestión de permisos y reglas desarrollado en PlacetoPay y utilizado por ACS. Este se encarga de gestionar los permisos y accesos de los diferentes roles y perfiles creados en ACS. 
-
-Estos permisos y reglas de acceso, se diferencian de los permisos básicos registrados en los roles, en que estos son más específicos y ofrecen una capa de seguridad extra a los datos manejados en la aplicación, ya que estos permisos permiten que se visualice la información que corresponde solo a un cliente en específico y que no se filtre otra información que pertenece a otros clientes u organizaciones.
-
-La lista de reglas se puede visualizar en el detalle de un perfil, en una vista similar a la siguiente:
-
-![](../assets/images/acl-list.png)
-
-### Crear reglas ACL:
-
-Para crear una regla ACL, haga clic en el botón *Crear*, se presentará un formulario como el siguiente:
-
-![](../assets/images/acl-create.png)
-
-#### Información general:
-
-Las reglas tienen dos opciones disponibles:
-- Permitir accesos
-- Denegar accesos
-
-En el campo entidad, debe seleccionar el la entidad que gestional el módulo al cual quiere aplicarle las condiciones que va a crear.
-
-#### Condicionales:
-
-- Atributo: Seleccione el campo correspondiente a la entidad seleccionada previamente y al cual desea validar.
-
-- Operador: Permite hacer las comparaciones de los datos.
-
-- Valor: Ingrese uno o varios valores que debería contener el atributo seleccionado.
-
-<!--
-type: tab
-title: Logs
--->
-
-# Logs de Seguridad
-
-En esta sección se registran los movimientos y actualizaciones que se realizan en la aplicación de ACS. Los logs permiten tener un control de los cambios y de lo que sucede en la aplicación. 
-En la sección de logs se encuentra un listado de los mismos,con una descripción y la fecha y hora en que fue registrado el movimiento. Un ejemplo de un índice de logs es el siguiente:
-
-![](../assets/images/logs-index.png)
-
-
-En los detalles de cada log, puede visualizar el usuario que realizó el movimiento, la dirección IP, el sistema operativo y un detalle del cambio con un antes y después.
-
-![](../assets/images/logs-detail.png)
-
-
-Para esta funcionabilidad también están disponibles los filtros de búsqueda por rango de fechas y usuario. Además, se pueden eliminar, exportar en un reporte de logs,  visualizar y descargar los reportes de logs creados.
-
-![](../assets/images/logs-actions.png)
-
-### Filtros:
-
-Puede hacer búsquedas de logs registrados. Puede filtrar por rango de fechas y por el correo electrónico del usuario que realizó el cambio o movimiento:
-
-![](../assets/images/logs-filters.png)
-
-
+> Para generar nuevas métricas, haga clic en el botón *Limpiar filtros* y genera un nuevo rango de fechas, moneda y emisor.
 
 <!-- type: tab-end -->
 

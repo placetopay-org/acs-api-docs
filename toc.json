@@ -36,9 +36,25 @@
       "uri": "docs/Database.md"
     },
     {
-      "type": "item",
-      "title": "Funcionabilidades de ACS",
-      "uri": "docs/ACSFunctionalities.md"
+      "type": "group",
+      "title": "Funcionamiento de ACS",
+      "items": [
+        {
+          "type": "item",
+          "title": "Funcionalidades",
+          "uri": "docs/ACSFunctionalities.md"
+        },
+        {
+          "type": "item",
+          "title": "Configuración",
+          "uri": "docs/ACSConfigurations.md"
+        },
+        {
+          "type": "item",
+          "title": "Seguridad",
+          "uri": "docs/ACSSecurity.md"
+        }
+      ]
     },
     {
       "type": "item",
