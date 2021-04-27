@@ -142,31 +142,72 @@ Se solicitará:
 
 - **Valor:** Corresponde al valor del tipo de parámetro seleccionado en el campo anterior. Con este valor se procede a hacer las validaciones y a verificar la coincidencia del dato con los recibidos en la autenticación.
 
-### Grupos de control antifraude:
-
-Para cada banco emisor registrado en el ACS, se creará un grupo predeterminado conformado por una serie de reglas antifraude que permiten validar las solicitudes de autenticación. Además de este grupo prederteminado, se podrán agregar otros nuevos al emisor.
-
-En la imagen se muestra el listado de grupos de control de fraude de un emisor. En esta vista se pueden crear nuevos grupos con el botón *Crear* y se pueden visualizar los detalles y las reglas de cada grupo dando clic en la opción *Ver*.
-
-En la imagen ejemplo, se visualizan dos grupos, uno llamado *Lista blanca*, donde se podrían incluir por ejemplo números de tarjetas y datos de clientes con bajo riesgo de fraude y las acciones de las reglas podrían ser en su mayoría *Autenticar*. El otro grupo se llama *Lista negra*, aquí se podrían agregar los números de tarjeta e información personal asociada a clientes con historiales o reportes y la acción de las reglas podría ser *No autenticar*.
-
-![](../assets/images/fraud-groups.png)
-
 ### Reglas antifraude:
 
-Los grupos de control antifraude están conformados por reglas que permiten hacer las validaciones de los datos recibidos en las autenticaciones. Estas reglas evalúan la coincidencia de las condiciones contenidas en la regla y de los datos obtenidos en la solicitud de autenticación.
+Las reglas de control antifraude evalúan la coincidencia de las condiciones contenidas en la regla y de los datos obtenidos en la solicitud de autenticación.
 
-Al presionar la opción *Ver* de un grupo de control antifraude, le mostrará una vista similar a esta.
+#### Reglas predeterminadas:
+
+Al crear un emisor, este se creará automáticamente con un conjunto de reglas predeterminadas, tales reglas dependerán de los requerimientos particulares del emisor.
+
+El siguiente es un ejemplo de cómo se podrían visualizar las reglas predeterminadas de un emisor.
+
+![](../assets/images/predermined-rules.png)
+
+#### Reglas pertenecientes a grupos:
+Además de las reglas predeterminadas, al crear grupos de control antifraude, estos se conformarán por conjuntos de reglas que puede crear, editar, habilitar o deshabilitar.
+
+Para visualizar las reglas contenidas en un grupo, haga clic en la opción *Ver* de un grupo de control antifraude. 
+
+Le mostrará una vista similar a esta:
 
 ![](../assets/images/group-details.png)
 
-Aquí se encuentran los detalles del grupo seleccionado, puede habilitarlo o deshabilitarlo en el menú lateral derecho. Además, encontrará el listado de reglas correspondientes al grupo, la acción que ejecutan, puede habilitarlas o deshabilitarlas y puede visualizar los detalles y condiciones de la misma.
+Aquí encontrará el listado de reglas correspondientes al grupo, la acción que ejecutan, puede habilitarlas o deshabilitarlas y puede visualizar los detalles y condiciones de la misma, desplegando el menú con tres puntos ubicado en la parte lateral derecha de cada reglas.
 
+> Puede ordenar el conjunto de reglas para que validen la petición de autenticación según ese orden. Para ello seleccione la regla y deje el cursor oprimido, deslice hacia arriba o hacia abajo según el orden que requiera dar.
+
+### Grupos de control antifraude:
+
+Los grupos de control antifraude permiten ejecutar un conjunto de reglas y dar un orden a la ejecución de reglas que van a proceder a validar las solicitudes de autenticación.
+
+En la siguiente imagen se muestra el listado de grupos de control de fraude de un emisor. 
+
+![](../assets/images/fraud-groups.png)
+
+En ella se visualizan dos grupos, uno llamado *Lista blanca*, donde se podrían incluir por ejemplo números de tarjetas y datos de clientes con bajo riesgo de fraude y las acciones de las reglas podrían ser en su mayoría *Autenticar*. El otro grupo se llama *Lista negra*, aquí se podrían agregar los números de tarjeta e información personal asociada a clientes con historiales o reportes y la acción de las reglas podría ser *No autenticar*.
+
+> Para los grupos solo está disponible la acción de *Ver*, para visualizar los detalles del grupo y las reglas contenidas en él. No puede eliminarlos, solo deshabilitarlos en el detalle.
+
+### Crear nuevos grupos de control antifraude:
+
+Haciendo clic en el botón *Crear* del índice de grupos, ubicado en la parte lateral derecha, se direccionará a un formulario como el siguiente: 
+
+![](../assets/images/create-group.png)
+
+Diligencie teniendo en cuenta:
+
+- **Nombre:** Ingrese el nombre que desea asignarle al grupo a crear.
+- **Posición:** Este número va a indicar la posición del grupo de reglas frente a otros grupos. Esta posición determina el orden en el cual se van a ejecutar las reglas al autenticar un tarjetahabiente. La aplicación asigna una posición automática según el orden de creación pero puede cambiar el indicador.
+
+### Detalles de un grupo:
+
+Al dar clic en la opción *Ver* de un grupo del listado, se direccionará a una vista como esta:
+
+![](../assets/images/group-detail.png)
+
+La anterior vista corresponde a los detalles de un grupo, en la primera sección se encuentran los datos de creación y actualización. Y en la segunda sección encontrará el listado de reglas que contiene el grupo y en la otra pestaña, la sección de Solicitudes de reglas.
+
+#### Deshabilitar un grupo:
+
+Para deshabilitar el grupo haga clic en el menú de tres puntos ubicado en la parte lateral derecha, encontrará el botón *Deshabilitar*, deslice para habilitarlo.
+
+#### Solicitudes de reglas:
 En la pestaña *Solicitudes de reglas*, se pueden visualizar las peticiones de creación, actualización o eliminación de reglas, las cuales se encuentran pendientes por aprobar o denegar. También, puede crear una petición de reglas nueva, haciendo clic en el botón *Crear petición de regla*.
 
 ![](../assets/images/rule-create.png)
 
-Luego visualizará una ventana como esta, dónde le solicitan la acción que desea hacer con la regla.
+Luego visualizará una ventana como esta, dónde le solicitan la acción que desea hacer para una regla. Es decir, quiere crear una regla nueva o editar o eliminar una regla existente.
 
 ![](../assets/images/rule-create-actions.png)
 
@@ -176,7 +217,7 @@ Para crear una petición de regla, debe seleccionar la opción *Crear*, y se des
 
 Los datos requeridos son:
 - **Nombre:** ¿Cómo desea nombrar la regla a crear?
-- **Acción:** Se refiere a la función que va a cumplir la regla en el proceso de autenticación. Estas acciones se describen detalladamente en el siguiente título.
+- **Acción:** Se refiere a la función que va a cumplir la regla en el proceso de autenticación. Estas acciones se describen detalladamente en el siguiente título "Acciones de las reglas".
 - **Tipo de regla:** Hace referencia al tipo de regla que desea crear, por ejemplo es una regla que valida números de tarjeta de crédito, o valida emails, o rangos de bines...
 - **Valor:** Es el valor que requiere una regla para validar y comparar los datos presentes en la misma y en la solicitud de autenticación.
 
@@ -192,7 +233,7 @@ Luego de enviar la solicitud de regla, esta se agregará al listado de *Solicitu
 
 > Hasta que no acepte la solicitud de regla, esta no podrá visualizarse ni utilizarse en producción. Luego de aceptarla recuerde habilitarla.
 
-### Acciones de las reglas: 
+#### Acciones de las reglas: 
 Al crear una regla se le define un tipo de acción específica que va a ejecutar. Estas acciones permiten definir el transStatus (estado de autenticación de la transacción). Las acciones permitidas son las siguientes:
 
 - **Autenticar:** Las reglas que contengan esta acción, permitirán validar la solicitud de autenticación y aprobarla automáticamente, generando un estatus Y (autenticación satisfactoria). Por ejemplo una regla de tipo *BinRange* va a contener un rango mínimo y máximo de BIN, las tarjetas cuyo BIN entren en este rango, podrán ser autenticadas automáticamente, creando una especie de lista blanca de datos.
@@ -208,6 +249,7 @@ Al crear una regla se le define un tipo de acción específica que va a ejecutar
 - **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado).
 
 > La función de ejecutar un grupo de reglas permitirá hacer validaciones no secuenciales entre los diferentes grupos registrados para un emisor.
+
 
 <!--
 type: tab
