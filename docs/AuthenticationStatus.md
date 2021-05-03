@@ -9,4 +9,5 @@ Estado | Descripción                                                           
  U     | Autenticación no realizada. Se presentó un error técnico durante el proceso.                              |
  A     | Se ejecutó un intento de autenticación.                                                                   |
  C     | Se requiere challenge para continuar el proceso de autenticación.                                         |
- R     | Autenticación rechazada. Una transacción cuya autenticación resulte en estado R no debería ser procesada debido al riesgo.                                                                                                  |
+ D     | Se requiere desafío desacoplado.                                                                          |
+ R     | Autenticación rechazada. Una transacción cuya autenticación resulte en estado R no debería ser procesada debido al riesgo.                                                                                                  |                                                                                                |
