@@ -7,7 +7,7 @@ title: Autenticaciones
 
 En este módulo se registra la información de todas las autenticaciones procesadas por el ACS. En la primera vista se encuentra el listado de las transacciones con fecha, estado y otros datos importantes. También, puede desplegar más información de cada transacción con el botón desplegable ubicado antes del botón *Ver*.
 
-![](../assets/images/auth-index.png)
+![](https://wiki.placetopay.com/images/f/fd/Acs-auth-index.png)
 
 ## Filtros:
 
