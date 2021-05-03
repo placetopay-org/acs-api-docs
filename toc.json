@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "type": "item",
+      "title": "Introducción",
+      "uri": "docs/Introduction.md"
+    },
+    {
+      "type": "item",
+      "title": "Términos y Definiciones",
+      "uri": "docs/TermsAndDefinitions.md"
+    },
+    {
+      "type": "item",
+      "title": "Generalidades del Protocolo 3DS",
+      "uri": "docs/3DSSecureProtocol.md"
+    },
+    {
+      "type": "item",
+      "title": "Acerca del componente ACS",
+      "uri": "docs/ACSComponent.md"
+    },
+    {
+      "type": "item",
+      "title": "Estados de la Autenticación",
+      "uri": "docs/AuthenticationStatus.md"
+    },
+    {
+      "type": "item",
+      "title": "Tecnologías usadas en el desarrollo de ACS",
+      "uri": "docs/Technologies.md"
+    },
+    {
+      "type": "item",
+      "title": "Gestión de los datos en ACS",
+      "uri": "docs/Database.md"
+    },
+    {
+      "type": "group",
+      "title": "Funcionamiento de ACS",
+      "items": [
+        {
+          "type": "item",
+          "title": "Funcionalidades",
+          "uri": "docs/ACSFunctionalities.md"
+        },
+        {
+          "type": "item",
+          "title": "Configuración",
+          "uri": "docs/ACSConfigurations.md"
+        },
+        {
+          "type": "item",
+          "title": "Seguridad",
+          "uri": "docs/ACSSecurity.md"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "title": "Implementación de servicios externos",
+      "uri": "docs/Services.md"
+    }
+  ]
+}
