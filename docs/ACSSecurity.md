@@ -7,17 +7,17 @@ title: Roles
 
 Para acceder a este módulo y a los demás comprendidos en la categoria seguridad, dírijase al menú ubicado en la parte lateral izquierda, y despliegue la opción de *Seguridad*.
 
-![](../assets/images/security-menu.png)
+![](https://wiki.placetopay.com/images/b/b6/Acs-security-menu.png)
 
 En este módulo se gestionan los roles de usuario de la aplicación. Inicialmente se tiene una vista con la lista de roles creados, los cuales se pueden ver, editar y eliminar haciendo clic en las opciones del menú desplegable ubicado en la parte lateral derecha. 
 
-![](../assets/images/roles-index.png)
+![](https://wiki.placetopay.com/images/2/21/Acs-roles-index.png)
 
 ### Crear nuevo rol:
 
 Además, se pueden crear nuevos roles mediante el botón *Crear*, ubicado en la parte lateral derecha. Se debe diligenciar un nombre y opcionalmente una descripción para el mismo.
 
-![](../assets/images/create-role.png)
+![](https://wiki.placetopay.com/images/9/92/Acs-create-role.png)
 
 En la parte inferior de los detalles de un rol se puede visualizar una sección con tres pestañas que direccionan a tres funcionalidades diferentes:
 
@@ -25,7 +25,7 @@ En la parte inferior de los detalles de un rol se puede visualizar una sección 
 
 Al dar clic en la opción *Ver* de un rol, se presentarán los detalles del rol seleccionado y en la parte inferior de la pantalla encontrará un menú como el siguiente:
 
-![](../assets/images/permissions.png)
+![](https://wiki.placetopay.com/images/c/c5/Acs-permissions.png)
 
 Aquí se pueden buscar permisos referentes a diversas funcionalidades de ACS, seleccionarlos, denegarlos y concederlos. Estos permisos determinan las funcionalidades y acciones a las cuales tiene acceso el rol.
 Además, se pueden conceder y denegar otros roles al actual.
@@ -53,17 +53,17 @@ Para acceder a este módulo, el usuario con los permisos necesarios para crear l
 
 Al ingresar al módulo, la plataforma muestra una tabla con los campos del nombre, descripción, rol y fechas de creación y actualización del perfil.
 
-![](../assets/images/profiles-index.png)
+![](https://wiki.placetopay.com/images/c/c2/Acs-profiles-index.png)
 
 Cada perfil cuenta con unas opciones para ser gestionado como son la opción de ver, editar o deshabilitar.
 
-![](../assets/images/options-profile.png)
+![](https://wiki.placetopay.com/images/9/95/Acs-options-profile.png)
 
 - **Opción *Ver*:** Permite visualizar una información más detallada del perfil como son el nombre, si es un perfil compartido o no, la fecha de creación, actualización, y el usuario que lo creó, al igual que los permisos que el perfil tiene a disposición o los que desea agregar. 
 
 Un ejemplo de una vista de detalle de un perfil es el siguiente:
 
-![](../assets/images/detail-profile.png)
+![](https://wiki.placetopay.com/images/1/1a/Acs-detail-profile.png)
 
 - **Opción *Editar*:** Permite actualizar el nombre, descripción, rol y la opción de compartido.
 
@@ -79,7 +79,7 @@ Para crear un nuevo perfil se solicitará:
 - Rol, debe seleccionar el rol que se asociará al perfil.
 - Compartido, puede habilitar o deshabilitar esta opción. Un perfil compartido se da cuando el perfil está siendo utilizado por otros roles.
 
-![](../assets/images/profile-create.png)
+![](https://wiki.placetopay.com/images/5/5a/Acs-profile-create.png)
 
 
 ### ACL:
@@ -90,13 +90,13 @@ Estos permisos y reglas de acceso, se diferencian de los permisos básicos regis
 
 La lista de reglas se puede visualizar en el detalle de un perfil, en una vista similar a la siguiente:
 
-![](../assets/images/acl-list.png)
+![](https://wiki.placetopay.com/images/c/c4/Acs-acl-list.png)
 
 ### Crear reglas ACL:
 
 Para crear una regla ACL, haga clic en el botón *Crear*, se presentará un formulario como el siguiente:
 
-![](../assets/images/acl-create.png)
+![](https://wiki.placetopay.com/images/c/cf/Acs-acl-create.png)
 
 #### Información general:
 
@@ -126,7 +126,7 @@ En la sección de logs se encuentra un listado de los mismos, con una descripci�
 
 Un ejemplo de un índice de logs es el siguiente:
 
-![](../assets/images/logs-index.png)
+![](https://wiki.placetopay.com/images/3/3d/Acs-logs-index.png)
 
 ### Acciones:
 
@@ -138,19 +138,19 @@ Para visualizar las acciones disponibles para el listado de los logs, haga clic 
 
 - **Exportar:** Exportará un documento en el cual registran todos los logs listados.
 
-![](../assets/images/logs-actions.png)
+![](https://wiki.placetopay.com/images/1/10/Acs-logs-actions.png)
 
 ### Detalles de un log:
 
 Puede visualizar los detalles de cada log haciendo clic en el botón *Ver*, ubicado al final de cada registro. Allí puede visualizar el usuario que realizó el movimiento, la dirección IP, el sistema operativo y un detalle del cambio con un antes y después.
 
-![](../assets/images/logs-detail.png)
+![](https://wiki.placetopay.com/images/9/91/Acs-logs-detail.png)
 
 ### Filtros:
 
 Para hacer búsquedas de los logs registrados utilice la sección de filtros. Haga clic en el botón *Filtros*, ubicado en la parte lateral izquierda, se desplegará un módulo para filtrar por rango de fechas y por el correo electrónico del usuario que realizó el cambio o movimiento:
 
-![](../assets/images/logs-filters.png)
+![](https://wiki.placetopay.com/images/b/bb/Acs-logs-filters.png)
 
 
 <!-- type: tab-end -->
