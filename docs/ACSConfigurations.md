@@ -9,13 +9,15 @@ En la sección de emisores se encuentran diferentes funcionalidades relacionadas
 
 En la siguiente imagen se visualiza un ejemplo de la vista de *Detalles del emisor*, además se puede editar y habilitar o deshabilitar con el menú lateral derecho.
 
-![](../assets/images/issuers.png)
+![](https://wiki.placetopay.com/images/2/21/Acs-issuers.png
+)
 
 
 ### Configuraciones:
 En este apartado se encuentra toda la gestión de configuración de campos para un banco emisor, puede ver los detalles de cada uno, qué función desempeña, puede editarlos, deshabilitarlos y habilitarlos según se requiera. 
 
-![](../assets/images/issuers-configurations.png)
+![](https://wiki.placetopay.com/images/6/6b/Acs-issuers-configurations.png
+)
 
 También, en la pestaña *Services*, se encuentran las estrategias disponibles para ejecutar los servicios para el emisor.
 
@@ -27,7 +29,8 @@ También, en la pestaña *Services*, se encuentran las estrategias disponibles p
 
 Estas configuraciones se gestionan desde la sección *Campos de configuración* del ACS. Allí se encuentra un listado de los campos creados para configurar los emisores, puede habilitarlos, deshabilitarlos, editarlos y ver sus detalles.
 
-![](../assets/images/configurations-actions.png)
+![](https://wiki.placetopay.com/images/a/ac/Acs-configurations-actions.png
+)
 
 Además, con el botón *Crear*, puede adicionar nuevos campos con diferentes tipos de datos a recibir:
 
@@ -45,24 +48,14 @@ Además, con el botón *Crear*, puede adicionar nuevos campos con diferentes tip
 
 - **TRANSLATABLE:** Recibe un dato que puede ser traducido.
 
-![](../assets/images/configuration-fields.png)
-
-### Gestión de bines:
-Aquí se gestionan los bines del adquiriente. En primer lugar obtendrá un listado de los bines creados anteriormente para el emisor, además puede crear otros bines nuevos, editarlos y eliminarlos.
-
-![](../assets/images/bines.png)
-
-Al dar clic en el botón *Crear* como ilustra la imagen, tendrá tres opciones para crear bines:
-
-- Crear un único BIN para el emisor.
-- Crear un rango de bines para el emisor, el cuál contendrá un valor mínimo y un valor máximo de bines, creando así un grupo de números de tarjetas de crédito a gestionar.
-- Crear importación, para la importación se aceptan los formatos de archivo .csv, .tsv y .txt
-
+![](https://wiki.placetopay.com/images/0/0d/Acs-configuration-fields.png
+)
 
 ### Gestión de rangos de tarjetas:
 En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico. Puede ver los detalles de cada rango, editarlos y eliminarlos.
 
-![](../assets/images/card-ranges-index.png)
+![](https://wiki.placetopay.com/images/2/22/Acs-card-ranges-index.png
+)
 
 Al dar clic en el botón *Crear*, se desplegarán dos opciones para crear rangos:
 
@@ -70,11 +63,13 @@ Al dar clic en el botón *Crear*, se desplegarán dos opciones para crear rangos
 
 - **Crear importación,** para crear una importación visualizará un formulario similar al siguiente:
 
-![](../assets/images/create-import-ranges.png)
+![](https://wiki.placetopay.com/images/b/ba/Acs-create-import-ranges.png
+)
 
 Debe seleccionar la franquicia para la cual se van a cargar los rangos y un archivo de tipo CSV (archivo de valores separados por comas) que contenga la información de los rangos. Un ejemplo del archivo es este:
 
-![](../assets/images/file-import-example.png)
+![](https://wiki.placetopay.com/images/8/8f/Acs-file-import-example.png
+)
 
 El archivo debe contener cuatro títulos separados por comas en minúscula:
 
@@ -122,11 +117,13 @@ Las listas de control de fraude son el primer filtro que puede validar una auten
 
 > Las listas de control antifraude se ejecutan antes de los grupos de control antifraude y según los resultados que obtenga de sus validaciones, puede evitar que una autenticación tenga que pasar por las validaciones de los grupos de reglas.
 
-![](../assets/images/fraud-list-index.png)
+![](https://wiki.placetopay.com/images/f/f9/Acs-fraud-list-index.png
+)
 
 Para crear una lista de control se direccionará a un formulario como este:
 
-![](../assets/images/create-fraud-list.png)
+![](https://wiki.placetopay.com/images/5/53/Acs-create-fraud-list.png
+)
 
 Se solicitará:
 
@@ -150,7 +147,8 @@ En la imagen se muestra el listado de grupos de control de fraude de un emisor. 
 
 En la imagen ejemplo, se visualizan dos grupos, uno llamado *Lista blanca*, donde se podrían incluir por ejemplo números de tarjetas y datos de clientes con bajo riesgo de fraude y las acciones de las reglas podrían ser en su mayoría *Autenticar*. El otro grupo se llama *Lista negra*, aquí se podrían agregar los números de tarjeta e información personal asociada a clientes con historiales o reportes y la acción de las reglas podría ser *No autenticar*.
 
-![](../assets/images/fraud-groups.png)
+![](https://wiki.placetopay.com/images/4/4c/Acs-fraud-groups.png
+)
 
 ### Reglas antifraude:
 
@@ -158,21 +156,25 @@ Los grupos de control antifraude están conformados por reglas que permiten hace
 
 Al presionar la opción *Ver* de un grupo de control antifraude, le mostrará una vista similar a esta.
 
-![](../assets/images/group-details.png)
+![](https://wiki.placetopay.com/images/8/8c/Acs-group-details.png
+)
 
 Aquí se encuentran los detalles del grupo seleccionado, puede habilitarlo o deshabilitarlo en el menú lateral derecho. Además, encontrará el listado de reglas correspondientes al grupo, la acción que ejecutan, puede habilitarlas o deshabilitarlas y puede visualizar los detalles y condiciones de la misma.
 
 En la pestaña *Solicitudes de reglas*, se pueden visualizar las peticiones de creación, actualización o eliminación de reglas, las cuales se encuentran pendientes por aprobar o denegar. También, puede crear una petición de reglas nueva, haciendo clic en el botón *Crear petición de regla*.
 
-![](../assets/images/rule-create.png)
+![](https://wiki.placetopay.com/images/5/59/Acs-rule-create.png
+)
 
 Luego visualizará una ventana como esta, dónde le solicitan la acción que desea hacer con la regla.
 
-![](../assets/images/rule-create-actions.png)
+![](https://wiki.placetopay.com/images/c/c2/Acs-rule-create-actions.png
+)
 
 Para crear una petición de regla, debe seleccionar la opción *Crear*, y se desplegará una vista como la siguiente:
 
-![](../assets/images/conditions-rule.png)
+![](https://wiki.placetopay.com/images/f/f0/Acs-conditions-rule.png
+)
 
 Los datos requeridos son:
 - **Nombre:** ¿Cómo desea nombrar la regla a crear?
@@ -184,11 +186,13 @@ Los datos requeridos son:
 
 También hay otros tipos de reglas que ofrecen más posibilidades, en la siguiente imagen puede visualizar una regla donde puede escoger que el valor tenga un rango, un valor mínimo o máximo por ejemplo.
 
-![](../assets/images/others-rule-conditions.png)
+![](https://wiki.placetopay.com/images/1/19/Acs-others-rule-conditions.png
+)
 
 Luego de enviar la solicitud de regla, esta se agregará al listado de *Solicitudes de regla*, allí tiene la opción de *Aceptar* o *Denegar*, con los botones de la parte lateral derecha.
 
-![](../assets/images/accept-deny.png)
+![](https://wiki.placetopay.com/images/a/aa/Acs-accept-deny.png
+)
 
 > Hasta que no acepte la solicitud de regla, esta no podrá visualizarse ni utilizarse en producción. Luego de aceptarla recuerde habilitarla.
 
@@ -226,7 +230,8 @@ Los estados posibles son:
 - Fallido
 - Pendiente
 
-![](../assets/images/imports-index.png)
+![](https://wiki.placetopay.com/images/2/2d/Acs-imports-index.png
+)
 
 
 <!--
@@ -238,7 +243,8 @@ title: Reportes
 
 Los reportes son archivos que contienen registros de las autenticaciones procesadas por ACS. La siguiente imagen muestra un ejemplo de la vista con el índice de reportes generados. Estos reportes se pueden ver y descargar.
 
-![](../assets/images/report-index.png)
+![](https://wiki.placetopay.com/images/1/12/Acs-report-index.png
+)
 
 Para crear un nuevo reporte haga clic en el botón *Crear*. 
 Actualmente se manejan dos tipos de reportes:
@@ -247,13 +253,15 @@ Actualmente se manejan dos tipos de reportes:
 
 El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. El siguiente es un ejemplo de creación de un reporte de autenticaciones:
 
-![](../assets/images/auth-report.png)
+![](https://wiki.placetopay.com/images/b/bd/Acs-auth-report.png
+)
 
 ## Reportes de Abandonos 
 
 Con este reporte se generan los datos de las autenticaciones que son abandonadas en el ACS. Para el reporte se puede definir un rango de fechas y el banco emisor. El siguiente es un ejemplo de creación de un reporte de abandonos:
 
-![](../assets/images/abandoned-report.png)
+![](https://wiki.placetopay.com/images/4/42/Acs-abandoned-report.png
+)
 
 
 ## Tipos de archivos generados para los reportes
@@ -273,7 +281,8 @@ Aquí se gestionan las franquicias que funcionan en ACS, siendo la franquicia un
 
 En esta sección se visualiza el listado de franquicias, los detalles de cada una, se pueden editar, habilitar y deshabilitar.
 
-![](../assets/images/franchise-index.png)
+![](https://wiki.placetopay.com/images/6/62/Acs-franchise-index.png
+)
 
 
 Para crear una franquicia, haga clic en el botón crear y diligencia los datos teniendo en cuenta la siguiente información:
@@ -291,7 +300,8 @@ Indicator (ECI), es un valor para indicar los resultados del intento de autentic
 
 En la siguientes imagen se puede visualizar un ejemplo de creación de franquicia:
 
-![](../assets/images/create-franchise.png)
+![](https://wiki.placetopay.com/images/a/a0/Acs-create-franchise.png
+)
 
 <!--
 type: tab
@@ -308,7 +318,8 @@ Es a través de una invitación que se pueden crear nuevos usuarios, esta se env
 
 Para crear una invitación, haga clic en el botón *Crear* del módulo de invitaciones, visualizará un formulario como el siguiente:
 
-![](../assets/images/create-invitation.png)
+![](https://wiki.placetopay.com/images/1/15/Acs-create-invitation.png
+)
 
 Datos a diligenciar:
 
@@ -348,7 +359,8 @@ En esta sección se visualizan las monedas creadas para utilizarse en ACS, puede
 
 Para crear una nueva moneda, debe diligenciar un formulario similar al siguiente:
 
-![](../assets/images/create-currency.png)
+![](https://wiki.placetopay.com/images/9/92/Acs-create-currency.png
+)
 
 Datos a diligenciar:
 
@@ -400,7 +412,8 @@ El certificado permite que cuando un usuario intente enviar información de las 
 
 La siguiente imagen muestra un ejemplo de la vista de un índice de certificados:
 
-![](../assets/images/certificates-index.png)
+![](https://wiki.placetopay.com/images/8/89/Acs-certificates-index.png
+)
 
 Los certificados se pueden editar y visualizar los detalles del mismo, haciendo clic en el menú con tres puntos ubicado en la parte lateral derecha de cada certificado.
 
@@ -410,7 +423,8 @@ Para crear un nuevo certificado en ACS, haga clic en el botón *Crear*. La solic
 
 #### 1. Creación de la llave privada:
 
-![](../assets/images/step-one.png)
+![](https://wiki.placetopay.com/images/3/3b/Acs-step-one.png
+)
 
 1.1. Solicitud del tipo de llave con el cual se va a cifrar el certificado, están disponibles los siguientes tipos de llaves:
 
@@ -442,7 +456,8 @@ Para crear un nuevo certificado en ACS, haga clic en el botón *Crear*. La solic
 
 #### 2. Solicitud de firma del certificado:
 
-![](../assets/images/step-two.png)
+![](https://wiki.placetopay.com/images/f/fd/Acs-step-two.png
+)
 
 Aquí se registran los datos de información general sobre el solicitante de la llave:
 
@@ -457,7 +472,8 @@ Aquí se registran los datos de información general sobre el solicitante de la 
 
 #### 3. Información de rastreo:
 
-![](../assets/images/step-three.png)
+![](https://wiki.placetopay.com/images/a/a4/Acs-step-three.png
+)
 
 Permite la identificación a partir de un slug, el cual forma parte de la URL que se va a consultar para acceder al servidor mediante el certificado.
 
@@ -474,7 +490,8 @@ Un ejemplo es el siguiente:
 
 1. Debe copiar este bloque, correspondiente a la solicitud de firma del certificado. Copie el bloque incluyendo las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
 
-![](../assets/images/signature-certificate-request.png)
+![](https://wiki.placetopay.com/images/b/bb/Acs-signature-certificate-request.png
+)
 
 2. Cree su llave privada y firme el certificado con el bloque de texto que copió.
 
@@ -482,11 +499,13 @@ Un ejemplo es el siguiente:
 
 4. En el detalle del certificado, al final encontrará la opción de registrar su certificado, haga clic en el enlace con el nombre *Aquí!*.
 
-![](../assets/images/request.png)
+![](https://wiki.placetopay.com/images/b/b8/Acs-request.png
+)
 
 5. Esto lo direccionará a la siguiente vista, donde debe pegar el segundo bloque de texto que copió, el cual corresponde a su certificado, en el campo *Certificado*, así:
 
-![](../assets/images/register-certificate.png)
+![](https://wiki.placetopay.com/images/8/83/Acs-register-certificate.png
+)
 
 6. Haga clic en guardar y con esto obtiene un certificado firmado válido para asegurar la transferencia de información con ACS.
 

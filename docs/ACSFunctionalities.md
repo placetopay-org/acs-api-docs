@@ -7,7 +7,8 @@ title: Autenticaciones
 
 En este módulo se registra la información de todas las autenticaciones procesadas por el ACS. En la primera vista se encuentra el listado de las transacciones, con fecha,estado y otros datos importantes. También, puede desplegar más información de cada transacción con el botón desplegable ubicado antes del botón *Ver*.
 
-![](../assets/images/auth-index.png)
+![](https://wiki.placetopay.com/images/f/fd/Acs-auth-index.png
+)
 
 ## Filtros:
 
@@ -17,7 +18,8 @@ Para acceder a la funcionalidad, dé clic en el botón *Filtrar* ubicado en la p
 
 #### Filtros básicos:
 
-![](../assets/images/auth-filters.png)
+![](https://wiki.placetopay.com/images/b/b7/Acs-auth-filters.png
+)
 
 La búsqueda se hace por:
 
@@ -28,7 +30,8 @@ La búsqueda se hace por:
 
 #### Filtros avanzados:
 
-![](../assets/images/advanced-filters.png)
+![](https://wiki.placetopay.com/images/6/67/Acs-advanced-filters.png
+)
 
 Al desplegar los filtros básicos, hay una opción *Ver filtros avanzados*, seleccionela y se desplegará una vista como la siguiente:
 
@@ -45,19 +48,22 @@ Aquí además de los dos filtros básicos, se pueden agregar más datos de búsq
 
 En el detalle de la autenticación, el cual se puede visualizar dando clic en el botón *Ver* de una autenticación, se encuentra información esencial del proceso de autenticación, como el estado de la autenticación, la información básica de la transacción, la información del tarjetahabiente, del comercio, los datos de entrega y una línea de tiempo con los detalles de todo el proceso de autenticación y de la información captada por cada uno de los mensajes presentes en el proceso y correspondientes al protocolo 3-D Secure.
 
-![](../assets/images/auth-details.png)
+![](https://wiki.placetopay.com/images/b/be/Acs-auth-details.png
+)
 
 ### Calificación:
 
 Algunas autenticaciones cuentan con calificaciones que permiten darle un puntaje de seguridad. Este puntaje determina el nivel de riesgo de la transacción, teniendo en cuenta el historial de transacciones que poseen características similares.
 
-![](../assets/images/scores.png)
+![](https://wiki.placetopay.com/images/5/5f/Acs-scores.png
+)
 
 ### Información de entrega:
 
 Aquí se visualiza la información relacionada con la ubicación en la cual se va a entregar el bien o servicio adquirido con la transacción. También, se puede visualizar un mapa con la ubicación.
 
-![](../assets/images/delivery-data.png)
+![](https://wiki.placetopay.com/images/d/d6/Acs-delivery-data.png
+)
 
 ### Gestión de disputas:
 
@@ -97,7 +103,8 @@ Para una disputa en estado **Abierta**, se pueden tomar estas acciones:
 
 2. **Resolver:** Haciendo clic en el botón *Resolver*, se presentará un formulario como el siguiente, en el cual debe registrar los motivos para la resolución de la disputa. Esta opción se toma cuando ya se ha dado una respuesta por parte del banco emisor encargado de analizar el caso de disputa.
 
-![](../assets/images/resolve-dispute.png)
+![](https://wiki.placetopay.com/images/d/d0/Acs-resolve-dispute.png
+)
 
 Diligencie el formulario teniendo en cuenta los siguientes datos:
 
@@ -124,11 +131,13 @@ Cada autenticación tiene una traza, la cual se entiende en ACS como una línea 
 
 Este es un ejemplo de una traza de una autenticación exitosa:
 
-![](../assets/images/auth-trace.png)
+![](https://wiki.placetopay.com/images/c/c4/Acs-auth-trace.png
+)
 
 Además, cada paso tiene la opción *Ver más*, la cual muestra la estructura de la petición o la respuesta con sus respectivos datos. Un ejemplo de este detalle es el siguiente:
 
-![](../assets/images/trace-detail.png)
+![](https://wiki.placetopay.com/images/c/c1/Acs-trace-detail.png
+)
 
 <!--
 type: tab
@@ -143,7 +152,8 @@ En esta sección se registran y listan las disputas que se procesaron para diver
 
 Aquí se pueden visualizar los detalles y descargar las disputas como un PDF.
 
-![](../assets/images/disputes-index.png)
+![](https://wiki.placetopay.com/images/5/5a/Acs-disputes-index.png
+)
 
 ### Reporte de disputas:
 
@@ -153,7 +163,8 @@ El archivo PDF generado para una disputa contiene el estado y el historial de la
 
 Este módulo contiene también filtros que permitirán hacer búsquedas de disputas específicas, filtrando por agentes responsables de las disputas, acciones, identificadores de transacción, entre otros.
 
-![](../assets/images/disputes-filters.png)
+![](https://wiki.placetopay.com/images/c/ce/Acs-disputes-filters.png
+)
 
 
 <!--
@@ -314,7 +325,8 @@ Para filtrar las transacciones se requieren los siguientes datos:
 - Emisor, banco emisor que por el cual se procesó el grupo de transacciones.
 
 
-![](../assets/images/filter-metrics.png)
+![](https://wiki.placetopay.com/images/6/6a/Acs-filter-metrics.png
+)
 
 
 ACS cuenta actualmente con los siguientes dos tipos de métricas:
@@ -330,7 +342,8 @@ Esta métrica muestra en una gráfica la cantidad de transacciones procesadas po
 
 Un ejemplo de métrica por estado de transacción, se presenta a continuación:
 
-![](../assets/images/metric.png)
+![](https://wiki.placetopay.com/images/8/8f/Acs-metric.png
+)
 
 En la parte inferior puede visualizarse el rango de fecha con el cual se obtuvo la métrica y la cantidad de transacciones que cumplieron con los filtros.
 

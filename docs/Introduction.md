@@ -1,6 +1,6 @@
 # Introducción
 
-El documento explora y describe la arquitectura y las dependencias de la aplicación ACS.
+El documento explora y describe las funcionalidades, conceptos y dependencias de la aplicación ACS.
 
 El ACS (Access Control Server), es un componente del protocolo 3-D Secure, perteneciente al dominio del emisor, cuya función es realizar la autenticación de un tarjetabiente en una transacción de comercio electrónico. El objetivo del ACS es verificar la identidad del titular de la tarjeta y tomar la decisión de autenticarlo o no basado en los datos recibidos en la petición de autenticación.
 
