@@ -102,14 +102,36 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
 
 ![](../assets/images/issuer-toggle.png)
 
+### ¿Cómo habilitar un emisor?
+
+1. **Crear certificado tipo Cliente:** Para habilitar un emisor debe crear un certificado tipo *CLIENT*, en el menú de *Certificados*, y seleccionar el emisor correspondiente y una franquicia suscrita para el mismo emisor.
+
+    Un ejemplo de la primera vista del formulario de
+    creación de un certificado es el siguiente:
+
+    ![](../assets/images/client-certificate.png)
+
+
+2. **Habilitar estrategias del emisor:** Además del certificado, en los detalles del emisor, en la parte inferior y la última pestaña encontrará un menú con el nombre de *SERVICES*, donde encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante). 
+
+    Un ejemplo del menú *Services* es el siguiente:
+
+   ![](../assets/images/issuer-strategies.png)
+
+    Nótese que en la imagen anterior, la estrategia con
+    nombre *cardholderStrategy*, se encuentra deshabilitada. Si se intentara habilitar el emisor con una de estas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
+
+    ![](../assets/images/error-enable-issuer.png)
 
 ## Detalles de un emisor
 
 ### Información principal del emisor:
 
-En la siguiente imagen se visualiza un ejemplo de la parte superior de la vista de *Detalles de un emisor*. Se visualiza la información con la cual se creó el emisor, el estado en que se encuentra el emisor (está habilitado o no),las fechas de creación del emisor y de actualización y los usuarios que hicieron la creación y/o la actualización.
+Para ir a los detalles de un emisor, haga clic en la acción *Ver* del menú desplegable del emisor, ubicado en el índice de emisores. 
 
-En la parte lateral derecha hay un recuadro en el cual se debe mostrar el logo de la franquicia, para este ejemplo no se cargó una imagen, por lo cual se muestra en negro.
+En la siguiente imagen se visualiza un ejemplo de la parte superior de la vista de *Detalles de un emisor*. En la vista se encuentra la información con la cual se creó el emisor, el estado en que se encuentra el emisor (está habilitado o no),las fechas de creación del emisor y de actualización y los usuarios que hicieron la creación y/o la actualización.
+
+En la parte lateral derecha hay un recuadro en el cual se debe mostrar el logo del emisor, para este ejemplo no se cargó una imagen, por lo cual se muestra en negro.
 
 Además, en la parte lateral derecha, hay un botón para acceder al formulario de edición en caso de requerirlo.
 
@@ -154,16 +176,80 @@ Además, con el botón *Crear*, puede adicionar nuevos campos con diferentes tip
 
 ![](https://wiki.placetopay.com/images/0/0d/Acs-configuration-fields.png)
 
-### Gestión de rangos de tarjetas:
-En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico. Puede ver los detalles de cada rango, editarlos y eliminarlos.
+
+## Gestión de franquicias:
+
+Para acceder a este menú, haga clic en el menú *Franquicias suscritas*, que actualmente se ubica al lado derecho del menú *Detalles del emisor*. 
+
+Luego visualizará una vista similar a la siguiente:
+
+![](../assets/images/issuer-franchises.png)
+
+En ella encontrará el listado de franquicias agregadas para el emisor y un formulario para agregar nuevas franquicias.
+
+> Para las franquicias solo está disponible la función de *Eliminar*, la cual se ejecuta dando clic en el botón con el mismo nombre ubicado al frente de cada franquicia.
+
+### Agregar una nueva franquicia:
+
+Para suscribir una nueva franquicia a su emisor, dírijase a la primera sección de la vista actual, al apartado *Franquicia* y despliegue la lista de franquicias disponibles haciendo clic en la flecha hacia abajo. Seleccione una franquicia y haga clic en el botón *Agregar*.
+
+![](../assets/images/add-franchise.png)
+
+## Gestión de rangos de tarjetas:
+
+Para acceder a este menú, haga clic en el menú *Gestionar rangos de tarjetas*, ubicado en la parte superior de la vista.
+
+Visualizará un índice similar al siguiente:
 
 ![](https://wiki.placetopay.com/images/2/22/Acs-card-ranges-index.png)
 
+En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico. Puede ver la información principal de cada rango organizada en una tabla, entre los datos están: BIN del rango, Rango inicial, Rango final, Franquicia, Clase y las respectivas acciones que tienen cada uno de los rangos.
+
+### Acciones de los rangos de tarjetas:
+
+Las acciones disponibles para los rangos de tarjetas se encuentran ubicadas en el menú desplegable ubicado al final de cada rango. Las acciones son las siguientes:
+
+- **Ver:** Seleccione esta opción para visualizar los detalles del rango y las fechas de creación y actualización y los datos de los usuarios que ejecutaron las acciones.
+
+  Visualizará una vista similar a la siguiente:
+
+![](../assets/images/card-range-detail.png)
+
+- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó el emisor. 
+
+  Visualizará un formulario similar al de creación de un rango de tarjeta. Todos los datos son editables.
+
+- **Eliminar:** Seleccione esta opción para eliminar un rango de tarjetas del emisor. Si elimina un rango tenga en cuenta que las solicitudes de autenticación que lleguen con un número de tarjeta que entre en este rango, no podrán ser procesadas.
+
+
+### ¿Cómo crear un rango de tarjetas?
+
 Al dar clic en el botón *Crear*, se desplegarán dos opciones para crear rangos:
 
-- **Crear un rango de tarjetas,** este permite crear un rango de forma manual, se solicitará el BIN para el rango, el cual debe ser de 8 dígitos, el valor inicial y el final, la franquicia y la clase o tipo de las tarjetas asociadas al rango.
+  ![](../assets/images/create-button-card.png)
 
-- **Crear importación,** para crear una importación visualizará un formulario similar al siguiente:
+1. **Crear un rango de tarjetas,** este permite crear un rango de forma manual.
+
+  Si selecciona esta opción, obtendrá un formulario similar al siguiente:
+
+  ![](../assets/images/create-card-range.png)
+
+  Para diligenciar el formulario tenga en cuenta:
+
+   -  **Bin del rango:** Ingrese el bin del rango de la tarjeta a crear, este debe ser de 8 dígitos.
+
+   - **Franquicia:** Seleccione el nombre de la franquicia a la cual se le va a registrar el rango.
+
+   - **Clase:** Ingrese el nombre de la clase del rango de tarjetas. Por ejemplo Gold, Platinium...
+
+   - **Rango inicial:** Ingrese los primeros números del BIN y adicione otros números que indiquen el inicio del rango. El valor debe tener 19 dígitos.
+
+  - **Rango final:** Ingrese los primeros números del BIN y adicione otros números que indiquen el final del rango y que sean mayores al rango inicial. El valor debe tener 19 dígitos.
+
+
+2. **Crear importación,** con esta opción puede importar rangos de tarjetas que tenga en un archivo.
+
+Para crear una importación visualizará un formulario similar al siguiente:
 
 ![](https://wiki.placetopay.com/images/b/ba/Acs-create-import-ranges.png)
 
@@ -192,7 +278,7 @@ Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, i
 
 > Para visualizar el formato de un archivo CSV de ejemplo, haga clic en la opción *Descargar* que aparece en el lado izquierdo del formulario.
 
-### Gestión del control de fraude:
+## Gestión del control de fraude:
 Estas funcionalidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de los grupos donde están contenidas, las cuales permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
 
 
