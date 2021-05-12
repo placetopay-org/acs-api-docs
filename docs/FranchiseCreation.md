@@ -19,28 +19,13 @@ Para acceder al listado de franquicias de la aplicación siga los siguientes pas
 
 ![](../assets/images/franchise-index.png)
 
-## Listado y funciones de las franquicias
-
-En esta sección se visualiza el listado de franquicias en una tabla donde se muestran los datos principales de cada una, tales como: Marca, Patrón, Algoritmo para el CAVV, Algoritmo para el ECI, Estado y Acciones. Estos datos se explican más adelante. 
-
-En el título "Acciones" ubicado en la parte lateral derecha,se encuentra un menú con tres puntos, haga clic en este menú y despliegue las acciones o funcionalidades disponibles para cada franquicia. En el menú se encuentran las siguientes acciones:
-
-**Ver:** Seleccione para visualizar más detalles de la franquicia.
-
-**Editar:** Seleccione para actualizar los datos de registro de la franquicia.
-
-**Habilitar o Deshabilitar:** Deslice el botón para habilitar la franquicia si se encuentra deshabilitada o para deshabilitarla cuando se encuentre habilitada. Tenga en cuenta que si una franquicia se encuentra deshabilitada, no podrá hacer movimientos con ella en la aplicación.
-
-
-![](https://wiki.placetopay.com/images/6/62/Acs-franchise-index.png)
-
 ## ¿Cómo crear una franquicia en ACS?
 
-Para crear una franquicia, haga clic en el botón crear y diligencia los datos teniendo en cuenta la siguiente información:
+Para crear una franquicia, haga clic en el botón *Crear* ubicado en la parte lateral derecha del índice de franquicias, posteriormente diligencia los datos del formulario teniendo en cuenta la siguiente información:
 
-- **Marca,** Nombre de la franquicia, por ejemplo Matercard, VISA...
+- **Marca,** Nombre de la franquicia, por ejemplo Mastercard, VISA...
 
-- **Patrón,** Se ingresa un patrón basado en una expresión regular, con este se valida que el número de tarjeta que llegue al ACS, sea válido según los estándares propios de cada franquicia.
+- **Patrón,** Ingrese un patrón basado en una expresión regular, con este se valida que el número de tarjeta que llegue al ACS, sea válido según los estándares propios de cada franquicia.
 
 - **Algoritmo para el CAVV,** El Cardholder Authentication Verification Value (CAVV), es un valor de verificación de autenticación del titular de la tarjeta. Aquí se debe seleccionar un algoritmo que valide este valor, el cual resulta de hacer una transacción. En el momento ACS cuenta con un algoritmo para VISA y otro para MASTERCARD.
 
@@ -49,7 +34,53 @@ Indicator (ECI), es un valor para indicar los resultados del intento de autentic
 
 - **Logo,** Puede adjuntar una imagen con el logo de la franquicia.
 
-En la siguientes imagen se puede visualizar un ejemplo de creación de franquicia:
+En la siguiente imagen se puede visualizar un ejemplo del formulario de creación de una franquicia:
 
 ![](https://wiki.placetopay.com/images/a/a0/Acs-create-franchise.png)
+
+## ¿Cuáles son los requerimientos para crear una franquicia en ACS?
+
+En primer lugar, para crear una franquicia, esta debe haber pasado por un proceso de certificación para ACS con PlacetoPay Evertec.
+
+## Listado y funciones de las franquicias
+
+En esta sección se visualiza el listado o índice de franquicias en una tabla donde se muestran los datos principales de cada una, tales como: Marca, Patrón, Algoritmo para el CAVV, Algoritmo para el ECI, Estado y Acciones. Estos datos se explican más adelante. 
+
+En el título "Acciones" ubicado en la parte lateral derecha,se encuentra un menú con tres puntos, haga clic en este menú y despliegue las acciones o funcionalidades disponibles para cada franquicia. En el menú se encuentran las siguientes acciones:
+
+![](https://wiki.placetopay.com/images/6/62/Acs-franchise-index.png)
+
+### Acciones para las franquicias:
+
+- **Ver:** Seleccione esta opción para visualizar más detalles de la franquicia.
+
+  Visualizará una vista similar a la siguiente:
+
+![](../assets/images/franchise-detail.png)
+
+- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó la franquicia. 
+
+  Visualizará un formulario similar al de creación de la franquicia.
+
+![](../assets/images/edit-franchise.png)
+
+- **Habilitar o Deshabilitar:** Deslice el botóntipo switch para habilitar la franquicia si se encuentra deshabilitada o para deshabilitarla cuando se encuentre habilitada. 
+
+![](../assets/images/franchise-toggle.png)
+
+Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirmación similar al siguiente e inmediatamente cambiará el estado en la franquicia editada.
+
+![](../assets/images/enable-franchise.png)
+
+### ¿Qué ocurre al deshabilitar una franquicia?
+
+Tenga en cuenta que si una franquicia se encuentra deshabilitada, no podrá hacer movimientos con ella en la aplicación. Por ejemplo no puede visualizar una franquicia deshabilitada en el listado de franquicias disponibles, al momento de crear un certificado o un emisor. 
+
+Tampoco podrán autenticarse las transacciones cuyas tarjetas pertenezcan a una franquicia deshabilitada. 
+
+Así mismo puede causar el fallo en los emisores que tengan suscrita tal franquicia.
+
+
+
+
 
