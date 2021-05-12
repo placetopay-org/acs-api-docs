@@ -40,7 +40,9 @@ En la siguiente imagen se puede visualizar un ejemplo del formulario de creació
 
 ## ¿Cuáles son los requerimientos para crear una franquicia en ACS?
 
-En primer lugar, para crear una franquicia, esta debe haber pasado por un proceso de certificación para ACS con PlacetoPay Evertec.
+Para crear una franquicia, esta debe haber pasado por un proceso de certificación para ACS con PlacetoPay Evertec.
+
+También, la franquicia debe proporcionar información como el tipo de tarjetas que soportan, las clases y los bines aceptados, para proceder a realizar una creación exitosa de franquicia en ACS y que esta coincida con las especificaciones y requerimientos de la franquicia en específico.
 
 ## Listado y funciones de las franquicias
 
