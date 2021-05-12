@@ -50,11 +50,6 @@
           "items": [
         {
           "type": "item",
-          "title": "Franquicias",
-          "uri": "docs/FranchiseCreation.md"
-        },
-        {
-          "type": "item",
           "title": "Emisores",
           "uri": "docs/IssuerConfiguration.md"
         },
