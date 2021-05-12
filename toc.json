@@ -45,9 +45,25 @@
           "uri": "docs/ACSFunctionalities.md"
         },
         {
-          "type": "item",
+          "type": "group",
           "title": "Configuración",
+          "items": [
+        {
+          "type": "item",
+          "title": "Franquicias",
+          "uri": "docs/FranchiseCreation.md"
+        },
+        {
+          "type": "item",
+          "title": "Emisores",
+          "uri": "docs/IssuerConfiguration.md"
+        },
+        {
+          "type": "item",
+          "title": "Configuración general",
           "uri": "docs/ACSConfigurations.md"
+        }
+        ]
         },
         {
           "type": "item",
