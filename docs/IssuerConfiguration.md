@@ -279,7 +279,7 @@ Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, i
 > Para visualizar el formato de un archivo CSV de ejemplo, haga clic en la opción *Descargar* que aparece en el lado izquierdo del formulario.
 
 ## Gestión del control de fraude:
-Estas funcionalidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de los grupos donde están contenidas, las cuales permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
+Estas funcionalidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de las lostas y grupos donde están contenidas. Las reglas permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
 
 
 <!--
@@ -293,27 +293,78 @@ La principal funcionalidad de ACS es el motor de control antifraude, este permit
 
 Esta funcionalidad se gestiona desde la sección de Emisores de la aplicación.
 
-### Listas de control de fraude:
+## Gestionar listas de control de fraude:
 
-Las listas de control de fraude son el primer filtro que puede validar una autenticación. Estas listas son temporales y se dividen en dos clases:
-
-- **Permisivas:** Estas listas van a crear un filtro que va a permitir que las autenticaciones que cumplan con los valores registrados en estas, puedan eximirse de la ejecución de los grupos de reglas y continúe con el proceso de autenticación.
-
-- **Restrictivas:** Por el contrario, este tipo de listas, al evaluar que los datos de la autenticación coinciden con los datos de la lista, enviará las autenticaciones directamente a evaluar los grupos de reglas.
+Las listas de control de fraude son el primer filtro que por el cual pasan las solicitudes de autenticación de ACS. 
 
 > Las listas de control antifraude se ejecutan antes de los grupos de control antifraude y según los resultados que obtenga de sus validaciones, puede evitar que una autenticación tenga que pasar por las validaciones de los grupos de reglas.
 
+### Índice y acciones de las listas de reglas:
+
+Para acceder al índice de reglas, busque el título *Gestionar listas de control de fraude* en las pestañas ubicadas en la parte superior del detalle de un emisor. Actualmente se ubica a la derecha del menú *Gestionar rangos de tarjetas*.
+
+Al dar clic en el menú, visualizará el índice de listas de reglas, similar al de la siguiente imagen:
+
 ![](https://wiki.placetopay.com/images/f/f9/Acs-fraud-list-index.png)
 
-Para crear una lista de control se direccionará a un formulario como este:
 
-![](https://wiki.placetopay.com/images/5/53/Acs-create-fraud-list.png)
+#### Acciones de la reglas:
+
+Las acciones disponibles para las listas de reglas se encuentran ubicadas en el menú desplegable ubicado al final de cada rango en el título *Acciones* de la tabla. Las acciones son las siguientes:
+
+- **Ver:** Seleccione esta opción para visualizar los detalles de la lista.
+
+  Visualizará una vista similar a la siguiente:
+
+![](../assets/images/list-detail.png)
+
+- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó la lista. 
+
+  Visualizará un formulario similar al de creación de un rango de tarjeta. Todos los datos son editables.
+
+- **Eliminar:** Seleccione esta opción para eliminar la lista.
+
+### Filtros para las listas de reglas:
+
+ACS provee para este módulo la funcionalidad de filtrar listas, esta permite hacer la búsqueda más flexible y específica cuando tiene muchos datos. 
+
+Para acceder a los filtros diríjase a la parte lateral derecha del índice de listas, al lado izquierdo del botón *Crear*, encontrará la opción llamada *Filtrar*, haga clic y se desplegará una vista como la siguiente:
+
+![](../assets/images/filter-lists.png)
+
+Puede filtrar únicamente por el tipo de lista que desea buscar, seleccione la requerida y haga clic en el botón *Buscar* o en el botón *Limpiar filtros* cuando necesite hacer una nueva búsqueda.
+
+
+### Tipos de listas de reglas:
+
+Estas listas son temporales, es decir, tienen una duración específica que usted le asigna al crearla, y se dividen en dos clases:
+
+- **Permisivas:** Estas listas van a crear un filtro que va a permitir que las autenticaciones que cumplan con los valores registrados en estas, puedan eximirse de la ejecución de los grupos de reglas, y continuar así con el proceso de autenticación.
+
+> En esta lista puedes agregar valores de clientes con historiales seguros y confiables, ya que al ser permisiva, será más flexible al momento de hacer la validación de la autenticación.
+
+- **Restrictivas:** Por el contrario, este tipo de listas, al evaluar que los datos de la autenticación coinciden con los datos de la lista, enviará las autenticaciones directamente a ejecutar los grupos de reglas.
+
+> En esta lista puedes agregar valores de clientes con historiales de riesgo. Al ser restrictiva la lista, permitirá ejercer mayor control de los filtros de validación. 
+
+### ¿Cómo crear una lista de control de fraude?
+
+Al dar clic en el botón *Crear*, ubicado en la parte lateral derecha del índice de listas, se desplegarán dos opciones para crear listas:
+
+  ![](../assets/images/button-create-list.png)
+
+
+1. **Crear una lista de control de fraude:**, Esta opción le permite crear una lista de forma manual e individual. 
+
+    Si escoge esta opción se direccionará a un formulario como este:
+
+    ![](https://wiki.placetopay.com/images/5/53/Acs-create-fraud-list.png)
 
 Se solicitará:
 
-- **Fecha de inicio:** Fecha en la que se va a iniciar la validación de la lista de reglas.
+- **Fecha de inicio:** Fecha en la que la lista va a comenzar a funcionar y hacer las validaciones.
 
-- **Fecha de finalización:** Fecha en la que se va a finalizar la validación de la lista de reglas.
+- **Fecha de finalización:** Fecha en la que se va a finalizar el funcionamiento y validación de la lista de reglas.
 
 - **Tipo de lista:** ACS dispone de dos tipos de listas:
     - PERMISSIVE
@@ -321,9 +372,37 @@ Se solicitará:
 
 - **Tipo de valor:** Aquí se selecciona el parámetro por el cual se van a hacer los filtros de las autenticaciones. 
 
+    Los siguientes son los tipos de valores disponibles:
+
+   - **IP:**  Internet Protocol. Es la dirección pública que identifica un dispositivo conectado a una red que utiliza el protocolo.
+
+   - **PAN:** Primary Account Number. Es el número de tarjeta que aparece en el anverso de una tarjeta de pago.
+
+   - **EMAIL:** Correo electrónico del comprador.
+
+   - **MERCHANT_ID:** Número identificador del comercio.
+
+   - **MCC:** Merchant Category Code. Hace referencia al código de categoría del comercio.
+
+  Los visualizará en la lista desplegable del campo *Tipo de valor* así:
+
+  ![](../assets/images/value-type-list.png)
+
 - **Valor:** Corresponde al valor del tipo de parámetro seleccionado en el campo anterior. Con este valor se procede a hacer las validaciones y a verificar la coincidencia del dato con los recibidos en la autenticación.
 
-### Grupos de control antifraude:
+2. **Crear importación:** Con esta opción podrá crear listas de reglas de forma masiva a partir de un archivo que contenga las reglas.
+
+> El archivo a cargar debe estar en formato .CSV, .TSV o .TXT.
+
+Si escoge esta opción, se cargará un formulario como el siguiente:
+
+  ![](../assets/images/list-import-create.png)
+
+  En el formulario, haga clic en la opción *Seleccionar archivo* y busque en su equipo el archivo que desea cargar. Luego haga clic en el botón *Guardar*.
+
+> Para visualizar un ejemplo del formato de una importación, haga clic en el link *Descargar*, ubicado en la parte lateral izquierda, en el título *Información básica*.
+
+## Grupos de control antifraude:
 
 Para cada banco emisor registrado en el ACS, se creará un grupo predeterminado conformado por una serie de reglas antifraude que permiten validar las solicitudes de autenticación. Además de este grupo prederteminado, se podrán agregar otros nuevos al emisor.
 
@@ -333,7 +412,7 @@ En la imagen ejemplo, se visualizan dos grupos, uno llamado *Lista blanca*, dond
 
 ![](https://wiki.placetopay.com/images/4/4c/Acs-fraud-groups.png)
 
-### Reglas antifraude:
+## Reglas antifraude:
 
 Los grupos de control antifraude están conformados por reglas que permiten hacer las validaciones de los datos recibidos en las autenticaciones. Estas reglas evalúan la coincidencia de las condiciones contenidas en la regla y de los datos obtenidos en la solicitud de autenticación.
 
