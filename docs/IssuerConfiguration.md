@@ -509,7 +509,7 @@ Luego de enviar la solicitud de regla, esta se agregará al listado de *Solicitu
 
 > Hasta que no acepte la solicitud de regla, esta no podrá visualizarse ni utilizarse en producción. Luego de aceptarla recuerde habilitarla.
 
-#### Acciones de las reglas: 
+### Acciones de las reglas: 
 
 Al crear una regla se le define un tipo de acción específica que va a ejecutar. Estas acciones permiten definir el transStatus (estado de autenticación de la transacción). 
 
@@ -539,7 +539,7 @@ Las acciones permitidas son las siguientes:
 
 > La función de ejecutar un grupo de reglas permite crear reglas que abarquen más validaciones y también permite utilizar reglas creadas anteriormente para hacer otras validaciones o complementarlas con otras condiciones, y de esta forma agrupar funcionalidades y disminuir reglas repetidas.
 
-#### Tipos de reglas: 
+### Tipos de reglas: 
 
 Al crear una regla se asigna un tipo específico. Las opciones disponibles se visualizan en el formulario de creación de la regla, en el campo *Tipo de regla*.
 
@@ -549,18 +549,91 @@ Visualizará una lista similar a esta con la lista de reglas disponibles:
 
 Los tipos de reglas disponibles actualmente son:
 
-- Rango de bines
-- Monto de compra
-- Puntuación del emisor
-- Puntuación histórica
-- Datos de autenticación
-- Puntuación RBA Master Card
-- Número de tarjeta de transacción
-- Coincidencia para correo electrónico
-- Coincidencia para teléfono móvil
-- Coincidencia para teléfono fijo
-- Coincidencia para teléfono del trabajo
-- Coincidencia para el dispositivo
+#### Rango de bines: 
+Esta regla permite validar que la tarjeta que llegue en la petición de autenticación, esté en el rango especificado. Acepta dos valores, el rango inicial que debe ser un BIN de 6 o de 8 dígitos y el rango final que debe tener los mismos dígitos.
+
+  ![](../assets/images/bin-range-rule.png)
+
+#### Número de tarjeta de transacción: 
+Esta regla permite validar que el número de tarjeta que registre en el valor, sea igual al número de tarjeta de la petición de autenticación. Esta regla recibe mínimo 13 dígitos y debe coincidir con el algoritmo de Luhn, el cual comprueba mediante una secuencia de dígitos, si un número de tarjeta es válido.
+
+  ![](../assets/images/card-number-rule.png)
+
+#### Monto de compra:
+Esta regla permite validar el monto de la transacción a autenticar. Acepta un valor numérico que indique un monto de pago.
+
+  ![](../assets/images/rule-total.png)
+
+#### Datos de autenticación:
+ Esta regla valida los campos que se envían en el mensaje AReq, siendo este un tipo de mensaje del Protocolo 3-D Secure, con el cual se da inicio al proceso de autenticación. Esta regla recibe los siguientes parámetros:
+
+  - **Campo**, Hace referencia al campo contenido en el mensaje AReq. Se presenta una lista con todos los campos disponibles para validar. Seleccione uno.
+
+  - **Condiciones**, En este campo se selecciona el operador con el cual se va a hacer la comparación de valores a validar. Según el campo seleccionado se despliegan unos operadores específicos.
+
+  - **Valores**, Aquí se ingresa el valor con el cual se va a hacer la comparación que permite validar o no la regla.
+
+Un ejemplo de regla para datos de autenticación es el siguiente:
+
+  ![](../assets/images/areq-rule.png)
+
+
+*Reglas de puntuación:*
+
+#### Puntuación del emisor:
+Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
+
+#### Puntuación histórica:
+Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el tarjetahabiente históricamente. Se evalúa a partir de transacciones anteriores. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
+
+#### Puntuación RBA Master Card:
+Esta regla valida la solicitud de autenticación a partir de la puntuación de riesgo evaluada para MasterCard. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
+
+ Los operadores disponibles para las reglas de puntuación son:
+  - **Entre**, acepta un valor mínimo y uno máximo. El dato en la autenticación debe estar en el rango para pasar la validación.
+  - **Menor que**, acepta un valor y valida que el dato de la autenticación sea menor al valor dado en la regla.
+  - **Menor o igual que**, acepta un valor y valida que el dato de la autenticación sea menor o igual al valor dado en la regla.
+  - **Mayor que**, acepta un valor y valida que el dato de la autenticación sea mayor al valor dado en la regla.
+  - **Mayor o igual que**, acepta un valor y valida que el dato de la autenticación sea mayor o igual al valor dado en la regla.
+  - **Igual a**, acepta un valor y valida que el dato de la autenticación sea igual al valor dado en la regla.
+
+Un ejemplo de una regla de puntuación es el siguiente:
+
+  ![](../assets/images/score-rule.png)
+
+*Reglas de coincidencia o match:*
+
+#### Coincidencia para correo electrónico: 
+Esta regla permite validar si el correo electrónico del tarjetahabiente que llega en los datos de autenticación, coincide con el correo electrónico guardado para el mismo tarjetahabiente en transacciones anteriores. 
+
+Acepta uno de los siguientes dos valores: hacer match (encontrar coincidencia) o no hacer match (No encontrar coincidencia).
+
+#### Coincidencia para teléfono móvil:
+Esta regla permite validar si el teléfono móvil del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono móvil guardado para el mismo tarjetahabiente en transacciones anteriores. 
+
+Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
+
+#### Coincidencia para teléfono fijo:
+Esta regla permite validar si el teléfono fijo del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono fijo guardado para el mismo tarjetahabiente en transacciones anteriores. 
+
+Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
+
+#### Coincidencia para teléfono del trabajo:
+Esta regla permite validar si el teléfono del trabajo del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono del trabajo guardado para el mismo tarjetahabiente en transacciones anteriores. 
+
+Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
+
+#### Coincidencia para el dispositivo:
+Esta regla permite validar si el fingerprint o huella digital del tarjetahabiente que se crea en la transacción, coincide con algún fingerprint guardado para el mismo tarjetahabiente en transacciones exitosas anteriores. El fingerprint es un método que registra automáticamente un identificador de un usuario, a partir de la información captada con el dispositivo usado al realizar una transacción o un movimiento digital.
+
+Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
+
+Un ejemplo de una regla tipo match es el siguiente:
+
+![](../assets/images/match-mobile-phone-rule.png)
+
+Encontrará en el campo *Valor*, una lista con dos opciones, hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia) con el dato guardado en ACS.
+
 
 ## Grupos de control antifraude:
 
