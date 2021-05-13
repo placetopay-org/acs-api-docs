@@ -1,5 +1,107 @@
 <!--
 type: tab
+title: Certificados
+-->
+
+# Certificados SSL
+
+En esta sección se crean los certificados SSL, los cuales son títulos digitales que vinculan digitalmente una clave criptográfica con los datos de una organización. Los certificados SSL permiten autenticar la identidad de un sitio web y cifrar la información que se envía al servidor.
+El certificado permite que cuando un usuario intente enviar información de las credenciales al servidor web, el navegador del usuario accede al certificado digital del servidor y establece una conexión segura. De esta forma, estos certificados proveen en esencia seguridad de los datos manejados en ACS.
+
+La siguiente imagen muestra un ejemplo de la vista de un índice de certificados:
+
+![](https://wiki.placetopay.com/images/8/89/Acs-certificates-index.png)
+
+Los certificados se pueden editar y visualizar los detalles del mismo, haciendo clic en el menú con tres puntos ubicado en la parte lateral derecha de cada certificado.
+
+## Creación de un certificado:
+
+Para crear un nuevo certificado en ACS, haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
+
+#### 1. Creación de la llave privada:
+
+![](https://wiki.placetopay.com/images/3/3b/Acs-step-one.png)
+
+1.1. Solicitud del tipo de llave con el cual se va a cifrar el certificado, están disponibles los siguientes tipos de llaves:
+
+- **RSA,** es una llave creada a partir del algoritmo RSA, un sistema criptográfico de clave pública que utiliza factorización de números enteros y cifra bloques de datos. Es el algoritmo más utilizado para crear estas llaves.
+
+> Una llave privada solo puede descifrarla la llave pública que se crea y que es asociada a una única llave privada.
+
+- **EC,** es una llave basada en la Criptografía de curva elíptica (ECC), la cual promete una seguridad más fuerte y mejor rendimiento ya que utiliza claves más cortas. El sistema criptográfico utilizado está basado en las matemáticas de curvas elípticas.
+
+> La llave es la que permite al usuario autenticarse por medio de la conexión SSH al servidor web. Para esto deberá contar con una llave privada y una llave pública que contiene el servidor y con la cual se va a conectar. 
+
+1.2. Selección del tipo de cifrador para el certificado. Se debe seleccionar dependiendo del tipo de conexión y están disponibles dos tipos:
+
+- **AES_128_CBC:** Es un tipo de cifrado, donde Advanced Encryption Standard (AES), es un esquema de cifrado por bloques y Cipher Block Chaining (CBC), es un modo de operación para una unidad de cifrado por bloques. Este tipo de cifrado tiene un tamaño de 128 bytes. Es el más utilizado.
+
+- **AES_256_CBC:** Es un tipo de cifrado por bloques, que utiliza el modo de operación CBC. Este tipo de cifrado tiene un tamaño de 256 bytes.
+
+
+3. Tamaño de la llave en bits.
+
+4. Contraseña de la llave.
+
+5. Tipo de llave. La llave va a funcionar para un cliente, un servidor o un SDK.
+
+6. Banco emisor.
+
+7. Tipo de franquicia.
+
+
+#### 2. Solicitud de firma del certificado:
+
+![](https://wiki.placetopay.com/images/f/fd/Acs-step-two.png)
+
+Aquí se registran los datos de información general sobre el solicitante de la llave:
+
+- **País:** Seleccione el país donde se crea el certificado de la lista desplegable.
+- **Estado:** Ingrese el nombre del estado del país en el cual está ubicado.
+- **Localidad:** Ingrese el nombre de la ciudad en el cual está ubicado.
+- **Nombre de la organización:** Ingrese el nombre de la organización para la cual se crea el certificado.
+- **Nombre de la unidad organizacional:** Ingrese el nombre del área de la organización para la cual se genera el certificado.
+- **Nombre común:** Ingrese un nombre de dominio válido, siendo este el título o nombre de la página web de la organización.
+- **Correo electrónico:** Ingrese la dirección de correo electrónico del solicitante del certificado.
+
+
+#### 3. Información de rastreo:
+
+![](https://wiki.placetopay.com/images/a/a4/Acs-step-three.png)
+
+Permite la identificación a partir de un slug, el cual forma parte de la URL que se va a consultar para acceder al servidor mediante el certificado.
+
+
+## Registro y firma del certificado:
+
+Una vez creado el certificado, le mostrará los datos que diligenció en el formulario.
+
+Un ejemplo es el siguiente:
+
+![](https://wiki.placetopay.com/images/5/59/Acs-ertificate-detail.png)
+
+#### ¿Cómo firmar el certificado?
+
+1. Debe copiar este bloque, correspondiente a la solicitud de firma del certificado. Copie el bloque incluyendo las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
+
+![](https://wiki.placetopay.com/images/b/bb/Acs-signature-certificate-request.png)
+
+2. Cree su llave privada y firme el certificado con el bloque de texto que copió.
+
+3. Al finalizar el proceso de creación de llaves y firma del certificado, obtendrá un bloque de texto similar al primero que copió. Copie este bloque, incluyendo también las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
+
+4. En el detalle del certificado, al final encontrará la opción de registrar su certificado, haga clic en el enlace con el nombre *Aquí!*.
+
+![](https://wiki.placetopay.com/images/b/b8/Acs-request.png)
+
+5. Esto lo direccionará a la siguiente vista, donde debe pegar el segundo bloque de texto que copió, el cual corresponde a su certificado, en el campo *Certificado*, así:
+
+![](https://wiki.placetopay.com/images/8/83/Acs-register-certificate.png)
+
+6. Haga clic en guardar y con esto obtiene un certificado firmado válido para asegurar la transferencia de información con ACS.
+
+<!--
+type: tab
 title: Importes
 -->
 
@@ -176,107 +278,5 @@ Diligencie teniendo en cuenta lo siguiente:
 
 - **Descripción:** Se presentan dos campos, en el que contiene el prefijo *en*, ingrese la descripción en inglés para el código a crear, y en el campo con prefijo *es*, ingrese la misma descripción en español.
 
-
-<!--
-type: tab
-title: Certificados
--->
-
-# Certificados SSL
-
-En esta sección se crean los certificados SSL, los cuales son títulos digitales que vinculan digitalmente una clave criptográfica con los datos de una organización. Los certificados SSL permiten autenticar la identidad de un sitio web y cifrar la información que se envía al servidor.
-El certificado permite que cuando un usuario intente enviar información de las credenciales al servidor web, el navegador del usuario accede al certificado digital del servidor y establece una conexión segura. De esta forma, estos certificados proveen en esencia seguridad de los datos manejados en ACS.
-
-La siguiente imagen muestra un ejemplo de la vista de un índice de certificados:
-
-![](https://wiki.placetopay.com/images/8/89/Acs-certificates-index.png)
-
-Los certificados se pueden editar y visualizar los detalles del mismo, haciendo clic en el menú con tres puntos ubicado en la parte lateral derecha de cada certificado.
-
-## Creación de un certificado:
-
-Para crear un nuevo certificado en ACS, haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
-
-#### 1. Creación de la llave privada:
-
-![](https://wiki.placetopay.com/images/3/3b/Acs-step-one.png)
-
-1.1. Solicitud del tipo de llave con el cual se va a cifrar el certificado, están disponibles los siguientes tipos de llaves:
-
-- **RSA,** es una llave creada a partir del algoritmo RSA, un sistema criptográfico de clave pública que utiliza factorización de números enteros y cifra bloques de datos. Es el algoritmo más utilizado para crear estas llaves.
-
-> Una llave privada solo puede descifrarla la llave pública que se crea y que es asociada a una única llave privada.
-
-- **EC,** es una llave basada en la Criptografía de curva elíptica (ECC), la cual promete una seguridad más fuerte y mejor rendimiento ya que utiliza claves más cortas. El sistema criptográfico utilizado está basado en las matemáticas de curvas elípticas.
-
-> La llave es la que permite al usuario autenticarse por medio de la conexión SSH al servidor web. Para esto deberá contar con una llave privada y una llave pública que contiene el servidor y con la cual se va a conectar. 
-
-1.2. Selección del tipo de cifrador para el certificado. Se debe seleccionar dependiendo del tipo de conexión y están disponibles dos tipos:
-
-- **AES_128_CBC:** Es un tipo de cifrado, donde Advanced Encryption Standard (AES), es un esquema de cifrado por bloques y Cipher Block Chaining (CBC), es un modo de operación para una unidad de cifrado por bloques. Este tipo de cifrado tiene un tamaño de 128 bytes. Es el más utilizado.
-
-- **AES_256_CBC:** Es un tipo de cifrado por bloques, que utiliza el modo de operación CBC. Este tipo de cifrado tiene un tamaño de 256 bytes.
-
-
-3. Tamaño de la llave en bits.
-
-4. Contraseña de la llave.
-
-5. Tipo de llave. La llave va a funcionar para un cliente, un servidor o un SDK.
-
-6. Banco emisor.
-
-7. Tipo de franquicia.
-
-
-#### 2. Solicitud de firma del certificado:
-
-![](https://wiki.placetopay.com/images/f/fd/Acs-step-two.png)
-
-Aquí se registran los datos de información general sobre el solicitante de la llave:
-
-- **País:** Seleccione el país donde se crea el certificado de la lista desplegable.
-- **Estado:** Ingrese el nombre del estado del país en el cual está ubicado.
-- **Localidad:** Ingrese el nombre de la ciudad en el cual está ubicado.
-- **Nombre de la organización:** Ingrese el nombre de la organización para la cual se crea el certificado.
-- **Nombre de la unidad organizacional:** Ingrese el nombre del área de la organización para la cual se genera el certificado.
-- **Nombre común:** Ingrese un nombre de dominio válido, siendo este el título o nombre de la página web de la organización.
-- **Correo electrónico:** Ingrese la dirección de correo electrónico del solicitante del certificado.
-
-
-#### 3. Información de rastreo:
-
-![](https://wiki.placetopay.com/images/a/a4/Acs-step-three.png)
-
-Permite la identificación a partir de un slug, el cual forma parte de la URL que se va a consultar para acceder al servidor mediante el certificado.
-
-
-## Registro y firma del certificado:
-
-Una vez creado el certificado, le mostrará los datos que diligenció en el formulario.
-
-Un ejemplo es el siguiente:
-
-![](https://wiki.placetopay.com/images/5/59/Acs-ertificate-detail.png)
-
-#### ¿Cómo firmar el certificado?
-
-1. Debe copiar este bloque, correspondiente a la solicitud de firma del certificado. Copie el bloque incluyendo las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
-
-![](https://wiki.placetopay.com/images/b/bb/Acs-signature-certificate-request.png)
-
-2. Cree su llave privada y firme el certificado con el bloque de texto que copió.
-
-3. Al finalizar el proceso de creación de llaves y firma del certificado, obtendrá un bloque de texto similar al primero que copió. Copie este bloque, incluyendo también las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
-
-4. En el detalle del certificado, al final encontrará la opción de registrar su certificado, haga clic en el enlace con el nombre *Aquí!*.
-
-![](https://wiki.placetopay.com/images/b/b8/Acs-request.png)
-
-5. Esto lo direccionará a la siguiente vista, donde debe pegar el segundo bloque de texto que copió, el cual corresponde a su certificado, en el campo *Certificado*, así:
-
-![](https://wiki.placetopay.com/images/8/83/Acs-register-certificate.png)
-
-6. Haga clic en guardar y con esto obtiene un certificado firmado válido para asegurar la transferencia de información con ACS.
 
 <!-- type: tab-end -->
