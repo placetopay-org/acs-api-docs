@@ -5,15 +5,24 @@ title: Certificados
 
 # Certificados SSL
 
+Para acceder al módulo de certificados, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Certificados* en los títulos.
+
+![](../assets/images/menu-certificates.png)
+
+## ¿Qué son y para qué utilizar los certificados SSL?
+
 En esta sección se crean los certificados SSL, los cuales son títulos digitales que vinculan digitalmente una clave criptográfica con los datos de una organización. Los certificados SSL permiten autenticar la identidad de un sitio web y cifrar la información que se envía al servidor.
-El certificado permite que cuando un usuario intente enviar información de las credenciales al servidor web, el navegador del usuario accede al certificado digital del servidor y establece una conexión segura. De esta forma, estos certificados proveen en esencia seguridad de los datos manejados en ACS.
+El certificado permite que cuando un usuario intente enviar información de las credenciales al servidor web, el navegador del usuario accederán al certificado digital del servidor para establecer una conexión segura. De esta forma, estos certificados proveen seguridad a los datos manejados en ACS.
 
 La siguiente imagen muestra un ejemplo de la vista de un índice de certificados:
 
 ![](https://wiki.placetopay.com/images/8/89/Acs-certificates-index.png)
 
-Los certificados se pueden editar y visualizar los detalles del mismo, haciendo clic en el menú con tres puntos ubicado en la parte lateral derecha de cada certificado.
+### Acciones para los certificados:
 
+Los certificados se pueden editar y se pueden visualizar los detalles del mismo, haciendo clic en el menú con tres puntos ubicado en la parte lateral derecha de cada certificado, se desplegará un menú como el de la siguiente imagen:
+
+![](../assets/images/actions-certificate.png)
 ## Creación de un certificado:
 
 Para crear un nuevo certificado en ACS, haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
@@ -74,11 +83,15 @@ Permite la identificación a partir de un slug, el cual forma parte de la URL qu
 
 ## Registro y firma del certificado:
 
-Una vez creado el certificado, le mostrará los datos que diligenció en el formulario.
-
-Un ejemplo es el siguiente:
+Una vez creado el certificado, le mostrará una vista como la siguiente:
 
 ![](https://wiki.placetopay.com/images/5/59/Acs-ertificate-detail.png)
+
+En la primera sección, se observan los datos que ingresó en el formulario para la creación de la llave privada.
+
+En la segunda sección, se presenta un bloque de texto cifrado que representa el CSR o solicitud de firma del certificado, necesario para la firma y creación del certificado SSL.
+
+En la tercera sección, se da la opción de registrar el certificado obtenido, luego de que lo firme con su entidad certificadora.
 
 #### ¿Cómo firmar el certificado?
 
@@ -86,9 +99,9 @@ Un ejemplo es el siguiente:
 
 ![](https://wiki.placetopay.com/images/b/bb/Acs-signature-certificate-request.png)
 
-2. Cree su llave privada y firme el certificado con el bloque de texto que copió.
+2. Diríjase a su entidad certificadora y firme el certificado con el bloque de texto que copió correspondiente al CSR.
 
-3. Al finalizar el proceso de creación de llaves y firma del certificado, obtendrá un bloque de texto similar al primero que copió. Copie este bloque, incluyendo también las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". 
+3. Al finalizar el proceso de firma del certificado, obtendrá un bloque de texto similar al primero que copió. Copie este bloque, incluyendo también las etiquetas de "---BEGIN CERTIFICATE REQUEST---" y "---END CERTIFICATE REQUEST---". Este bloque de texto corresponde al certificado en sí.
 
 4. En el detalle del certificado, al final encontrará la opción de registrar su certificado, haga clic en el enlace con el nombre *Aquí!*.
 
@@ -105,9 +118,15 @@ type: tab
 title: Importes
 -->
 
-# Importes de rangos de tarjetas
+# Importes
 
-En esta sección se pueden visualizar las importaciones de archivos realizadas en ACS, por ejemplo se encuentran los archivos que importan un listado de rangos de tarjetas para un emisor.
+Para acceder al módulo de importes, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Importes* en los títulos.
+
+![](../assets/images/menu-imports.png)
+
+En esta sección se pueden visualizar las importaciones de archivos realizadas en ACS, por ejemplo se encuentran los archivos que importan un listado de rangos de tarjetas para un emisor, también los archivos de importación de listas de control de fraude.
+
+## Índice de importes:
 
 En este índice de importes puede visualizar los detalles de cada importe y el estado en el cual se encuentra la importanción.
 
@@ -127,20 +146,28 @@ title: Reportes
 
 # Reportes
 
-Los reportes son archivos que contienen registros de las autenticaciones procesadas por ACS. La siguiente imagen muestra un ejemplo de la vista con el índice de reportes generados. Estos reportes se pueden ver y descargar.
+Para acceder al módulo de reportes, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Reportes* en los títulos.
+
+![](../assets/images/menu-reports.png)
+
+## Índice de reportes:
+
+Los reportes son archivos que contienen registros de las autenticaciones procesadas por ACS. La siguiente imagen muestra un ejemplo de la vista con el índice de reportes generados. Estos reportes se pueden ver y descargar los archivos con toda la información de los mismos.
 
 ![](https://wiki.placetopay.com/images/1/12/Acs-report-index.png)
+
+## ¿Cómo crear nuevos reportes?
 
 Para crear un nuevo reporte haga clic en el botón *Crear*. 
 Actualmente se manejan dos tipos de reportes:
 
-## Reportes de Autenticaciones
+### Reportes de Autenticaciones
 
 El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. El siguiente es un ejemplo de creación de un reporte de autenticaciones:
 
 ![](https://wiki.placetopay.com/images/b/bd/Acs-auth-report.png)
 
-## Reportes de Abandonos 
+### Reportes de Abandonos 
 
 Con este reporte se generan los datos de las autenticaciones que son abandonadas en el ACS. Para el reporte se puede definir un rango de fechas y el banco emisor. El siguiente es un ejemplo de creación de un reporte de abandonos:
 
@@ -191,11 +218,19 @@ title: Invitaciones
 
 # Invitaciones de usuarios
 
+Para acceder al módulo de invitaciones, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Invitaciones* en los títulos.
+
+![](../assets/images/menu-invitations.png)
+
 En este módulo se gestionan las invitaciones que realiza un usuario registrado en ACS a otro usuario que desea utilizar la aplicación.
+
+## Invitaciones para crear nuevos usuarios de ACS:
 
 Es a través de una invitación que se pueden crear nuevos usuarios, esta se envía a un correo y allí redirecciona al usuario al inicio de sesión gestionado por la aplicación de Accounts, creada en PlacetoPay, en esta redirección el usuario podrá registrarse y acceder.
 
 > Los datos que registre deben ser los mismos que se utilizaron para enviar la invitación.
+
+## ¿Cómo crear una invitación?
 
 Para crear una invitación, haga clic en el botón *Crear* del módulo de invitaciones, visualizará un formulario como el siguiente:
 
@@ -214,7 +249,13 @@ type: tab
 title: Usuarios
 -->
 
-# Listado de usuarios
+# Usuarios
+
+Para acceder al módulo de usuarios, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Usuarios* en los títulos.
+
+![](../assets/images/menu-users.png)
+
+## Listado de usuarios:
 
 En este módulo se puede visualizar el listado de usuarios con acceso a ACS. El listado contiene el nombre y el correo electrónico asociado al usuario.
 
@@ -235,7 +276,29 @@ title: Monedas
 
 # Monedas utilizadas en ACS
 
-En esta sección se visualizan las monedas creadas para utilizarse en ACS, pueden visualizarse los detalles, editar,habilitar o deshabilitar según las necesidades y requerimientos del cliente.
+Para acceder al módulo de monedas, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Monedas* en los títulos.
+
+![](../assets/images/menu-currencies.png)
+
+## Índice de monedas:
+
+En esta sección se visualiza el índice o listado de las monedas creadas para utilizarse en ACS. La información se encuentra organizada en una tabla y muestra los datos más relevantes de las monedas como son: Nombre, Código alfabético, Código numérico y Estado.
+
+![](../assets/images/currencies-index.png)
+
+## Acciones para las monedas:
+
+En el índice de monedas puede acceder a las acciones disponibles para las monedas: 
+
+- Puede visualizar los detalles de cada moneda haciendo clic en la opción *Ver*.
+
+- Puede editar la información con la cual creó las monedas, haciendo clic en la opción *Editar*. 
+
+- Puede habilitar o deshabilitar las monedas, deslizando el botón tipo switch con nombre *Habilitar* cuando está deshabilitada la moneda, o con nombre *Deshabilitar* cuando está habilitada y desea deshabilitarla. Utilice esta función acorde con las necesidades del territorio donde se utilizarán los servicios de ACS.
+
+Para acceder a esta funciones, diríjase al menú con tres puntos ubicado al final de cada registro de moneda en la tabla.
+
+## ¿Cómo crear una nueva moneda?
 
 Para crear una nueva moneda, debe diligenciar un formulario similar al siguiente:
 
@@ -258,9 +321,21 @@ title: Códigos del comercio
 
 # Códigos de categoría del comercio
 
-En este módulo se encuentran registrados todos los códigos relacionados con las categorías de los comercios a los cuales ACS les procesa autenticaciones. Este módulo se pone a disposición del cliente a modo informativo y aclaratorio, ya que las autenticaciones en la recepción del mensaje *AReq* procesa un campo llamado *mcc* (Merchant Category Code), el cual contiene el código de categoría del comercio, un valor numérico de 4 dígitos que por sí mismo no es muy claro, así que este listado de códigos va a facilitar la aclaración del tipo de comercio y la descripción a la cual hace referencia el código.
+Para acceder al módulo de monedas, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Códigos de categoría del comercio* en los títulos.
+
+![](../assets/images/menu-merchant-codes.png)
+
+## Índice de códigos de categoría del comercio:
+
+En esta sección se visualiza el índice o listado de los códigos relacionados con las categorías de los comercios a los cuales ACS les procesa autenticaciones. La información se encuentra organizada en una tabla y muestra los datos relevantes de los códigos como son el código numérico en sí y su descripción.
+
+## Función del módulo:
+
+Este módulo se pone a disposición del cliente a modo informativo y aclaratorio, ya que las autenticaciones en la recepción del mensaje *AReq* procesa un campo llamado *mcc* (Merchant Category Code), el cual contiene el código de categoría del comercio, un valor numérico de 4 dígitos que por sí mismo no es muy claro, así que este listado de códigos va a facilitar la aclaración del tipo de comercio y la descripción a la cual hace referencia el código.
 
 ![](https://wiki.placetopay.com/images/3/31/Acs-merchant-codes-index.png)
+
+## Acciones y creación de códigos de categoría del comercio:
 
 La anterior imagen muestra un ejemplo de la vista del módulo, las funcionalidades que están disponibles son:
 
