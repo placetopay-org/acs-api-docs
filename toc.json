@@ -40,25 +40,30 @@
       "title": "Funcionamiento de ACS",
       "items": [
         {
-          "type": "item",
-          "title": "Funcionalidades",
-          "uri": "docs/ACSFunctionalities.md"
-        },
-        {
           "type": "group",
           "title": "Configuración",
           "items": [
         {
           "type": "item",
-          "title": "Emisores",
+          "title": "Configuración general de ACS",
+          "uri": "docs/ACSGeneralConfiguration.md"
+        },
+        {
+          "type": "item",
+          "title": "Configuración de emisores",
           "uri": "docs/IssuerConfiguration.md"
         },
         {
           "type": "item",
-          "title": "Configuración general",
+          "title": "Otras configuraciones",
           "uri": "docs/ACSConfigurations.md"
         }
         ]
+        },
+        {
+          "type": "item",
+          "title": "Funcionalidades",
+          "uri": "docs/ACSFunctionalities.md"
         },
         {
           "type": "item",
