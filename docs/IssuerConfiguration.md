@@ -140,25 +140,33 @@ En la parte superior derecha de la vista actual, se encuentran pestañas que per
 ![](../assets/images/issuer-detail-basic-info.png)
 
 ### Configuraciones del emisor:
+
 En la parte inferior de la vista del detalle de un emisor, se encuentra la sección correspondiente a la gestión de configuración de campos del emisor.
 
-Puede ver los detalles de cada campo, qué función desempeña,puede editarlos, deshabilitarlos y habilitarlos según se requiera. 
+Ingresando a cada una de las pestañas (GENERAL, UI_OTP, SINGLE_SELECT, UI_MULTI_SELECT, UI_OOB), podrá ver los detalles de cada campo, qué función desempeña, puede editarlos, deshabilitarlos y habilitarlos según lo requiera el emisor en particular.
 
 ![](https://wiki.placetopay.com/images/6/6b/Acs-issuers-configurations.png)
 
-También, en la pestaña *Services*, se encuentran las estrategias disponibles para ejecutar los servicios para el emisor.
 
-- otpStrategy, información acerca de cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso).
+### Campos de configuración:
 
-- cardholderStrategy, información acerca de cómo se va a implementar el servicio de información del tarjetabiente.
+Los campos de configuración que registran en el emisor, se gestionan generalmente desde el módulo *Campos de configuración* del ACS, ubicada en el menú *Sistema*. Allí se encuentra un listado de los campos creados para configurar los emisores, puede habilitarlos, deshabilitarlos, editarlos, ver sus detalles y crear nuevos campos.
 
-#### Campos de configuración:
-
-Estas configuraciones se gestionan desde la sección *Campos de configuración* del ACS. Allí se encuentra un listado de los campos creados para configurar los emisores, puede habilitarlos, deshabilitarlos, editarlos y ver sus detalles.
+Aquí un ejemplo del índice de campos con sus funciones desplegadas.
 
 ![](https://wiki.placetopay.com/images/a/ac/Acs-configurations-actions.png)
 
-Además, con el botón *Crear*, puede adicionar nuevos campos con diferentes tipos de datos a recibir:
+Un ejemplo de la vista del detalle de un campo de configuración es el siguiente:
+
+![](../assets/images/configuration-field-detail.png)
+
+#### Crear un nuevo campo de configuración:
+
+Haga clic en el botón *Crear* ubicado en el índice de campos de configuración, en la parte lateral derecha.
+
+Al presionar el botón crear, lo primero que solicita y se debe seleccionar, es el tipo de dato del campo. 
+
+Estos son los tipos de datos disponibles:
 
 - **SELECT:** Recibe un dato que se ha seleccionado de una lista de valores disponibles.
 
@@ -174,8 +182,21 @@ Además, con el botón *Crear*, puede adicionar nuevos campos con diferentes tip
 
 - **TRANSLATABLE:** Recibe un dato que puede ser traducido.
 
+> Según el tipo de dato escogido se mostrará un formulario diferente para la creación del campo.
+
 ![](https://wiki.placetopay.com/images/0/0d/Acs-configuration-fields.png)
 
+## Estrategias del emisor:
+
+También, en la sección *Configuraciones* del emisor, en la pestaña *SERVICES*, se encuentran las estrategias disponibles para ejecutar los servicios para el emisor.
+
+![](../assets/images/strategies.png)
+
+- **otpStrategy,** estrategia para definir cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso).
+
+- **cardholderStrategy,** estrategia para definir cómo se va a implementar el servicio de información del tarjetabiente.
+
+> Estas estrategias deben estar en estado habilitado para que el emisor pueda ser habilitado al crearse.
 
 ## Gestión de franquicias:
 
