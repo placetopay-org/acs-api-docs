@@ -66,11 +66,17 @@ Para crear un nuevo certificado en ACS, haga clic en el botón *Crear*. La solic
 Aquí se registran los datos de información general sobre el solicitante de la llave:
 
 - **País:** Seleccione el país donde se crea el certificado de la lista desplegable.
+
 - **Estado:** Ingrese el nombre del estado del país en el cual está ubicado.
+
 - **Localidad:** Ingrese el nombre de la ciudad en el cual está ubicado.
+
 - **Nombre de la organización:** Ingrese el nombre de la organización para la cual se crea el certificado.
+
 - **Nombre de la unidad organizacional:** Ingrese el nombre del área de la organización para la cual se genera el certificado.
+
 - **Nombre común:** Ingrese un nombre de dominio válido, siendo este el título o nombre de la página web de la organización.
+
 - **Correo electrónico:** Ingrese la dirección de correo electrónico del solicitante del certificado.
 
 
@@ -237,6 +243,87 @@ El siguiente es un ejemplo de una vista del módulo usuarios.
 <!-- theme: warning -->
 
 > Los usuarios no se pueden eliminar ni editar.
+
+<!--
+type: tab
+title: Campos de configuración
+-->
+
+# Campos de configuración
+
+Para acceder al módulo de campos de configuración, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Campos de configuración* en los títulos.
+
+![](../assets/images/menu-setting-field.png)
+
+## Índice y acciones de los campos de configuración:
+
+En este módulo se gestionan los campos de configuración para los emisores. En el índice del módulo se visualiza un listado de los campos creados para configurar los emisores y el funcionamiento del challenge para las autenticaciones.
+
+### Acciones para los campos:
+
+Entre las acciones disponibles para los campos de configuración están:
+
+- Habilitar / Deshabilitar
+- Editar
+- Ver
+- Crear
+
+Aquí un ejemplo del índice de campos con sus acciones desplegadas.
+
+![](https://wiki.placetopay.com/images/a/ac/Acs-configurations-actions.png)
+
+## Detalles de los campos de configuración:
+
+Un ejemplo de la vista del detalle de un campo de configuración es el siguiente:
+
+![](../assets/images/configuration-field-detail.png)
+
+En él se puede visualizar el estado del campo, la categoría,el tipo, la descripción del campo y su traducción, el valor que se asigna al campo y los datos de creación y actualización del campo.
+
+## Creación de un nuevo campo de configuración:
+
+Para crear un nuevo campo de configuración, haga clic en el botón *Crear* ubicado en el índice de *Campos de configuración*, en la parte lateral derecha.
+
+Al presionar el botón crear, lo primero que solicita y se debe seleccionar, es el tipo de dato del campo, como se visualiza en la siguiente imagen: 
+
+![](https://wiki.placetopay.com/images/0/0d/Acs-configuration-fields.png)
+
+### Tipos de datos de un campo:
+
+- **SELECT:** Recibe un dato que se ha seleccionado de una lista de valores disponibles.
+
+- **BOOLEAN:** Recibe únicamente las opciones de falso y verdadero.
+
+- **DATE:** Recibe una fecha con un formato dado.
+
+- **NUMERIC:** Recibe valores numéricos.
+
+- **STRING:** Recibe un dato que puede incluir cadena de texto, números y signos.
+
+- **PASSWORD:** El dato que se recibe en este campo es guardado de forma segura. SU valor original suele reemplazarse con carácteres especiales o con un algoritmo de criptografía.
+
+- **TRANSLATABLE:** Recibe un dato que puede ser traducido.
+
+> Según el tipo de dato escogido se mostrará un formulario diferente para la creación del campo.
+
+### Fomulario de creación:
+
+Luego de seleccionar el tipo de dato del campo, visualizará el formulario, para este ejemplo se seleccionó el tipo de campo *BOOLEAN*, para el cual obtendrá un formulario como el siguiente:
+
+![](../assets/images/create-setting-field.png)
+
+En el formulario se solicitan los siguientes datos:
+
+- **Nombre:** Ingrese el nombre para el campo a crear.
+
+- **Categoría:** Seleccione la categoría para la cual desea que opere el campo a crear.
+
+- **Valor de configuración:** Ingrese o seleccione el valor que desea que tenga el campo. Este valor se toma como el valor por defecto y con el cual se inicializa el campo de configuración, posteriormente puede editar tal valor.
+
+  Para el ejemplo al hacer un campo de tipo booleano, solo acepta valores de sí, no, verdadero o falso. Haga check en el valor con el cual desea configurar el campo.
+  
+
+- **Descripción:** Ingrese en el campo con prefijo *en* la descripción de la función del campo en inglés, y para el prefijo *es*, ingrese la descripción de la función del campo en español.
 
 <!--
 type: tab

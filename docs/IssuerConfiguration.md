@@ -159,48 +159,32 @@ En la parte superior derecha de la vista actual, se encuentran pestañas que per
 
 En la parte inferior de la vista del detalle de un emisor, se encuentra la sección correspondiente a la gestión de configuración de campos del emisor.
 
-Ingresando a cada una de las pestañas (GENERAL, UI_OTP, SINGLE_SELECT, UI_MULTI_SELECT, UI_OOB), podrá ver los detalles de cada campo, qué función desempeña, puede editarlos, deshabilitarlos y habilitarlos según lo requiera el emisor en particular.
+Ingresando a cada una de las pestañas (GENERAL, UI_OTP, SINGLE_SELECT, UI_MULTI_SELECT, UI_OOB), podrá ver la información de los campos del emisor organizada en tablas, en las cuales se muestra el nombre, el valor inicial del campo y el estado del mismo.
+
+> Para una mejor comprensión del funcionamiento de los campos de configuración y de las categorías, remítase a la sección *Otras configuraciones*, pestaña *Campos de configuración* de la presente documentación.
+
+La siguiente imagen muestra una vista de configuraciones de un emisor.
 
 ![](https://wiki.placetopay.com/images/6/6b/Acs-issuers-configurations.png)
 
+#### Acciones para las configuraciones del emisor:
 
-### Campos de configuración:
+Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable con tres puntos, ubicado al final de cada campo, obtendrá un menú como el de la siguiente imagen:
 
-Los campos de configuración que registran en el emisor, se gestionan generalmente desde el módulo *Campos de configuración* del ACS, ubicada en el menú *Sistema*. Allí se encuentra un listado de los campos creados para configurar los emisores, puede habilitarlos, deshabilitarlos, editarlos, ver sus detalles y crear nuevos campos.
+![](../assets/images/setting-field-actions.png)
 
-Aquí un ejemplo del índice de campos con sus funciones desplegadas.
+Las acciones disponibles son:
 
-![](https://wiki.placetopay.com/images/a/ac/Acs-configurations-actions.png)
+- **Ver:** Seleccione para visualizar los detalles de configuración del campo.
 
-Un ejemplo de la vista del detalle de un campo de configuración es el siguiente:
+- **Editar:** Seleccione para editar algún valor de la configuración con la cual se creó inicialmente el campo.
 
-![](../assets/images/configuration-field-detail.png)
+    > Edite los campos de configuración teniendo en cuenta la lógica de negocio y el funcionamiento del emisor específico.
 
-#### Crear un nuevo campo de configuración:
+- **Habilitar / Deshabilitar:** Deslice el botón tipo switch para habilitar o deshabitar el campo según corresponda con el estado actual.
 
-Haga clic en el botón *Crear* ubicado en el índice de campos de configuración, en la parte lateral derecha.
+  > Tenga en cuenta que si deshabilita un campo de los que están por default, el emisor no podrá ser habilitado.
 
-Al presionar el botón crear, lo primero que solicita y se debe seleccionar, es el tipo de dato del campo. 
-
-Estos son los tipos de datos disponibles:
-
-- **SELECT:** Recibe un dato que se ha seleccionado de una lista de valores disponibles.
-
-- **BOOLEAN:** Recibe únicamente las opciones de falso y verdadero.
-
-- **DATE:** Recibe una fecha con un formato dado.
-
-- **NUMERIC:** Recibe valores numéricos.
-
-- **STRING:** Recibe un dato que puede incluir cadena de texto, números y signos.
-
-- **PASSWORD:** El dato que se recibe en este campo es guardado de forma segura. SU valor original suele reemplazarse con carácteres especiales o con un algoritmo de criptografía.
-
-- **TRANSLATABLE:** Recibe un dato que puede ser traducido.
-
-> Según el tipo de dato escogido se mostrará un formulario diferente para la creación del campo.
-
-![](https://wiki.placetopay.com/images/0/0d/Acs-configuration-fields.png)
 
 ## Estrategias del emisor:
 
@@ -628,10 +612,15 @@ Esta regla valida la solicitud de autenticación a partir de la puntuación de r
 
  Los operadores disponibles para las reglas de puntuación son:
   - **Entre**, acepta un valor mínimo y uno máximo. El dato en la autenticación debe estar en el rango para pasar la validación.
+
   - **Menor que**, acepta un valor y valida que el dato de la autenticación sea menor al valor dado en la regla.
+
   - **Menor o igual que**, acepta un valor y valida que el dato de la autenticación sea menor o igual al valor dado en la regla.
+
   - **Mayor que**, acepta un valor y valida que el dato de la autenticación sea mayor al valor dado en la regla.
+
   - **Mayor o igual que**, acepta un valor y valida que el dato de la autenticación sea mayor o igual al valor dado en la regla.
+  
   - **Igual a**, acepta un valor y valida que el dato de la autenticación sea igual al valor dado en la regla.
 
 Un ejemplo de una regla de puntuación es el siguiente:
