@@ -56,6 +56,29 @@ Para diligenciarlo tenga en cuenta los siguientes datos:
 
 - **Logo:** Aquí puede cargar una imagen con el logo del emisor. Para hacerlo haga clic en la opción *Seleccionar archivo* y busque la imagen correspondiente al logo en su equipo. La imagen debe tener unas dimensiones máximas de 1000x1000.
 
+### Validación de datos:
+
+Para el formulario de creación de un emisor en ACS, y para todos los formularios en general de la aplicación, se dispone de la funcionalidad de validación de los datos ingresados, lo cual permite asegurar la integridad y funcionalidad de los datos.
+
+De esta forma, al diligencia el formulario puede encontrar dos tipos de validaciones:
+
+1. **Validaciones de lado del cliente:**
+
+    Estas validaciones se realizan cuando un dato no cumple las reglas mínimas de aceptación y no hay necesidad de enviar la respuesta al servidor si se ha validado previamente que está errónea la información. Se visualizan con mensajes en rojo para el campo erróneo y le ofrece al usuario una ayuda de cómo debe diligenciar el campo en cuestión para ser aceptado. Si hay errores en estas validaciones, la aplicación no permite el envío del formulario.
+
+    La siguiente imagen ilustra errores en validaciones del lado del cliente:
+
+
+    ![](../assets/images/issuer-pre-validations.png)
+
+1. **Validaciones de lado del servidor:**
+
+    Estas validaciones se aplican cuando se envía un formulario o una data al servidor y esta no cumple con las validaciones requeridas, por lo cual se genera un error, deniega la solicitud y muestra al usuario el error encontrado. Estas validaciones se ejecutan cuando no se han registrado como validaciones del lado del cliente, o son complicadas de validar del lado del cliente o el usuario logra por algún medio pasar el primer filtro de validaciones del cliente con la información errónea, sin embargo, este filtro de validaciones detiene una solicitud con datos inválidos.
+
+    La siguiente imagen ilustra errores en validaciones del lado del servidor, en la cual se logró enviar el formulario pero al momento de recibirlo se encontraron errores en los datos de la solicitud, por lo cual no pudo ser procesada correctamente:
+
+
+    ![](../assets/images/image-issuer-error.png)    
 
 ## ¿Cuáles son los requerimientos para crear un emisor en ACS?
 
