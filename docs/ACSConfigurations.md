@@ -182,37 +182,6 @@ Con este reporte se generan los datos de las autenticaciones que son abandonadas
 
 <!--
 type: tab
-title: Franquicias
--->
-
-# Franquicias
-
-Aquí se gestionan las franquicias que funcionan en ACS, siendo la franquicia una compañía aliada con los bancos emisores de tarjetas de crédito, las cuales proveen diversos beneficios bancarios a sus clientes.
-
-En esta sección se visualiza el listado de franquicias, los detalles de cada una, se pueden editar, habilitar y deshabilitar.
-
-![](https://wiki.placetopay.com/images/6/62/Acs-franchise-index.png)
-
-
-Para crear una franquicia, haga clic en el botón crear y diligencia los datos teniendo en cuenta la siguiente información:
-
-- **Marca,** Nombre de la franquicia, por ejemplo Matercard, VISA...
-
-- **Patrón,** Se ingresa un patrón basado en una expresión regular, con este se valida que el número de tarjeta que llegue al ACS, sea válido según los estándares propios de cada franquicia.
-
-- **Algoritmo para el CAVV,** El Cardholder Authentication Verification Value (CAVV), es un valor de verificación de autenticación del titular de la tarjeta. Aquí se debe seleccionar un algoritmo que valide este valor, el cual resulta de hacer una transacción. En el momento ACS cuenta con un algoritmo para VISA y otro para MASTERCARD.
-
-- **Algoritmo para el ECI,** El Electronic Commerce
-Indicator (ECI), es un valor para indicar los resultados del intento de autenticación. En ACS hay tres algoritmos disponibles, para las franquicias de VISA, MASTERCARD y JCB.
-
-- **Logo,** Puede adjuntar una imagen con el logo de la franquicia.
-
-En la siguientes imagen se puede visualizar un ejemplo de creación de franquicia:
-
-![](https://wiki.placetopay.com/images/a/a0/Acs-create-franchise.png)
-
-<!--
-type: tab
 title: Invitaciones
 -->
 

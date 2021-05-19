@@ -43,21 +43,26 @@
           "type": "group",
           "title": "Configuración",
           "items": [
-        {
-          "type": "item",
-          "title": "Configuración general de ACS",
-          "uri": "docs/ACSGeneralConfiguration.md"
-        },
-        {
-          "type": "item",
-          "title": "Configuración de emisores",
-          "uri": "docs/IssuerConfiguration.md"
-        },
-        {
-          "type": "item",
-          "title": "Otras configuraciones",
-          "uri": "docs/ACSConfigurations.md"
-        }
+            {
+              "type": "item",
+              "title": "Configuración general de ACS",
+              "uri": "docs/ACSGeneralConfiguration.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de emisores",
+              "uri": "docs/IssuerConfiguration.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de franquicias",
+              "uri": "docs/FranchiseCreation.md"
+            },
+            {
+              "type": "item",
+              "title": "Otras configuraciones",
+              "uri": "docs/ACSConfigurations.md"
+            }
         ]
         },
         {
