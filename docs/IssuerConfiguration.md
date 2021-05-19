@@ -106,21 +106,28 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
 
 ### ¿Cómo habilitar un emisor?
 
-1. **Active los campos de configuración requeridos:** En el menú *Campos de configuración* de la aplicación, habilite todos los campos de configuración (debe habilitarlos antes de crear el emisor), ya que estos son requeridos para la habilitación del emisor.
+1. **Active los campos de configuración requeridos:** En el menú *Campos de configuración* de la aplicación, habilite todos los campos de configuración (debe habilitarlos antes de crear el emisor), ya que estos son requeridos para la habilitación del emisor. Para obtener más información de los campos de configuración, vaya al título *Campos de configuración* del presente documento.
 
-2. **Habilitar estrategias del emisor:** Además del certificado, en los detalles del emisor, en la parte inferior y la última pestaña encontrará un menú con el nombre de *SERVICES*, donde encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante). 
+    La siguiente imagen muestra un índice de los campos de configuración donde todos los campos visibles están habilitados, así deben estar para comenzar a configurar correctamente el emisor.
+
+    ![](../assets/images/configuration-fields.png)
+
+2. **Habilitar estrategias del emisor:** En los detalles del emisor, en la parte inferior y la última pestaña encontrará un menú con el nombre de *SERVICES*, donde encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante), debe habilitar ambas estrategias.
 
     Un ejemplo del menú *Services* es el siguiente:
 
    ![](../assets/images/issuer-strategies.png)
 
+    
     Nótese que en la imagen anterior, la estrategia con
     nombre *cardholderStrategy*, se encuentra deshabilitada. Si se intentara habilitar el emisor con esta o ambas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
 
-  ![](../assets/images/error-enable-issuer.png)
+    ![](../assets/images/error-enable-issuer.png)
 
 
-3. **Suscribir franquicia al emisor:** Además del certificado, en los detalles del emisor, en la parte inferior y la última pestaña encontrará un menú con el nombre de *SERVICES*, donde encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante). 
+3. **Suscribir franquicia al emisor:** En la pestaña *Franquicias suscritas* del detalle del emisor, seleccione una franquicia del listado, sino hay franquicias disponibles, debe ir al menú *Franquicias* de la aplicación y crear una nueva franquicia para el emisor, para esto guíese de la sección *Configuración de franquicias* de la presente documentación.
+
+    > La franquicia seleccionada debe ser diferente a franquicias previamente suscritas a otros emisores. 
     
 4. **Configurar rangos de tarjeta para el emisor:** En la pestaña *Gestionar rangos de tarjetas* del detalle del emisor, haga clic en el botón *Crear* y cree rangos de tarjeta manuales o por importación, para ello guíese de la sección *Gestión de rangos de tarjetas* del presente documento.
     
