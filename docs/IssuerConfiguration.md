@@ -65,6 +65,8 @@ Se requiere que el país y el idioma con el cual se vaya a crear el emisor, est�
 
 Se requiere que exista una relación entre emisor, adquiriente y comercio y que estos estén registrados en las aplicaciones de ACS y de MPI de PlacetoPay Evertec, para lograr un proceso de autenticación exitosa. 
 
+Importante tener en cuenta habilitar todos los campos de configuración del menú *Campos de configuración* de la aplicación, antes de crear el emisor, ya que todos estos campos son requeridos para el funcionamiento básico de un emisor.
+
 > En este punto es importante recordar que la aplicación de **MPI** también implementa y pertenece al flujo propuesto por el protocolo 3-D Secure para autenticar un tarjetahabiente.
 Pertenece al dominio el adquiriente y entre sus funciones principales están:
   >> - Recibir y responder la petición de autenticación enviada por el comercio o pasarela de pagos.
@@ -104,13 +106,7 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
 
 ### ¿Cómo habilitar un emisor?
 
-1. **Crear certificado tipo Cliente:** Para habilitar un emisor debe crear un certificado tipo *CLIENT*, en el menú de *Certificados*, y seleccionar el emisor correspondiente y una franquicia suscrita para el mismo emisor.
-
-    Un ejemplo de la primera vista del formulario de
-    creación de un certificado es el siguiente:
-
-    ![](../assets/images/client-certificate.png)
-
+1. **Active los campos de configuración requeridos:** En el menú *Campos de configuración* de la aplicación, habilite todos los campos de configuración (debe habilitarlos antes de crear el emisor), ya que estos son requeridos para la habilitación del emisor.
 
 2. **Habilitar estrategias del emisor:** Además del certificado, en los detalles del emisor, en la parte inferior y la última pestaña encontrará un menú con el nombre de *SERVICES*, donde encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante). 
 
@@ -119,9 +115,22 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
    ![](../assets/images/issuer-strategies.png)
 
     Nótese que en la imagen anterior, la estrategia con
-    nombre *cardholderStrategy*, se encuentra deshabilitada. Si se intentara habilitar el emisor con una de estas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
+    nombre *cardholderStrategy*, se encuentra deshabilitada. Si se intentara habilitar el emisor con esta o ambas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
 
-    ![](../assets/images/error-enable-issuer.png)
+  ![](../assets/images/error-enable-issuer.png)
+
+
+3. **Suscribir franquicia al emisor:** Además del certificado, en los detalles del emisor, en la parte inferior y la última pestaña encontrará un menú con el nombre de *SERVICES*, donde encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante). 
+    
+4. **Configurar rangos de tarjeta para el emisor:** En la pestaña *Gestionar rangos de tarjetas* del detalle del emisor, haga clic en el botón *Crear* y cree rangos de tarjeta manuales o por importación, para ello guíese de la sección *Gestión de rangos de tarjetas* del presente documento.
+    
+5. **Crear certificado tipo Cliente para las franquicias del emisor:** Para habilitar un emisor debe crear un certificado tipo *CLIENT*, en el menú de *Certificados*, y seleccionar el emisor correspondiente y una franquicia suscrita para el mismo emisor. Luego debe firmar el certificado con la entidad certificadora y en el índice de certificados, este debe registrar en el campo *Certificado* con el estado *Encontrado*, que indica que fue validado correctamente. 
+
+    Para crear el certificado, guíese de la sección *Otras configuraciones* pestaña *Certificados SSL*.
+
+    Un ejemplo de la primera vista del formulario de creación de un certificado es el siguiente:
+
+    ![](../assets/images/client-certificate.png)
 
 ## Detalles de un emisor
 
