@@ -161,11 +161,29 @@ En la parte inferior de la vista del detalle de un emisor, se encuentra la secci
 
 Ingresando a cada una de las pestañas (GENERAL, UI_OTP, SINGLE_SELECT, UI_MULTI_SELECT, UI_OOB), podrá ver la información de los campos del emisor organizada en tablas, en las cuales se muestra el nombre, el valor inicial del campo y el estado del mismo.
 
-> Para una mejor comprensión del funcionamiento de los campos de configuración y de las categorías, remítase a la sección *Otras configuraciones*, pestaña *Campos de configuración* de la presente documentación.
-
 La siguiente imagen muestra una vista de configuraciones de un emisor.
 
 ![](https://wiki.placetopay.com/images/6/6b/Acs-issuers-configurations.png)
+
+Los títulos de las pestañas de la sección esta *Configuraciones*, hacen referencia a las categorías en las cuales se ubican los campos de configuración del emisor.
+
+#### Categorías de los campos de configuración: 
+
+  - **GENERAL:** Los campos registrados en esta categoría aplican para todos los tipos de interfaces de usuario utilizadas en autenticaciones con desafío.
+
+  - **UI_OTP:** Los campos registrados en esta categoría  validan el desafío con una interfaz de usuario para OTP (código de un solo uso).
+
+  - **UI_SINGLE_SELECT:** Los campos registrados en esta categoría validan el desafío con una interfaz de usuario diseñada para que se seleccione una única opción para el desafío.
+
+  - **UI_MULTI_SELECT:** Los campos registrados en esta categoría validan el desafío con una interfaz de usuario diseñada para seleccionar múltiples opciones en un desafío. 
+
+  - **UI_OOB:** Los campos registrados en esta categoría  validan el desafío con una interfaz de usuario fuera de banda (OOB), la cual permite a los emisores utilizar otros métodos de autenticación como por ejemplo la aplicación móvil de un emisor.
+
+  - **SERVICES:** Los campos registrados en esta categoría validan las estrategias a utilizar para implementar servicios del ACS como el OTP o el servicio de información del tarjetahabiente.
+
+
+> Para una mejor comprensión del funcionamiento de los campos de configuración y de las categorías, remítase a la sección *Otras configuraciones*, pestaña *Campos de configuración* de la presente documentación.
+
 
 #### Acciones para las configuraciones del emisor:
 
@@ -188,13 +206,31 @@ Las acciones disponibles son:
 
 ## Estrategias del emisor:
 
-También, en la sección *Configuraciones* del emisor, en la pestaña *SERVICES*, se encuentran las estrategias disponibles para ejecutar los servicios para el emisor.
+También, en la sección *Configuraciones* del emisor, en la pestaña *SERVICES*, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor.
 
 ![](../assets/images/strategies.png)
 
-- **otpStrategy,** estrategia para definir cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso).
+### otpStrategy
 
-- **cardholderStrategy,** estrategia para definir cómo se va a implementar el servicio de información del tarjetabiente.
+Esta estrategia permite definir a través de un indicador, cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso), para el emisor específico.  Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
+
+  En el momento se dispone de las siguientes estregias:
+
+  - **PlacetoPayStrategy:** Para enviar y validar el OTP se utiliza un servicio propio de PlacetoPay.
+
+  - **DinersStrategy:** Para enviar y validar el OTP se utiliza un servicio propio de Diners.
+
+### cardholderStrategy
+
+Esta estrategia permite definir a través de un indicador, cómo se va a implementar el servicio de información del tarjetabiente. Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
+
+  En el momento se dispone de las siguientes estregias:
+
+  - **StandardStrategy:** Permite autenticar las solicitudes que lleguen al ACS con la estrategia estandar, mediante la cual se toma la decisión de autenticar o no, conforme a la información del tarjetahabiente recibida.
+
+  - **StandardNoAuthStrategyStandard:** Permite no autenticar las solicitudes que lleguen al ACS con la estrategia estandar.
+
+  - **NoServiceStrategy:** No valida la información del tarjetahabiente y pasa a ejecutar las reglas de validación correspondientes para aprobar o denegar la autenticación.
 
 > Estas estrategias deben estar en estado habilitado para que el emisor pueda ser habilitado al crearse.
 
@@ -620,7 +656,7 @@ Esta regla valida la solicitud de autenticación a partir de la puntuación de r
   - **Mayor que**, acepta un valor y valida que el dato de la autenticación sea mayor al valor dado en la regla.
 
   - **Mayor o igual que**, acepta un valor y valida que el dato de la autenticación sea mayor o igual al valor dado en la regla.
-  
+
   - **Igual a**, acepta un valor y valida que el dato de la autenticación sea igual al valor dado en la regla.
 
 Un ejemplo de una regla de puntuación es el siguiente:

@@ -257,7 +257,9 @@ Para acceder al módulo de campos de configuración, diríjase al menú lateral 
 
 ## Índice y acciones de los campos de configuración:
 
-En este módulo se gestionan los campos de configuración para los emisores. En el índice del módulo se visualiza un listado de los campos creados para configurar los emisores y el funcionamiento del challenge para las autenticaciones.
+En este módulo se gestionan los campos de configuración para los emisores. En el índice del módulo se visualiza el listado de los campos organizados en una tabla.
+
+Estos campos permiten configurar el funcionamiento y la validación de los datos a recibir en la interfaz de usuario del desafío para las autenticaciones con challenge.
 
 ### Acciones para los campos:
 
@@ -317,6 +319,21 @@ En el formulario se solicitan los siguientes datos:
 - **Nombre:** Ingrese el nombre para el campo a crear.
 
 - **Categoría:** Seleccione la categoría para la cual desea que opere el campo a crear.
+
+  Las categorías disponibles son las siguientes:
+
+  - **GENERAL:** Los campos creados en esta categoría aplican para todos los tipos de interfaces de usuario utilizadas en el desafío de la autenticación.
+
+  - **UI_OTP:** En esta categoría se almacenan los campos que validan el desafío con una interfaz de usuario para OTP (código de un solo uso), en la cual el usuario visualiza un campo en el cual debe ingresar el código OTP que recibió.
+
+  - **UI_SINGLE_SELECT:** En esta categoría se almacenan los campos que validan el desafío con una interfaz de usuario diseñada para que se seleccione una única opción para el desafío. Por ejemplo, se pregunta al tarjetahabiente si prefiere el OTP que se enviará al dispositivo del consumidor o a la dirección de correo electrónico registrada.
+
+  - **UI_MULTI_SELECT:** En esta categoría se almacenan los campos que validan el desafío con una interfaz de usuario diseñada para seleccionar múltiples opciones para realizar el desafío solicitado y obtener a su vez, múltiples respuestas en una sola pantalla. Por ejemplo, se pregunta al usuario en qué ciudades ha vivido, para lo cual se le ofrecen múltiples opciones que pueda seleccionar.
+
+  - **UI_OOB:** En esta categoría se almacenan los campos que validan el desafío con una interfaz de usuario fuera de banda (OOB), la cual permite a los emisores utilizar otros métodos de autenticación como por ejemplo la aplicación móvil de un emisor. De esta forma, en la interfaz de usuario el emisor proporciona instrucciones al tarjetahabiente para explicar el proceso de autenticación con desafío que debe realizar.
+
+  - **SERVICES:** En esta categoría se almacenan los campos que validan las estrategias a utilizar para implementar servicios del ACS como el OTP o el servicio de información del tarjetahabiente.
+
 
 - **Valor de configuración:** Ingrese o seleccione el valor que desea que tenga el campo. Este valor se toma como el valor por defecto y con el cual se inicializa el campo de configuración, posteriormente puede editar tal valor.
 
