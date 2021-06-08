@@ -139,7 +139,7 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
 
     Un ejemplo del menú *Services* es el siguiente:
 
-   ![](../assets/images/issuer-strategies.png)
+   ![](https://wiki.placetopay.com/images/5/5b/Strategies.png)
 
     
     Nótese que en la imagen anterior, la estrategia con
@@ -212,7 +212,7 @@ Los títulos de las pestañas de la sección esta *Configuraciones*, hacen refer
 
 Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable con tres puntos, ubicado al final de cada campo, obtendrá un menú como el de la siguiente imagen:
 
-![](../assets/images/setting-field-actions.png)
+![](https://wiki.placetopay.com/images/3/38/Setting-field-actions.png)
 
 Las acciones disponibles son:
 
@@ -466,7 +466,7 @@ Se solicitará:
 
   Los visualizará en la lista desplegable del campo *Tipo de valor* así:
 
-  ![](../assets/images/value-type-list.png)
+  ![](https://wiki.placetopay.com/images/e/e8/Value-type-list.png)
 
 - **Valor:** Corresponde al valor del tipo de parámetro seleccionado en el campo anterior. Con este valor se procede a hacer las validaciones y a verificar la coincidencia del dato con los recibidos en la autenticación.
 
@@ -504,7 +504,7 @@ Las reglas tienen dos funciones a las cuales puede acceder haciendo clic en el m
 
   Encontrará una vista similar a la siguiente, en la cual encontrará el estado de la regla, el nombre, el tipo de regla y el valor que le asignó, así mismo, las fechas y usuarios que crearon y actualizaron la regla:
 
-  ![](../assets/images/rule-detail.png)
+  ![](https://wiki.placetopay.com/Archivo:Rule-detail.png)
 
 - **Activar/Inactivar:** Deslice este botón tipo switch para activar o inactivar una regla.
 
@@ -595,7 +595,7 @@ Al crear una regla se le define un tipo de acción específica que va a ejecutar
 
 Estas acciones se encuentran en el formulario de creación de regla, en el campo *Acción*:
 
-![](../assets/images/rule-actions.png)
+![](https://wiki.placetopay.com/images/d/db/Rule-actions.png)
 
 Las acciones permitidas son las siguientes:
 
@@ -611,7 +611,7 @@ Las acciones permitidas son las siguientes:
 
   Si escoges esta opción, el formulario se visualizará como el siguiente:
 
-  ![](../assets/images/rule-to-execute-group.png)
+  ![](https://wiki.placetopay.com/images/5/5c/Rule-to-execute-group.png)
 
   En el apartado *Grupos de control de fraude*, se presentará una lista de los grupos disponibles, escoja uno y continúe con el diligenciamiento de las condiciones para la regla.
 
@@ -625,7 +625,7 @@ Al crear una regla se asigna un tipo específico. Las opciones disponibles se vi
 
 Visualizará una lista similar a esta con la lista de reglas disponibles:
 
-![](../assets/images/rule-types.png)
+![](https://wiki.placetopay.com/images/f/fe/Rule-types.png)
 
 Los tipos de reglas disponibles actualmente son:
 
@@ -642,7 +642,7 @@ Esta regla permite validar que el número de tarjeta que registre en el valor, s
 #### Monto de compra:
 Esta regla permite validar el monto de la transacción a autenticar. Acepta un valor numérico que indique un monto de pago.
 
-  ![](../assets/images/rule-total.png)
+  ![](https://wiki.placetopay.com/images/1/14/Rule-total.png)
 
 #### Datos de autenticación:
  Esta regla valida los campos que se envían en el mensaje AReq, siendo este un tipo de mensaje del Protocolo 3-D Secure, con el cual se da inicio al proceso de autenticación. Esta regla recibe los siguientes parámetros:
@@ -684,7 +684,7 @@ Esta regla valida la solicitud de autenticación a partir de la puntuación de r
 
 Un ejemplo de una regla de puntuación es el siguiente:
 
-  ![](../assets/images/score-rule.png)
+  ![](https://wiki.placetopay.com/images/8/8d/Score-rule.png)
 
 *Reglas de coincidencia o match:*
 

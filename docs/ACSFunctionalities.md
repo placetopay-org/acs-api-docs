@@ -145,7 +145,7 @@ title: Disputas
 
 Para acceder a la gestión de disputas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Disputas*.
 
-![](../assets/images/menu-disputes.png)
+![](https://wiki.placetopay.com/images/9/95/Menu-disputes.png)
 
 ## Índice de disputas:
 
@@ -318,7 +318,7 @@ Las métricas son estadísticas que reportan el comportamiento de la aplicación
 
 Para acceder a la gestión de métricas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Métricas*.
 
-![](../assets/images/menu-metrics.png)
+![](https://wiki.placetopay.com/images/7/70/Menu-metrics.png)
 
 ## Filtros:
 

@@ -7,7 +7,7 @@ title: Certificados
 
 Para acceder al módulo de certificados, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Certificados* en los títulos.
 
-![](../assets/images/menu-certificates.png)
+![](https://wiki.placetopay.com/images/7/7f/Menu-certificates.png)
 
 ## ¿Qué son y para qué utilizar los certificados SSL?
 
@@ -128,7 +128,7 @@ title: Importes
 
 Para acceder al módulo de importes, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Importes* en los títulos.
 
-![](../assets/images/menu-imports.png)
+![](https://wiki.placetopay.com/Archivo:Menu-imports.png)
 
 En esta sección se pueden visualizar las importaciones de archivos realizadas en ACS, por ejemplo se encuentran los archivos que importan un listado de rangos de tarjetas para un emisor, también los archivos de importación de listas de control de fraude.
 
@@ -154,7 +154,7 @@ title: Reportes
 
 Para acceder al módulo de reportes, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Reportes* en los títulos.
 
-![](../assets/images/menu-reports.png)
+![](https://wiki.placetopay.com/images/b/b3/Menu-reports.png)
 
 ## Índice de reportes:
 
@@ -195,7 +195,7 @@ title: Invitaciones
 
 Para acceder al módulo de invitaciones, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Invitaciones* en los títulos.
 
-![](../assets/images/menu-invitations.png)
+![](https://wiki.placetopay.com/images/f/f6/Menu-invitations.png)
 
 En este módulo se gestionan las invitaciones que realiza un usuario registrado en ACS a otro usuario que desea utilizar la aplicación.
 
@@ -228,7 +228,7 @@ title: Usuarios
 
 Para acceder al módulo de usuarios, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Usuarios* en los títulos.
 
-![](../assets/images/menu-users.png)
+![](https://wiki.placetopay.com/images/4/43/Menu-users.png)
 
 ## Listado de usuarios:
 
@@ -253,7 +253,7 @@ title: Campos de configuración
 
 Para acceder al módulo de campos de configuración, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Campos de configuración* en los títulos.
 
-![](../assets/images/menu-setting-field.png)
+![](https://wiki.placetopay.com/images/7/71/Menu-setting-field.png)
 
 ## Índice y acciones de los campos de configuración:
 
@@ -351,7 +351,7 @@ title: Monedas
 
 Para acceder al módulo de monedas, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Monedas* en los títulos.
 
-![](../assets/images/menu-currencies.png)
+![](https://wiki.placetopay.com/images/2/28/Menu-currencies.png)
 
 ## Índice de monedas:
 
@@ -396,7 +396,7 @@ title: Códigos del comercio
 
 Para acceder al módulo de monedas, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Códigos de categoría del comercio* en los títulos.
 
-![](../assets/images/menu-merchant-codes.png)
+![](https://wiki.placetopay.com/Archivo:Menu-merchant-codes.png)
 
 ## Índice de códigos de categoría del comercio:
 
