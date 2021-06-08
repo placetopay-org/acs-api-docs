@@ -5,6 +5,12 @@ title: Autenticaciones
 
 # Autenticaciones
 
+Para acceder a la gestión de autenticaciones de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Autenticaciones*.
+
+![](https://wiki.placetopay.com/images/8/80/Menu-auth.png)
+
+## Índice de autenticaciones:
+
 En este módulo se registra la información de todas las autenticaciones procesadas por el ACS. En la primera vista se encuentra el listado de las transacciones con fecha, estado y otros datos importantes. También, puede desplegar más información de cada transacción con el botón desplegable ubicado antes del botón *Ver*.
 
 ![](https://wiki.placetopay.com/images/f/fd/Acs-auth-index.png)
@@ -137,6 +143,12 @@ title: Disputas
 
 # Disputas
 
+Para acceder a la gestión de disputas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Disputas*.
+
+![](https://wiki.placetopay.com/images/9/95/Menu-disputes.png)
+
+## Índice de disputas:
+
 Como se menciona en el módulo de Autenticaciones, las disputas son reclamaciones que realiza un cliente por un posible caso de fraude en una transacción.
 
 En esta sección se registran y listan las disputas que se procesaron para diversas autenticaciones. 
@@ -161,6 +173,12 @@ title: Autenticaciones Desacopladas
 -->
 
 # Autenticaciones Desacopladas
+
+Para acceder a la gestión de autenticaciones desacopladas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Autenticaciones desacopladas*.
+
+![](https://wiki.placetopay.com/images/a/a9/Menu-auth-decoupled.png)
+
+## Índice de autenticaciones desacopladas:
 
 En esta sección registran las autenticaciones que entraron a un proceso de desacople a cargo del banco
 emisor para corroborar la identidad del tarjetabiente.
@@ -297,6 +315,10 @@ title: Métricas
 # Métricas
 
 Las métricas son estadísticas que reportan el comportamiento de la aplicación conforme al flujo de transacciones procesadas.
+
+Para acceder a la gestión de métricas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Métricas*.
+
+![](https://wiki.placetopay.com/images/7/70/Menu-metrics.png)
 
 ## Filtros:
 

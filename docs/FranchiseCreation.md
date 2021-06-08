@@ -11,13 +11,13 @@ Para acceder al listado de franquicias de la aplicación siga los siguientes pas
 
 1. Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", como muestra la siguiente imagen:
 
-![](../assets/images/lateral-menu.png)
+![](https://wiki.placetopay.com/images/a/ac/Lateral-menu.png)
 
 2. Haga clic en el menú "Sistema", se desplegará un listado de opciones, haga clic en la opción "Franquicias".
 
 3. Visualizará una pantalla similar a la ilustrada en la siguiente imagen:
 
-![](../assets/images/franchise-index.png)
+![](https://wiki.placetopay.com/images/4/4c/Franchise-index.png)
 
 ## ¿Cómo crear una franquicia en ACS?
 
@@ -58,21 +58,21 @@ En el título "Acciones" ubicado en la parte lateral derecha,se encuentra un men
 
   Visualizará una vista similar a la siguiente:
 
-![](../assets/images/franchise-detail.png)
+![](https://wiki.placetopay.com/images/7/7d/Franchise-detail.png)
 
 - **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó la franquicia. 
 
   Visualizará un formulario similar al de creación de la franquicia.
 
-![](../assets/images/edit-franchise.png)
+![](https://wiki.placetopay.com/images/5/5d/Edit-franchise.png)
 
 - **Habilitar o Deshabilitar:** Deslice el botóntipo switch para habilitar la franquicia si se encuentra deshabilitada o para deshabilitarla cuando se encuentre habilitada. 
 
-![](../assets/images/franchise-toggle.png)
+![](https://wiki.placetopay.com/images/a/a9/Franchise-toggle.png)
 
 Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirmación similar al siguiente e inmediatamente cambiará el estado en la franquicia editada.
 
-![](../assets/images/enable-franchise.png)
+![](https://wiki.placetopay.com/images/0/09/Enable-franchise.png)
 
 ### ¿Qué ocurre al deshabilitar una franquicia?
 

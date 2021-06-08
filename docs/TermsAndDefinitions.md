@@ -62,3 +62,7 @@ Indica el canal a través del cual la transacción es autorizada. Los canales so
 - **Dominio adquiriente:** Esta compuesto por los sistemas y funciones del 3DS Requestor Environment.
 
 - **Dominio interoperabilidad:** El componente de 3DS que facilita la transferencia de información entre el dominio emisor y los sistemas del dominio adquirente.
+
+- **Algoritmo de Luhn:** Es un tipo de algoritmo basado en el principio del módulo aritmético, el cual permite comprobar si una secuencia de dígitos corresponde a un número de tarjeta (PAN) válido.
+
+- **Fingerprint:**  El fingerprinting o la huella digital es toda aquella información que se registra sobre un dispositivo informático cada vez que es utilizado. El fingerprint es un identificador único que se construye a partir de datos como el navegador utilizado, el sistema operativo y el hardware gráfico instalado, entre otros datos.
