@@ -7,7 +7,7 @@ title: Autenticaciones
 
 Para acceder a la gestión de autenticaciones de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Autenticaciones*.
 
-![](../assets/images/menu-auth.png)
+![](https://wiki.placetopay.com/images/8/80/Menu-auth.png)
 
 ## Índice de autenticaciones:
 
@@ -176,7 +176,7 @@ title: Autenticaciones Desacopladas
 
 Para acceder a la gestión de autenticaciones desacopladas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Autenticaciones desacopladas*.
 
-![](../assets/images/menu-auth-decoupled.png)
+![](https://wiki.placetopay.com/images/a/a9/Menu-auth-decoupled.png)
 
 ## Índice de autenticaciones desacopladas:
 

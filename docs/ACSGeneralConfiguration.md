@@ -8,11 +8,11 @@ Para obtener un óptimo funcionamiento de la aplicación, esta se debe configura
 
 2. Seleccione el **idioma** con el cual desea que se presente toda la información y funcionalidades en la aplicación. Están disponibles los idiomas español e inglés. Esta opción se encuentra ubicada en la parte superior derecha de la aplicación, en un menú desplegable.
 
-![](../assets/images/language-configuration.png)
+![](https://wiki.placetopay.com/images/3/34/Language-configuration.png)
 
 3. Ubique y **familiarícese con los módulos** en los cuales se divide la aplicación y las funcionalidades que contienen. Estos se encuentran en un menú ubicado en la parte lateral izquierda de la aplicación. Y se visualizan así:
 
-![](../assets/images/lateral-menu-options.png)
+![](https://wiki.placetopay.com/images/f/f5/Lateral-menu-options.png)
 
 #### Dashboard:
 En este módulo se encuentran las principales funcionalidades de ACS, conformando el tablero principal con el cual el usuario se va a relacionar más.

@@ -28,13 +28,13 @@ Para acceder al listado de emisores de la aplicación siga los siguientes pasos:
 
 1. Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", como muestra la siguiente imagen:
 
-![](../assets/images/lateral-menu.png)
+![](https://wiki.placetopay.com/images/a/ac/Lateral-menu.png)
 
 2. Haga clic en el menú "Sistema", se desplegará un listado de opciones, haga clic en la opción "Emisores".
 
 3. Visualizará una pantalla similar a la siguiente:
 
-![](../assets/images/issuer-index.png)
+![](https://wiki.placetopay.com/images/4/4e/Issuer-index.png)
 
 ## ¿Cómo crear un emisor en ACS?
 
@@ -42,7 +42,7 @@ Para crear un emisor, haga clic en el botón Crear ubicado en la parte lateral d
 
 Visualizará un formulario similar al siguiente:
 
-![](../assets/images/create-issuer.png)
+![](https://wiki.placetopay.com/images/3/35/Create-issuer.png)
 
 Para diligenciarlo tenga en cuenta los siguientes datos:
 
@@ -69,7 +69,7 @@ De esta forma, al diligencia el formulario puede encontrar dos tipos de validaci
     La siguiente imagen ilustra errores en validaciones del lado del cliente:
 
 
-    ![](../assets/images/issuer-pre-validations.png)
+    ![](https://wiki.placetopay.com/images/3/30/Issuer-pre-validations.png)
 
 1. **Validaciones de lado del servidor:**
 
@@ -78,7 +78,7 @@ De esta forma, al diligencia el formulario puede encontrar dos tipos de validaci
     La siguiente imagen ilustra errores en validaciones del lado del servidor, en la cual se logró enviar el formulario pero al momento de recibirlo se encontraron errores en los datos de la solicitud, por lo cual no pudo ser procesada correctamente:
 
 
-    ![](../assets/images/image-issuer-error.png)    
+    ![](https://wiki.placetopay.com/images/9/91/Image-issuer-error.png)    
 
 ## ¿Cuáles son los requerimientos para crear un emisor en ACS?
 
@@ -101,7 +101,7 @@ Pertenece al dominio el adquiriente y entre sus funciones principales están:
 
 En esta sección se visualiza el listado o índice de emisores, la información se presenta en una tabla donde se muestran los datos principales de cada emisor, tales como: Nombre, País y Estado. 
 
-![](../assets/images/issuer-actions.png)
+![](https://wiki.placetopay.com/images/4/4a/Issuer-actions.png)
 
 ### Acciones disponibles para los emisores:
 
@@ -111,21 +111,21 @@ En el título "Acciones" ubicado en la parte lateral derecha del índice de emis
 
   Visualizará una vista similar a la siguiente:
 
-![](../assets/images/issuer-detail.png)
+![](https://wiki.placetopay.com/images/f/f6/Issuer-detail.png)
 
 - **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó el emisor. 
 
   Visualizará un formulario similar al de creación del emisor. Todos los datos son editables.
 
-![](../assets/images/edit-issuer.png)
+![](https://wiki.placetopay.com/images/3/3c/Edit-issuer.png)
 
 - **Habilitar o Deshabilitar:** Deslice el botón tipo switch para habilitar el emisor si se encuentra deshabilitado o para deshabilitarlo cuando se encuentre habilitado. 
 
-![](../assets/images/issuer-actions-toggle.png)
+![](https://wiki.placetopay.com/images/8/81/Issuer-actions-toggle.png)
 
 Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirmación similar al siguiente e inmediatamente cambiará el estado del emisor editado.
 
-![](../assets/images/issuer-toggle.png)
+![](https://wiki.placetopay.com/images/c/ca/Issuer-toggle.png)
 
 ### ¿Cómo habilitar un emisor?
 
@@ -133,7 +133,7 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
 
     La siguiente imagen muestra un índice de los campos de configuración donde todos los campos visibles están habilitados, así deben estar para comenzar a configurar correctamente el emisor.
 
-    ![](../assets/images/configuration-fields.png)
+    ![](https://wiki.placetopay.com/images/3/31/Configuration-fields.png)
 
 2. **Habilitar estrategias del emisor:** En los detalles del emisor, en la parte inferior y la última pestaña encontrará un menú con el nombre de *SERVICES*, donde encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante), debe habilitar ambas estrategias.
 
@@ -145,7 +145,7 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
     Nótese que en la imagen anterior, la estrategia con
     nombre *cardholderStrategy*, se encuentra deshabilitada. Si se intentara habilitar el emisor con esta o ambas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
 
-    ![](../assets/images/error-enable-issuer.png)
+    ![](https://wiki.placetopay.com/images/0/07/Error-enable-issuer.png)
 
 
 3. **Suscribir franquicia al emisor:** En la pestaña *Franquicias suscritas* del detalle del emisor, seleccione una franquicia del listado, sino hay franquicias disponibles, debe ir al menú *Franquicias* de la aplicación y crear una nueva franquicia para el emisor, para esto guíese de la sección *Configuración de franquicias* de la presente documentación.
@@ -160,7 +160,7 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
 
     Un ejemplo de la primera vista del formulario de creación de un certificado es el siguiente:
 
-    ![](../assets/images/client-certificate.png)
+    ![](https://wiki.placetopay.com/images/8/8a/Client-certificate.png)
 
 ## Detalles de un emisor
 
@@ -176,7 +176,7 @@ Además, en la parte lateral derecha, hay un botón para acceder al formulario d
 
 En la parte superior derecha de la vista actual, se encuentran pestañas que permiten acceder a otros menús de configuración de un emisor, los cuales se revisarán más adelante.
 
-![](../assets/images/issuer-detail-basic-info.png)
+![](https://wiki.placetopay.com/images/6/63/Issuer-detail-basic-info.png)
 
 ### Configuraciones del emisor:
 
@@ -231,7 +231,7 @@ Las acciones disponibles son:
 
 También, en la sección *Configuraciones* del emisor, en la pestaña *SERVICES*, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor.
 
-![](../assets/images/strategies.png)
+![](https://wiki.placetopay.com/images/5/5b/Strategies.png)
 
 ### otpStrategy
 
@@ -263,7 +263,7 @@ Para acceder a este menú, haga clic en el menú *Franquicias suscritas*, que ac
 
 Luego visualizará una vista similar a la siguiente:
 
-![](../assets/images/issuer-franchises.png)
+![](https://wiki.placetopay.com/images/6/62/Issuer-franchises.png)
 
 En ella encontrará el listado de franquicias agregadas para el emisor y un formulario para agregar nuevas franquicias.
 
@@ -273,7 +273,7 @@ En ella encontrará el listado de franquicias agregadas para el emisor y un form
 
 Para suscribir una nueva franquicia a su emisor, dírijase a la primera sección de la vista actual, al apartado *Franquicia* y despliegue la lista de franquicias disponibles haciendo clic en la flecha hacia abajo. Seleccione una franquicia y haga clic en el botón *Agregar*.
 
-![](../assets/images/add-franchise.png)
+![](https://wiki.placetopay.com/images/1/1f/Add-franchise.png)
 
 ## Gestión de rangos de tarjetas:
 
@@ -293,7 +293,7 @@ Las acciones disponibles para los rangos de tarjetas se encuentran ubicadas en e
 
   Visualizará una vista similar a la siguiente:
 
-![](../assets/images/card-range-detail.png)
+![](https://wiki.placetopay.com/images/6/6b/Card-range-detail.png)
 
 - **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó el emisor. 
 
@@ -306,13 +306,13 @@ Las acciones disponibles para los rangos de tarjetas se encuentran ubicadas en e
 
 Al dar clic en el botón *Crear*, se desplegarán dos opciones para crear rangos:
 
-  ![](../assets/images/create-button-card.png)
+  ![](https://wiki.placetopay.com/images/1/18/Create-button-card.png)
 
 1. **Crear un rango de tarjetas,** este permite crear un rango de forma manual.
 
   Si selecciona esta opción, obtendrá un formulario similar al siguiente:
 
-  ![](../assets/images/create-card-range.png)
+  ![](https://wiki.placetopay.com/images/c/c3/Create-card-range.png)
 
   Para diligenciar el formulario tenga en cuenta:
 
@@ -396,7 +396,7 @@ Las acciones disponibles para las listas de reglas se encuentran ubicadas en el 
 
   Visualizará una vista similar a la siguiente:
 
-![](../assets/images/list-detail.png)
+![](https://wiki.placetopay.com/images/4/48/List-detail.png)
 
 - **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó la lista. 
 
@@ -410,7 +410,7 @@ ACS provee para este módulo la funcionalidad de filtrar listas, esta permite ha
 
 Para acceder a los filtros diríjase a la parte lateral derecha del índice de listas, al lado izquierdo del botón *Crear*, encontrará la opción llamada *Filtrar*, haga clic y se desplegará una vista como la siguiente:
 
-![](../assets/images/filter-lists.png)
+![](https://wiki.placetopay.com/images/1/11/Filter-lists.png)
 
 Puede filtrar únicamente por el tipo de lista que desea buscar, seleccione la requerida y haga clic en el botón *Buscar* o en el botón *Limpiar filtros* cuando necesite hacer una nueva búsqueda.
 
@@ -431,7 +431,7 @@ Estas listas son temporales, es decir, tienen una duración específica que uste
 
 Al dar clic en el botón *Crear*, ubicado en la parte lateral derecha del índice de listas, se desplegarán dos opciones para crear listas:
 
-  ![](../assets/images/button-create-list.png)
+  ![](https://wiki.placetopay.com/images/4/43/Button-create-list.png)
 
 
 1. **Crear una lista de control de fraude:**, Esta opción le permite crear una lista de forma manual e individual. 
@@ -476,7 +476,7 @@ Se solicitará:
 
 Si escoge esta opción, se cargará un formulario como el siguiente:
 
-  ![](../assets/images/list-import-create.png)
+  ![](https://wiki.placetopay.com/images/e/ed/List-import-create.png)
 
   En el formulario, haga clic en la opción *Seleccionar archivo* y busque en su equipo el archivo que desea cargar. Luego haga clic en el botón *Guardar*.
 
@@ -494,7 +494,7 @@ Para acceder al índice y gestión de reglas, diríjase al menú superior del de
 
 Visualizará una pantalla similar a la siguiente:
 
-![](../assets/images/index-rules.png)
+![](https://wiki.placetopay.com/images/5/5e/Index-rules.png)
 
 #### Funciones de las reglas:
 
@@ -504,7 +504,7 @@ Las reglas tienen dos funciones a las cuales puede acceder haciendo clic en el m
 
   Encontrará una vista similar a la siguiente, en la cual encontrará el estado de la regla, el nombre, el tipo de regla y el valor que le asignó, así mismo, las fechas y usuarios que crearon y actualizaron la regla:
 
-  ![](https://wiki.placetopay.com/Archivo:Rule-detail.png)
+  ![](https://wiki.placetopay.com/images/3/36/Rule-detail.png)
 
 - **Activar/Inactivar:** Deslice este botón tipo switch para activar o inactivar una regla.
 
@@ -545,11 +545,11 @@ Luego visualizará una ventana como esta, dónde le solicitan la acción que des
 
 - **Actualizar:** Permite crear una petición para editar una regla existente. Si selecciona esta opción, luego se desplegará una lista con las reglas disponibles para editar, seleccione una y haga clic en el botón *Siguiente*, lo redirigirá a un formalario como el de creación de regla.
 
-![](../assets/images/edit-rule.png)
+![](https://wiki.placetopay.com/images/8/89/Edit-rule.png)
 
 - **Eliminar:** Permite crear una petición para eliminar una regla existente, si selecciona esta opción también se desplegará una lista con las reglas que puede eliminar, luedo haga clic en el botón *Enviar solicitud*.
 
-![](../assets/images/delete-rule.png)
+![](https://wiki.placetopay.com/images/f/f5/Delete-rule.png)
 
 ### ¿Cómo crear nuevas reglas?
 
@@ -577,7 +577,7 @@ Puede además agregar otras condiciones para una misma regla,haciendo clic en el
 
 Al hacer clic en el botón se presentará un formulario como el siguiente:
 
-![](../assets/images/add-condition-rule.png)
+![](https://wiki.placetopay.com/images/d/dc/Add-condition-rule.png)
 
 También hay otros tipos de reglas que ofrecen más posibilidades, en la siguiente imagen puede visualizar una regla donde puede escoger el operador con el cual va a comparar los valores la regla, por ejemplo, que el valor dado tenga un rango específico, un valor mínimo o máximo.
 
@@ -632,12 +632,12 @@ Los tipos de reglas disponibles actualmente son:
 #### Rango de bines: 
 Esta regla permite validar que la tarjeta que llegue en la petición de autenticación, esté en el rango especificado. Acepta dos valores, el rango inicial que debe ser un BIN de 6 o de 8 dígitos y el rango final que debe tener los mismos dígitos.
 
-  ![](../assets/images/bin-range-rule.png)
+  ![](https://wiki.placetopay.com/images/9/96/Bin-range-rule.png)
 
 #### Número de tarjeta de transacción: 
 Esta regla permite validar que el número de tarjeta que registre en el valor, sea igual al número de tarjeta de la petición de autenticación. Esta regla recibe mínimo 13 dígitos y debe coincidir con el algoritmo de Luhn, el cual comprueba mediante una secuencia de dígitos, si un número de tarjeta es válido.
 
-  ![](../assets/images/card-number-rule.png)
+  ![](https://wiki.placetopay.com/images/7/7f/Card-number-rule.png)
 
 #### Monto de compra:
 Esta regla permite validar el monto de la transacción a autenticar. Acepta un valor numérico que indique un monto de pago.
@@ -655,7 +655,7 @@ Esta regla permite validar el monto de la transacción a autenticar. Acepta un v
 
 Un ejemplo de regla para datos de autenticación es el siguiente:
 
-  ![](../assets/images/areq-rule.png)
+  ![](https://wiki.placetopay.com/images/d/d4/Areq-rule.png)
 
 
 *Reglas de puntuación:*
@@ -715,7 +715,7 @@ Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o
 
 Un ejemplo de una regla tipo match es el siguiente:
 
-![](../assets/images/match-mobile-phone-rule.png)
+![](https://wiki.placetopay.com/images/3/33/Match-mobile-phone-rule.png)
 
 Encontrará en el campo *Valor*, una lista con dos opciones, hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia) con el dato guardado en ACS.
 
@@ -730,13 +730,13 @@ Por ejemplo, puede crear dos grupos, uno llamado *Lista blanca*, donde se podrí
 
 En la siguiente imagen se muestra el listado de grupos de control de fraude de un emisor. La información se encuentra organizada en una tabla y muestra los datos principales de los grupos tales como: Nombre, Fecha, Reglas y Estado.
 
-![](../assets/images/group-index.png)
+![](https://wiki.placetopay.com/images/7/7b/Group-index.png)
 
 ### ¿Cómo crear un nuevo grupo de reglas?
 
 Para crear un grupo, haga clic el botón *Crear* ubicado en la parte lateral derecha del índice de grupos. Se desplegará un formulario similar al siguiente:
 
-![](../assets/images/create-group.png)
+![](https://wiki.placetopay.com/images/0/08/Create-group.png)
 
 En el formulario solo debe ingresar el nombre que desea que tenga el grupo y haga clic en el botón *Guardar*.
 
@@ -748,7 +748,7 @@ Para visualizar los detalles de un grupo, haga clic en el botón *Ver*, ubicado 
 
 Visualizará una vista como la siguiente:
 
-![](../assets/images/group-detail.png)
+![](https://wiki.placetopay.com/images/1/1c/Group-detail.png)
 
 #### Habilitar y Deshabilitar un grupo:
 Para habilitar o deshabilitar un grupo, haga clic en el menú lateral derecho con tres puntos y deslice el botón tipo switch para habilitar o deshabilitar según corresponda.

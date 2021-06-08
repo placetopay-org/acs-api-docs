@@ -22,7 +22,7 @@ La siguiente imagen muestra un ejemplo de la vista de un índice de certificados
 
 Los certificados se pueden editar y se pueden visualizar los detalles del mismo, haciendo clic en el menú con tres puntos ubicado en la parte lateral derecha de cada certificado, se desplegará un menú como el de la siguiente imagen:
 
-![](../assets/images/actions-certificate.png)
+![](https://wiki.placetopay.com/images/9/93/Actions-certificate.png)
 ## Creación de un certificado:
 
 Para crear un nuevo certificado en ACS, haga clic en el botón *Crear*. La solicitud o creación del certificado consta de tres partes:
@@ -128,7 +128,7 @@ title: Importes
 
 Para acceder al módulo de importes, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Importes* en los títulos.
 
-![](https://wiki.placetopay.com/Archivo:Menu-imports.png)
+![](https://wiki.placetopay.com/images/b/b6/Menu-imports.png)
 
 En esta sección se pueden visualizar las importaciones de archivos realizadas en ACS, por ejemplo se encuentran los archivos que importan un listado de rangos de tarjetas para un emisor, también los archivos de importación de listas de control de fraude.
 
@@ -278,7 +278,7 @@ Aquí un ejemplo del índice de campos con sus acciones desplegadas.
 
 Un ejemplo de la vista del detalle de un campo de configuración es el siguiente:
 
-![](../assets/images/configuration-field-detail.png)
+![](https://wiki.placetopay.com/images/e/eb/Configuration-field-detail.png)
 
 En él se puede visualizar el estado del campo, la categoría,el tipo, la descripción del campo y su traducción, el valor que se asigna al campo y los datos de creación y actualización del campo.
 
@@ -312,7 +312,7 @@ Al presionar el botón crear, lo primero que solicita y se debe seleccionar, es 
 
 Luego de seleccionar el tipo de dato del campo, visualizará el formulario, para este ejemplo se seleccionó el tipo de campo *BOOLEAN*, para el cual obtendrá un formulario como el siguiente:
 
-![](../assets/images/create-setting-field.png)
+![](https://wiki.placetopay.com/images/9/99/Create-setting-field.png)
 
 En el formulario se solicitan los siguientes datos:
 
@@ -357,7 +357,7 @@ Para acceder al módulo de monedas, diríjase al menú lateral izquierdo, despli
 
 En esta sección se visualiza el índice o listado de las monedas creadas para utilizarse en ACS. La información se encuentra organizada en una tabla y muestra los datos más relevantes de las monedas como son: Nombre, Código alfabético, Código numérico y Estado.
 
-![](../assets/images/currencies-index.png)
+![](https://wiki.placetopay.com/images/8/83/Currencies-index.png)
 
 ## Acciones para las monedas:
 
@@ -396,7 +396,7 @@ title: Códigos del comercio
 
 Para acceder al módulo de monedas, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Códigos de categoría del comercio* en los títulos.
 
-![](https://wiki.placetopay.com/Archivo:Menu-merchant-codes.png)
+![](https://wiki.placetopay.com/images/d/d3/Menu-merchant-codes.png)
 
 ## Índice de códigos de categoría del comercio:
 
