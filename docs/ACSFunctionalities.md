@@ -1,5 +1,56 @@
 <!--
 type: tab
+title: Métricas
+-->
+
+# Métricas
+
+Las métricas son estadísticas que reportan el comportamiento de la aplicación conforme al flujo de transacciones procesadas.
+
+Para acceder a la gestión de métricas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Métricas*.
+
+![](https://wiki.placetopay.com/images/7/70/Menu-metrics.png)
+
+## Filtros:
+
+Para mostrar en la gráfica de la métrica los datos específicos que se requieran, se debe hacer un filtro de las autenticaciones. Para acceder a los filtros haga clic en el botón *Filtrar*, ubicado en la parte superior lateral izquierda.
+
+Para filtrar las transacciones se requieren los siguientes datos:
+
+- Rango de fecha, seleccione una fecha inicial y una posterior en el calendario. Luego de clic en el botón negro para guardar el rango.
+
+- Periodo.
+
+- Moneda, divisa utilizada para las transacciones.
+
+- Emisor, banco emisor que por el cual se procesó el grupo de transacciones.
+
+
+![](https://wiki.placetopay.com/images/6/6a/Acs-filter-metrics.png)
+
+
+ACS cuenta actualmente con los siguientes dos tipos de métricas:
+
+## Métricas por monto de transacción
+
+Esta métrica muestra en una gráfica el monto de las transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
+
+
+## Métricas por estado de transacción
+
+Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación. 
+
+Un ejemplo de métrica por estado de transacción, se presenta a continuación:
+
+![](https://wiki.placetopay.com/images/8/8f/Acs-metric.png)
+
+En la parte inferior puede visualizarse el rango de fecha con el cual se obtuvo la métrica y la cantidad de transacciones que cumplieron con los filtros.
+
+> Para generar nuevas métricas, haga clic en el botón *Limpiar filtros* y genera un nuevo rango de fechas, moneda y emisor.
+
+
+<!--
+type: tab
 title: Autenticaciones
 -->
 
@@ -135,37 +186,6 @@ Este es un ejemplo de una traza de una autenticación exitosa:
 Además, cada paso tiene la opción *Ver más*, la cual muestra la estructura de la petición o la respuesta con sus respectivos datos. Un ejemplo de este detalle es el siguiente:
 
 ![](https://wiki.placetopay.com/images/c/c1/Acs-trace-detail.png)
-
-<!--
-type: tab
-title: Disputas
--->
-
-# Disputas
-
-Para acceder a la gestión de disputas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Disputas*.
-
-![](https://wiki.placetopay.com/images/9/95/Menu-disputes.png)
-
-## Índice de disputas:
-
-Como se menciona en el módulo de Autenticaciones, las disputas son reclamaciones que realiza un cliente por un posible caso de fraude en una transacción.
-
-En esta sección se registran y listan las disputas que se procesaron para diversas autenticaciones. 
-
-Aquí se pueden visualizar los detalles y descargar las disputas como un PDF.
-
-![](https://wiki.placetopay.com/images/5/5a/Acs-disputes-index.png)
-
-### Reporte de disputas:
-
-El archivo PDF generado para una disputa contiene el estado y el historial de la disputa, información básica de esta, información del tarjetahabiente, las trazas o pasos de la autenticación con sus respectivas peticiones y respuestas.
-
-### Filtros:
-
-Este módulo contiene también filtros que permitirán hacer búsquedas de disputas específicas, filtrando por agentes responsables de las disputas, acciones, identificadores de transacción, entre otros.
-
-![](https://wiki.placetopay.com/images/c/ce/Acs-disputes-filters.png)
 
 <!--
 type: tab
@@ -309,53 +329,78 @@ En este módulo se presentan los mensajes de petición y de respuesta que se han
 
 <!--
 type: tab
-title: Métricas
+title: Reportes
 -->
 
-# Métricas
+# Reportes
 
-Las métricas son estadísticas que reportan el comportamiento de la aplicación conforme al flujo de transacciones procesadas.
+Para acceder al módulo de reportes, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Reportes* en los títulos.
 
-Para acceder a la gestión de métricas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Métricas*.
+![](https://wiki.placetopay.com/images/b/b3/Menu-reports.png)
 
-![](https://wiki.placetopay.com/images/7/70/Menu-metrics.png)
+## Índice de reportes:
 
-## Filtros:
+Los reportes son archivos que contienen registros de las autenticaciones procesadas por ACS. La siguiente imagen muestra un ejemplo de la vista con el índice de reportes generados. Estos reportes se pueden ver y descargar los archivos con toda la información de los mismos.
 
-Para mostrar en la gráfica de la métrica los datos específicos que se requieran, se debe hacer un filtro de las autenticaciones. Para acceder a los filtros haga clic en el botón *Filtrar*, ubicado en la parte superior lateral izquierda.
+![](https://wiki.placetopay.com/images/1/12/Acs-report-index.png)
 
-Para filtrar las transacciones se requieren los siguientes datos:
+## ¿Cómo crear nuevos reportes?
 
-- Rango de fecha, seleccione una fecha inicial y una posterior en el calendario. Luego de clic en el botón negro para guardar el rango.
+Para crear un nuevo reporte haga clic en el botón *Crear*. 
+Actualmente se manejan dos tipos de reportes:
 
-- Periodo.
+### Reportes de Autenticaciones
 
-- Moneda, divisa utilizada para las transacciones.
+El sistema de reportes permite generar un archivo con el reporte de las autenticaciones procesadas por ACS. Para el reporte se puede definir un rango de fechas, identificador de la transacción, BIN de tarjetas, banco emisor y uno o varios estados de las autenticaciones que se desean registrar en el reporte. El siguiente es un ejemplo de creación de un reporte de autenticaciones:
 
-- Emisor, banco emisor que por el cual se procesó el grupo de transacciones.
+![](https://wiki.placetopay.com/images/b/bd/Acs-auth-report.png)
 
+### Reportes de Abandonos 
 
-![](https://wiki.placetopay.com/images/6/6a/Acs-filter-metrics.png)
+Con este reporte se generan los datos de las autenticaciones que son abandonadas en el ACS. Para el reporte se puede definir un rango de fechas y el banco emisor. El siguiente es un ejemplo de creación de un reporte de abandonos:
 
-
-ACS cuenta actualmente con los siguientes dos tipos de métricas:
-
-## Métricas por monto de transacción
-
-Esta métrica muestra en una gráfica el monto de las transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
+![](https://wiki.placetopay.com/images/4/42/Acs-abandoned-report.png)
 
 
-## Métricas por estado de transacción
+## Tipos de archivos generados para los reportes
+- Archivo separado por comas.
+- Archivo separado por tabuladores.
+- Archivo de Excel
 
-Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación. 
+<!--
+type: tab
+title: Disputas
+-->
 
-Un ejemplo de métrica por estado de transacción, se presenta a continuación:
+# Disputas
 
-![](https://wiki.placetopay.com/images/8/8f/Acs-metric.png)
+Para acceder a la gestión de disputas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Disputas*.
 
-En la parte inferior puede visualizarse el rango de fecha con el cual se obtuvo la métrica y la cantidad de transacciones que cumplieron con los filtros.
+![](https://wiki.placetopay.com/images/9/95/Menu-disputes.png)
 
-> Para generar nuevas métricas, haga clic en el botón *Limpiar filtros* y genera un nuevo rango de fechas, moneda y emisor.
+## Índice de disputas:
+
+Como se menciona en el módulo de Autenticaciones, las disputas son reclamaciones que realiza un cliente por un posible caso de fraude en una transacción.
+
+En esta sección se registran y listan las disputas que se procesaron para diversas autenticaciones. 
+
+Aquí se pueden visualizar los detalles y descargar las disputas como un PDF.
+
+![](https://wiki.placetopay.com/images/5/5a/Acs-disputes-index.png)
+
+### Reporte de disputas:
+
+El archivo PDF generado para una disputa contiene el estado y el historial de la disputa, información básica de esta, información del tarjetahabiente, las trazas o pasos de la autenticación con sus respectivas peticiones y respuestas.
+
+### Filtros:
+
+Este módulo contiene también filtros que permitirán hacer búsquedas de disputas específicas, filtrando por agentes responsables de las disputas, acciones, identificadores de transacción, entre otros.
+
+![](https://wiki.placetopay.com/images/c/ce/Acs-disputes-filters.png)
+
+
+> Para conocer otras funcionalidades de las disputas tales como crear, anular, resolver, visualizar historial y descargar reporte de disputas, dirííjase a la pestaña *Autenticaciones* de esta documentación, y luego al título *Gestión de disputas*.
+
 
 <!-- type: tab-end -->
 
