@@ -111,7 +111,7 @@ En el título "Acciones" ubicado en la parte lateral derecha del índice de emis
 
   Visualizará una vista similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/f/f6/Issuer-detail.png)
+![](https://wiki.placetopay.com/images/c/c6/Issuer-detail2.png)
 
 - **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó el emisor. 
 
@@ -133,19 +133,20 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
 
     La siguiente imagen muestra un índice de los campos de configuración donde todos los campos visibles están habilitados, así deben estar para comenzar a configurar correctamente el emisor.
 
-    ![](https://wiki.placetopay.com/images/3/31/Configuration-fields.png)
+    ![](https://wiki.placetopay.com/images/a/a7/Settings-index-2.png)
 
-2. **Habilitar estrategias del emisor:** En los detalles del emisor, en la parte inferior y la última pestaña encontrará un menú con el nombre de *SERVICES*, donde encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante), debe habilitar ambas estrategias.
+    > Si algún campo se encuentra deshabilitado, despliegue el menú de la parte lateral derecha y seleccione la opción *Habilitar*.
+
+2. **Habilitar estrategias del emisor:** En los detalles del emisor, en la pestaña *Configuraciones*, y luego en la pestaña *Servicios*, encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante), debe habilitar ambas estrategias (cardholderStrategy y otpStrategy).
 
     Un ejemplo del menú *Services* es el siguiente:
 
-   ![](https://wiki.placetopay.com/images/5/5b/Strategies.png)
+   ![](https://wiki.placetopay.com/images/c/c4/Issuer-settings-disable-services.png)
 
     
-    Nótese que en la imagen anterior, la estrategia con
-    nombre *cardholderStrategy*, se encuentra deshabilitada. Si se intentara habilitar el emisor con esta o ambas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
+    Nótese que en la imagen anterior, las estrategia se encuentran deshabilitadas. Si se intentara habilitar el emisor con una o ambas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
 
-    ![](https://wiki.placetopay.com/images/0/07/Error-enable-issuer.png)
+    ![](https://wiki.placetopay.com/images/f/f6/Issuer-enable-error2.png)
 
 
 3. **Suscribir franquicia al emisor:** En la pestaña *Franquicias suscritas* del detalle del emisor, seleccione una franquicia del listado, sino hay franquicias disponibles, debe ir al menú *Franquicias* de la aplicación y crear una nueva franquicia para el emisor, para esto guíese de la sección *Configuración de franquicias* de la presente documentación.
@@ -174,9 +175,7 @@ En la parte lateral derecha hay un recuadro en el cual se debe mostrar el logo d
 
 Además, en la parte lateral derecha, hay un botón para acceder al formulario de edición en caso de requerirlo.
 
-En la parte superior derecha de la vista actual, se encuentran pestañas que permiten acceder a otros menús de configuración de un emisor, los cuales se revisarán más adelante.
-
-![](https://wiki.placetopay.com/images/6/63/Issuer-detail-basic-info.png)
+![](https://wiki.placetopay.com/images/c/c6/Issuer-detail2.png)
 
 ### Configuraciones del emisor:
 
