@@ -1,3 +1,63 @@
+
+<!--
+type: tab
+title: Invitaciones
+-->
+
+# Invitaciones de usuarios
+
+Para acceder al módulo de invitaciones, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Invitaciones* en los títulos.
+
+![](https://wiki.placetopay.com/images/f/f6/Menu-invitations.png)
+
+En este módulo se gestionan las invitaciones que realiza un usuario registrado en ACS a otro usuario que desea utilizar la aplicación.
+
+## Invitaciones para crear nuevos usuarios de ACS:
+
+Es a través de una invitación que se pueden crear nuevos usuarios, esta se envía a un correo y allí redirecciona al usuario al inicio de sesión gestionado por la aplicación de Accounts, creada en PlacetoPay, en esta redirección el usuario podrá registrarse y acceder.
+
+> Los datos que registre deben ser los mismos que se utilizaron para enviar la invitación.
+
+## ¿Cómo crear una invitación?
+
+Para crear una invitación, haga clic en el botón *Crear* del módulo de invitaciones, visualizará un formulario como el siguiente:
+
+![](https://wiki.placetopay.com/images/1/15/Acs-create-invitation.png)
+
+Datos a diligenciar:
+
+- **Nombre:** Corresponde al nombre que va a identificar al nuevo usuario.
+
+- **Correo electrónico:** Debe ser un correo válido porque allí es dónde se enviará la invitación.
+
+- **Perfil:** Seleccione el perfil que desea otorgarle al nuevo usuario.
+
+<!--
+type: tab
+title: Usuarios
+-->
+
+# Usuarios
+
+Para acceder al módulo de usuarios, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Usuarios* en los títulos.
+
+![](https://wiki.placetopay.com/images/4/43/Menu-users.png)
+
+## Listado de usuarios:
+
+En este módulo se puede visualizar el listado de usuarios con acceso a ACS. El listado contiene el nombre y el correo electrónico asociado al usuario.
+
+> Es importante recordar que los usuarios se crean a través del módulo invitaciones y solo aparece en este módulo, cuando haya aceptado la invitación para unirse a ACS, creado el usuario y haya iniciado sesión sin conflicto alguno.
+
+El siguiente es un ejemplo de una vista del módulo usuarios.
+
+![](https://wiki.placetopay.com/images/a/ae/Acs-users-index.png)
+
+<!-- theme: warning -->
+
+> Los usuarios no se pueden eliminar ni editar.
+
+
 <!--
 type: tab
 title: Roles
