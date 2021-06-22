@@ -26,13 +26,11 @@ Entre las funciones de un emisor están:
 
 Para acceder al listado de emisores de la aplicación siga los siguientes pasos:
 
-1. Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", como muestra la siguiente imagen:
+1. Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione "Sistema" y luego "Emisores":
 
-![](https://wiki.placetopay.com/images/a/ac/Lateral-menu.png)
+![](https://wiki.placetopay.com/images/e/e8/Issuers-menu.2.png)
 
-2. Haga clic en el menú "Sistema", se desplegará un listado de opciones, haga clic en la opción "Emisores".
-
-3. Visualizará una pantalla similar a la siguiente:
+2. Visualizará una pantalla similar a la siguiente:
 
 ![](https://wiki.placetopay.com/images/4/4e/Issuer-index.png)
 
