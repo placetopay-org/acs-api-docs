@@ -113,7 +113,9 @@ Datos a diligenciar:
 
 - **Copiar datos de un usuario existente:** Con este botón deslizable, puede activar o desactivar la opción de copiar la información (permisos), que posee un usuario existente actualmente en ACS, a el usuario o usuarios nuevos que desea crear. 
 
-- **Perfil:** Si activó la opción anterior, debe seleccionar un perfil existente a partir del cual desea crear el nuevo usuario.
+- **Perfiles:** Si activó la opción "Copiar datos de un usuario existente", debe seleccionar uno o varios perfiles existente a partir del cual desea crear el nuevo usuario.
+
+- **Roles:** Si desactivó la opción "Copiar datos de un usuario existente", debe seleccionar uno o varios roles existente a partir del cual desea crear el nuevo usuario.
 
 Luego de diligenciar el formulario, haga clic en el botón *Siguiente*, visualizará una vista similar a la siguiente:
 
@@ -286,14 +288,7 @@ Cada perfil cuenta con unas opciones para ser gestionado como son la opción de 
 
 ## ¿Cómo crear un nuevo perfil?
 
-Para crear un nuevo perfil se solicitará:
-
-- Nombre para el perfil.
-- Descripción (opcional).
-- Rol, debe seleccionar el rol que se asociará al perfil.
-
-![](https://wiki.placetopay.com/images/5/5a/Acs-profile-create.png)
-
+Para crear un nuevo perfil debe hacerlo a través de una invitación.
 
 ### ¿Qué es el ACL?
 

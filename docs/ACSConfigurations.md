@@ -259,6 +259,14 @@ Para acceder al módulo de monedas, diríjase al menú lateral izquierdo, despli
 
 En esta sección se visualiza el índice o listado de las monedas creadas para utilizarse en ACS. La información se encuentra organizada en una tabla y muestra los datos más relevantes de las monedas como son: Nombre, Código alfabético, Código numérico y Estado.
 
+#### Buscador de monedas:
+
+Además, en el índice encuentra un buscador de monedas para facilitar sus búsquedas. Puede buscar por el nombre de la moneda o parte de este, y por el código alfabético y numérico.
+
+#### Paginador:
+
+En el índice encuentra además un paginador en la parte inferior de la vista, que le permitirá obtener listas de datos agrupadas más fáciles de visualizar. 
+
 ![](https://wiki.placetopay.com/images/8/83/Currencies-index.png)
 
 ## Acciones para las monedas:
@@ -271,7 +279,7 @@ En el índice de monedas puede acceder a las acciones disponibles para las moned
 
 - Puede habilitar o deshabilitar las monedas, deslizando el botón tipo switch con nombre *Habilitar* cuando está deshabilitada la moneda, o con nombre *Deshabilitar* cuando está habilitada y desea deshabilitarla. Utilice esta función acorde con las necesidades del territorio donde se utilizarán los servicios de ACS.
 
-Para acceder a esta funciones, diríjase al menú con tres puntos ubicado al final de cada registro de moneda en la tabla.
+> Para acceder a esta funciones, diríjase al menú con tres puntos ubicado al final de cada registro de moneda en la tabla.
 
 ## ¿Cómo crear una nueva moneda?
 
@@ -283,11 +291,72 @@ Datos a diligenciar:
 
 - **Nombre:** Nombre por el cual se reconoce a la divisa que va a crear.
 
-- **Código alfabético:** Para este campo debe buscar el código alfabético correspondiente a la moneda que va a crear. El código debe ser el establecido por el estándar internacional ISO. Este contiene tres carácteres.
+- **Código alfabético:** Para este campo debe buscar el código alfabético correspondiente a la moneda que va a crear. El código se establece en la norma ISO 4217 y contiene tres carácteres.
 
-- **Código numérico:** Para este campo debe buscar el código numérico correspondiente a la moneda que va a crear. El código debe ser el establecido por el estándar internacional ISO y consta de tres dígitos.
+- **Código numérico:** Para este campo debe buscar el código numérico correspondiente a la moneda que va a crear. El código se establece en la norma ISO 3166 y consta de tres dígitos.
 
 - **Unidad menor:** Ingrese un número que indique la menor denominación o el menor valor que puede tener la moneda que está creando.
+
+<!--
+type: tab
+title: Países
+-->
+
+# Países en ACS
+
+Para acceder al módulo de paííses, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Países* en los títulos.
+
+![](https://wiki.placetopay.com/images/9/91/Countries-menu.png)
+
+## Índice de países:
+
+En esta sección se visualiza el índice o listado de los países creados para utilizarse en ACS. La información se encuentra organizada en una tabla y muestra los datos más relevantes de los países como son: Nombre, Código alfabético, Código numérico, Estado y acciones disponibles.
+
+#### Buscador:
+
+También, en el índice se encuentra un buscador ubicado en la parte superior lateral izquierda para facilitar las búsquedas de países.
+
+#### Paginador:
+
+En el índice encuentra además un paginador en la parte inferior de la vista, que le permitirá obtener listas de datos agrupadas más fáciles de visualizar. 
+
+![](https://wiki.placetopay.com/images/6/69/Countries-index.png)
+
+## Acciones para los países:
+
+En el índice de paííses puede acceder a las acciones disponibles para las monedas:haciendo clic en el menú con tres puntos, ubicado al final de cada registro de país:
+
+Las acciones disponibles son:
+
+- **Ver:** Puede visualizar los detalles de cada paíís haciendo clic en la opción *Ver*.
+
+- **Editar:** Puede editar la información con la cual creó un país, haciendo clic en la opción *Editar*. 
+
+- Puede habilitar o deshabilitar un país, deslizando el botón tipo switch con nombre *Habilitar* cuando está deshabilitado el país, o con nombre *Deshabilitar* cuando está habilitado y desea deshabilitarlo. Utilice esta función acorde con las necesidades del territorio donde se utilizarán los servicios de ACS.
+
+## ¿Cómo crear un nuevo país?
+
+Para crear un nuevo país haga clic en el botón *Crear*, ubicado en la parte lateral derecha del índice de países.
+
+![](https://wiki.placetopay.com/images/2/2e/Create-button-country.png)
+
+## Formulario de creación y edición:
+
+Para crear o editar un nuevo país, debe diligenciar un formulario similar al siguiente:
+
+![](https://wiki.placetopay.com/images/9/92/Country-create.png)
+
+Tenga en cuenta la siguiente informacióón para diligenciar el formulario de creación y edición:
+
+- **Código numérico:** Para este campo debe buscar el código numérico correspondiente al país que va a crear. El código se establece en la norma ISO 3166-1 numérico y consta de tres dígitos numéricos.
+
+- **Código alfa 2:** Para este campo debe buscar el código alfabético correspondiente al país que va a crear. El código se establece en la norma ISO 3166-1 alfa-2, que define códigos de dos letras para cada país.
+
+- **Código alfa 3:** Para este campo debe buscar el código alfabético correspondiente al país que va a crear. El código se establece en la norma ISO 3166-1 alfa-3, que define códigos de tres letras para cada país.
+
+- **Nombre:** Nombre por el cual se reconoce al país en idioma inglés para la casilla "en" y en idioma español para la casilla "es".
+
+- **Código de marcado:** Ingrese un número que indique el código de marcado establecido para el país. Este código es utilizado para obtener los indicadores de números telefónicos del país para realizar llamadas.
 
 <!--
 type: tab
@@ -308,7 +377,7 @@ En esta sección se visualiza el índice o listado de los códigos relacionados 
 
 Este módulo se pone a disposición del cliente a modo informativo y aclaratorio, ya que las autenticaciones en la recepción del mensaje *AReq* procesa un campo llamado *mcc* (Merchant Category Code), el cual contiene el código de categoría del comercio, un valor numérico de 4 dígitos que por sí mismo no es muy claro, así que este listado de códigos va a facilitar la aclaración del tipo de comercio y la descripción a la cual hace referencia el código.
 
-![](https://wiki.placetopay.com/images/3/31/Acs-merchant-codes-index.png)
+![](https://wiki.placetopay.com/images/e/e4/Merchant-category-codes-index-2.png)
 
 ## Acciones y creación de códigos de categoría del comercio:
 
