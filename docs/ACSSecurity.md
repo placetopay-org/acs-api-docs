@@ -99,7 +99,7 @@ Los permisos se encuentran organizados en una tabla con el modelo para el cual s
 
 Desde las invitaciones puede crear nuevas reglas ACL para adjuntar a la invitación específica de los usuarios que desea crear.
 
-Para crear una nueva regla, haga clic en el botóón *Agregar regla acl*, ubicado en la parte lateral derecha de la vista. Se desplegará un formulario, diligencie los datos a partir de la siguiente información:
+Para crear una nueva regla, haga clic en el botón *Agregar regla acl*, ubicado en la parte lateral derecha de la vista. Se desplegará un formulario, diligencie los datos a partir de la siguiente información:
 
 #### Acción:
 
@@ -201,17 +201,20 @@ title: Perfiles
 
 Para acceder a este módulo, dírijase al menú ubicado en la parte lateral izquierda, y despliegue la opción de *Seguridad*, luego seleccione el título *Perfiles*.
 
-![](https://wiki.placetopay.com/images/b/b6/Acs-security-menu.png)
+![](https://wiki.placetopay.com/images/f/f8/Profiles-menu-2.png)
 
 ## Índice de perfiles:
 
-Los roles se asocian con los perfiles. El siguiente es un ejemplo de un índice de perfiles.
+Los roles se asocian con los perfiles, ya que varios perfiles pueden estar asociados a un mismo rol. El siguiente es un ejemplo de un índice de perfiles.
 
 Para acceder a este módulo, el usuario con los permisos necesarios para crear los perfiles, ingresa a través del menú despegable ubicado en la izquierda del panel, en la pestaña de seguridad.
 
-Al ingresar al módulo, la plataforma muestra una tabla con los campos del nombre, descripción, rol y fechas de creación y actualización del perfil.
+Al ingresar al módulo, la plataforma muestra una tabla con los campos del nombre, descripción, usuario y fechas de creación y actualización del perfil. 
 
-![](https://wiki.placetopay.com/images/c/c2/Acs-profiles-index.png)
+Además, esta sección posee un buscador de perfiles en la parte superior izquierda.
+
+
+![](https://wiki.placetopay.com/images/d/d1/Profiles-index-2.png)
 
 ## Acciones para los perfiles:
 
@@ -219,15 +222,30 @@ Cada perfil cuenta con unas opciones para ser gestionado como son la opción de 
 
 ![](https://wiki.placetopay.com/images/9/95/Acs-options-profile.png)
 
-- **Opción *Ver*:** Permite visualizar una información más detallada del perfil como son el nombre, si es un perfil compartido o no, la fecha de creación, actualización, y el usuario que lo creó, al igual que los permisos que el perfil tiene a disposición o los que desea agregar. 
+**Ver:** Permite visualizar una información más detallada del perfil como son el nombre, la fecha de creación, actualización, y el usuario que lo creó, al igual que los permisos que el perfil tiene a disposición o los que desea agregar. 
 
-Un ejemplo de una vista de detalle de un perfil es el siguiente:
+  Un ejemplo de una vista de detalle de un perfil es el siguiente:
 
-![](https://wiki.placetopay.com/images/1/1a/Acs-detail-profile.png)
+  ![](https://wiki.placetopay.com/images/2/2e/Profile-detail.png)
 
-- **Opción *Editar*:** Permite actualizar el nombre, descripción, rol y la opción de compartido.
+  En el detalle de un perfil se encuentran tres secciones:
 
-> Es importante tener en cuenta que un perfil no se puede eliminar, ya que existen actividades que se hanrealizado en nombre de ese perfil y si se pudiera eliminar, se puede producir un error. Por esta razón, la aplicación tiene la opción de deshabilitar el perfil para denegar el acceso.
+  - **Información del perfil:** En esta seccióón se visualiza el estado del perfil, el nombre, si es el perfil actual o no (el perfil con el cual inició sesión es el mismo que está visualizando en el detalle) y si está habilitado, también, las fechas de creación y actualización y los usuarios que realizaron los movimientos.
+
+  - **Roles:** Lista los roles asociados al perfil, su nombre, descripción y la opción de ver el detalle del rol.
+
+  - **Acl:** Lista los permisos ACL creados para el perfil, el modelo o entidad de cada permiso, la descripción de la regla y el número de excepciones si las posee.
+
+  > Las excepciones a una regla ACL, permiten que una regla con acción *Denegar*, permita que el perfil actual pueda visualizar solo aquellos registros que se hayan creado con ese mismo perfil.
+
+
+**Editar:** Permite actualizar el nombre y la descripción del perfil.
+
+  Un ejemplo del formulario de edición es el siguiente.
+
+  ![](https://wiki.placetopay.com/images/7/73/Profile-edit-2.png)
+
+> Es importante tener en cuenta que un perfil no se puede eliminar, ya que existen actividades que se han realizado en nombre de ese perfil y si se pudiera eliminar, se puede producir un error. Por esta razón, la aplicación tiene la opción de deshabilitar el perfil para denegar el acceso.
 
 
 ## ¿Cómo crear un nuevo perfil?
@@ -237,7 +255,6 @@ Para crear un nuevo perfil se solicitará:
 - Nombre para el perfil.
 - Descripción (opcional).
 - Rol, debe seleccionar el rol que se asociará al perfil.
-- Compartido, puede habilitar o deshabilitar esta opción. Un perfil compartido se da cuando el perfil está siendo utilizado por otros roles.
 
 ![](https://wiki.placetopay.com/images/5/5a/Acs-profile-create.png)
 
@@ -246,11 +263,11 @@ Para crear un nuevo perfil se solicitará:
 
 El ACL (Access Control List), es un módulo de gestión de permisos y reglas desarrollado en PlacetoPay y utilizado por ACS. Este se encarga de gestionar los permisos y accesos de los diferentes roles y perfiles creados en ACS. 
 
-Estos permisos y reglas de acceso, se diferencian de los permisos básicos registrados en los roles, en que estos son más específicos y ofrecen una capa de seguridad extra a los datos manejados en la aplicación, ya que estos permisos permiten que se visualice la información que corresponde solo a un cliente en específico y que no se filtre otra información que pertenece a otros clientes u organizaciones.
+Estos permisos y reglas de acceso, se diferencian de los permisos básicos registrados en los roles, en que estos son más específicos y ofrecen una capa de seguridad extra a los datos manejados en la aplicación, ya que permiten que se visualice la información que corresponde solo a un cliente en específico y que no se filtre otra información que pertenece a otros clientes u organizaciones.
 
 La lista de reglas se puede visualizar en el detalle de un perfil, en una vista similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/c/c4/Acs-acl-list.png)
+![](https://wiki.placetopay.com/images/e/e1/Acl-rules.png)
 
 ### ¿Cómo crear reglas ACL?
 
@@ -264,7 +281,7 @@ Las reglas tienen dos opciones disponibles:
 - Permitir accesos
 - Denegar accesos
 
-En el campo entidad, debe seleccionar el la entidad que gestional el módulo al cual quiere aplicarle las condiciones que va a crear.
+En el campo entidad, debe seleccionar la entidad que gestiona el módulo al cual quiere aplicarle las condiciones que va a crear.
 
 #### Condicionales:
 
@@ -273,6 +290,8 @@ En el campo entidad, debe seleccionar el la entidad que gestional el módulo al 
 - Operador: Permite hacer las comparaciones de los datos.
 
 - Valor: Ingrese uno o varios valores que debería contener el atributo seleccionado.
+
+Al finalizar el diligenciamiento del formulario, haga clic en el botón *Guardar*.
 
 <!--
 type: tab
