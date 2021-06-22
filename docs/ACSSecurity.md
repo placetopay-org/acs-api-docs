@@ -1,3 +1,27 @@
+<!--
+type: tab
+title: Usuarios
+-->
+
+# Usuarios
+
+Para acceder al módulo de usuarios, diríjase al menú lateral izquierdo, despliegue la opción *Seguridad* y busque la sección de *Usuarios* en los títulos.
+
+![](https://wiki.placetopay.com/images/c/c8/Users-menu-2.png)
+
+## Listado de usuarios:
+
+En este módulo se puede visualizar el listado de usuarios con acceso a ACS. El listado contiene el nombre y el correo electrónico asociado al usuario.
+
+> Es importante recordar que los usuarios se crean a través del módulo invitaciones y solo aparece en este módulo, cuando haya aceptado la invitación para unirse a ACS, creado el usuario y haya iniciado sesión sin conflicto alguno.
+
+El siguiente es un ejemplo de un índice de usuarios.
+
+![](https://wiki.placetopay.com/images/4/48/Users-index-2.png)
+
+<!-- theme: warning -->
+
+> Los usuarios no se pueden eliminar ni editar. Para hacer ediciones del correo electrónico de un usuario o la contraseña, se deben realizar en la aplicación de *Accounts*, que es quien gestiona los usuarios y accesos para ACS.
 
 <!--
 type: tab
@@ -6,56 +30,120 @@ title: Invitaciones
 
 # Invitaciones de usuarios
 
-Para acceder al módulo de invitaciones, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Invitaciones* en los títulos.
+Para acceder al módulo de invitaciones, diríjase al menú lateral izquierdo, despliegue la opción *Seguridad* y busque la sección de *Invitaciones* en los títulos.
 
-![](https://wiki.placetopay.com/images/f/f6/Menu-invitations.png)
+![](https://wiki.placetopay.com/images/d/d6/Invitations-menu-2.png)
 
-En este módulo se gestionan las invitaciones que realiza un usuario registrado en ACS a otro usuario que desea utilizar la aplicación.
+En este módulo se gestionan las invitaciones que realiza un usuario registrado en ACS a otro usuario u otro grupo de usuarios que desean utilizar la aplicación.
+
+## Listado de invitaciones:
+
+En este módulo se puede visualizar el listado de invitaciones creadas. El listado contiene el nombre de la invitación, el estado y las fechas de creación y actualización.
+
+El siguiente es un ejemplo de un índice de invitaciones, con una invitación en estado *Aceptada*.
+
+![](https://wiki.placetopay.com/images/f/fb/Invitations-index-2.png)
+
+### Estados de las invitaciones:
+
+Las invitaciones poseen dos estados:
+
+- **Aceptada:** Una invitación adquiere este estado, cuando un usuario o el grupo de usuarios a los cuales se les envió, aceptaron la misma.
+
+- **Pendiente:** Una invitación adquiere este estado, cuando un usuario o el grupo de usuarios a los cuales se les envió, no han aceptado la misma.
+
+> Cuando la invitación fue enviada a varios usuarios, el estado se muestra con un indicador similar al siguiente, el cual muestra cuantas de las invitaciones enviadas, están en el estado específico.
+
+![](https://wiki.placetopay.com/images/0/05/Invitation-state.png)
+
 
 ## Invitaciones para crear nuevos usuarios de ACS:
 
-Es a través de una invitación que se pueden crear nuevos usuarios, esta se envía a un correo y allí redirecciona al usuario al inicio de sesión gestionado por la aplicación de Accounts, creada en PlacetoPay, en esta redirección el usuario podrá registrarse y acceder.
+Es a través de una invitación que se pueden crear nuevos usuarios. Una invitación se envía a uno o varios correos electrónicos y allí redirecciona al usuario a la aplicación de Accounts de PlacetoPay. En esta redirección, el usuario podrá registrar sus datos personales y contraseña para acceder posteriormente a ACS.
 
 > Los datos que registre deben ser los mismos que se utilizaron para enviar la invitación.
 
-## ¿Cómo crear una invitación?
+## ¿Cómo crear una invitación o un grupo de invitaciones?
 
-Para crear una invitación, haga clic en el botón *Crear* del módulo de invitaciones, visualizará un formulario como el siguiente:
+Para crear una invitación, haga clic en el botón *Crear* del módulo de invitaciones. Visualizará un formulario como el siguiente:
 
-![](https://wiki.placetopay.com/images/1/15/Acs-create-invitation.png)
+![](https://wiki.placetopay.com/images/8/8e/Invitation-create-2.png)
 
 Datos a diligenciar:
 
-- **Nombre:** Corresponde al nombre que va a identificar al nuevo usuario.
+- **Nombre de la invitación:** Corresponde al nombre con el cual se va a identificar la invitación.
 
-- **Correo electrónico:** Debe ser un correo válido porque allí es dónde se enviará la invitación.
+- **Correo electrónico:** Debe ingresar un correo válido porque allí es dónde se enviará la invitación. Puede ingresar uno o varios para conformar una invitación grupal.
 
-- **Perfil:** Seleccione el perfil que desea otorgarle al nuevo usuario.
+- **Copiar datos de un usuario existente:** Con este botón deslizable, puede activar o desactivar la opción de copiar la información (permisos), que posee un usuario existente actualmente en ACS, a el usuario o usuarios nuevos que desea crear. 
 
-<!--
-type: tab
-title: Usuarios
--->
+- **Perfil:** Si activó la opción anterior, debe seleccionar un perfil existente a partir del cual desea crear el nuevo usuario.
 
-# Usuarios
+Luego de diligenciar el formulario, haga clic en el botón *Siguiente*, visualizará una vista similar a la siguiente:
 
-Para acceder al módulo de usuarios, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Usuarios* en los títulos.
+![](https://wiki.placetopay.com/images/b/b8/Invitation-detail-add-acl.png)
 
-![](https://wiki.placetopay.com/images/4/43/Menu-users.png)
+En esta vista se encuentra el paso siguiente para crear una invitación. 
 
-## Listado de usuarios:
+#### Información básica de la invitación:
 
-En este módulo se puede visualizar el listado de usuarios con acceso a ACS. El listado contiene el nombre y el correo electrónico asociado al usuario.
+En esta vista, en la parte superior se muestra el o los correos a los cuales se va a enviar la invitación y el rol copiado si se seleccionó.
 
-> Es importante recordar que los usuarios se crean a través del módulo invitaciones y solo aparece en este módulo, cuando haya aceptado la invitación para unirse a ACS, creado el usuario y haya iniciado sesión sin conflicto alguno.
+#### Permisos ACL creados para la invitación:
 
-El siguiente es un ejemplo de una vista del módulo usuarios.
+En la parte inferior de la vista se encuentran los permisos de tipo ACL, que permitirán personalizar los permisos de la aplicación, denegando o permitiendo accesos a diferentes secciones.
 
-![](https://wiki.placetopay.com/images/a/ae/Acs-users-index.png)
+Los permisos se encuentran organizados en una tabla con el modelo para el cual se creó el permiso, la descripción de la regla y el botón para eliminar el permiso.
 
-<!-- theme: warning -->
+### Crear nueva regla ACL:
 
-> Los usuarios no se pueden eliminar ni editar.
+Desde las invitaciones puede crear nuevas reglas ACL para adjuntar a la invitación específica de los usuarios que desea crear.
+
+Para crear una nueva regla, haga clic en el botóón *Agregar regla acl*, ubicado en la parte lateral derecha de la vista. Se desplegará un formulario, diligencie los datos a partir de la siguiente información:
+
+#### Acción:
+
+Seleccione una opción para la regla ACL:
+
+- **Permitir:** La regla permitirá acceder a un módulo y una acción específica.
+
+- **Denegar:** La regla denegará el acceso a un módulo y una acción específica.
+
+![](https://wiki.placetopay.com/images/e/ec/Invitations-form-action.png)
+
+#### Modelo:
+
+Seleccione de la lista, para el módulo al cual desea crear una regla que dé o deniegue un acceso.
+
+![](https://wiki.placetopay.com/images/4/44/Invitations-form-model.png)
+
+#### Atributo:
+
+Seleccione de la lista, el atributo o campo del módulo, para el cual desea crear la regla.
+
+![](https://wiki.placetopay.com/images/0/08/Invitations-form-attributte.png)
+
+#### Operador:
+
+Seleccione de la lista, el operador para generar la lógica de la regla, por ejemplo:
+
+- Para comparar un valor (eq).
+- Para encontrar un valor en una lista (in).
+
+![](https://wiki.placetopay.com/images/c/c4/Invitations-form-operator.png)
+
+
+#### Valor:
+
+Seleccione de la lista, el valor que va a asignar para completar la regla:
+
+![](https://wiki.placetopay.com/images/4/42/Invitations-form-value.png)
+
+### Condicionales:
+
+Para agregar y guardar la regla, haga clic en el botón *Agregar condicional*, posteriormente, visualizará la condición o regla ACL creada, en la parte inferior de la vista, similar a la siguiente vista:
+
+![](https://wiki.placetopay.com/images/c/c2/Invitations-conditional-added.png)
 
 
 <!--
