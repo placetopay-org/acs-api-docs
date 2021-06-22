@@ -130,7 +130,7 @@ title: Importes
 
 Para acceder al módulo de importes, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Importes* en los títulos.
 
-![](https://wiki.placetopay.com/images/b/b6/Menu-imports.png)
+![](https://wiki.placetopay.com/images/b/bc/Imports-menu-2.png)
 
 En esta sección se pueden visualizar las importaciones de archivos realizadas en ACS, por ejemplo se encuentran los archivos que importan un listado de rangos de tarjetas para un emisor, también los archivos de importación de listas de control de fraude.
 
@@ -253,7 +253,7 @@ title: Monedas
 
 Para acceder al módulo de monedas, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Monedas* en los títulos.
 
-![](https://wiki.placetopay.com/images/2/28/Menu-currencies.png)
+![](https://wiki.placetopay.com/images/2/24/Currencies-menu-2.png)
 
 ## Índice de monedas:
 
@@ -298,7 +298,7 @@ title: Códigos del comercio
 
 Para acceder al módulo de monedas, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Códigos de categoría del comercio* en los títulos.
 
-![](https://wiki.placetopay.com/images/d/d3/Menu-merchant-codes.png)
+![](https://wiki.placetopay.com/images/f/f3/Merchant-category-codes-menu-2.png)
 
 ## Índice de códigos de categoría del comercio:
 
