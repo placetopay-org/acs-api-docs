@@ -334,9 +334,9 @@ title: Reportes
 
 # Reportes
 
-Para acceder al módulo de reportes, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Reportes* en los títulos.
+Para acceder al módulo de reportes, diríjase al menú lateral izquierdo, despliegue la opción *Dashboard* y busque la sección de *Reportes* en los títulos.
 
-![](https://wiki.placetopay.com/images/b/b3/Menu-reports.png)
+![](https://wiki.placetopay.com/images/0/09/Reports-menu-2.png)
 
 ## Índice de reportes:
 
