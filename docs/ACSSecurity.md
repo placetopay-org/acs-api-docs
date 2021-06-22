@@ -155,7 +155,7 @@ title: Roles
 
 Para acceder a este módulo, dírijase al menú ubicado en la parte lateral izquierda, y despliegue la opción de *Seguridad*, luego seleccione el título *Roles*.
 
-![](https://wiki.placetopay.com/images/b/b6/Acs-security-menu.png)
+![](https://wiki.placetopay.com/images/b/b4/Roles-menu-2.png)
 
 ## Índice de roles:
 
@@ -302,12 +302,12 @@ title: Logs
 
 Para acceder a este módulo, dírijase al menú ubicado en la parte lateral izquierda, y despliegue la opción de *Seguridad*, luego seleccione el título *Logs*.
 
-![](https://wiki.placetopay.com/images/b/b6/Acs-security-menu.png)
+![](https://wiki.placetopay.com/images/3/3a/Logs-menu-2.png)
 
 ## Índice de logs:
 
 En esta sección se registran los movimientos y actualizaciones que se realizan en la aplicación de ACS. Los logs permiten tener un control de los cambios y de lo que sucede en la aplicación. 
-En la sección de logs se encuentra un listado de los mismos,con una descripción, la fecha y hora en que fue registrado el movimiento. 
+En la sección de logs se encuentra un listado de los mismos, con una descripción, la fecha y hora en que fue registrado el movimiento. 
 
 Un ejemplo de un índice de logs es el siguiente:
 
