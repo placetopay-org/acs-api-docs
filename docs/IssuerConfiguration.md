@@ -350,7 +350,7 @@ Esta estrategia permite definir a través de un indicador, cómo se va a impleme
 
 ## URLs para configurar los servicios:
 
-En la seccióón de servicios, además se encuentran dos campos para configurar la URL para los servicios o las estrategias del OTP y del carholder, estos campos son:
+En la sección de servicios, además se encuentran dos campos para configurar la URL para los servicios o las estrategias del OTP y del carholder, estos campos son:
 
 ### otpURL:
 

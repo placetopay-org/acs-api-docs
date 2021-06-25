@@ -56,7 +56,7 @@ Si tiene varios perfiles, al desplegar el menú se listarán todos y al hacer cl
 
 ## Sesión:
 
-En esta sección encontrará el botón *Cerrar sesión*, para cuando desee salir de la aplicacióón.
+En esta sección encontrará el botón *Cerrar sesión*, para cuando desee salir de la aplicación.
 
 
 <!--
@@ -268,7 +268,7 @@ Cada perfil cuenta con unas opciones para ser gestionado como son la opción de 
 
   En el detalle de un perfil se encuentran tres secciones:
 
-  - **Información del perfil:** En esta seccióón se visualiza el estado del perfil, el nombre, si es el perfil actual o no (el perfil con el cual inició sesión es el mismo que está visualizando en el detalle) y si está habilitado, también, las fechas de creación y actualización y los usuarios que realizaron los movimientos.
+  - **Información del perfil:** En esta sección se visualiza el estado del perfil, el nombre, si es el perfil actual o no (el perfil con el cual inició sesión es el mismo que está visualizando en el detalle) y si está habilitado, también, las fechas de creación y actualización y los usuarios que realizaron los movimientos.
 
   - **Roles:** Lista los roles asociados al perfil, su nombre, descripción y la opción de ver el detalle del rol.
 

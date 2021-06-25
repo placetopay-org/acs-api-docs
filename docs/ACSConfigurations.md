@@ -120,7 +120,8 @@ En la tercera sección, se da la opción de registrar el certificado obtenido, l
 
 6. Haga clic en guardar y con esto obtiene un certificado firmado válido para asegurar la transferencia de información con ACS.
 
-> En el índice de certificados, el certificado creado, en el ítem *Certificado* de la tabla, debe tener el estado de **Found**, que indica que el certificado es correcto. En caso de resultar **No encontrado** o **Not Found**, debe volver a hacer el proceso de firma del certificado, ya que este estado es un pndicador de error en el proceso de creacióón y firma del certificado.
+> En el índice de certificados, verifique en la tabla de datos, el campo *Certificado*, debe registrar el estado **Found** o **Encontrado**, que indica que el certificado es correcto. En caso de registrar un estado **No encontrado** o **Not Found**, debe volver a hacer el proceso de firma, ya que este estado es un indicador de error en el proceso de creación y firma del certificado.
+
 <!--
 type: tab
 title: Importes
@@ -304,7 +305,7 @@ title: Países
 
 # Países en ACS
 
-Para acceder al módulo de paííses, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Países* en los títulos.
+Para acceder al módulo de países, diríjase al menú lateral izquierdo, despliegue la opción *Sistema* y busque la sección de *Países* en los títulos.
 
 ![](https://wiki.placetopay.com/images/9/91/Countries-menu.png)
 
@@ -324,11 +325,11 @@ En el índice encuentra además un paginador en la parte inferior de la vista, q
 
 ## Acciones para los países:
 
-En el índice de paííses puede acceder a las acciones disponibles para las monedas:haciendo clic en el menú con tres puntos, ubicado al final de cada registro de país:
+En el índice de países puede acceder a las acciones disponibles para las monedas:haciendo clic en el menú con tres puntos, ubicado al final de cada registro de país:
 
 Las acciones disponibles son:
 
-- **Ver:** Puede visualizar los detalles de cada paíís haciendo clic en la opción *Ver*.
+- **Ver:** Puede visualizar los detalles de cada país haciendo clic en la opción *Ver*.
 
 - **Editar:** Puede editar la información con la cual creó un país, haciendo clic en la opción *Editar*. 
 
@@ -346,7 +347,7 @@ Para crear o editar un nuevo país, debe diligenciar un formulario similar al si
 
 ![](https://wiki.placetopay.com/images/9/92/Country-create.png)
 
-Tenga en cuenta la siguiente informacióón para diligenciar el formulario de creación y edición:
+Tenga en cuenta la siguiente información para diligenciar el formulario de creación y edición:
 
 - **Código numérico:** Para este campo debe buscar el código numérico correspondiente al país que va a crear. El código se establece en la norma ISO 3166-1 numérico y consta de tres dígitos numéricos.
 
@@ -411,7 +412,7 @@ Para acceder al menú de idiomas, ubíquese en la parte superior derecha de la a
 
 Para cambiar el idioma con el que se imprimen los datos y las opciones de ACS, haga clic en el botón *English*, para el idioma inglés.
 
-Si selecciona la opcióón inglés, la aplicación se mostraría similar a como se visualiza en la siguiente imagen:
+Si selecciona la opción inglés, la aplicación se mostraría similar a como se visualiza en la siguiente imagen:
 
 ![](https://wiki.placetopay.com/images/2/22/English-language.png)
 

@@ -399,7 +399,7 @@ Este módulo contiene también filtros que permitirán hacer búsquedas de dispu
 ![](https://wiki.placetopay.com/images/c/ce/Acs-disputes-filters.png)
 
 
-> Para conocer otras funcionalidades de las disputas tales como crear, anular, resolver, visualizar historial y descargar reporte de disputas, dirííjase a la pestaña *Autenticaciones* de esta documentación, y luego al título *Gestión de disputas*.
+> Para conocer otras funcionalidades de las disputas tales como crear, anular, resolver, visualizar historial y descargar reporte de disputas, diríjase a la pestaña *Autenticaciones* de esta documentación, y luego al título *Gestión de disputas*.
 
 
 <!-- type: tab-end -->
