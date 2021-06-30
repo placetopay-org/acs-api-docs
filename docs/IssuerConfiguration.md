@@ -26,13 +26,11 @@ Entre las funciones de un emisor están:
 
 Para acceder al listado de emisores de la aplicación siga los siguientes pasos:
 
-1. Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", como muestra la siguiente imagen:
+1. Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione "Sistema" y luego "Emisores":
 
-![](https://wiki.placetopay.com/images/a/ac/Lateral-menu.png)
+![](https://wiki.placetopay.com/images/e/e8/Issuers-menu.2.png)
 
-2. Haga clic en el menú "Sistema", se desplegará un listado de opciones, haga clic en la opción "Emisores".
-
-3. Visualizará una pantalla similar a la siguiente:
+2. Visualizará una pantalla similar a la siguiente:
 
 ![](https://wiki.placetopay.com/images/4/4e/Issuer-index.png)
 
@@ -111,7 +109,7 @@ En el título "Acciones" ubicado en la parte lateral derecha del índice de emis
 
   Visualizará una vista similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/f/f6/Issuer-detail.png)
+![](https://wiki.placetopay.com/images/c/c6/Issuer-detail2.png)
 
 - **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó el emisor. 
 
@@ -133,19 +131,20 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
 
     La siguiente imagen muestra un índice de los campos de configuración donde todos los campos visibles están habilitados, así deben estar para comenzar a configurar correctamente el emisor.
 
-    ![](https://wiki.placetopay.com/images/3/31/Configuration-fields.png)
+    ![](https://wiki.placetopay.com/images/a/a7/Settings-index-2.png)
 
-2. **Habilitar estrategias del emisor:** En los detalles del emisor, en la parte inferior y la última pestaña encontrará un menú con el nombre de *SERVICES*, donde encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante), debe habilitar ambas estrategias.
+    > Si algún campo se encuentra deshabilitado, despliegue el menú de la parte lateral derecha y seleccione la opción *Habilitar*.
+
+2. **Habilitar estrategias del emisor:** En los detalles del emisor, en la pestaña *Configuraciones*, y luego en la pestaña *Servicios*, encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante), debe habilitar ambas estrategias (cardholderStrategy y otpStrategy).
 
     Un ejemplo del menú *Services* es el siguiente:
 
-   ![](https://wiki.placetopay.com/images/5/5b/Strategies.png)
+   ![](https://wiki.placetopay.com/images/c/c4/Issuer-settings-disable-services.png)
 
     
-    Nótese que en la imagen anterior, la estrategia con
-    nombre *cardholderStrategy*, se encuentra deshabilitada. Si se intentara habilitar el emisor con esta o ambas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
+    Nótese que en la imagen anterior, las estrategia se encuentran deshabilitadas. Si se intentara habilitar el emisor con una o ambas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
 
-    ![](https://wiki.placetopay.com/images/0/07/Error-enable-issuer.png)
+    ![](https://wiki.placetopay.com/images/f/f6/Issuer-enable-error2.png)
 
 
 3. **Suscribir franquicia al emisor:** En la pestaña *Franquicias suscritas* del detalle del emisor, seleccione una franquicia del listado, sino hay franquicias disponibles, debe ir al menú *Franquicias* de la aplicación y crear una nueva franquicia para el emisor, para esto guíese de la sección *Configuración de franquicias* de la presente documentación.
@@ -174,88 +173,7 @@ En la parte lateral derecha hay un recuadro en el cual se debe mostrar el logo d
 
 Además, en la parte lateral derecha, hay un botón para acceder al formulario de edición en caso de requerirlo.
 
-En la parte superior derecha de la vista actual, se encuentran pestañas que permiten acceder a otros menús de configuración de un emisor, los cuales se revisarán más adelante.
-
-![](https://wiki.placetopay.com/images/6/63/Issuer-detail-basic-info.png)
-
-### Configuraciones del emisor:
-
-En la parte inferior de la vista del detalle de un emisor, se encuentra la sección correspondiente a la gestión de configuración de campos del emisor.
-
-Ingresando a cada una de las pestañas (GENERAL, UI_OTP, SINGLE_SELECT, UI_MULTI_SELECT, UI_OOB), podrá ver la información de los campos del emisor organizada en tablas, en las cuales se muestra el nombre, el valor inicial del campo y el estado del mismo.
-
-La siguiente imagen muestra una vista de configuraciones de un emisor.
-
-![](https://wiki.placetopay.com/images/6/6b/Acs-issuers-configurations.png)
-
-Los títulos de las pestañas de la sección esta *Configuraciones*, hacen referencia a las categorías en las cuales se ubican los campos de configuración del emisor.
-
-#### Categorías de los campos de configuración: 
-
-  - **GENERAL:** Los campos registrados en esta categoría aplican para todos los tipos de interfaces de usuario utilizadas en autenticaciones con desafío.
-
-  - **UI_OTP:** Los campos registrados en esta categoría  validan el desafío con una interfaz de usuario para OTP (código de un solo uso).
-
-  - **UI_SINGLE_SELECT:** Los campos registrados en esta categoría validan el desafío con una interfaz de usuario diseñada para que se seleccione una única opción para el desafío.
-
-  - **UI_MULTI_SELECT:** Los campos registrados en esta categoría validan el desafío con una interfaz de usuario diseñada para seleccionar múltiples opciones en un desafío. 
-
-  - **UI_OOB:** Los campos registrados en esta categoría  validan el desafío con una interfaz de usuario fuera de banda (OOB), la cual permite a los emisores utilizar otros métodos de autenticación como por ejemplo la aplicación móvil de un emisor.
-
-  - **SERVICES:** Los campos registrados en esta categoría validan las estrategias a utilizar para implementar servicios del ACS como el OTP o el servicio de información del tarjetahabiente.
-
-
-> Para una mejor comprensión del funcionamiento de los campos de configuración y de las categorías, remítase a la sección *Otras configuraciones*, pestaña *Campos de configuración* de la presente documentación.
-
-
-#### Acciones para las configuraciones del emisor:
-
-Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable con tres puntos, ubicado al final de cada campo, obtendrá un menú como el de la siguiente imagen:
-
-![](https://wiki.placetopay.com/images/3/38/Setting-field-actions.png)
-
-Las acciones disponibles son:
-
-- **Ver:** Seleccione para visualizar los detalles de configuración del campo.
-
-- **Editar:** Seleccione para editar algún valor de la configuración con la cual se creó inicialmente el campo.
-
-    > Edite los campos de configuración teniendo en cuenta la lógica de negocio y el funcionamiento del emisor específico.
-
-- **Habilitar / Deshabilitar:** Deslice el botón tipo switch para habilitar o deshabitar el campo según corresponda con el estado actual.
-
-  > Tenga en cuenta que si deshabilita un campo de los que están por default, el emisor no podrá ser habilitado.
-
-
-## Estrategias del emisor:
-
-También, en la sección *Configuraciones* del emisor, en la pestaña *SERVICES*, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor.
-
-![](https://wiki.placetopay.com/images/5/5b/Strategies.png)
-
-### otpStrategy
-
-Esta estrategia permite definir a través de un indicador, cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso), para el emisor específico.  Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
-
-  En el momento se dispone de las siguientes estregias:
-
-  - **PlacetoPayStrategy:** Para enviar y validar el OTP se utiliza un servicio propio de PlacetoPay.
-
-  - **DinersStrategy:** Para enviar y validar el OTP se utiliza un servicio propio de Diners.
-
-### cardholderStrategy
-
-Esta estrategia permite definir a través de un indicador, cómo se va a implementar el servicio de información del tarjetabiente. Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
-
-  En el momento se dispone de las siguientes estregias:
-
-  - **StandardStrategy:** Permite autenticar las solicitudes que lleguen al ACS con la estrategia estandar, mediante la cual se toma la decisión de autenticar o no, conforme a la información del tarjetahabiente recibida.
-
-  - **StandardNoAuthStrategyStandard:** Permite no autenticar las solicitudes que lleguen al ACS con la estrategia estandar.
-
-  - **NoServiceStrategy:** No valida la información del tarjetahabiente y pasa a ejecutar las reglas de validación correspondientes para aprobar o denegar la autenticación.
-
-> Estas estrategias deben estar en estado habilitado para que el emisor pueda ser habilitado al crearse.
+![](https://wiki.placetopay.com/images/c/c6/Issuer-detail2.png)
 
 ## Gestión de franquicias:
 
@@ -357,6 +275,91 @@ El archivo debe contener cuatro títulos separados por comas en minúscula:
 Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, igualmente separados por comas, sin espacios.
 
 > Para visualizar el formato de un archivo CSV de ejemplo, haga clic en la opción *Descargar* que aparece en el lado izquierdo del formulario.
+
+### Gestión de configuraciones del emisor:
+
+Para acceder a este menú, haga clic en el menú *Configuraciones*, del detalle del emisor. 
+
+Luego visualizará una vista similar a la siguiente:
+
+![](https://wiki.placetopay.com/images/7/75/Issuer-general-settings2.png)
+
+En la parte inferior de la vista, encontrará tres pestañas que contienen los campos de configuración de los emisores, agrupados en tres secciones: General, Desafíos y Servicios.
+
+Ingresando a cada una de las pestañas, podrá ver la información de los campos del emisor organizada en tablas, en las cuales se muestra el nombre, el valor inicial del campo y el estado del mismo.
+
+#### Categorías de los campos de configuración: 
+
+  - **GENERAL:** Los campos registrados en esta categoría aplican para todos los tipos de interfaces de usuario utilizadas en autenticaciones con desafío.
+
+ - **DESAFÍOS:** Los campos registrados en esta categoría permiten configurar las interfaces de usuario para los diferentes tipos de OTP (código de un solo uso, OTP con única y múltiple opción de selección y OTP fuera de banda).
+
+  - **SERVICIOS:** Los campos registrados en esta categoría validan las estrategias a utilizar para implementar servicios del ACS como el OTP o el servicio de información del tarjetahabiente, así como, configurar las URL para los servicios de OTP y de información del tarjetahabiente.
+
+> Para una mejor comprensión del funcionamiento de los campos de configuración y de las categorías, remítase a la sección *Otras configuraciones*, pestaña *Campos de configuración* de la presente documentación.
+
+
+#### Acciones para las configuraciones del emisor:
+
+Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable con tres puntos, ubicado al final de cada campo, obtendrá un menú como el de la siguiente imagen:
+
+![](https://wiki.placetopay.com/images/6/61/Issuer-settings-actions-2.png)
+
+Las acciones disponibles son:
+
+- **Ver:** Seleccione para visualizar los detalles de configuración del campo.
+
+- **Editar:** Seleccione para editar algún valor de la configuración con la cual se creó inicialmente el campo.
+
+    > Edite los campos de configuración teniendo en cuenta la lógica de negocio y el funcionamiento del emisor específico.
+
+- **Habilitar / Deshabilitar:** Deslice el botón tipo switch para habilitar o deshabitar el campo según corresponda con el estado actual.
+
+  > Tenga en cuenta que si deshabilita un campo de los que están por default, el emisor no podrá ser habilitado.
+
+
+## Estrategias del emisor:
+
+En la pestaña *Servicios* de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor.
+
+![](https://wiki.placetopay.com/images/9/94/Issuer-services-settings2.png)
+
+### otpStrategy
+
+Esta estrategia permite definir a través de un indicador, cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso), para el emisor específico.  Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
+
+  En el momento se dispone de las siguientes estregias:
+
+  - **PlacetoPayStrategy:** Para enviar y validar el OTP se utiliza un servicio propio de PlacetoPay.
+
+  - **DinersStrategy:** Para enviar y validar el OTP se utiliza un servicio propio de Diners.
+
+### cardholderStrategy
+
+Esta estrategia permite definir a través de un indicador, cómo se va a implementar el servicio de información del tarjetabiente. Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
+
+  En el momento se dispone de las siguientes estregias:
+
+  - **StandardStrategy:** Permite autenticar las solicitudes que lleguen al ACS con la estrategia estandar, mediante la cual se toma la decisión de autenticar o no, conforme a la información del tarjetahabiente recibida.
+
+  - **StandardNoAuthStrategyStandard:** Permite no autenticar las solicitudes que lleguen al ACS con la estrategia estandar.
+
+  - **NoServiceStrategy:** No valida la información del tarjetahabiente y pasa a ejecutar las reglas de validación correspondientes para aprobar o denegar la autenticación.
+
+> Estas estrategias deben estar en estado habilitado para que el emisor pueda ser habilitado al crearse.
+
+## URLs para configurar los servicios:
+
+En la sección de servicios, además se encuentran dos campos para configurar la URL para los servicios o las estrategias del OTP y del carholder, estos campos son:
+
+### otpURL:
+
+Edite este campo haciendo clic en el menú desplegable con tres puntos ubicados en la parte lateral derecha, seleccione la opción *Editar* y luego ingrese en el campo *Valor*, una URL válida para el servicio del OTP.
+
+
+### cardholderInfoURL:
+
+Edite este campo haciendo clic en el menú desplegable con tres puntos ubicados en la parte lateral derecha, seleccione la opción *Editar* y luego ingrese en el campo *Valor*, una URL válida para el servicio del cardholder information.
 
 ## Gestión del control de fraude:
 Estas funcionalidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de las lostas y grupos donde están contenidas. Las reglas permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
