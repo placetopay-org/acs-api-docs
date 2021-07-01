@@ -66,11 +66,6 @@
           "uri": "docs/ACSSecurity.md"
         }
       ]
-    },
-    {
-      "type": "item",
-      "title": "Implementación de servicios externos",
-      "uri": "docs/Services.md"
     }
   ]
 }
