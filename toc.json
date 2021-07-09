@@ -26,16 +26,6 @@
       "uri": "docs/AuthenticationStatus.md"
     },
     {
-      "type": "item",
-      "title": "Tecnologías usadas en el desarrollo de ACS",
-      "uri": "docs/Technologies.md"
-    },
-    {
-      "type": "item",
-      "title": "Gestión de los datos en ACS",
-      "uri": "docs/Database.md"
-    },
-    {
       "type": "group",
       "title": "Funcionamiento de ACS",
       "items": [
@@ -76,11 +66,6 @@
           "uri": "docs/ACSSecurity.md"
         }
       ]
-    },
-    {
-      "type": "item",
-      "title": "Implementación de servicios externos",
-      "uri": "docs/Services.md"
     }
   ]
 }
