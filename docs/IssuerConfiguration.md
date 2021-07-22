@@ -659,7 +659,106 @@ Esta regla permite validar el monto de la transacción a autenticar. Acepta un v
 Un ejemplo de regla para datos de autenticación es el siguiente:
 
   ![](https://wiki.placetopay.com/images/d/d4/Areq-rule.png)
+  
+#### •	Identificador de cuenta del titular de la tarjeta:
+Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
+  
+###  •	Identificador de la cuenta del titular:
 
+Tiempo que el titular de la tarjeta ha tenido la cuenta con el solicitante 3DS, los valores recibidos son de 2 caracteres, y son de tipo numéricos.
+
+Los valores recibidos son:
+#####  •	01 = Sin cuenta 
+#####  •	02 = Creado durante esta transacción
+#####  •	03 = Menos de 30 días
+#####  •	04 = 30 – 60 días
+#####  •	05 = Mas de 60 días
+
+###  •	Fecha de la cuenta del titular de la tarjeta
+
+Fecha en que el titular de la tarjeta abrió la cuenta con el solicitante 3DS, los valores recibidos son de 8 caracteres, con un formato de fecha YYYYMMDD
+
+###  •	Indicador de cambio de cuenta del titular de la tarjeta 
+
+Indicador del tiempo transcurrido desde que se modifico por ultima vez la información de la cuenta del titular de la tarjeta con el solicitante 3DS, incluida la dirección de facturación o envió, una nueva cuenta de pago o nuevos usuarios agregados, los valores recibidos es de 2 caracteres, y son de tipo numérico.
+
+Los valores recibidos son:
+#####  •	01 = sin cambios
+#####  •	02 = Modificado durante esta transacción
+#####  •	03 = Menos de 30 días
+#####  •	04 = 30 – 60 días
+#####  •	05 = Mas de 60 días
+
+###  •	Cambio de cuenta del titular de la tarjeta
+
+Fecha en la que se modifico por ultima vez la cuenta del titular de la tarjeta con el solicitante de 3DS, incluida la dirección de facturación o envio, la nueva cuenta de pago o los nuevos usuarios agregados, el tipo de dato que se recibe es en el formato YYYYMMDD
+
+###  •	Indicador de cambio de contraseña de la cuenta del titular de la tarjeta
+
+Indica el tiempo transcurrido dese que se cambio la contraseña o se restableció la cuenta del titular de la tarjeta con el solicitante 3DS, los valores recibidos es de 2 caracteres, y son de tipo numérico.
+
+Los valores recibidos son:
+#####  •	01 = sin cambios
+#####  •	02 = Modificado durante esta transacción
+#####  •	03 = Menos de 30 días
+#####  •	04 = 30 – 60 días
+#####  •	05 = Mas de 60 días
+
+###  •	Cambio de contraseña de la cuenta del titular de la tarjeta
+
+Fecha en que se cambio la contraseña o se restableció la cuenta del titular de la tarjeta con 3DS Requestor, el tipo de dato que se recibe es en el formato YYYYMMDD.
+
+###  •	Indicador de uso de la dirección de envió
+
+Indica cuando se utilizo por primera vez la dirección de envió utilizada para esta transacción con 3DS Requestor, los valores recibidos es de 2 caracteres, y son de tipo numérico.
+
+Los valores recibidos son:
+#####  •	01 = Esta transacción 
+#####  •	02 = Menos de 30 días
+#####  •	03 = 30 – 60 días
+#####  •	04 = Mas de 60 días
+
+###  •	Uso de la dirección de envió 
+
+Fecha en la que se utilizo por primera vez la dirección de envió utilizada para esta transacción con el solicitante 3DS, el tipo de dato que se recibe es en el formato YYYYMMDD.
+
+###  •	Numero de transacciones por día
+
+Numero de transacciones (exitosas y abandonadas) para esta cuenta de titular de tarjeta con 3DS Requestor en todas las cuentas de pago en las 24 horas anteriores, como por ejemplo 2, 02, 002
+
+###  •	Numero de transacciones por año 
+
+Numero de transacciones (exitosas y abandonadas) para esta cuenta de titular de tarjeta con 3DS Requestor en todas las cuentas de pago en el año anterior, como por ejemplo 2, 02, 002
+
+###  •	Numero de intentos de aprovisionamiento por día 
+
+Numero de intentos de agregar tarjeta en las ultimas 24 horas.
+
+###  •	Recuento de compras de la cuenta del titular de la tarjeta
+
+Numero de compras realizadas con esta cuenta de titular de tarjeta durante los seis meses anteriores.
+
+###  •	Actividad de cuenta sospechosa
+
+Indica si el solicitante de 3DS ha experimentado una actividad sospechosa (incluido un fraude anterior) en la cuenta del titular de la tarjeta.
+
+###  •	Indicador de nombre de envió
+
+Indica si el nombre del titular de la tarjeta en la cuenta es idéntico al nombre de envió utilizado para esta transacción. 
+
+###  •	Indicador de antigüedad de la cuenta de pago
+
+Indica el periodo de tiempo que la cuenta de pago estuvo inscrita en la cuenta del titular de la tarjeta con el solicitante de 3DS, los valores recibidos es de 2 caracteres, y son de tipo numérico.
+
+Los valores recibidos son:
+#####  •	01 = sin cambios
+#####  •	02 = Modificado durante esta transacción
+#####  •	03 = 30 – 60 días
+#####  •	04 = Mas de 60 días
+
+###  •	Antigüedad de la cuenta de pago
+
+Fecha en que la cuenta de pago se inscribió en la cuenta del titular de la tarjeta con el solicitante de 3DS, el tipo de dato que se recibe es en el formato YYYYMMDD.
 
 *Reglas de puntuación:*
 
