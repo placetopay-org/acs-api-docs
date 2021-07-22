@@ -647,7 +647,7 @@ Esta regla permite validar el monto de la transacción a autenticar. Acepta un v
 
   ![](https://wiki.placetopay.com/images/1/14/Rule-total.png)
 
-#### Datos de autenticación:
+#### Regla para datos de autenticación:
  Esta regla valida los campos que se envían en el mensaje AReq, siendo este un tipo de mensaje del Protocolo 3-D Secure, con el cual se da inicio al proceso de autenticación. Esta regla recibe los siguientes parámetros:
 
   - **Campo**, Hace referencia al campo contenido en el mensaje AReq. Se presenta una lista con todos los campos disponibles para validar. Seleccione uno.
@@ -660,6 +660,8 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
 
   ![](https://wiki.placetopay.com/images/d/d4/Areq-rule.png)
    
+   ### Campos de autenticación:
+
 - **Identificador de la cuenta del titular**
 
   Identificador de cuenta del titular de la tarjeta: Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.   
@@ -1087,12 +1089,12 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
 
     El número de teléfono del trabajo proporcionado por el titular de la tarjeta. El valor recibido es de maximo 15 caracteres. 
 
-*Reglas de puntuación:*
+### Reglas de puntuación:
 
-###### Puntuación del emisor:
+#### Puntuación del emisor:
 Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
 
-###### Puntuación histórica:
+#### Puntuación histórica:
 Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el tarjetahabiente históricamente. Se evalúa a partir de transacciones anteriores. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
 
 #### Puntuación RBA Master Card:
@@ -1115,29 +1117,29 @@ Un ejemplo de una regla de puntuación es el siguiente:
 
   ![](https://wiki.placetopay.com/images/8/8d/Score-rule.png)
 
-*Reglas de coincidencia o match:*
+### Reglas de coincidencia o match:
 
-###### Coincidencia para correo electrónico: 
+#### Coincidencia para correo electrónico: 
 Esta regla permite validar si el correo electrónico del tarjetahabiente que llega en los datos de autenticación, coincide con el correo electrónico guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-###### Coincidencia para teléfono móvil:
+#### Coincidencia para teléfono móvil:
 Esta regla permite validar si el teléfono móvil del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono móvil guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-###### Coincidencia para teléfono fijo:
+#### Coincidencia para teléfono fijo:
 Esta regla permite validar si el teléfono fijo del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono fijo guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-###### Coincidencia para teléfono del trabajo:
+#### Coincidencia para teléfono del trabajo:
 Esta regla permite validar si el teléfono del trabajo del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono del trabajo guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-###### Coincidencia para el dispositivo:
+#### Coincidencia para el dispositivo:
 Esta regla permite validar si el fingerprint o huella digital del tarjetahabiente que se crea en la transacción, coincide con algún fingerprint guardado para el mismo tarjetahabiente en transacciones exitosas anteriores. El fingerprint es un método que registra automáticamente un identificador de un usuario, a partir de la información captada con el dispositivo usado al realizar una transacción o un movimiento digital.
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
