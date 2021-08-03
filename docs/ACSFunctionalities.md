@@ -21,9 +21,16 @@ Para filtrar las transacciones se requieren los siguientes datos:
 
 - **Periodo,** Seleccione el tipo de periodo por el cual desea hacer el filtro, puede elegir entre:
 
-  - Día
-  - Día de la semana
-  - Mes
+    - **Día**, al escoger este filtro, los datos se graficaran por días con fechas, como lo ilustra el siguiente ejemplo:
+  ![](https://wiki.placetopay.com/images/2/2d/Day.png)
+
+    - **Día de la semana,** al escoger este filtro, los datos se graficaran por días con nombres, como lo ilustra el siguiente ejemplo:
+  ![](https://wiki.placetopay.com/images/5/5b/Weekday.png)
+
+
+    - **Mes,** este filtro se puede escoger cuando el rango de fecha seleccionado es superior a un mes. Al escoger este filtro, los datos se graficaran por los nombres de los meses, como lo ilustra el siguiente ejemplo:
+  ![](https://wiki.placetopay.com/images/5/50/Month.png)
+
 
 - **Moneda,** Seleccione la divisa con la cual desea filtrar las transacciones.
 
