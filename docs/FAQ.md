@@ -23,6 +23,41 @@ El proceso de autenticación permite reducir el riesgo de fraude en las transacc
 
 El Protocolo 3-D Secure es quien define y describe la infraestructura y las pautas para la autenticación del tarjetahabiente durante una transacción de comercio electrónico.
 
+
+> Recomendamos leer la documentación en su totalidad, ya que en cada una de las secciones se describen situaciones particulares que se pueden experimentar y sus respectivas soluciones
+
+## ¿Cómo acceder a ACS?
+
+Para acceder a la consola de ACS, se requiere de un usuario con el cual debe iniciar sesión. 
+
+### Usuario:
+Para obtener un usuario de ACS, se debe hacer mediante una invitación que creará un usuario actual de la aplicación.
+
+> Para obtener más información de las invitaciones, diríjase a la sección de **Seguridad** y luego **Invitaciones**, de esta documentación.
+
+### Activación de usuario:
+
+Posterior a la creación de una invitación, será enviado un correo electrónico al correo registrado en el formulario de creación, con el cual podrá activar el usuario. El correo se verá similar al siguiente:
+
+![](https://wiki.placetopay.com/images/b/be/Invitation-email.png)
+
+Para activar el usuario, haga clic en el botón **Activar Registro** y se redireccionará a la página de inicio de sesión de ACS.
+
+### Inicio de sesión:
+
+La página de inicio de sesión o login será similar a la siguiente:
+
+![](https://wiki.placetopay.com/images/a/ad/Acs-login.png)
+
+En este formulario de inicio de sesión, ingrese el correo electrónico con el cual fue creada la invitación y la contraseña.
+
+### Restablecimiento de contraseña:
+
+Si olvidó la contraseña de inicio de sesión, puede hacer clic en la opción **¿Olvidaste tu contraseña** y se redireccionará a un formalario para ingresar su correo electrónico y enviar una solicitud de cambio de contraseña. Visualizará un formulario como el siguiente:
+
+![](https://wiki.placetopay.com/images/a/ad/Password-login.png)
+
+
 <!--
 type: tab
 title: Contáctenos
@@ -40,5 +75,6 @@ Para acceder a este servicio, puede contactarse por alguno de los siguientes med
   - **Teléfonos:** 444 2310 / 317 431 0510
   - **Correo electrónico:** servicioposventa@placetopay.com
   - **Dirección:** Carrera 65 # 45 - 20 oficina 430 Medellín - Colombia
+
 
 <!-- type: tab-end -->
