@@ -1,3 +1,44 @@
-# FAQ
+<!--
+type: tab
+title: Preguntas frecuentes
+-->
 
-The beginning of an awesome article...
+# Preguntas frecuentes sobre el funcionamiento ACS
+
+En esta sección podrá encontrar respuestas a preguntas o problemas que puede encontrarse en ACS.
+
+## ¿Qué significan las siglas ACS?
+
+ACS traduce en inglés Access Control Server o en español, Servidor de control de acceso.
+
+## ¿Para qué es necesario ACS?
+
+La aplicación de ACS verifica si una autenticación está disponible para un número de tarjeta, cumpliendo la importante función de autenticar a los tarjetahabientes en el flujo transaccional. Además, en el proceso de autenticación, es ACS el encargado de validar los datos ingresados y registrados para una transacción.
+
+## ¿Por qué se debe autenticar a un tarjetahabiente?
+
+El proceso de autenticación permite reducir el riesgo de fraude en las transacciones virtuales, a través de la  verificación de cuenta, la identidad del tarjehabiente y la corroboración de información transaccional y personal brindada.
+
+## ¿Cómo se parametriza el proceso de autenticación de un tarjetahabiente?
+
+El Protocolo 3-D Secure es quien define y describe la infraestructura y las pautas para la autenticación del tarjetahabiente durante una transacción de comercio electrónico.
+
+<!--
+type: tab
+title: Contáctenos
+-->
+
+# Contacto y soporte
+
+Si existe alguna duda o la solución al problema que posee no está contenida en esta documentación, puede acceder al servicio de posventa que brinda la compañía para atender su requerimiento.
+
+Tenga en cuenta que para brindar un excelente servicio de soporte, es necesario que provea todos los detalles de la incidencia. 
+
+Para acceder a este servicio, puede contactarse por alguno de los siguientes medios y le atenderemos con gusto.
+
+  - **Página web:** https://www.placetopay.com
+  - **Teléfonos:** 444 2310 / 317 431 0510
+  - **Correo electrónico:** servicioposventa@placetopay.com
+  - **Dirección:** Carrera 65 # 45 - 20 oficina 430 Medellín - Colombia
+
+<!-- type: tab-end -->
