@@ -28,10 +28,10 @@ El Protocolo 3-D Secure es quien define y describe la infraestructura y las paut
 
 ## ¿Cómo acceder a ACS?
 
-Para acceder a la consola de ACS, se requiere de un usuario con el cual debe iniciar sesión. 
+Para acceder a la consola de ACS, se requiere de un usuario registrado con el cual procederá a iniciar sesión. 
 
 ### Usuario:
-Para obtener un usuario de ACS, se debe hacer mediante una invitación que creará un usuario actual de la aplicación.
+Para obtener el usuario de ACS, se debe hacer mediante una invitación que creará un usuario registrado y autenticado actualmente en la aplicación.
 
 > Para obtener más información de las invitaciones, diríjase a la sección de **Seguridad** y luego **Invitaciones**, de esta documentación.
 
@@ -53,7 +53,7 @@ En este formulario de inicio de sesión, ingrese el correo electrónico con el c
 
 ### Restablecimiento de contraseña:
 
-Si olvidó la contraseña de inicio de sesión, puede hacer clic en la opción **¿Olvidaste tu contraseña** y se redireccionará a un formalario para ingresar su correo electrónico y enviar una solicitud de cambio de contraseña. Visualizará un formulario como el siguiente:
+Si olvidó la contraseña de inicio de sesión, puede hacer clic en la opción **¿Olvidaste tu contraseña?** y se redireccionará a un formalario para ingresar su correo electrónico y enviar una solicitud de cambio de contraseña. Visualizará un formulario como el siguiente:
 
 ![](https://wiki.placetopay.com/images/a/ad/Password-login.png)
 
