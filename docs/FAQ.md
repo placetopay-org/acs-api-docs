@@ -58,6 +58,76 @@ Si olvidó la contraseña de inicio de sesión, puede hacer clic en la opción *
 ![](https://wiki.placetopay.com/images/a/ad/Password-login.png)
 
 
+## ¿Cómo mostrar datos en las diferentes métricas?
+
+Cuando accede a la sección de métricas puede preguntarse ¿cómo obtener información a partir de las gráficas?, la respuesta a esta pregunta es que debe hacer un filtrado de datos en primer lugar, para ello haga clic en el botón **Filtrar** como lo ilustra la siguiente imagen y posteriormente seleccione los datos con los cuales desea que se grafiquen y se muestren estadísticas de funcionamiento de la aplicación.
+
+![](https://wiki.placetopay.com/images/5/55/Hide-filters.png)
+
+
+## ¿Puedo acceder a registros de cambios e interacciones realizadas en la aplicación?
+
+La aplicación de ACS contiene un módulo ubicado en el menú *Seguridad* -> *Logs de seguridad*, donde se registran los movimientos realizados en la aplicación, con el detalle de la fecha, hora, descripción del movimiento y datos del equipo desde el cual se realizó. Se visualizan como el siguiente ejemplo:
+
+![](https://wiki.placetopay.com/images/e/e8/Acs-log.png)
+
+<!--
+type: tab
+title: Eventos frecuentes
+-->
+
+# Eventos frecuentes y soluciones 
+
+## ¿Cómo ocultar la pestaña de selección de filtros?
+
+Cuando accede a módulos de la aplicación que contienen la funcionalidad de filtros para hacer búsquedas específicas de información, puede encontrarse con la necesidad de ocultar la pestaña de filtros para tener mayor acceso y visualización a la información mostrada.
+
+Para ocultar la pestaña o sección, lo único que debe hacer es dar clic nuevamente en el botón de filtros, como se ilustra en el siguiente ejemplo:
+
+![](https://wiki.placetopay.com/images/1/18/Hide-filters-auth.png)
+
+Luego obtendrá un índice de datos con mejor visualización como se muestra en la siguiente imagen:
+
+![](https://wiki.placetopay.com/images/7/73/Occult-filters.png)
+
+
+## ¿Cómo crear una disputa?
+
+Para crear una disputa para una autenticación, esta debe hacerse desde la sección de autenticaciones, allí seleccione el detalle de la transacción a la cual desea crear una disputa, como lo ilustra el siguiente ejemplo:
+
+![](https://wiki.placetopay.com/images/c/c3/Select-auth.png)
+
+Luego se direcciona a una vista como la siguiente, donde debe hacer clic en el botón **Generar nueva disputa**.
+
+![](https://wiki.placetopay.com/images/0/0b/Save-dispute.png)
+
+Posteriormente, al detalle de la autenticación se agregará la siguiente información y se visualizará como se ilustra en el siguiente ejemplo:
+
+![](https://wiki.placetopay.com/images/8/88/Open-dispute.png)
+
+Y finalmente, la disputa se agregará al final del índice de la sección de *Disputas*, así:
+
+![](https://wiki.placetopay.com/images/f/f3/Disputes-menu.png)
+
+> Para obtener más información de la gestión de disputas, dirígase a la sección de *Funcionalidades* -> *Autenticaciones* -> *Gestión de disputas*
+
+## ¿Por qué no puedo habilitar un emisor?
+
+Cuando seleccione el detalle de un emisor, puede encontrarse con un mensaje como el siguiente, el cual le advierte que no se puede habilitar el emisor debido a que algunas configuraciones están deshabilitadas y son necesarias para el correcto funcionamiento del emisor.
+
+![](https://wiki.placetopay.com/images/1/19/Issuer-message.png)
+
+Para habilitar las configuraciones, diríjase al menú **Configuraciones** del emisor.
+
+![](https://wiki.placetopay.com/images/d/d8/Issuer-menus.png)
+
+Luego, se va a desplegar un menú como el siguiente con tres secciones, busque los campos de configuración mencionados en el mensaje, accediendo con un clic a cada una de las secciones y habilite el campo o los campos deshabilitados.
+
+Cuando tenga todos los campos habilitados, intente habilitar nuevamente el emisor.
+
+![](https://wiki.placetopay.com/images/a/a3/Enable-setting.png)
+
+
 <!--
 type: tab
 title: Contáctenos
