@@ -5,49 +5,90 @@ title: Métricas
 
 # Métricas
 
-Las métricas son estadísticas que reportan el comportamiento de la aplicación conforme al flujo de transacciones procesadas.
+Las métricas son estadísticas que reportan el comportamiento de la aplicación en cuanto al flujo de las transacciones procesadas.
 
-Para acceder a la gestión de métricas de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Métricas*.
+Para acceder a la gestión de métricas de la aplicación, diríjase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Métricas*.
 
 ![](https://wiki.placetopay.com/images/7/70/Menu-metrics.png)
 
-## Filtros:
+## Filtros para las métricas:
 
-Para mostrar en la gráfica de la métrica los datos específicos que se requieran, se debe hacer un filtro de las autenticaciones. Para acceder a los filtros haga clic en el botón *Filtrar*, ubicado en la parte superior lateral izquierda.
+Para mostrar en la gráfica de la métrica los datos específicos que se requieran, se debe hacer un filtro de las autenticaciones. Para acceder a los filtros, haga clic en el botón *Filtrar*, ubicado en la parte superior lateral derecha.
 
 Para filtrar las transacciones se requieren los siguientes datos:
 
-- Rango de fecha, seleccione una fecha inicial y una posterior en el calendario. Luego de clic en el botón negro para guardar el rango.
+- **Rango de fecha,** Seleccione un rango de tiempo con una fecha inicial y una final en el calendario, luego haga clic en el botón con check de la parte inferior, para guardar el rango.
 
-- Periodo.
+- **Periodo,** Seleccione el tipo de periodo por el cual desea hacer el filtro, puede elegir entre:
 
-- Moneda, divisa utilizada para las transacciones.
+    - **Día**, al escoger este filtro, los datos se graficaran por días con fechas, como lo ilustra el siguiente ejemplo:
+  ![](https://wiki.placetopay.com/images/2/2d/Day.png)
 
-- Emisor, banco emisor que por el cual se procesó el grupo de transacciones.
-
-
-![](https://wiki.placetopay.com/images/6/6a/Acs-filter-metrics.png)
-
-
-ACS cuenta actualmente con los siguientes dos tipos de métricas:
-
-## Métricas por monto de transacción
-
-Esta métrica muestra en una gráfica el monto de las transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación.
+    - **Día de la semana,** al escoger este filtro, los datos se graficaran por días con nombres, como lo ilustra el siguiente ejemplo:
+  ![](https://wiki.placetopay.com/images/5/5b/Weekday.png)
 
 
-## Métricas por estado de transacción
+    - **Mes,** este filtro se puede escoger cuando el rango de fecha seleccionado es superior a un mes. Al escoger este filtro, los datos se graficaran por los nombres de los meses, como lo ilustra el siguiente ejemplo:
+  ![](https://wiki.placetopay.com/images/5/50/Month.png)
 
-Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estatus obtenido en la autenticación. 
+
+- **Moneda,** Seleccione la divisa con la cual desea filtrar las transacciones.
+
+- **Emisor,** Seleccione el banco emisor del cual desea obtener las transacciones procesadas.
+
+- **País,** Seleccione de la lista, el país del cual desea obtener transacciones.
+
+En la siguiente imagen se visualiza un ejemplo de la vista de filtros:
+
+![](https://wiki.placetopay.com/images/f/fe/Metrics-filter.png)
+
+**Botón Buscar:** Para mostrar los datos de las métricas, haga clic en este botón con los datos de filtros previamente seleccionados.
+
+**Botón Limpiar filtros:** Para generar nuevas métricas, haga clic en el botón *Limpiar filtros* y genere un nuevo rango de fechas, moneda y emisor.
+
+
+## Tipos de métricas:
+
+ACS cuenta actualmente con los siguientes tipos de métricas:
+
+
+### Métrica por estado de transacción
+Esta métrica muestra en una gráfica la cantidad de transacciones procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estado obtenido en la autenticación. 
 
 Un ejemplo de métrica por estado de transacción, se presenta a continuación:
 
-![](https://wiki.placetopay.com/images/8/8f/Acs-metric.png)
+![](https://wiki.placetopay.com/images/e/e2/State-transaction-metric.png)
 
-En la parte inferior puede visualizarse el rango de fecha con el cual se obtuvo la métrica y la cantidad de transacciones que cumplieron con los filtros.
+> En la parte inferior puede visualizarse el rango de fecha con el cual se obtuvo la métrica y la cantidad de transacciones que cumplieron con los filtros.
 
-> Para generar nuevas métricas, haga clic en el botón *Limpiar filtros* y genera un nuevo rango de fechas, moneda y emisor.
 
+### Métrica por monto de transacción
+Esta métrica muestra en una gráfica el monto de las transacciones exitosas procesadas por el ACS, filtradas por un rango de fechas y diferenciadas por el estado obtenido en la autenticación.
+
+### Métrica por flujos de autenticación
+Esta métrica grafica una comparación entre los dos posibles flujos de autenticación en ACS (con fricción y sin fricción) basado en  las transacciones filtradas. Además, muestra detalles de cada flujo.
+
+Un ejemplo de métrica por flujo de autenticación, se presenta a continuación:
+
+![](https://wiki.placetopay.com/images/d/db/Flow-authentication-metric.png)
+
+#### Detalles de las métricas:
+
+  - **Sin fricción:** Para ver los detalles del flujo sin fricción, haga clic sobre la barra de la gráfica que hace referencia a los datos *Sin fricción*, se desplegará una gráfica como la siguiente, dónde podrá visualizar los estados resultantes de transacciones realizadas con este flujo.
+
+  ![](https://wiki.placetopay.com/images/b/bb/Frictionless-flow.png)
+
+ - **Con fricción:** Para ver los detalles del flujo con fricción, haga clic sobre la barra de la gráfica que hace referencia a los datos *Con fricción*, se desplegará una gráfica como la siguiente, dónde podrá visualizar los tipos de desafío (normal o desacoplado) de transacciones realizadas con este flujo.
+  
+  ![](https://wiki.placetopay.com/images/3/33/Friction-flow.png)
+
+
+### Métrica de tasas de conversión
+Esta métrica muestra los porcentajes de autenticaciones, con desafíos e intentos de autenticación. Los datos se grafican en un funnel o embudo de conversión, que permite filtrar las autenticaciones dentro de todo el flujo, permitiendo visualizar las autenticaciones generales iniciales, las que ingresan al desafío y finalmente las que no logran pasar el desafío, ofreciendo con ello un panorama general del funcionamiento y la cantidad de tarjetahabientes que se autentican en ACS.
+
+Un ejemplo de métrica de tasas de conversión, se presenta a continuación:
+
+![](https://wiki.placetopay.com/images/8/83/Conversion-rates-metric.png)
 
 <!--
 type: tab
@@ -58,7 +99,7 @@ title: Autenticaciones
 
 Para acceder a la gestión de autenticaciones de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Autenticaciones*.
 
-![](https://wiki.placetopay.com/images/8/80/Menu-auth.png)
+![](https://wiki.placetopay.com/images/e/e2/State-transaction-metric.png)
 
 ## Índice de autenticaciones:
 
