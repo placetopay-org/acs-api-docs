@@ -26,8 +26,20 @@ El siguiente es un ejemplo de un índice de usuarios.
 
 <!--
 type: tab
-title: Cuenta
+title: Cuenta de usuario
 -->
+
+## Página de inicio 
+
+La siguiente imagen muestra un ejemplo de una pantalla inicial, a esta vista se redirecciona el usuario cuando se loguea exitosamente en ACS. 
+
+![](https://wiki.placetopay.com/images/9/9a/Home.png)
+
+En esta vista encontrará:
+ - Fecha y hora del último inicio de sesión.
+ - Dirección IP, navegador y sistema operativo del dispositivo utilizado para la sesión.
+ - Gráfica con datos del flujo transaccional del año anterior y el año actual.
+
 
 # Gestión de cuenta
 
