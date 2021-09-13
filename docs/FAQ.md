@@ -47,7 +47,7 @@ Para activar el usuario, haga clic en el botón **Activar Registro** y se redire
 
 La página de inicio de sesión o login será similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/a/ad/Acs-login.png)
+![](https://wiki.placetopay.com/images/5/5f/Login-acs-update.png)
 
 En este formulario de inicio de sesión, ingrese el correo electrónico con el cual fue creada la invitación y la contraseña.
 
