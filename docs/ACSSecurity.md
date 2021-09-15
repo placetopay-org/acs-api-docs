@@ -48,7 +48,7 @@ haga clic en el menú desplegable que se encuentra al lado derecho del avatar de
 
 Visualizará un menú como el siguiente:
 
-![](https://wiki.placetopay.com/images/6/6e/Account-menu.png)
+![](https://wiki.placetopay.com/images/2/2b/Update-acs-account-2.png)
 
 El menú puede contener las siguientes secciones:
 
