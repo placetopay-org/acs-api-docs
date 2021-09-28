@@ -21,9 +21,30 @@
       "uri": "docs/ACSComponent.md"
     },
     {
-      "type": "item",
-      "title": "Estados de la Autenticación",
-      "uri": "docs/AuthenticationStatus.md"
+      "type": "group",
+      "title": "Datos a tener en cuenta",
+      "items": [
+        {
+          "type": "item",
+          "title": "Estados de autenticación",
+          "uri": "docs/AuthenticationStatus.md"
+        },
+        {
+          "type": "item",
+          "title": "Tarjetas y datos de prueba para la API",
+          "uri": "docs/TestCards.md"
+        },
+        {
+          "type": "item",
+          "title": "Descripción de códigos HTTP",
+          "uri": "docs/HttpCodes.md"
+        },
+        {
+          "type": "item",
+          "title": "Descripción de códigos de error",
+          "uri": "docs/ErrorCodes.md"
+        }
+        ]
     },
     {
       "type": "group",

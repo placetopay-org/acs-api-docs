@@ -99,7 +99,7 @@ title: Autenticaciones
 
 Para acceder a la gestión de autenticaciones de la aplicación vaya al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Dashboard* y luego *Autenticaciones*.
 
-![](https://wiki.placetopay.com/images/e/e2/State-transaction-metric.png)
+![](https://wiki.placetopay.com/images/a/a2/Auth-acs-menu.png)
 
 ## Índice de autenticaciones:
 
