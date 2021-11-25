@@ -8,7 +8,57 @@ Estado | Descripción                                                           
  N     | Autenticación fallida. Se rechazó la autenticación sin embargo el comercio puede aprobar la transacción asociada.                                                                                                          |
  U     | Autenticación no realizada. Se presentó un error técnico durante el proceso.                              |
  A     | Se ejecutó un intento de autenticación.                                                                   |
- C     | Se requiere challenge para continuar el proceso de autenticación.                                         |
+ C     | Se requiere desafío para continuar el proceso de autenticación.                                         |
  R     | Autenticación rechazada. Una transacción cuya autenticación resulte en estado R no debería ser procesada debido al riesgo.                                                                                                  |
  D     | La autenticación requiere un desafío desacoplado, este es responsabilidad del emisor.                     |
  I     | Autenticación de tipo informativa, no soporta pago. Utilizada para verificar cuentas.                     |
+
+
+## Razones de los estados del proceso de autenticación
+
+Los siguientes son las razones de los estados anteriormente presentados, estas razones proporcionan más información del por qué una transacción puede presentar un estado específico. 
+
+### Razones de estados de autenticación para versiones 2.1.0 y 2.2.0 del protocolo 3DS:
+
+Indicador   | Razón                                                                                                 |  
+------------|-------------------------------------------------------------------------------------------------------|
+ 01         | Fallo en la autenticación de la tarjeta.                                                              |
+ 02         | Dispositivo desconocido.                                                                              |
+ 03         | Dispositivo no admitido.                                                                              |
+ 04         | La autenticación excede el límite de frecuencia.                                                      |
+ 05         | Tarjeta caducada.                                                                                     |
+ 06         | Número de tarjeta inválida.                                                                           |
+ 07         | Transacción inválida.                                                                                 |
+ 08         | Tarjeta sin registro.                                                                                 |
+ 09         | Fallo de seguridad.                                                                                   |
+ 10         | Tarjeta robada.                                                                                       |
+ 11         | Sospecha de fraude.                                                                                   |
+ 12         | Transacción no permitida por el tarjetahabiente.                                                      |
+ 13         | Tarjetahabiente no inscrito en el servicio.                                                           |
+ 14         | Agotado tiempo de espera para transacción en el ACS.                                                  |
+ 15         | Confianza baja.                                                                                       |
+ 16         | Confianza media.                                                                                      |
+ 17         | Confianza alta.                                                                                       |
+ 18         | Confianza muy alta.                                                                                   |
+ 19         | Excede desafíos máximos en ACS.                                                                       |
+ 20         | Falta pago, transacción no soportada.                                                                 |
+ 21         | Transacción 3RI no soportada.                                                                         |
+ 83         | El DS descartó el código de razón recibido de ACS, por carecer de sentido en una transacción con estado N o R (Estado válido para Mastercard).                                                                                |
+
+
+### Razones adicionales de estados de autenticación para versión 2.1.0 del protocolo 3DS:
+
+Indicador   | Razón                                                                                                 |  
+------------|-------------------------------------------------------------------------------------------------------|
+ 81         | Acepta la excepción de SCA (Estado válido para Mastercard).                                           |   
+
+
+### Razones adicionales de estados de autenticación para versión 2.2.0 del protocolo 3DS:
+
+Indicador   | Razón                                                                                                 |  
+------------|-------------------------------------------------------------------------------------------------------|
+ 22         | Asunto técnico en ACS.                                                                                |
+ 23         | Autenticación desacoplada requerida por ACS pero no solicitada por 3DS Requestor.                     |   
+ 24         | Se superó el tiempo máximo de espera del solicitante 3DS desacoplado.                                 |
+ 25         | La autenticación desacoplada no tuvo tiempo suficiente para autenticar al tarjetahabiente. ACS no hará más intentos.                                                                                                       |
+ 26         | Autenticación intentada pero no realizada por el tarjetahabiente.                                     |
