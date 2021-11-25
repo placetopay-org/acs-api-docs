@@ -14,7 +14,11 @@ Por esta razón ACS creó una alerta que permite notificar cuando ocurre un erro
 
 ### ¿Qué acción tomar cuando se reciba esta alerta?
 
-Esta alerta permite avisar oportunamente de un error que está ocurriendo en un servicio y que no permite a un cliente autenticarse adecuadamente. Por esta razón se debe comunicar con los representantes del servicio externo para verificar que esté funcionando correctamente, a qué se debió el error y qué acciones se pueden tomar para prevenir que siga ocurriendo y así evitar la pérdida de autenticación de transacciones.
+Esta alerta permite avisar oportunamente de un error que está ocurriendo en un servicio y que no permite a un cliente autenticarse adecuadamente. 
+
+Por esta razón se debe comunicar con los representantes del servicio externo para verificar que esté funcionando correctamente, a qué se debió el error y qué acciones se pueden tomar para prevenir que siga ocurriendo y así evitar la pérdida de autenticación de transacciones. 
+
+Además, se recomienda verificar que estén correctas en la configuración del emisor, las credenciales y el endpoint del servicio específico que presenta la falla. El cual se puede encontrar en el siguiente menú: **Sistema / Emisores / Configuraciones / Servicios / OtpStrategy**
 
 ## 2. Alerta de expiración de certificados SSL:
 

@@ -1,4 +1,4 @@
-# Códigos de Error
+# Códigos de error
 
 Los siguientes son los códigos de error establecidos por el protocolo 3-D Secure, con su respectiva descripción e instrucción de qué hacer en caso de presentarse.
 
