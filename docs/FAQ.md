@@ -7,6 +7,8 @@ title: Preguntas frecuentes
 
 En esta sección podrá encontrar respuestas a preguntas o problemas que puede encontrarse en ACS.
 
+<br>
+
 ## ¿Qué significan las siglas ACS?
 
 ACS traduce en inglés Access Control Server o en español, Servidor de control de acceso.
@@ -77,6 +79,8 @@ title: Eventos frecuentes
 -->
 
 # Eventos frecuentes y soluciones 
+
+<br>
 
 ## ¿Cómo ocultar la pestaña de selección de filtros?
 
