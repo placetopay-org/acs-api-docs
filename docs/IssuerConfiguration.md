@@ -5,6 +5,8 @@ title: Generalidades del emisor
 
 # Emisores en ACS
 
+<br>
+
 ## ¿Qué es un emisor?
 
 Un emisor o banco emisor, es la institución financiera responsable de emitir los medios de pago, como tarjetas de débito o de crédito. Estas tarjetas de pago se emiten con la marca de la asociación de tarjetas o franquicia. También pueden existir emisores de tarjetas de pago propias y no franquiciadas.
@@ -40,15 +42,15 @@ Para crear un emisor, haga clic en el botón Crear ubicado en la parte lateral d
 
 Visualizará un formulario similar al siguiente:
 
-![](https://wiki.placetopay.com/images/3/35/Create-issuer.png)
+![](https://wiki.placetopay.com/images/6/62/Issuer-create-form.png)
 
 Para diligenciarlo tenga en cuenta los siguientes datos:
 
 - **Nombre:** Ingrese en este campo el nombre del banco emisor que va a crear.
 
-- **Idioma:** Seleccione de la lista desplegable el idioma principal con el cual desea que se procesen las autenticaciones para los usuarios.
-
 - **País:** Seleccione de la lista desplegable el país dónde opera el banco emisor.
+
+- **Moneda:** Seleccione de la lista desplegable la moneda con la cual procesa las transacciones el banco emisor.
 
 - **Slug:** Ingrese una cadena clave para el emisor. Esta cadena se agregará a las URL donde se gestionen configuraciones y servicios del emisor.
 
