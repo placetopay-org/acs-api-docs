@@ -20,7 +20,7 @@ A continuación se presentan varios ejemplos de las diferentes alertas:
 
 ![](https://wiki.placetopay.com/images/3/33/Error_siscard.png)
 
-## Errores en el servicio de desafío con implementación estándar de PlacetoPay:
+## Errores en el servicio de desafío con implementación estándar de PlacetoPay (SMS CORE):
 
 ![](https://wiki.placetopay.com/images/a/ab/Error_servicio_ptp.png)
 

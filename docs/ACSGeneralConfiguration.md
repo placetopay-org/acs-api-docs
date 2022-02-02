@@ -70,7 +70,7 @@ En este módulo se encuentran los componentes que gestionan los registros de mov
 
     - Cree manualmente o importe los **rangos de tarjeta** que acepta el emisor que está configurando, para los rangos requiere también relacionarlos con sus respectivas franquicias.
 
-    - Puede crear una o varias **listas de reglas** para el control antifraude, en la sección *Gestionar control fraude* y luego *Gestionaristas de control de fraude* en el detalle del emisor, estas listas hacen el primer filtro de validación de una autenticación.
+    - Puede crear una o varias **listas de reglas** para el control antifraude, en la sección *Gestionar control fraude* y luego *Gestionar listas de control de fraude* en el detalle del emisor, estas listas hacen el primer filtro de validación de una autenticación.
 
     - Al crear un emisor, se crean automáticamente unas **reglas predeterminadas** para validar las autenticaciones. Estas reglas se encuentran en la sección *Reglas de control de fraude* en el detalle del emisor. Revise las reglas predeterminadas, edítelas si es necesario y habilíteles o deshabilítelas según los requerimientos del emisor. Siempre debe existir al menos una regla para validar las autenticaciones conforme al flujo establecido en ACS. Entre más reglas tenga habilitadas, más seguro puede llegar a ser el proceso de autenticación del tarjetahabiente. Además, puede crear múltiples reglas en esta sección.
 
