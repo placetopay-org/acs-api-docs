@@ -51,8 +51,7 @@ Por ejemplo, un comerciante de comercio electrónico basado en suscripción usar
 
 - **Dispositivo de consumo:** El dispositivo usado por el cardholder (smartphone, laptop, tablet) como conducto para realizar las operaciones de pago (autenticación y compra).
 
-- **Device channel:** Device Channel
-Indica el canal a través del cual la transacción es autorizada. Los canales son:
+- **Device channel:** Canal del dispositivo. Indica el canal a través del cual la transacción es autorizada. Los canales son:
   - App-based (01-APP)
   - Browser-based (02-BRW)
   - 3DS Requestor Initiated (03-3RI)

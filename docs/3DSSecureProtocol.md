@@ -26,7 +26,7 @@ Así mismo, estos dominios poseen una serie de componentes en cada uno, los cual
 
 Los dominios son los siguientes:
 
-**1. Dominio Adquiriente: ** Inicia y finaliza el flujo de autenticación. 
+**1. Dominio Adquiriente:** Inicia y finaliza el flujo de autenticación. 
 
   El dominio Adquiriente tiene los siguientes componentes:
         
@@ -46,7 +46,7 @@ El dominio de Interoperabilidad tiene los siguientes componentes:
 - Autoridad de Certificación del Servidor de Directorio (Directory Server Certificate Authority, DS CA)
 - Sistema de autorización (Authorisation System)
 
-**3. Dominio Emisor: ** Las transacciones se autentican en este dominio, es el que decide si una autenticación es satisfactoria o no. 
+**3. Dominio Emisor:** Las transacciones se autentican en este dominio, es el que decide si una autenticación es satisfactoria o no. 
 El dominio Emisor tiene los siguientes componentes:
        
 - Titular de la tarjeta (Cardholder)
@@ -69,7 +69,7 @@ El protocolo 3-D Secure define una serie de mensajes de petición y de respuesta
 
 ### Mensajes de autenticación:
 
-**AReq (Authentication Request Message): **
+**AReq (Authentication Request Message):**
       El mensaje AReq es el mensaje inicial en el flujo de autenticación 3-D Secure. El 3DS Server crea este mensaje cuando inicia el proceso de autenticación. Puede contener información del titular de la tarjeta, el pago y el dispositivo para la transacción. 
 
 **ARes (Authentication Response Message):**
@@ -78,35 +78,35 @@ El protocolo 3-D Secure define una serie de mensajes de petición y de respuesta
 ---
 ### Mensajes de desafío: 
 
-**CReq (Challenge Request Message): **      
+**CReq (Challenge Request Message):**      
       Inicia la interacción del tarjetahabiente en un flujo con challenge. Este mensaje solo se presenta en un flujo con fricción o challenge.
       
-**CRes (Challenge Response Message): **      
+**CRes (Challenge Response Message):**      
       Indica el resultado de la autenticación o también puede indicar que se requiere la interacción del tarjetahabiente para completar la autenticación. Este mensaje solo se presenta en un flujo con fricción o challenge.
 
 --- 
 ### Mensajes de resultados: 
 
-**RRes (Results Response Message): **
+**RRes (Results Response Message):**
       El mensaje RRes comunica el resultado del mensaje RReq. El mensaje es creado y enviado por el 3DS Server a través del DS al ACS. 
 
-**RReq (Results Request Message): **      
+**RReq (Results Request Message):**      
       El mensaje RReq comunica los resultados de la autenticación. Este mensaje es enviado por el componente ACS al DS y es recibido por el 3DS Server. Este mensaje no está presente en una transacción sin fricción.
       
 ---
 ### Mensajes de preparación: 
 
-**PReq (Preparation Request Message): **
+**PReq (Preparation Request Message):**
       El mensaje PReq se crea y envía desde el 3DS Server al DS para solicitar información sobre el ACS y DS. Este mensaje no forma parte del flujo de mensajes de autenticación de 3-D Secure.
 
-**PRes (Preparation Response Message): **      
+**PRes (Preparation Response Message):**      
       El mensaje RReq comunica los resultados de la autenticación. Este mensaje es enviado por el componente ACS al DS y es recibido por el 3DS Server. Este mensaje no forma parte del flujo de mensajes de autenticación de 3-D Secure.
 
 ---
 
 ### Mensaje de error: 
 
-**Error Message: **
+**Error Message:**
       Los mensajes de error proporcionan información adicional sobre un error que se produjo durante el procesamiento de un mensaje. Estos pueden originarse en cualquiera de los componentes del 3-D Secure.
 
 ---
@@ -126,7 +126,7 @@ Los campos de un mensaje específico pueden variar dependiendo del dispositivo u
 
 Los siguientes son los canales del dispositivo posibles:
 
-- **APP: **Autenticación de una transacción originada en una aplicación del comercio o pasarela de pago.
+- **APP:** Autenticación de una transacción originada en una aplicación del comercio o pasarela de pago.
       
 - **BRW:** Autenticación de una transacción originada en un sitio web del comercio o pasarela de pago, que utiliza un navegador.
       
@@ -172,19 +172,19 @@ El protocolo 3-D Secure contiene dos posibles flujos para el proceso de autentic
   
   - **Autenticación con challenge:** Se suele presentar al tarjetahabiente un formulario de preguntas sobre información personal adicional a la aportada, verificación de clave u OTP (autenticación con contraseña de un solo uso).
 
-  - **Autenticación desacoplada:** En esta autenticación el flujo se pone en pausa y es el emisor de la tarjeta el que se comunica con el tarjetabiente para comprobar los datos dados y lo hace a través de un proceso manual.
+  - **Autenticación desacoplada:** En esta autenticación el flujo se pone en pausa y la transacción entra en un proceso de desacoplamiento donde la aplicación de ACS ejecuta validaciones manuales para verificar la identidad del tarjetahabiente. En este proceso puede intermediar el emisor.
           
-  - **Autenticación fuera de banda:** El proceso de comprobación de los datos del tarjetabiente queda a cargo del emisor de la tarjeta. Puede incluir otros medios de autenticación como un QR, un código enviado a una app, autenticación por biometría.
+  - **Autenticación fuera de banda:** El proceso de comprobación de los datos del tarjetabiente queda a cargo del emisor de la tarjeta, el cual se encarga de hacer un proceso de validación manual que puede incluir otros medios de autenticación como un QR, un código enviado a una app, autenticación por biometría.
       
-> En cuanto a los mensajes presentes en este tipo de flujo, en adición a los mensajes AReq y ARes que comprenden el flujo sin fricción. El flujo con fricción o challenge comprende los mensajes CReq y CRes (excepto en el caso de una autenticación desacoplada) y los mensajes RReq y RRes.
+> En cuanto a los mensajes presentes en este tipo de flujo, en adición a los mensajes AReq y ARes que comprenden el flujo sin fricción. El flujo con fricción o challenge, comprende los mensajes CReq y CRes (excepto en el caso de una autenticación desacoplada) y los mensajes RReq y RRes.
   
   - El mensaje CReq se construye basado en la información recibida en el mensaje ARes.
   
-  - El mensaje CRes puede indicar el resultado de la autenticación o puede indicar que se requiere mayor interacción del tarjetahabiente para completar la autenticación. Este mensaje es la respuesta al mensaje CReq.
+  - El mensaje CRes puede indicar el resultado del desafío presentado al cliente o puede indicar que se requiere mayor interacción del tarjetahabiente para completar la autenticación. Este mensaje es la respuesta al mensaje CReq.
   
-> Para la autenticación desacoplada, en lugar de utilizar CReq y CRes mensajes, el ACS autentica al titular de la tarjeta fuera del 3-D Secure protocolo.
+> Para la autenticación desacoplada, en lugar de utilizar los mensajes CReq y CRes, el ACS autentica al titular de la tarjeta fuera del 3-D Secure protocolo.
   
-  - El mensaje RReq se construye basado en la información recibida en el mensaje Ares y comunica los resultados de la autenticación.
+  - El mensaje RReq se construye basado en la información recibida en el mensaje ARes y comunica los resultados del desafío al 3DS Server.
   
   - El mensaje RRes comunica la recepción del mensaje RReq y los resultados de la autenticación y su estado.
 

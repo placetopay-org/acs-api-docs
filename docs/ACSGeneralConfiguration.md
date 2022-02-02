@@ -22,7 +22,9 @@ En este módulo se encuentran las principales funcionalidades de ACS, conformand
   - Métricas de procesamiento y funcionamiento de la aplicación.
   - Registros y funciones para las autenticaciones procesadas.
   - Registros y funciones para las autenticaciones desacopladas.
+  - Listado y funciones de los reportes generados en ACS.
   - Listado y estados de disputas de autenticaciones.
+
 
 > Este módulo y sus funcionalidades, se revisan y explican detalladamente en la sección de *Funcionalidades* de esta documentación.
 
@@ -31,16 +33,14 @@ En este módulo se encuentran los componentes que permiten configurar ACS y gest
 
   Se encuentran en el módulo:
 
-  - Listado y funciones para los campos de configuración para emisores.
-  - Listado y funciones para los códigos de categoría del comercio.
-  - Listado y funciones para las monedas aceptadas en ACS.
-  - Listado y funciones para los usuarios registrados en ACS.
-  - Listado y funciones de invitaciones para crear nuevos usuarios en ACS.
+  - Listado, funciones y configuraciones de los emisores.
   - Listado y funciones para los certificados SSL.
   - Listado y funciones para las franquicias.
-  - Listado, funciones y configuraciones de los emisores.
+  - Listado y funciones para los códigos de categoría del comercio.
+  - Listado y funciones para las monedas aceptadas en ACS.
+  - Listado y funciones para los países aceptados en ACS.
+  - Listado y funciones para los campos de configuración para emisores.
   - Listado y funciones de los importes creados en la aplicación.
-  - Listado y funciones de los reportes generados en ACS.
 
 > Este módulo y sus funcionalidades, se revisan y explican detalladamente en la presente sección de *Configuración*  y en los artículos que la componen.
 
@@ -48,6 +48,8 @@ En este módulo se encuentran los componentes que permiten configurar ACS y gest
 En este módulo se encuentran los componentes que gestionan los registros de movimientos, accesos y seguridad para ACS.
 
   Se encuentran en el módulo:
+   - Listado y funciones para los usuarios registrados en ACS.
+  - Listado y funciones de invitaciones para crear nuevos usuarios en ACS.
    - Registros y gestión de roles para usuarios de ACS.
    - Registros y gestión de perfiles para usuarios de ACS.
    - Listados y gestión de los registros de movimientos realizados por los diferentes usuarios de ACS.
@@ -62,13 +64,13 @@ En este módulo se encuentran los componentes que gestionan los registros de mov
  
     - Habilite y edite los **campos de configuración** requeridos según la lógica de negocio del emisor, en la sección de *Configuraciones* ubicada en el detalle del emisor.
     
-    - Habilite las **estrategias** que indican al ACS qué implementación debe tomar para el servicio de la información del tarjetahabiente y para el servicio del OTP. Las estrategias se ubican en la sección de *Configuraciones* en la última pestaña con nombre *Services*.
+    - Habilite las **estrategias** que indican al ACS qué implementación debe tomar para el servicio de la información del tarjetahabiente y para el servicio del OTP, para cada franquicia. Las estrategias se ubican en la sección de *Configuraciones* en la última pestaña con nombre *Servicios*, en el detalle del emisor.
 
-    - Suscriba las **franquicias** disponibles para el emisor en la sección de *Franquicias suscritas* ubicada en el detalle del emisor.
+    - Suscriba las **franquicias** disponibles para el emisor en la sección de *Operaciones* y luego *Franquicias suscritas* ubicada en el detalle del emisor.
 
     - Cree manualmente o importe los **rangos de tarjeta** que acepta el emisor que está configurando, para los rangos requiere también relacionarlos con sus respectivas franquicias.
 
-    - Puede crear una o varias **listas de reglas** para el control antifraude, en la sección *Listas de control de fraude* en el detalle del emisor, estas listas hacen el primer filtro de validación de una autenticación.
+    - Puede crear una o varias **listas de reglas** para el control antifraude, en la sección *Gestionar control fraude* y luego *Gestionar listas de control de fraude* en el detalle del emisor, estas listas hacen el primer filtro de validación de una autenticación.
 
     - Al crear un emisor, se crean automáticamente unas **reglas predeterminadas** para validar las autenticaciones. Estas reglas se encuentran en la sección *Reglas de control de fraude* en el detalle del emisor. Revise las reglas predeterminadas, edítelas si es necesario y habilíteles o deshabilítelas según los requerimientos del emisor. Siempre debe existir al menos una regla para validar las autenticaciones conforme al flujo establecido en ACS. Entre más reglas tenga habilitadas, más seguro puede llegar a ser el proceso de autenticación del tarjetahabiente. Además, puede crear múltiples reglas en esta sección.
 
