@@ -8,11 +8,25 @@ En el momento ACS cuenta con dos alertas que requieren ser gestionadas cuando se
 
 Cuando una transacción requiere desafío, utiliza un servicio de información de tarjetahabiente específico para procesarlo, este servicio puede requerir un consumo externo, por lo cual en este flujo pueden presentarse diferentes errores que muchas veces se deben a dificultades con el servicio externo. 
 
-Por esta razón ACS creó una alerta que permite notificar cuando ocurre un error de este tipo. Esta alerta se envía por correo electrónico al área de operaciones con el asunto **"Error en ejecución de servicio"**, y se visualiza como se muestra en la siguiente imagen:
+Por esta razón ACS creó una serie de alertas que permiten notificar cuando ocurre un error de este tipo. Esta alerta se envía por correo electrónico al área de operaciones con el asunto **"Error en ejecución de servicio"**. 
+
+A continuación se presentan varios ejemplos de las diferentes alertas:
+
+## Error en el servicio de desafío para Diners:
 
 ![](https://wiki.placetopay.com/images/e/ec/Error-challenge-service.png)
 
-### ¿Qué acción tomar cuando se reciba esta alerta?
+## Error en el servicio de desafío para Siscard:
+
+![](https://wiki.placetopay.com/images/3/33/Error_siscard.png)
+
+## Errores en el servicio de desafío con implementación estándar de PlacetoPay:
+
+![](https://wiki.placetopay.com/images/a/ab/Error_servicio_ptp.png)
+
+![](https://wiki.placetopay.com/images/f/ff/Servicio_ptp2.png)
+
+### ¿Qué acción tomar cuando se reciba alguna de estas alertas?
 
 Esta alerta permite avisar oportunamente de un error que está ocurriendo en un servicio y que no permite a un cliente autenticarse adecuadamente. 
 
