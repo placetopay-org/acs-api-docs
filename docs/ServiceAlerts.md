@@ -40,11 +40,11 @@ Los certificados SSL son de vital importancia para el correcto funcionamiento de
 
 Esta alerta se envía por correo electrónico al área de operaciones con el asunto **"Se encontraron certificados próximos a expirar"**, y se visualiza como se muestra en la siguiente imagen:
 
-![](https://wiki.placetopay.com/images/2/2f/Certificate-next-to-expire.png)
+![](https://wiki.placetopay.com/images/8/89/Next-to-expire-cert.png)
 
 Este correo también se puede visualizar de la siguiente forma, cuando informa el vencimiento del certificado.
 
-![](https://wiki.placetopay.com/images/f/f2/Expired-certificate.png)
+![](https://wiki.placetopay.com/images/d/d4/Expired_cert.png)
 
 ### ¿Qué acción tomar cuando se reciba esta alerta?
 
