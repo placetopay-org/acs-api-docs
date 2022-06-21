@@ -9,9 +9,9 @@ El protocolo 3-D Secure es un documento que describe la infraestructura y los co
 
 El protocolo de autenticación 3-D Secure se basa en un modelo de tres dominios, en el que el Dominio del Adquirente y el Dominio del Emisor están conectados por el Dominio de Interoperabilidad a través de una serie de mensajes, con el fin de autenticar a un tarjetahabiente durante una transacción de comercio electrónico (e-commerce) o para verificar la identidad o la cuenta del tarjetahabiente en autenticaciones de no pago.
 
-El protocolo cuenta actualmente con dos versiones activas, la versión 2.10 y la versión 2.2O. La principal diferencia entre ambas versiones es que en la 2.10, la autenticación del tarjetahabiente siempre va a requerir de un reto para comprobar su identidad, el cual consiste en aportar información personal adicional o en la verificación de un código o similares. Mientras que en la versión 2.20, se implementó el flujo de autenticación sin reto o challenge, dado cuando el tarjetahabiente aporta datos completos y seguros; además se creó para esta versión otro tipo de autenticación nombrada como desacoplada.
+El protocolo cuenta actualmente con dos versiones activas, la versión 2.10 y la versión 2.20. La principal diferencia entre ambas versiones es que en la 2.10, la autenticación del tarjetahabiente siempre va a requerir de un reto para comprobar su identidad, el cual consiste en aportar información personal adicional o en la verificación de un código o similares. Mientras que en la versión 2.20, además del flujo con reto, se implementó el flujo de autenticación sin reto, esto para los casos en los cuales el tarjetahabiente aporte datos completos y seguros o esté en listas blancas; además se creó para esta versión otro tipo de autenticación nombrada como desacoplada.
 
-De esta forma, el proceso de autenticación puede darse mediante un flujo sin fricción o con fricción, entendiendo la fricción como el reto para autenticarse, y es el componente ACS el cual decide cual de estos flujos es el requerido en una autenticación, dependiendo del nivel de legitimidad evaluado en la información provista por el tarjetabiente y de la versión utilizada del protocolo.
+De esta forma, el proceso de autenticación puede darse mediante un flujo sin fricción o con fricción, entendiendo la fricción como el reto para autenticarse. Siendo el componente de ACS, quien decide cual de estos flujos es el adecuado para completar una autenticación, dependiendo del nivel de legitimidad evaluado en la información provista por el tarjetabiente y de la versión utilizada del protocolo.
 
 
 <!--
@@ -87,27 +87,27 @@ El protocolo 3-D Secure define una serie de mensajes de petición y de respuesta
 --- 
 ### Mensajes de resultados: 
 
-**RRes (Results Response Message):**
-      El mensaje RRes comunica el resultado del mensaje RReq. El mensaje es creado y enviado por el 3DS Server a través del DS al ACS. 
-
 **RReq (Results Request Message):**      
-      El mensaje RReq comunica los resultados de la autenticación. Este mensaje es enviado por el componente ACS al DS y es recibido por el 3DS Server. Este mensaje no está presente en una transacción sin fricción.
-      
+      El mensaje RReq comunica los resultados de la autenticación. Este mensaje es enviado por el componente ACS al DS y es recibido por el 3DS Server. Solo hay un mensaje RReq por mensaje AReq. Este mensaje no está presente en una transacción sin fricción.
+
+**RRes (Results Response Message):**
+      El mensaje RRes comunica la respuesta para el mensaje RReq. El mensaje es creado y enviado por el 3DS Server a través del DS al ACS. 
+
 ---
 ### Mensajes de preparación: 
 
 **PReq (Preparation Request Message):**
-      El mensaje PReq se crea y envía desde el 3DS Server al DS para solicitar información sobre el ACS y DS. Este mensaje no forma parte del flujo de mensajes de autenticación de 3-D Secure.
+      El mensaje PReq se crea y envía desde el 3DS Server al DS para solicitar información sobre el ACS y DS, como los rangos de tarjeta. Este mensaje no forma parte del flujo de mensajes de autenticación de 3-D Secure.
 
 **PRes (Preparation Response Message):**      
-      El mensaje RReq comunica los resultados de la autenticación. Este mensaje es enviado por el componente ACS al DS y es recibido por el 3DS Server. Este mensaje no forma parte del flujo de mensajes de autenticación de 3-D Secure.
+      Respuesta al mensaje PREQ que contiene los rangos de tarjetas DS, las versiones de protocolo activas para ACS y DS y la URL del método 3DS para que se puedan realizar actualizaciones en el almacenamiento interno del servidor 3DS. Este mensaje no forma parte del flujo de mensajes de autenticación de 3-D Secure.
 
 ---
 
 ### Mensaje de error: 
 
 **Error Message:**
-      Los mensajes de error proporcionan información adicional sobre un error que se produjo durante el procesamiento de un mensaje. Estos pueden originarse en cualquiera de los componentes del 3-D Secure.
+      Los mensajes de error proporcionan información adicional sobre un error que se se haya podido generar durante el procesamiento de un mensaje. Estos pueden originarse en cualquiera de los componentes del 3-D Secure.
 
 ---
 
@@ -143,7 +143,7 @@ Los mensajes creados por el Procolo 3-D Secure, están categorizados en dos grup
 
 - **PA (Payment Authentication):** Autenticación para transacciones de comercio electrónico que incluyen pago.
       
-- **NPA (Non-Payment Authentication):** Autenticación de no pago, utilizada para verficar la identidad y la cuenta del tarjetahabiente.
+- **NPA (Non-Payment Authentication):** Autenticación de no pago, utilizada para verificar la identidad y la cuenta del tarjetahabiente.
 
 <!--
 type: tab
@@ -158,13 +158,13 @@ El protocolo 3-D Secure contiene dos posibles flujos para el proceso de autentic
       
   El flujo sin fricción o sin challenge, no requiere interacción adicional por parte del tarjetahabiente para lograr una autenticación exitosa con 3-D Secure, ya que se evalúa la información obtenida del tarjetahabiente como legítima, muy completa y de bajo riesgo. Se considera información de bajo riesgo por ejemplo cuando el tarjetabiente registra los mismos datos personales que suele registrar o cuando diligencia los campos opcionales de la autenticación.
       
-  Este flujo inicia el proceso de autenticación de 3-D Secure y consiste en el envío de un mensaje de petición de autenticación (AReq) y posteriormente, un mensaje de respuesta a la autenticación (ARes).
+  Este flujo inicia el proceso de autenticación de 3-D Secure y consiste en el envío de un mensaje de petición de autenticación (AReq) y posteriormente, un mensaje de respuesta a la autenticación (ARes). El flujo sin challenge solo se presenta en la version 2.20 del protocolo.
 
 ---         
         
 - **Flujo con fricción o challenge:**
 
-  Este flujo se presenta si el componente ACS determina que la interacción del tarjetahabiente es necesaria para completar la autenticación. Esta determinación puede originarse porque la transacción es considerada de alto riesgo, se encuentra por encima de ciertos umbrales o requiere un mayor nivel de autenticación debido a mandatos o regulaciones del país. 
+  Este flujo se presenta si el componente ACS determina que la interacción del tarjetahabiente es necesaria para completar la autenticación. Esta determinación puede originarse porque la transacción es considerada de alto riesgo, se encuentra por encima de ciertos umbrales, requiere un mayor nivel de autenticación debido a mandatos o regulaciones del país, o según la versión del protocolo 3DS con la cual se procese.
       
   Ocurre entonces que el flujo sin fricción pasa a ser un flujo con fricción o challenge, donde el challenge consiste en un desafío que se le presenta al tarjetahabiente para comprobar la legitimidad de su identidad y de su cuenta. 
       
@@ -174,7 +174,7 @@ El protocolo 3-D Secure contiene dos posibles flujos para el proceso de autentic
 
   - **Autenticación desacoplada:** En esta autenticación el flujo se pone en pausa y la transacción entra en un proceso de desacoplamiento donde la aplicación de ACS ejecuta validaciones manuales para verificar la identidad del tarjetahabiente. En este proceso puede intermediar el emisor.
           
-  - **Autenticación fuera de banda:** El proceso de comprobación de los datos del tarjetabiente queda a cargo del emisor de la tarjeta, el cual se encarga de hacer un proceso de validación manual que puede incluir otros medios de autenticación como un QR, un código enviado a una app, autenticación por biometría.
+  - **Autenticación fuera de banda:** El proceso de comprobación de los datos del tarjetabiente queda a cargo del emisor de la tarjeta, el cual se encarga de hacer un proceso de validación manual que puede incluir otros medios de autenticación como un QR, un código enviado a una APP, autenticación por biometría, entre otras que disponga el emisor correspondiente.
       
 > En cuanto a los mensajes presentes en este tipo de flujo, en adición a los mensajes AReq y ARes que comprenden el flujo sin fricción. El flujo con fricción o challenge, comprende los mensajes CReq y CRes (excepto en el caso de una autenticación desacoplada) y los mensajes RReq y RRes.
   

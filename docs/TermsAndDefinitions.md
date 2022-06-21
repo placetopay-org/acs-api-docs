@@ -14,8 +14,7 @@ Las siguientes definiciones pretenden dar claridad sobre la información present
 
 - **CAVV:** Cardholder Authentication Verification Value, es un código de seguridad asociado a la información almacenada en la banda magnética de una tarjeta de pago. 
 
-- **3RI:** 3DS Requestor Initiated, es un tipo de canal definido por el protocolo 3D-Secure por el cual se origina una transacción. Las transacciones realizadas por este canal, tienen como finalidad confirmar la información de la cuenta sin necesidad de la presencia del tarjetabiente. 
-Por ejemplo, un comerciante de comercio electrónico basado en suscripción usaría este tipo de canal para confirmar que una cuenta sigue siendo válida. Estas transacciones son no pago y no tienen interfaz de usuario.
+- **3RI:** 3DS Requestor Initiated, es un tipo de canal definido por el protocolo 3D-Secure por el cual se origina una transacción. Las transacciones realizadas por este canal, tienen como finalidad confirmar la información de la cuenta sin necesidad de la presencia del tarjetabiente.  Por ejemplo, un comerciante de comercio electrónico basado en suscripción usaría este tipo de canal para confirmar que una cuenta sigue siendo válida. Estas transacciones son no pago y no tienen interfaz de usuario.
 
 - **OTP:** Los códigos OTP (One Time Password) son códigos numéricos de un solo uso que se utilizan para una sola transacción. Se suelen enviar a un tarjetahabiente a través de un SMS en el teléfono móvil cada vez que se quiera hacer una transacción bancaria.
 

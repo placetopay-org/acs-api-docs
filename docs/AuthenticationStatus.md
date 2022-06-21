@@ -43,8 +43,27 @@ Indicador   | Razón                                                            
  19         | Excede desafíos máximos en ACS.                                                                       |
  20         | Falta pago, transacción no soportada.                                                                 |
  21         | Transacción 3RI no soportada.                                                                         |
- 83         | El DS descartó el código de razón recibido de ACS, por carecer de sentido en una transacción con estado N o R (Estado válido para Mastercard).                                                                                |
 
+### Razones de estados para MASTERCARD:
+
+Indicador   | Razón                                                                                                 |  
+------------|-------------------------------------------------------------------------------------------------------|
+83         | El DS descartó el código de razón recibido de ACS, por carecer de sentido en una transacción con estado N o R.                                           |   
+
+### Razones de estados para VISA:
+
+Indicador   | Razón                                                                                                 |  
+------------|-------------------------------------------------------------------------------------------------------|
+ 80         | Error de conexión con ACS.                                           |
+ 81         | Agotado tiempo de espera.                                           |   
+ 82         | Respuesta inválida dada por el ACS.                                           |   
+ 83         | Error del sistema desde ACS.                                           |   
+ 84         | Error interno mientras se generaba el CAVV.                                           |   
+ 85         | VMID no elegible por la petición solicitada.                                           |   
+ 86         | Versión del protocolo no soportada por ACS.                                           |   
+ 87         | Transacción excluída por número de intentos de procesamiento.                                           |   
+ 88         | Petición no soportada por ACS.                                           |   
+ 89         | CAVV incluído en la respuesta.                                           |            
 
 ### Razones adicionales de estados de autenticación para versión 2.1.0 del protocolo 3DS:
 
