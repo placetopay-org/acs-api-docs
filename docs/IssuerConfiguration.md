@@ -391,34 +391,30 @@ La principal funcionalidad de ACS es el motor de control antifraude, este permit
 
 Esta funcionalidad se gestiona desde la sección de Emisores de la aplicación.
 
-## Gestionar listas de control de fraude:
+## Listas de control de fraude
 
 Las listas de control de fraude son el primer filtro que por el cual pasan las solicitudes de autenticación de ACS. 
 
 > Las listas de control antifraude se ejecutan antes de los grupos de control antifraude y según los resultados que obtenga de sus validaciones, puede evitar que una autenticación tenga que pasar por las validaciones de los grupos de reglas.
 
-### Índice y acciones de las listas de reglas:
+### Índice de las listas de reglas:
 
-Para acceder al índice de reglas, busque el título *Gestionar listas de control de fraude* en las pestañas ubicadas en la parte superior del detalle de un emisor. Actualmente se ubica a la derecha del menú *Gestionar rangos de tarjetas*.
+Para acceder al índice de listas de reglas, diríjase al menú **Gestionar control de fraude -> Gestionar listas de control de fraude**, en las pestañas ubicadas en la parte superior del detalle de un emisor.
 
 Al dar clic en el menú, visualizará el índice de listas de reglas, similar al de la siguiente imagen:
 
-![](https://wiki.placetopay.com/images/f/f9/Acs-fraud-list-index.png)
+![](https://wiki.placetopay.com/images/3/35/Listas-antifraude.png)
 
 
-#### Acciones de la reglas:
+### Acciones de las listas de reglas:
 
-Las acciones disponibles para las listas de reglas se encuentran ubicadas en el menú desplegable ubicado al final de cada rango en el título *Acciones* de la tabla. Las acciones son las siguientes:
+Las acciones disponibles para las listas de reglas se encuentran ubicadas en el menú desplegable ubicado al final de cada lista. Las acciones son las siguientes:
 
-- **Ver:** Seleccione esta opción para visualizar los detalles de la lista.
+- **Ver:** Seleccione esta opción para visualizar los detalles de la lista. Visualizará una vista similar a la siguiente:
 
-  Visualizará una vista similar a la siguiente:
+  ![](https://wiki.placetopay.com/images/4/48/List-detail.png)
 
-![](https://wiki.placetopay.com/images/4/48/List-detail.png)
-
-- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó la lista. 
-
-  Visualizará un formulario similar al de creación de un rango de tarjeta. Todos los datos son editables.
+- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó la lista. Visualizará un formulario similar al de creación de una lista. Todos los datos son editables.
 
 - **Eliminar:** Seleccione esta opción para eliminar la lista.
 
@@ -426,7 +422,7 @@ Las acciones disponibles para las listas de reglas se encuentran ubicadas en el 
 
 ACS provee para este módulo la funcionalidad de filtrar listas, esta permite hacer la búsqueda más flexible y específica cuando tiene muchos datos. 
 
-Para acceder a los filtros diríjase a la parte lateral derecha del índice de listas, al lado izquierdo del botón *Crear*, encontrará la opción llamada *Filtrar*, haga clic y se desplegará una vista como la siguiente:
+Para acceder a los filtros, diríjase a la parte lateral derecha del índice de listas, al lado izquierdo del botón *Crear*, encontrará la opción **Filtrar**, haga clic en esta y se desplegará una vista como la siguiente:
 
 ![](https://wiki.placetopay.com/images/1/11/Filter-lists.png)
 
@@ -439,11 +435,11 @@ Estas listas son temporales, es decir, tienen una duración específica que uste
 
 - **Permisivas:** Estas listas van a crear un filtro que va a permitir que las autenticaciones que cumplan con los valores registrados en estas, puedan eximirse de la ejecución de los grupos de reglas, y continuar así con el proceso de autenticación.
 
-> En esta lista puedes agregar valores de clientes con historiales seguros y confiables, ya que al ser permisiva, será más flexible al momento de hacer la validación de la autenticación.
+  > En esta lista se pueden agregar valores de clientes con historiales seguros y confiables, ya que al ser permisiva, será más flexible al momento de hacer la validación de la autenticación.
 
 - **Restrictivas:** Por el contrario, este tipo de listas, al evaluar que los datos de la autenticación coinciden con los datos de la lista, enviará las autenticaciones directamente a ejecutar los grupos de reglas.
 
-> En esta lista puedes agregar valores de clientes con historiales de riesgo. Al ser restrictiva la lista, permitirá ejercer mayor control de los filtros de validación. 
+  > En esta lista se pueden agregar valores de clientes con historiales de riesgo. Al ser restrictiva la lista, permitirá ejercer mayor control de los filtros de validación. 
 
 ### ¿Cómo crear una lista de control de fraude?
 
@@ -452,21 +448,19 @@ Al dar clic en el botón *Crear*, ubicado en la parte lateral derecha del índic
   ![](https://wiki.placetopay.com/images/4/43/Button-create-list.png)
 
 
-1. **Crear una lista de control de fraude:**, Esta opción le permite crear una lista de forma manual e individual. 
+**1. Crear una lista de control de fraude:** Esta opción le permite crear una lista de forma manual e individual. 
 
-    Si escoge esta opción se direccionará a un formulario como este:
+  Si escoge esta opción se direccionará a un formulario como este:
 
-    ![](https://wiki.placetopay.com/images/5/53/Acs-create-fraud-list.png)
+  ![](https://wiki.placetopay.com/images/5/53/Acs-create-fraud-list.png)
 
 Se solicitará:
 
 - **Fecha de inicio:** Fecha en la que la lista va a comenzar a funcionar y hacer las validaciones.
 
-- **Fecha de finalización:** Fecha en la que se va a finalizar el funcionamiento y validación de la lista de reglas.
+- **Fecha de finalización:** Fecha en la que la lista dejará de funcionar y validar reglas.
 
-- **Tipo de lista:** ACS dispone de dos tipos de listas:
-    - PERMISSIVE
-    - RESTRICTIVE
+- **Tipo de lista:** ACS dispone de dos tipos de listas (PERMISSIVE y RESTRICTIVE), escoja una según el tipo de validaciones a ejecutar.
 
 - **Tipo de valor:** Aquí se selecciona el parámetro por el cual se van a hacer los filtros de las autenticaciones. 
 
@@ -484,11 +478,11 @@ Se solicitará:
 
   Los visualizará en la lista desplegable del campo *Tipo de valor* así:
 
-  ![](https://wiki.placetopay.com/images/e/e8/Value-type-list.png)
+    ![](https://wiki.placetopay.com/images/e/e8/Value-type-list.png)
 
 - **Valor:** Corresponde al valor del tipo de parámetro seleccionado en el campo anterior. Con este valor se procede a hacer las validaciones y a verificar la coincidencia del dato con los recibidos en la autenticación.
 
-2. **Crear importación:** Con esta opción podrá crear listas de reglas de forma masiva a partir de un archivo que contenga las reglas.
+**2. Crear importación de listas de control de fraude:** Con esta opción podrá crear listas de reglas de forma masiva a partir de un archivo que contenga las reglas.
 
 > El archivo a cargar debe estar en formato .CSV, .TSV o .TXT.
 
@@ -500,7 +494,7 @@ Si escoge esta opción, se cargará un formulario como el siguiente:
 
 > Para visualizar un ejemplo del formato de una importación, haga clic en el link *Descargar*, ubicado en la parte lateral izquierda, en el título *Información básica*.
 
-## Reglas de control de fraude:
+## Reglas de control de fraude
 
 Las reglas permiten hacer las validaciones de los datos recibidos en las solicitudes de autenticación. Estas reglas evalúan la coincidencia de las condiciones contenidas en la regla y de los datos obtenidos en la solicitud de autenticación.
 
@@ -508,19 +502,19 @@ Las reglas permiten hacer las validaciones de los datos recibidos en las solicit
 
 ### Índice de reglas:
 
-Para acceder al índice y gestión de reglas, diríjase al menú superior del detalle del emisor y haga clic en la pestaña con nombre *Reglas de control de fraude*.
+Para acceder al índice de reglas de control de fraude, diríjase al menú **Gestionar control de fraude -> Reglas de control de fraude**, ubicado en las pestañas de la parte superior del detalle de un emisor.
 
 Visualizará una pantalla similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/5/5e/Index-rules.png)
+![](https://wiki.placetopay.com/images/1/18/Indice-reglas-antifraude.png)
 
-#### Funciones de las reglas:
+### Funciones de las reglas:
 
-Las reglas tienen dos funciones a las cuales puede acceder haciendo clic en el menú con tres puntos ubicado al final de cada regla:
+Las reglas tienen dos funciones a las cuales puede acceder haciendo clic en el menú desplegable ubicado al final de cada regla:
 
-- **Ver:** Seleccione esta opción para visualizar más detalles de la regla. Haga clic en el botón con ícono de ojo ubicado al final de cada regla.
+- **Ver:** Seleccione esta opción para visualizar más detalles de la regla. Haga clic en el botón con la leyenda *Ver*, ubicado al final de cada regla.
 
-  Encontrará una vista similar a la siguiente, en la cual encontrará el estado de la regla, el nombre, el tipo de regla y el valor que le asignó, así mismo, las fechas y usuarios que crearon y actualizaron la regla:
+  Encontrará una vista similar a la siguiente, en la cual está el estado de la regla, el nombre, el tipo de regla y el valor que le asignó, así mismo, las fechas y usuarios que crearon y actualizaron la regla:
 
   ![](https://wiki.placetopay.com/images/3/36/Rule-detail.png)
 
@@ -530,26 +524,24 @@ Las reglas tienen dos funciones a las cuales puede acceder haciendo clic en el m
 
 ### ¿Cómo puedo cambiar el orden de ejecución de las reglas?
 
-Las reglas se ejecutan y validan en el orden dado en el índice de reglas. Las nuevas reglas que cree, se ubicarán automáticamente debajo de la última creada y se ejecutará en ese mismo orden (solo se ejecutan las que reglas que tengan estado activo).
+Las reglas se ejecutan y validan en el orden dado en el índice de reglas. Las nuevas reglas que cree, se ubicarán automáticamente debajo de la última creada y se ejecutarán en ese mismo orden (solo se ejecutan las que reglas que tengan estado *Activo*).
 
-Para cambiar el orden de las reglas, mantenga presionada la regla que desea cambiar de lugar y deslícela al lugar donde desea ubicarla. Posteriormente aparecerá un mensaje que dice lo siguiente:
+Para cambiar el orden de las reglas, mantenga presionada la regla que desea cambiar de lugar y deslícela al lugar donde desea ubicarla. Posteriormente aparecerá un mensaje que dice lo siguiente: *"Existen cambios sin guardar, si abandona esta página puede perderlos!"*
 
-"Existen cambios sin guardar, si abandona esta página puede perderlos!"
-
-Y en la parte inferior del índice obtendrá dos botones, presione *Guardar* para confirmar el cambio de lugar de la regla o *Cancelar* para volver al estado de orden anterior.
+Y en la parte inferior del índice obtendrá dos botones, presione **Guardar cambios** para confirmar el cambio de lugar de la regla o **Restablecer cambios** para volver al estado anterior de ordenamiento de las reglas.
 
 
 ### Solicitudes de reglas:
 
 Haga clic en la pestaña *Solicitudes de reglas*, ubicada en la parte superior derecha del índice de reglas. Allí se pueden visualizar las peticiones de creación, actualización o eliminación de reglas, las cuales se encuentran pendientes por aprobar o denegar.
 
-- **Aprobar:** Para aprobar una solicitud, haga clic en el botón con check verde para aprobar o en el botón con equis rojo para denegar la solicitud. Luego se desplegará una ventana para confirmar la aprobación y el despliegue de la regla al entorno productivo, dé clic en *Confirmar* para aceptar la acción o en *Cancelar* para volver a las solicitudes.
+- **Aprobar:** Para aprobar una solicitud, haga clic en el botón con check verde para aprobar o en el botón con equis en rojo para denegar la solicitud. Luego se desplegará una ventana para confirmar la aprobación y el despliegue de la regla al entorno productivo, dé clic en *Confirmar* para aceptar la acción o en *Cancelar* para volver a las solicitudes.
 
-- **Denegar:** Para denegar una solicitud, haga clic en el botón con equis rojo. Luego se desplegará una ventana para confirmar la eliminación, dé clic en *Confirmar* para aceptar la acción o en *Cancelar* para volver a las solicitudes.
+- **Denegar:** Para denegar una solicitud, haga clic en el botón con equis en rojo. Luego se desplegará una ventana para confirmar la eliminación, dé clic en *Confirmar* para aceptar la acción o en *Cancelar* para volver a las solicitudes.
 
 ### ¿Cómo crear solicitudes de reglas?
 
-Para crear una petición de regla, haga clic en el botón *Crear petición de regla*, ubicado en la parte lateral derecha en la pestaña *Solicitudes de reglas*.
+Para crear una petición de regla, diríjase a la pestaña **Solicitudes de reglas** y haga clic en el botón **Crear petición de regla**, ubicado en la parte lateral derecha.
 
 ![](https://wiki.placetopay.com/images/5/59/Acs-rule-create.png)
 
@@ -561,17 +553,17 @@ Luego visualizará una ventana como esta, dónde le solicitan la acción que des
 
 - **Crear:** Permite crear una petición para crear una nueva regla.
 
-- **Actualizar:** Permite crear una petición para editar una regla existente. Si selecciona esta opción, luego se desplegará una lista con las reglas disponibles para editar, seleccione una y haga clic en el botón *Siguiente*, lo redirigirá a un formalario como el de creación de regla.
+- **Actualizar:** Permite crear una petición para editar una regla existente. Si selecciona esta opción, luego se desplegará una lista con las reglas disponibles para editar, seleccione una y haga clic en el botón *Siguiente* y lo redirigirá a un formulario como el de creación de regla.
 
-![](https://wiki.placetopay.com/images/8/89/Edit-rule.png)
+  ![](https://wiki.placetopay.com/images/8/89/Edit-rule.png)
 
-- **Eliminar:** Permite crear una petición para eliminar una regla existente, si selecciona esta opción también se desplegará una lista con las reglas que puede eliminar, luedo haga clic en el botón *Enviar solicitud*.
+- **Eliminar:** Permite crear una petición para eliminar una regla existente, si selecciona esta opción también se desplegará una lista con las reglas que puede eliminar, luego haga clic en el botón *Enviar solicitud*.
 
 ![](https://wiki.placetopay.com/images/f/f5/Delete-rule.png)
 
 ### ¿Cómo crear nuevas reglas?
 
-Para una nueva regla, debe seleccionar la opción *Crear* de la lista de peticiones y se desplegará un formulario como el siguiente:
+Para crear una nueva regla, debe seleccionar la opción *Crear* de la lista de peticiones y se desplegará un formulario como el siguiente:
 
 ![](https://wiki.placetopay.com/images/f/f0/Acs-conditions-rule.png)
 
@@ -579,17 +571,15 @@ Los datos requeridos son:
 
 - **Nombre:** ¿Cómo desea nombrar la regla que va a crear?
 
-- **Acción:** Se refiere a la función que va a cumplir la regla en el proceso de autenticación. Estas acciones se describen detalladamente en el siguiente título.
+- **Acción:** Se refiere a la función que va a cumplir la regla en el proceso de autenticación. Estas acciones se describen detalladamente en el título *Acciones de las reglas*, de la presente documentación.
 
-  *Construcción de la condición de la regla:*
-
-- **Tipo de regla:** Hace referencia al tipo de regla que desea crear, por ejemplo es una regla que valida números de tarjeta de crédito, o valida emails, o rangos de bines...
+- **Tipo de regla:** Hace referencia al tipo de regla que desea crear, por ejemplo es una regla que valida un número de tarjeta de crédito, o valida un rango de tarjetas, un email, un rangos de bines...
 
 - **Valor:** Es el valor que requiere una regla para validar y comparar los datos de la regla y de la solicitud de autenticación.
 
 #### Reglas con múltiples condiciones:
 
-Puede además agregar otras condiciones para una misma regla,haciendo clic en el botón inferior del formulario *Agregar condición*, y se desplegarán nuevos campos para ingresar otro tipo de regla y su valor correspondiente.
+Puede además agregar otras condiciones para una misma regla,haciendo clic en el botón inferior del formulario **Agregar condición**, y se desplegarán nuevos campos para ingresar otro tipo de regla y su valor correspondiente.
 
 > Para habilitar este botón debe haber diligenciado ya una condición completa con su tipo de regla y valor.
 
@@ -597,7 +587,7 @@ Al hacer clic en el botón se presentará un formulario como el siguiente:
 
 ![](https://wiki.placetopay.com/images/d/dc/Add-condition-rule.png)
 
-También hay otros tipos de reglas que ofrecen más posibilidades, en la siguiente imagen puede visualizar una regla donde puede escoger el operador con el cual va a comparar los valores la regla, por ejemplo, que el valor dado tenga un rango específico, un valor mínimo o máximo.
+También hay otros tipos de reglas que ofrecen más posibilidades. En la siguiente imagen puede visualizar una regla donde puede escoger el operador con el cual va a comparar los valores la regla, por ejemplo, que el valor dado tenga un rango específico, un valor mínimo o máximo.
 
 ![](https://wiki.placetopay.com/images/1/19/Acs-others-rule-conditions.png)
 
@@ -617,13 +607,13 @@ Estas acciones se encuentran en el formulario de creación de regla, en el campo
 
 Las acciones permitidas son las siguientes:
 
-- **Autenticar:** Las reglas que contengan esta acción, permitirán validar la solicitud de autenticación y aprobarla automáticamente si la validación de los datos pasa exitosamente, generando un estatus Y (autenticación satisfactoria). Por ejemplo una regla de tipo *BinRange* va a contener un rango mínimo y máximo de BIN, las tarjetas cuyo BIN entren en este rango, se validará exitosamente y autenticará la solicitud.
+- **Autenticar:** Las reglas que contengan esta acción, permitirán validar la solicitud de autenticación y aprobarla automáticamente si la validación de los datos pasa de forma exitosa, generando un estatus Y (autenticación satisfactoria). Por ejemplo una regla de tipo *Rango de bines* va a contener un rango mínimo y máximo de BIN, las autenticaciones con tarjetas cuyo BIN entren en este rango, se validarán exitosamente y autenticará inmediatamente la solicitud.
 
 - **Realizar desafío:** Las reglas cuya acción es realizar desafío, al validarse generarán el estatus C (requiere desafío), con este estatus el tarjetahabiente será direccionado a una interfaz de usuario en la cual se le pedirá aceptar un desafío para validar su identidad. 
 
-- **Desafío desacoplado:** Las reglas que contengan esta acción, al validarse generarán un estatus D y la petición de autenticación se pondrá en pausa y el emisor se encargará de realizar el desafío manualmente con el tarjetahabiente.
+- **Desafío desacoplado:** Las reglas que contengan esta acción, al validarse generarán un estatus D (desafío desacoplado)y la petición de autenticación se pondrá en pausa y el emisor se encargará de realizar el desafío manualmente con el tarjetahabiente.
  
-- **No autenticar:** Las reglas con acción de no autenticar, al cumplirse la validación, lanzarán automáticamente un estado *N* (Autenticación fallida). Los datos incluídos en estas reglas suelen ser riesgosos.
+- **No autenticar:** Las reglas con acción de no autenticar, al cumplirse la validación, lanzarán automáticamente un estado N (autenticación fallida). Los datos incluídos en estas reglas suelen ser riesgosos.
 
 - **Ejecutar grupo de reglas:** Las reglas creadas con esta acción, pueden ejecutar todas las reglas contenidas en un grupo de reglas específico del emisor. Para escoger esta opción debes tener grupos de reglas habilitados para el emisor.
 
@@ -633,7 +623,7 @@ Las acciones permitidas son las siguientes:
 
   En el apartado *Grupos de control de fraude*, se presentará una lista de los grupos disponibles, escoja uno y continúe con el diligenciamiento de las condiciones para la regla.
 
-- **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado).
+- **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado.
 
 > La función de ejecutar un grupo de reglas permite crear reglas que abarquen más validaciones y también permite utilizar reglas creadas anteriormente para hacer otras validaciones o complementarlas con otras condiciones, y de esta forma agrupar funcionalidades y disminuir reglas repetidas.
 
@@ -1166,13 +1156,15 @@ Un ejemplo de una regla tipo match es el siguiente:
 Encontrará en el campo *Valor*, una lista con dos opciones, hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia) con el dato guardado en ACS.
 
 
-## Grupos de control antifraude:
+## Grupos de control de fraude
 
 Los grupos de control de fraude permiten clasificar y agrupar reglas para hacer validaciones con fines específicos. 
 
 Por ejemplo, puede crear dos grupos, uno llamado *Lista blanca*, donde se podrían incluir números de tarjetas y datos de clientes con bajo riesgo de fraude y las acciones de las reglas podrían ser en su mayoría *Autenticar*. El otro grupo se llama *Lista negra*, aquí se podrían agregar los números de tarjeta e información personal asociada a clientes con historiales o reportes riesgosos y la acción de las reglas podría ser *No autenticar*.
 
 ### Índice de grupos de control de fraude:
+
+Para acceder al índice de grupos de reglas, diríjase al menú **Gestionar control de fraude -> Grupos de control de fraude**, ubicado en las pestañas de la parte superior del detalle de un emisor.
 
 En la siguiente imagen se muestra el listado de grupos de control de fraude de un emisor. La información se encuentra organizada en una tabla y muestra los datos principales de los grupos tales como: Nombre, Fecha, Reglas y Estado.
 
