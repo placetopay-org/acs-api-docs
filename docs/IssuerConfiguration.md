@@ -103,7 +103,7 @@ En esta sección se visualiza el listado o índice de emisores, la información 
 
 ### Acciones disponibles para los emisores:
 
-En el título "Acciones" ubicado en la parte lateral derecha del índice de emisores, se encuentra un menú con tres puntos, haga clic en este menú y despliegue las acciones o funcionalidades disponibles para cada emisor. En el menú se encuentran las siguientes acciones:
+En el título "Acciones" ubicado en la parte lateral derecha del índice de emisores, se encuentra un menú desplegable, haga clic en este menú y despliegue las acciones o funcionalidades disponibles para cada emisor. En el menú se encuentran las siguientes acciones:
 
 - **Ver:** Seleccione esta opción para visualizar los detalles del emisor, sus configuraciones y componentes.
 
@@ -180,7 +180,7 @@ Luego visualizará una vista similar a la siguiente:
 
 En ella encontrará el listado de marcas registradas para el emisor y un formulario para agregar nuevas marcas.
 
-> Para las marcas están disponibles las funciones de *Editar* y *Eliminar*, las cuales se encuentran dando clic en el menú con tres puntos ubicado al final del registro de cada marca.
+> Para las marcas están disponibles las funciones de *Editar* y *Eliminar*, las cuales se encuentran dando clic en el menú desplegable ubicado al final del registro de cada marca.
 
 ### Agregar una nueva marca:
 
@@ -293,7 +293,7 @@ Ingresando a cada una de las pestañas, podrá ver la información de los campos
 
 #### Acciones para las configuraciones del emisor:
 
-Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable con tres puntos, ubicado al final de cada campo.
+Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable ubicado al final de cada campo.
 
 Las acciones disponibles son:
 
@@ -637,43 +637,44 @@ Visualizará una lista similar a esta con la lista de reglas disponibles:
 
 Los tipos de reglas disponibles actualmente son:
 
-#### Rango de bines: 
+#### Regla de rango de número de tarjeta: 
+Esta regla permite validar que la tarjeta que llegue en la petición de autenticación, esté en el rango especificado. Acepta dos valores, el rango inicial que debe tener mínimo 13 dígitos y el rango final que debe ser mayor al inicial y tener máximo 19 dígitos dígitos.
+
+  ![](https://wiki.placetopay.com/images/6/64/Regla-rango-tarjeta.png)
+
+#### Regla de rango de bines: 
 Esta regla permite validar que la tarjeta que llegue en la petición de autenticación, esté en el rango especificado. Acepta dos valores, el rango inicial que debe ser un BIN de 6 o de 8 dígitos y el rango final que debe tener los mismos dígitos.
 
   ![](https://wiki.placetopay.com/images/9/96/Bin-range-rule.png)
 
-#### Número de tarjeta de transacción: 
-Esta regla permite validar que el número de tarjeta que registre en el valor, sea igual al número de tarjeta de la petición de autenticación. Esta regla recibe mínimo 13 dígitos y debe coincidir con el algoritmo de Luhn, el cual comprueba mediante una secuencia de dígitos, si un número de tarjeta es válido.
+#### Regla de número de tarjeta de transacción: 
+Esta regla permite validar que el número de tarjeta que registre en el valor, sea igual al número de tarjeta de la petición de autenticación. Esta regla recibe mínimo 13 dígitos y máximo 19, y debe coincidir con el algoritmo de Luhn, el cual comprueba mediante una secuencia de dígitos, si un número de tarjeta es válido.
 
   ![](https://wiki.placetopay.com/images/7/7f/Card-number-rule.png)
 
-#### Monto de compra:
+#### Regla de monto de compra:
 Esta regla permite validar el monto de la transacción a autenticar. Acepta un valor numérico que indique un monto de pago.
 
   ![](https://wiki.placetopay.com/images/1/14/Rule-total.png)
 
-#### Regla para datos de autenticación:
+#### Regla de datos de autenticación:
  Esta regla valida los campos que se envían en el mensaje AReq, siendo este un tipo de mensaje del Protocolo 3-D Secure, con el cual se da inicio al proceso de autenticación. Esta regla recibe los siguientes parámetros:
 
-  - **Campo**, Hace referencia al campo contenido en el mensaje AReq. Se presenta una lista con todos los campos disponibles para validar. Seleccione uno.
+  - **Campo**, hace referencia al campo contenido en el mensaje AReq. Se presenta una lista con todos los campos disponibles para validar. Seleccione uno.
 
-  - **Condiciones**, En este campo se selecciona el operador con el cual se va a hacer la comparación de valores a validar. Según el campo seleccionado se despliegan unos operadores específicos.
+  - **Condiciones**, en este campo se selecciona el operador con el cual se va a hacer la comparación de valores a validar. Según el campo seleccionado se despliegan unos operadores específicos.
 
-  - **Valores**, Aquí se ingresa el valor con el cual se va a hacer la comparación que permite validar o no la regla.
+  - **Valores**, aquí se ingresa el valor con el cual se va a hacer la comparación que permite validar o no la regla.
 
 Un ejemplo de regla para datos de autenticación es el siguiente:
 
   ![](https://wiki.placetopay.com/images/d/d4/Areq-rule.png)
    
-   ### Campos de autenticación:
+##### Campos de autenticación disponibles para la regla de datos de autenticación:
 
-- **Identificador de la cuenta del titular**
+- **Identificador de la cuenta del titular:** Identificador de cuenta del titular de la tarjeta: Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.   
 
-  Identificador de cuenta del titular de la tarjeta: Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.   
-
-- **Indicador de edad de la cuenta del titular:**
-
-    Tiempo que el titular de la tarjeta ha tenido la cuenta con el solicitante 3DS, los valores recibidos son de 2 caracteres, y son de tipo numéricos.
+- **Indicador de edad de la cuenta del titular:** Tiempo que el titular de la tarjeta ha tenido la cuenta con el solicitante 3DS, los valores recibidos son de 2 caracteres, y son de tipo numéricos.
 
     Los valores recibidos son:
     -   01 = Sin cuenta 
@@ -682,13 +683,9 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     -   04 = 30 – 60 días
     -   05 = Mas de 60 días
 
-- **Fecha de la cuenta del titular de la tarjeta**
+- **Fecha de la cuenta del titular de la tarjeta:** Fecha en que el titular de la tarjeta abrió la cuenta con el solicitante 3DS, los valores recibidos son de 8 caracteres, con un formato de fecha AAAAMMDD
 
-    Fecha en que el titular de la tarjeta abrió la cuenta con el solicitante 3DS, los valores recibidos son de 8 caracteres, con un formato de fecha AAAAMMDD
-
-- **Indicador de cambio de cuenta del titular de la tarjeta** 
-
-    Indicador del tiempo transcurrido desde que se modificó por última vez la información de la cuenta del titular de la tarjeta con el solicitante 3DS, incluída la dirección de facturación o envío, una nueva cuenta de pago o nuevos usuarios agregados. Los valores recibidos son de 2 caracteres, y son de tipo numérico.
+- **Indicador de cambio de cuenta del titular de la tarjeta:** Indicador del tiempo transcurrido desde que se modificó por última vez la información de la cuenta del titular de la tarjeta con el solicitante 3DS, incluída la dirección de facturación o envío, una nueva cuenta de pago o nuevos usuarios agregados. Los valores recibidos son de 2 caracteres, y son de tipo numérico.
     
     Los valores recibidos son:
     -   01 = Sin cambios
@@ -697,13 +694,9 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     -   04 = 30 – 60 días
     -   05 = Mas de 60 días
 
-- **Cambio de cuenta del titular de la tarjeta**
+- **Cambio de cuenta del titular de la tarjeta:** Fecha en la que se modificó por última vez la cuenta del titular de la tarjeta con el solicitante de 3DS, incluída la dirección de facturación o envío, la nueva cuenta de pago o los nuevos usuarios agregados. El tipo de dato que se recibe es en el formato AAAAMMDD.
 
-    Fecha en la que se modificó por última vez la cuenta del titular de la tarjeta con el solicitante de 3DS, incluída la dirección de facturación o envío, la nueva cuenta de pago o los nuevos usuarios agregados. El tipo de dato que se recibe es en el formato AAAAMMDD.
-
-- **Indicador de cambio de contraseña de la cuenta del titular de la tarjeta**
-
-    Indica el tiempo transcurrido desde que se cambió la contraseña o se restableció la cuenta del titular de la tarjeta con el solicitante 3DS, los valores recibidos es de 2 caracteres, y son de tipo numérico.
+- **Indicador de cambio de contraseña de la cuenta del titular de la tarjeta:** Indica el tiempo transcurrido desde que se cambió la contraseña o se restableció la cuenta del titular de la tarjeta con el solicitante 3DS, los valores recibidos son de 2 caracteres, y son de tipo numérico.
     
     Los valores recibidos son:
     -   01 = sin cambios
@@ -712,13 +705,9 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     -   04 = 30 – 60 días
     -   05 = Mas de 60 días
 
-- **Cambio de contraseña de la cuenta del titular de la tarjeta**
+- **Cambio de contraseña de la cuenta del titular de la tarjeta:** Fecha en que se cambió la contraseña o se restableció la cuenta del titular de la tarjeta con 3DS Requestor, el tipo de dato que se recibe es en el formato AAAAMMDD.
 
-    Fecha en que se cambió la contraseña o se restableció la cuenta del titular de la tarjeta con 3DS Requestor, el tipo de dato que se recibe es en el formato AAAAMMDD.
-
-- **Indicador de uso de la dirección de envío**
-
-    Indica cuando se utilizó por primera vez la dirección de envío para la transacción con 3DS Requestor, los valores recibidos son de 2 caracteres, y son de tipo numérico.
+- **Indicador de uso de la dirección de envío:** Indica cuando se utilizó por primera vez la dirección de envío para la transacción con 3DS Requestor, los valores recibidos son de 2 caracteres, y son de tipo numérico.
 
     Los valores recibidos son:
     -   01 = Esta transacción 
@@ -726,37 +715,21 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     -   03 = 30 – 60 días
     -   04 = Mas de 60 días
 
-- **Uso de la dirección de envío**
+- **Uso de la dirección de envío**: Fecha en la que se utilizó por primera vez la dirección de envío para la transacción con el solicitante 3DS. El tipo de dato que se recibe es en el formato AAAAMMDD.
 
-    Fecha en la que se utilizó por primera vez la dirección de envío para la transacción con el solicitante 3DS. El tipo de dato que se recibe es en el formato AAAAMMDD.
+- **Número de transacciones por día**: Número de transacciones (exitosas y abandonadas) para esta cuenta del titular de tarjeta con 3DS Requestor, en todas las cuentas de pago en las 24 horas anteriores.
 
-- **Número de transacciones por día**
+- **Número de transacciones por año**: Número de transacciones (exitosas y abandonadas) para esta cuenta de titular de tarjeta con 3DS Requestor, en todas las cuentas de pago en el año anterior.
 
-    Número de transacciones (exitosas y abandonadas) para esta cuenta del titular de tarjeta con 3DS Requestor, en todas las cuentas de pago en las 24 horas anteriores.
+- **Número de intentos de aprovisionamiento por día**: Número de intentos de agregar una tarjeta en las últimas 24 horas.
 
-- **Número de transacciones por año**
+- **Recuento de compras de la cuenta del titular de la tarjeta**: Número de compras realizadas con esta cuenta del titular de tarjeta, durante los seis meses anteriores.
 
-    Número de transacciones (exitosas y abandonadas) para esta cuenta de titular de tarjeta con 3DS Requestor, en todas las cuentas de pago en el año anterior.
+- **Actividad de cuenta sospechosa**: Indica si el solicitante de 3DS ha experimentado una actividad sospechosa (incluído un fraude anterior) en la cuenta del titular de la tarjeta.
 
-- **Número de intentos de aprovisionamiento por día**
- 
-    Número de intentos de agregar tarjeta en las últimas 24 horas.
+- **Indicador de nombre de envío**: Indica si el nombre del titular de la tarjeta en la cuenta es idéntico al nombre de envío utilizado para esta transacción. 
 
-- **Recuento de compras de la cuenta del titular de la tarjeta**
-
-    Número de compras realizadas con esta cuenta del titular de tarjeta, durante los seis meses anteriores.
-
-- **Actividad de cuenta sospechosa**
-
-    Indica si el solicitante de 3DS ha experimentado una actividad sospechosa (incluido un fraude anterior) en la cuenta del titular de la tarjeta.
-
-- **Indicador de nombre de envío**
-
-    Indica si el nombre del titular de la tarjeta en la cuenta es idéntico al nombre de envío utilizado para esta transacción. 
-
-- **Indicador de antigüedad de la cuenta de pago**
-
-    Indica el periodo de tiempo que la cuenta de pago estuvo inscrita en la cuenta del titular de la tarjeta con el solicitante de 3DS, los valores recibidos son de 2 caracteres, y son de tipo numérico.
+- **Indicador de antigüedad de la cuenta de pago**: Indica el periodo de tiempo que la cuenta de pago estuvo inscrita en la cuenta del titular de la tarjeta con el solicitante de 3DS, los valores recibidos son de 2 caracteres, y son de tipo numérico.
 
     Los valores recibidos son:
     -   01 = sin cambios
@@ -764,14 +737,9 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     -   03 = 30 – 60 días
     -   04 = Mas de 60 días
 
-- **Antigüedad de la cuenta de pago**
+- **Antigüedad de la cuenta de pago**: Fecha en que la cuenta de pago se inscribió en la cuenta del titular de la tarjeta con el solicitante de 3DS, el tipo de dato que se recibe es en el formato AAAAMMDD.
 
-    Fecha en que la cuenta de pago se inscribió en la cuenta del titular de la tarjeta con el solicitante de 3DS, el tipo de dato que se recibe es en el formato AAAAMMDD.
-
-- **Tipo de cuenta**
-
-    Indica el tipo de cuenta. Por ejemplo, para un producto de tarjeta de varias cuentas. Los valores recibidos son de 2 caracteres, y son de tipo numérico.
-                                                                               
+- **Tipo de cuenta**: Indica el tipo de cuenta. Por ejemplo, para una tarjeta con varias cuentas. Los valores recibidos son de 2 caracteres, y son de tipo numérico.                                                                           
     Los valores recibidos son:
     -   01 = No aplicable
     -   02 = Credito 
@@ -779,56 +747,34 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     -   04 - 79 = Reservado para valores a futuro EMVCo 
     -   80 - 99 = DS o pagos de sistemas especificos
 
-- **BIN del adquirente**
-
-    Código de identificación de la institución según lo asignado por el DS que recibe el mensaje AReq. Este valor se correlaciona con el BIN del comprador según lo definido por cada sistema de pago o DS.
+- **BIN del adquirente**: Código de identificación de la institución según lo asignado por el DS que recibe el mensaje AReq. Este valor se correlaciona con el BIN del comprador según lo definido por cada sistema de pago o DS.
     
-- **ID de comerciante del adquirente**
-
-    Identificador de comerciante asignado por el adquirente.
-    Este puede ser el mismo valor que se utiliza en las solicitudes de autorización enviadas en nombre del solicitante 3DS y está representado en los requisitos de formato ISO 8583.
+- **ID de comerciante del adquirente**: Identificador del comerciante asignado por el adquirente. Este puede ser el mismo valor que se utiliza en las solicitudes de autorización enviadas en nombre del solicitante 3DS y está representado en los requisitos de formato ISO 8583.
+    
     El valor aceptado:
     Los servidores de directorio individuales pueden imponer requisitos específicos de formato y carácter en el contenido de este campo. Tiene una longitud de 35 caracteres. 
 
-- **Indicador de coincidencia de direcciones**
-    
-    Indica si la dirección de envío del titular de la tarjeta y la dirección de facturación del titular de la tarjeta son iguales.
+- **Indicador de coincidencia de direcciones**: Indica si la dirección de envío del titular de la tarjeta y la dirección de facturación del titular de la tarjeta son iguales.
     
     Los valores recibidos son:
     -   Y = La dirección de envío coincide con la facturación
     -   N = La dirección de envío no coincide con la dirección de facturación
     
-- **Ciudad de la dirección de facturación del titular de la tarjeta**
+- **Ciudad de la dirección de facturación del titular de la tarjeta**: La ciudad de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. Los valores a recibir son de un tamaño máximo 50 caracteres. 
 
-    La ciudad de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. Los valores a recibir son de un tamaño máximo 50 caracteres. 
+- **País de la dirección de facturación del titular de la tarjeta**: Es el país de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es el código de país numérico de tres dígitos según el ISO 3166-1.
 
-- **País de la dirección de facturación del titular de la tarjeta**
-
-    Es el país de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es el código de país numérico de tres dígitos según el ISO 3166-1.
-
-- **Línea 1 de la dirección de facturación del titular de la tarjeta**
-
-    Primera línea de la dirección postal o parte local equivalente de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es de un tamaño máximo de 50 caracteres.
+- **Línea 1 de la dirección de facturación del titular de la tarjeta**: Primera línea de la dirección postal o parte local equivalente de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es de un tamaño máximo de 50 caracteres.
     
-- **Dirección de facturación del titular de la tarjeta, línea 2**
+- **Dirección de facturación del titular de la tarjeta, línea 2**: Segunda línea de la dirección postal o parte local equivalente de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es de un tamaño máximo de 50 caracteres.
 
-    Segunda línea de la dirección postal o parte local equivalente de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es de un tamaño máximo de 50 caracteres.
+- **Dirección de facturación del titular de la tarjeta, línea 3**: Tercera línea de la dirección postal o parte local equivalente de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es de un tamaño máximo de 50 caracteres.
 
-- **Dirección de facturación del titular de la tarjeta, línea 3**
+- **Dirección de facturación del titular de la tarjeta - código postal**: ZIP u otro código postal de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es de un tamaño maximo de 16 caracteres.
 
-    Tercera línea de la dirección postal o parte local equivalente de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es de un tamaño máximo de 50 caracteres.
+- **Estado de la dirección de facturación del titular de la tarjeta**: El estado o provincia de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado debe ser el código de subdivisión del país definido en ISO 3166-2, conformado por 3 caracteres.
 
-- **Dirección de facturación del titular de la tarjeta Código postal**
-    
-    ZIP u otro código postal de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado es de un tamaño maximo de 16 caracteres.
-
-- **Estado de la dirección de facturación del titular de la tarjeta**
-
-    El estado o provincia de la dirección de facturación del titular de la tarjeta asociada con la tarjeta utilizada para esta compra. El valor aceptado debe ser el código de subdivisión del país definido en ISO 3166-2, conformado por 3 caracteres.
-
-- **Canal de dispositivo**
-
-    Indica el tipo de interfaz de canal que se utiliza para iniciar la transacción.
+- **Canal de dispositivo**: Indica el tipo de interfaz de canal que se utiliza para iniciar la transacción.
     
     Los valores recibidos son:
     
@@ -838,33 +784,19 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     -   04–79 = Reservado para uso futuro de EMVCo (valores no válidos hasta que los defina EMVCo)
     -   80–99 = Reservado para uso de DS
     
-- **Dirección de correo electrónico del titular de la tarjeta**
-
-    La dirección de correo electrónico asociada con la cuenta que ingresó el titular de la tarjeta o que está archivada con el Solicitante de 3DS. El valor aceptado deberá cumplir con los requisitos de la Sección 3.4 de IETF RFC 5322.
+- **Dirección de correo electrónico del titular de la tarjeta**: La dirección de correo electrónico asociada con la cuenta que ingresó el titular de la tarjeta o que está archivada con el Solicitante de 3DS. El valor aceptado deberá cumplir con los requisitos de la Sección 3.4 de IETF RFC 5322.
     
-- **Código del país del número de teléfono de la casa del titular de la tarjeta**
-
-    El codigo del teléfono residencial proporcionado por el titular de la tarjeta. El valor recibido es de 1 a 3 caracteres.
+- **Código del país del número de teléfono de la casa del titular de la tarjeta**: El codigo del teléfono residencial proporcionado por el titular de la tarjeta. El valor recibido es de 1 a 3 caracteres.
     
-- **Número de teléfono de la casa del titular de la tarjeta**
-
-    El número de teléfono residencial proporcionado por el titular de la tarjeta. El valor recibido es de máximo 15 caracteres. 
+- **Número de teléfono de la casa del titular de la tarjeta**: El número de teléfono residencial proporcionado por el titular de la tarjeta. El valor recibido es de máximo 15 caracteres. 
     
-- **Código de categoría de comerciante**
-
-    Código específico de DS que describe el tipo de negocio, producto o servicio del comerciante. Este valor se correlaciona con el código de categoría de comerciante según lo definido por cada sistema de pago o DS.
+- **Código de categoría de comerciante**: Código específico de DS que describe el tipo de negocio, producto o servicio del comerciante. Este valor se correlaciona con el código de categoría de comerciante según lo definido por cada sistema de pago o DS.
     
-- **Código de país del comerciante**
-
-    Este valor se correlaciona con el código de país del comerciante según lo definido por cada cistema de pago o DS. El valor recibido es de 3 caracteres. 
+- **Código de país del comerciante**: Este valor se correlaciona con el código de país del comerciante según lo definido por cada cistema de pago o DS. El valor recibido es de 3 caracteres. 
     
-- **Nombre del comerciante**
-
-    Nombre del comerciante asignado por el adquiriente o sistema de Pago. El valor a recibir es mayor a 40 caracteres. 
+- **Nombre del comerciante**: Nombre del comerciante asignado por el adquiriente o sistema de Pago. El valor a recibir es mayor a 40 caracteres. 
     
-- **Indicador de envío**
-
-    Indica el método de envío elegido para la transacción. Los comerciantes deben elegir el código del indicador de envío que describa con mayor precisión la transacción específica del titular de la tarjeta, no su negocio general. Si uno o más artículos están incluidos en la venta, use el código de indicador de envío para los bienes físicos, o si todos son bienes digitales, use el código de indicador de envío que describe el artículo más caro.
+- **Indicador de envío**: Indica el método de envío elegido para la transacción. Los comerciantes deben elegir el código del indicador de envío que describa con mayor precisión la transacción específica del titular de la tarjeta, no su negocio general. Si uno o más artículos están incluidos en la venta, use el código de indicador de envío para los bienes físicos, o si todos son bienes digitales, use el código de indicador de envío que describe el artículo más caro.
     
     Los valores recibidos son:
     
@@ -876,9 +808,7 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     -    06 = Boletos de viaje y eventos, no enviados
     -    07 = Otro (por ejemplo, juegos, servicios digitales no enviados, suscripciones a emedia, etc.)
     
-- **Plazo de entrega**
-
-    Indica el plazo de entrega de la mercancía.
+- **Plazo de entrega**: Indica el plazo de entrega de la mercancía.
 
     Los valores recibidos son:
     
@@ -887,47 +817,31 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     -    03 = Envío al día siguiente
     -    04 = Envío en dos días o más
     
-- **Dirección de correo electrónico de entrega**
-
-    Para entrega electrónica, la dirección de correo electrónico a la que se entregó la mercancía. El valor máximo es de 254 caracteres. 
+- **Dirección de correo electrónico de entrega**: Para entrega electrónica, la dirección de correo electrónico a la que se entregó la mercancía. El valor máximo es de 254 caracteres. 
     
-- **Indicador de reordenar artículos**
-
-    Indica si el titular de la tarjeta está reordenando mercancía comprada anteriormente.
+- **Indicador de reordenar artículos**: Indica si el titular de la tarjeta está reordenando mercancía comprada anteriormente.
     
     Los valores recibidos son:
     
     -   01 = Pedido por primera vez
     -   02 = Reordenado
     
-- **Indicador de compra anticipada**
-
-    Indica si el Titular de la tarjeta está realizando un pedido de mercancía con una disponibilidad futura o una fecha de lanzamiento.
+- **Indicador de compra anticipada**: Indica si el Titular de la tarjeta está realizando un pedido de mercancía con una disponibilidad futura o una fecha de lanzamiento.
     
     Los valores recibidos son:
     
     - 01 = Mercancía disponible
     - 02 = Disponibilidad futura
     
-- **Fecha de reserva**
+- **Fecha de reserva**: Para una compra pre-ordenada, la fecha esperada en que la mercancía estará disponible, el tipo de dato que se recibe es en el formato AAAAMMDD.
+    
+- **Monto de la tarjeta de regalo**: El monto de la tarjeta de regalo.
+    
+- **Moneda de la tarjeta de regalo**: La moneda de uso en la compra de la tarjeta de regalo. 
+    
+- **Recuento de tarjetas de regalo**: Cantidad de tarjetas de regalo. 
 
-    Para una compra pre-ordenada, la fecha esperada en que la mercancía estará disponible, el tipo de dato que se recibe es en el formato AAAAMMDD.
-    
-- **Monto de la tarjeta de regalo**
-    
-    El monto de la tarjeta de regalo.
-    
-- **Moneda de la tarjeta de regalo**
-
-    La moneda de uso en la compra de la tarjeta de regalo. 
-    
-- **Recuento de tarjetas de regalo**
-
-    Recuento de las tarjetas de regalo. 
-
-- **Categoría de mensaje**
-    
-    Identifica la categoría del mensaje para un caso de uso específico.
+- **Categoría de mensaje**: Identifica la categoría del mensaje para un caso de uso específico.
     
     Los valores recibidos son:
     
@@ -936,73 +850,39 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     - 03–79 = Reservado para uso futuro de EMVCo (valores no válidos hasta que los defina EMVCo)
     - 80–99 = Reservado para uso de DS
     
-- **Código del país del número de teléfono móvil del titular de la tarjeta**
+- **Código del país del número de teléfono móvil del titular de la tarjeta**: El código del teléfono móvil proporcionado por el titular de la tarjeta. El valor recibido es de 1 a 3 caracteres.
 
-    El código del teléfono móvil proporcionado por el titular de la tarjeta. El valor recibido es de 1 a 3 caracteres.
+- **Número de teléfono móvil del titular de la tarjeta**: El número de teléfono móvil proporcionado por el titular de la tarjeta. El valor recibido es de maximo 15 caracteres. 
 
-- **Número de teléfono móvil del titular de la tarjeta**
+- **Moneda de compra**: Moneda en la que se expresa el monto de la compra. El valor a recibir es el código de moneda de tres dígitos según el ISO 4217.
 
-    El número de teléfono móvil proporcionado por el titular de la tarjeta. El valor recibido es de maximo 15 caracteres. 
+- **Fecha de compra**: Fecha y hora de la compra expresada en UTC.
 
-- **Moneda de compra**
-
-    Moneda en la que se expresa el monto de la compra. El valor a recibir es el código de moneda de tres dígitos según el ISO 4217.
-
-- **Fecha de compra**
-
-    Fecha y hora de la compra expresada en UTC.
-
-- **Datos de pago a plazos**
-
-    Indica el número máximo de autorizaciones permitidas para pagos a plazos.
+- **Datos de pago a plazos**: Indica el número máximo de autorizaciones permitidas para pagos a plazos.
     
-- **Caducidad recurrente**
-
-    Fecha a partir de la cual no se realizarán más autorizaciones.
+- **Caducidad recurrente**: Fecha a partir de la cual no se realizarán más autorizaciones.
     
-- **Frecuencia recurrente**
+- **Frecuencia recurrente**: Indica el número mínimo de días entre autorizaciones.
 
-    Indica el número mínimo de días entre autorizaciones.
+- **Ciudad de la dirección de envío del titular de la tarjeta**: Parte de la ciudad de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de maximo 50 caracteres. 
 
-- **Ciudad de la Dirección de envío del titular de la tarjeta**
-
-    Parte de la ciudad de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de maximo 50 caracteres. 
-
-- **País de la Dirección de envío del titular de la tarjeta**
-
-    País de la dirección de envío solicitada por el Titular de la Tarjeta. El valor aceptado es el código de país de tres dígitos ISO 3166-1.
+- **País de la dirección de envío del titular de la tarjeta**: País de la dirección de envío solicitada por el Titular de la Tarjeta. El valor aceptado es el código de país de tres dígitos ISO 3166-1.
     
-- **Dirección de envío del titular de la tarjeta 1**
-
-    Primera línea de la dirección postal o parte local equivalente de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de máximo 50 caracteres. 
+- **Dirección de envío del titular de la tarjeta 1**: Primera línea de la dirección postal o parte local equivalente de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de máximo 50 caracteres. 
                                                                    
-- **Dirección de envío del titular de la tarjeta 2**
-
-    Segunda línea de la dirección postal o parte local equivalente de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de maximo 50 caracteres. 
+- **Dirección de envío del titular de la tarjeta 2**: Segunda línea de la dirección postal o parte local equivalente de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de maximo 50 caracteres. 
     
-- **Dirección de envío del titular de la tarjeta 3**
-
-    Tercera línea de la dirección postal o parte local equivalente de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de maximo 50 caracteres. 
+- **Dirección de envío del titular de la tarjeta 3**: Tercera línea de la dirección postal o parte local equivalente de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de maximo 50 caracteres. 
    
-- **Código postal de la dirección de envío del titular de la tarjeta**
-
-    El ZIP u otro código postal de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de maximo 16 caracteres.
+- **Código postal de la dirección de envío del titular de la tarjeta**: El ZIP u otro código postal de la dirección de envío solicitada por el titular de la tarjeta. El valor recibido es de maximo 16 caracteres.
     
-- **Estado de la dirección de envío del titular de la tarjeta**
+- **Estado de la dirección de envío del titular de la tarjeta**: El estado o provincia de la dirección de envío asociada con la tarjeta que se utiliza para esta compra. El valor aceptado debe ser el código de subdivisión del país definido en ISO 3166-2.
 
-    El estado o provincia de la dirección de envío asociada con la tarjeta que se utiliza para esta compra. El valor aceptado debe ser el código de subdivisión del país definido en ISO 3166-2.
-
-- **Indicador de desafío del solicitante de 3DS**
-
-    El código del desafío del solicitante que entrega 3DS.
+- **Indicador de desafío del solicitante de 3DS**: El código del desafío del solicitante que entrega 3DS.
     
-- **Datos de autenticación de transacciones previas del solicitante 3DS**
+- **Datos de autenticación de transacciones previas del solicitante 3DS**:  Datos que documentan y respaldan un proceso de autenticación específico. En la versión actual de la especificación, este elemento de datos no está definido en detalle, sin embargo, la intención es que para cada método de autenticación de solicitante 3DS, este campo contenga datos que el ACS pueda usar para verificar el proceso de autenticación. En versiones futuras de la especificación, se espera que se incluyan estos detalles. El valor recibido es de maximo 2048 caracteres.             
 
-    Datos que documentan y respaldan un proceso de autenticación específico. En la versión actual de la especificación, este elemento de datos no está definido en detalle, sin embargo, la intención es que para cada método de autenticación de solicitante 3DS, este campo contenga datos que el ACS pueda usar para verificar el proceso de autenticación. En versiones futuras de la especificación, se espera que se incluyan estos detalles. El valor recibido es de maximo 2048 caracteres.
-                                                                                                              
-- **Método de autenticación de transacción previa del solicitante 3DS**
-
-    Mecanismo utilizado por el titular de la tarjeta para autenticarse previamente ante el Solicitante 3DS.
+- **Método de autenticación de transacción previa del solicitante 3DS**: Mecanismo utilizado por el titular de la tarjeta para autenticarse previamente ante el Solicitante 3DS.
     
     Los valores recibidos son:
     
@@ -1013,22 +893,14 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     - 05–79 = Reservado para uso futuro de EMVCo (valores no válidos hasta que los defina EMVCo)
     - 80–99 = Reservado para uso de DS
     
-- **Marca de tiempo de autenticación de transacción previa del solicitante 3DS**
-
-    Fecha y hora en UTC de la autenticación del titular de la tarjeta anterior.
+- **Marca de tiempo de autenticación de transacción previa del solicitante 3DS**: Fecha y hora en UTC de la autenticación del titular de la tarjeta anterior.
     
-- **Referencia de transacción previa del solicitante 3DS**
+- **Referencia de transacción previa del solicitante 3DS**: Este elemento de datos proporciona información adicional al ACS para determinar el mejor enfoque para entregar una solicitud.
 
-    Este elemento de datos proporciona información adicional al ACS para determinar el mejor enfoque para entregar una solicitud.
-
-- **ID de operador del servidor 3DS**
-
-    Identificador del operador que entrega el servidor de 3DS.
+- **ID de operador del servidor 3DS**: Identificador del operador que entrega el servidor de 3DS.
     
-- **Indicador 3RI**
-
-    Indica el tipo de solicitud 3RI.
-    Este elemento de datos proporciona información adicional al ACS para determinar el mejor enfoque para entregar una solicitud 3RI.
+- **Indicador 3RI**: Indica el tipo de solicitud 3RI.
+  Este elemento de datos proporciona información adicional al ACS para determinar el mejor enfoque para entregar una solicitud de tipo 3RI.
     
     Los valores recibidos son:
     
@@ -1046,9 +918,7 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     - 12–79 = Reservado para uso futuro de EMVCo (valores no válidos hasta que los defina EMVCo)
     - 80–99 = Reservado para uso de DS
     
-- **Tipo de transacción**
-
-    Identifica el tipo de transacción que se autentica.
+- **Tipo de transacción**: Identifica el tipo de transacción que se autentica.
     
     Los valores recibidos son:
     
@@ -1059,9 +929,7 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     - 28 = Activación y carga prepago
     *Nota: Valores derivados de la norma ISO 8583.*
     
-- **Estado de la lista blanca**
-
-    Permite la comunicación del estado de la lista blanca para los beneficiarios de confianza entre ACS, DS y 3DS Requestor.
+- **Estado de la lista blanca**: Permite la comunicación del estado de la lista blanca para los beneficiarios de confianza entre ACS, DS y 3DS Requestor.
     
     Los valores recibidos son:
     
@@ -1074,9 +942,7 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     
     *Nota: Los valores válidos en el mensaje AReq son Y o N*
     
-- **Fuente de estado de la lista blanca**
-
-    Este elemento de datos se completará con la configuración del sistema de estado de la lista blanca.
+- **Fuente de estado de la lista blanca**: Este elemento de datos se completará con la configuración del sistema de estado de la lista blanca.
     
     Los valores recibidos son:
     
@@ -1086,23 +952,21 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     - 04-79 = Reservado para uso futuro de EMVCo (valores no válidos hasta que los defina EMVCo)
     - 80-99 = Reservado para uso de DS
     
-- **Código del país del número de teléfono del trabajo del titular de la tarjeta'**
+- **Código del país del número de teléfono del trabajo del titular de la tarjeta**: El código del teléfono del trabajo proporcionado por el titular de la tarjeta. El valor recibido tiene de 1 a 3 caracteres.
 
-    El código del teléfono del trabajo proporcionado por el titular de la tarjeta. El valor recibido tiene de 1 a 3 caracteres.
-
-- **Número de teléfono del trabajo del titular de la tarjeta**
-
-    El número de teléfono del trabajo proporcionado por el titular de la tarjeta. El valor recibido es de maximo 15 caracteres. 
+- **Número de teléfono del trabajo del titular de la tarjeta**: El número de teléfono del trabajo proporcionado por el titular de la tarjeta. El valor recibido es de maximo 15 caracteres. 
 
 ### Reglas de puntuación:
 
-#### Puntuación del emisor:
+<br>
+
+#### Regla de puntuación del emisor:
 Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
 
-#### Puntuación histórica:
+#### Regla de puntuación histórica:
 Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el tarjetahabiente históricamente. Se evalúa a partir de transacciones anteriores. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
 
-#### Puntuación RBA Master Card:
+#### Regla de puntuación RBA Master Card:
 Esta regla valida la solicitud de autenticación a partir de la puntuación de riesgo evaluada para MasterCard. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
 
  Los operadores disponibles para las reglas de puntuación son:
@@ -1118,38 +982,40 @@ Esta regla valida la solicitud de autenticación a partir de la puntuación de r
 
   - **Igual a**, acepta un valor y valida que el dato de la autenticación sea igual al valor dado en la regla.
 
-Un ejemplo de una regla de puntuación es el siguiente:
+*Un ejemplo de una regla de puntuación es el siguiente:*
 
   ![](https://wiki.placetopay.com/images/8/8d/Score-rule.png)
 
 ### Reglas de coincidencia o match:
 
-#### Coincidencia para correo electrónico: 
+<br>
+
+#### Regla de coincidencia para correo electrónico: 
 Esta regla permite validar si el correo electrónico del tarjetahabiente que llega en los datos de autenticación, coincide con el correo electrónico guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-#### Coincidencia para teléfono móvil:
+#### Regla de coincidencia para teléfono móvil:
 Esta regla permite validar si el teléfono móvil del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono móvil guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-#### Coincidencia para teléfono fijo:
+#### Regla de coincidencia para teléfono fijo:
 Esta regla permite validar si el teléfono fijo del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono fijo guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-#### Coincidencia para teléfono del trabajo:
+#### Regla de coincidencia para teléfono del trabajo:
 Esta regla permite validar si el teléfono del trabajo del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono del trabajo guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-#### Coincidencia para el dispositivo:
+#### Regla de coincidencia para el dispositivo:
 Esta regla permite validar si el fingerprint o huella digital del tarjetahabiente que se crea en la transacción, coincide con algún fingerprint guardado para el mismo tarjetahabiente en transacciones exitosas anteriores. El fingerprint es un método que registra automáticamente un identificador de un usuario, a partir de la información captada con el dispositivo usado al realizar una transacción o un movimiento digital.
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-Un ejemplo de una regla tipo match es el siguiente:
+*Un ejemplo de una regla tipo match es el siguiente:*
 
 ![](https://wiki.placetopay.com/images/3/33/Match-mobile-phone-rule.png)
 
@@ -1166,34 +1032,34 @@ Por ejemplo, puede crear dos grupos, uno llamado *Lista blanca*, donde se podrí
 
 Para acceder al índice de grupos de reglas, diríjase al menú **Gestionar control de fraude -> Grupos de control de fraude**, ubicado en las pestañas de la parte superior del detalle de un emisor.
 
-En la siguiente imagen se muestra el listado de grupos de control de fraude de un emisor. La información se encuentra organizada en una tabla y muestra los datos principales de los grupos tales como: Nombre, Fecha, Reglas y Estado.
+En la siguiente imagen se muestra un listado de grupos de control de fraude de un emisor. La información se encuentra organizada en una tabla y muestra los datos principales de los grupos tales como: Nombre, fecha, reglas y estado.
 
 ![](https://wiki.placetopay.com/images/7/7b/Group-index.png)
 
 ### ¿Cómo crear un nuevo grupo de reglas?
 
-Para crear un grupo, haga clic el botón *Crear* ubicado en la parte lateral derecha del índice de grupos. Se desplegará un formulario similar al siguiente:
+Para crear un grupo, haga clic el botón **Crear** ubicado en la parte lateral derecha del índice de grupos. Se desplegará un formulario similar al siguiente:
 
 ![](https://wiki.placetopay.com/images/0/08/Create-group.png)
 
-En el formulario solo debe ingresar el nombre que desea que tenga el grupo y haga clic en el botón *Guardar*.
+En el formulario solo debe ingresar el nombre que desea que tenga el grupo, luego haga clic en el botón *Guardar*.
 
 > Un grupo de reglas solo se ejecuta cuando al crear una nueva regla, se escoge la opción *Ejecutar grupo de reglas*, se selecciona el grupo específico, y posteriormente, se habilita la regla.
 
 ### Detalles de un grupo:
 
-Para visualizar los detalles de un grupo, haga clic en el botón *Ver*, ubicado en la parte lateral derecha de la tabla, al frente de cada grupo.
+Para visualizar los detalles de un grupo, haga clic en el botón **Ver**, ubicado en la parte lateral derecha de la tabla, al frente de cada grupo.
 
 Visualizará una vista como la siguiente:
 
-![](https://wiki.placetopay.com/images/1/1c/Group-detail.png)
+![](https://wiki.placetopay.com/images/6/68/Detalle-grupo-antifraude.png)
 
-#### Habilitar y Deshabilitar un grupo:
-Para habilitar o deshabilitar un grupo, haga clic en el menú lateral derecho con tres puntos y deslice el botón tipo switch para habilitar o deshabilitar según corresponda.
+#### Habilitar y deshabilitar un grupo:
+Para habilitar o deshabilitar un grupo, haga clic en el menú lateral derecho, en el detalle del grupo y deslice el botón tipo switch para habilitar o deshabilitar según corresponda.
 
 #### Reglas de un grupo:
 En la parte inferior del detalle de un emisor, encontrará el listado de reglas en producción del grupo, listadas en una tabla que muestra el estado de la regla, el nombre y la acción que ejecutan al validar. 
-Puede habilitarlas o deshabilitarlas, haciendo clic en el menú con tres puntos ubicado al final de cafa regla. También, puede visualizar los detalles de cada regla presionar el botón con ícono de ojo.
+Puede habilitarlas o deshabilitarlas, haciendo clic en el menú desplegable ubicado al final de cada regla. También, puede visualizar los detalles de cada regla presionar el botón con la leyenda *Ver*.
 
 #### Solicitudes de reglas:
 Esta funcionalidad se comporta igual a la sección de solicitudes de las *Reglas de control antifraude*, con la diferencia que las solicitudes de reglas que se hagan para crear, actualizar o eliminar reglas, se guardarán exclusivamente para el grupo escogido.
