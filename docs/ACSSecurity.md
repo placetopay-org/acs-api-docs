@@ -33,7 +33,7 @@ title: Cuenta de usuario
 
 La siguiente imagen muestra un ejemplo de una pantalla inicial, a esta vista se redirecciona el usuario cuando se loguea exitosamente en ACS. 
 
-![](https://wiki.placetopay.com/images/9/9a/Home.png)
+![](https://wiki.placetopay.com/images/e/ed/Pagina-inicial.png)
 
 En esta vista encontrará:
  - Fecha y hora del último inicio de sesión.
@@ -88,9 +88,9 @@ En este módulo se gestionan las invitaciones que realiza un usuario registrado 
 
 En este módulo se puede visualizar el listado de invitaciones creadas. El listado contiene el nombre de la invitación, el estado y las fechas de creación y actualización.
 
-El siguiente es un ejemplo de un índice de invitaciones, con una invitación en estado *Aceptada*.
+El siguiente es un ejemplo de un índice de invitaciones:
 
-![](https://wiki.placetopay.com/images/f/fb/Invitations-index-2.png)
+![](https://wiki.placetopay.com/images/c/cd/Indice-invitaciones.png)
 
 ### Estados de las invitaciones:
 
@@ -100,10 +100,7 @@ Las invitaciones poseen dos estados:
 
 - **Pendiente:** Una invitación adquiere este estado, cuando un usuario o el grupo de usuarios a los cuales se les envió, no han aceptado la misma.
 
-> Cuando la invitación fue enviada a varios usuarios, el estado se muestra con un indicador similar al siguiente, el cual muestra cuantas de las invitaciones enviadas, están en el estado específico.
-
-![](https://wiki.placetopay.com/images/0/05/Invitation-state.png)
-
+> Cuando la invitación fue enviada a varios usuarios, el estado se muestra con un indicador de cuantas invitaciones fueron aceptadas y cuantas fueron enviadas.
 
 ## Invitaciones para crear nuevos usuarios de ACS:
 
@@ -215,7 +212,7 @@ En este módulo se gestionan los roles de usuario de la aplicación. Inicialment
 
 ## ¿Cómo crear un nuevo rol?
 
-Además, se pueden crear nuevos roles mediante el botón *Crear*, ubicado en la parte lateral derecha. Se debe diligenciar un nombre y opcionalmente una descripción para el mismo.
+Además, se pueden crear nuevos roles mediante el botón **Crear**, ubicado en la parte lateral derecha. Se debe diligenciar un nombre y opcionalmente una descripción para el mismo.
 
 ![](https://wiki.placetopay.com/images/9/92/Acs-create-role.png)
 
@@ -270,7 +267,7 @@ Además, esta sección posee un buscador de perfiles en la parte superior izquie
 
 Cada perfil cuenta con unas opciones para ser gestionado como son la opción de ver, editar o deshabilitar.
 
-![](https://wiki.placetopay.com/images/9/95/Acs-options-profile.png)
+![](https://wiki.placetopay.com/images/4/40/Acciones-perfiles.png)
 
 **Ver:** Permite visualizar una información más detallada del perfil como son el nombre, la fecha de creación, actualización, y el usuario que lo creó, al igual que los permisos que el perfil tiene a disposición o los que desea agregar. 
 
