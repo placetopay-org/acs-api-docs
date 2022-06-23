@@ -55,7 +55,7 @@ En este formulario de inicio de sesión, ingrese el correo electrónico con el c
 
 ### Restablecimiento de contraseña:
 
-Si olvidó la contraseña de inicio de sesión, puede hacer clic en la opción **¿Olvidaste tu contraseña?** y se redireccionará a un formalario para ingresar su correo electrónico y enviar una solicitud de cambio de contraseña. Visualizará un formulario como el siguiente:
+Si olvidó la contraseña de inicio de sesión, puede hacer clic en la opción **¿Olvidaste tu contraseña?** y se redireccionará a un formulario para ingresar su correo electrónico y enviar una solicitud de cambio de contraseña. Visualizará un formulario como el siguiente:
 
 ![](https://wiki.placetopay.com/images/a/ad/Password-login.png)
 
@@ -123,9 +123,7 @@ Cuando seleccione el detalle de un emisor, puede encontrarse con un mensaje como
 
 Para habilitar las configuraciones, diríjase al menú **Configuraciones** del emisor.
 
-![](https://wiki.placetopay.com/images/d/d8/Issuer-menus.png)
-
-Luego, se va a desplegar un menú como el siguiente con tres secciones, busque los campos de configuración mencionados en el mensaje, accediendo con un clic a cada una de las secciones y habilite el campo o los campos deshabilitados.
+Luego, se va a desplegar un menú como el de la siguiente imagen, con tres secciones. Busque los campos de configuración mencionados en el mensaje, accediendo con un clic a cada una de las secciones y habilite el campo o los campos deshabilitados, y diligencie valores de configuración para los campos deshabilitados que lo requieran.
 
 Cuando tenga todos los campos habilitados, intente habilitar nuevamente el emisor.
 
@@ -145,7 +143,7 @@ Tenga en cuenta que para brindar un excelente servicio de soporte, es necesario 
 
 Para acceder a este servicio, puede contactarse por alguno de los siguientes medios y le atenderemos con gusto.
 
-  - **Página web:** https://www.placetopay.com
+  - **Página web:** https://www.evertecinc.com/pasarela-de-pagos-e-commerce
   - **Teléfonos:** 444 2310 / 317 431 0510
   - **Correo electrónico:** servicioposventa@placetopay.com
   - **Dirección:** Carrera 65 # 45 - 20 oficina 430 Medellín - Colombia
