@@ -9,7 +9,7 @@ title: Generalidades del emisor
 
 ## ¿Qué es un emisor?
 
-Un emisor o banco emisor, es la institución financiera responsable de emitir los medios de pago, como tarjetas de débito o de crédito. Estas tarjetas de pago se emiten con la marca de la asociación de tarjetas o franquicia. También pueden existir emisores de tarjetas de pago propias y no franquiciadas.
+Un emisor o banco emisor, es la institución financiera responsable de emitir los medios de pago, como tarjetas de débito o de crédito. Estas tarjetas de pago se emiten con la marca de la asociación. También pueden existir emisores de tarjetas de pago propias y no franquiciadas.
 
 Entre las funciones de un emisor están:
 
@@ -28,17 +28,17 @@ Entre las funciones de un emisor están:
 
 Para acceder al listado de emisores de la aplicación siga los siguientes pasos:
 
-1. Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione "Sistema" y luego "Emisores":
+**1.** Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione "Sistema" y luego "Emisores":
 
-![](https://wiki.placetopay.com/images/e/e8/Issuers-menu.2.png)
+  ![](https://wiki.placetopay.com/images/3/34/Emisor-menu.png)
 
-2. Visualizará una pantalla similar a la siguiente:
+**2.** Visualizará una pantalla similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/4/4e/Issuer-index.png)
+  ![](https://wiki.placetopay.com/images/8/83/Indice-emisores.png)
 
 ## ¿Cómo crear un emisor en ACS?
 
-Para crear un emisor, haga clic en el botón Crear ubicado en la parte lateral derecha del índice de emisores.
+Para crear un emisor, haga clic en el botón **Crear**, ubicado en la parte lateral derecha del índice de emisores.
 
 Visualizará un formulario similar al siguiente:
 
@@ -58,31 +58,30 @@ Para diligenciarlo tenga en cuenta los siguientes datos:
 
 ### Validación de datos:
 
-Para el formulario de creación de un emisor en ACS, y para todos los formularios en general de la aplicación, se dispone de la funcionalidad de validación de los datos ingresados, lo cual permite asegurar la integridad y funcionalidad de los datos.
+Para el formulario de creación de un emisor en ACS, y para todos los formularios en general de la aplicación, se dispone de la funcionalidad de validación de los datos ingresados, lo cual permite asegurar la integridad y validez de los datos ingresados en los formularios.
 
-De esta forma, al diligencia el formulario puede encontrar dos tipos de validaciones:
+De esta forma, al diligenciar el formulario puede encontrar dos tipos de validaciones:
 
-1. **Validaciones de lado del cliente:**
+**1. Validaciones de lado del cliente:**
 
-    Estas validaciones se realizan cuando un dato no cumple las reglas mínimas de aceptación y no hay necesidad de enviar la respuesta al servidor si se ha validado previamente que está errónea la información. Se visualizan con mensajes en rojo para el campo erróneo y le ofrece al usuario una ayuda de cómo debe diligenciar el campo en cuestión para ser aceptado. Si hay errores en estas validaciones, la aplicación no permite el envío del formulario.
+  Estas validaciones se realizan cuando un dato no cumple las reglas mínimas de aceptación y no hay necesidad de enviar la respuesta al servidor, sí se ha validado previamente que está errónea la información. Se visualizan con mensajes en rojo para el campo erróneo y le ofrece al usuario una ayuda de cómo debe diligenciar el campo en cuestión para ser aceptado. Si hay errores en estas validaciones, la aplicación no permite el envío del formulario.
 
-    La siguiente imagen ilustra errores en validaciones del lado del cliente:
+  La siguiente imagen ilustra errores en validaciones del lado del cliente:
 
+  ![](https://wiki.placetopay.com/images/3/30/Issuer-pre-validations.png)
 
-    ![](https://wiki.placetopay.com/images/3/30/Issuer-pre-validations.png)
+**2. Validaciones de lado del servidor:**
 
-1. **Validaciones de lado del servidor:**
+  Estas validaciones se aplican cuando se envía un formulario o una información al servidor y ésta no cumple con las validaciones requeridas, por lo cual se genera un error, deniega la solicitud y muestra al usuario el error encontrado. Estas validaciones se ejecutan cuando no se han registrado como validaciones del lado del cliente, o son complicadas de validar del lado del cliente o el usuario logra por algún medio pasar el primer filtro de validaciones del cliente con la información errónea, sin embargo, este filtro de validaciones detiene una solicitud con datos inválidos.
 
-    Estas validaciones se aplican cuando se envía un formulario o una data al servidor y esta no cumple con las validaciones requeridas, por lo cual se genera un error, deniega la solicitud y muestra al usuario el error encontrado. Estas validaciones se ejecutan cuando no se han registrado como validaciones del lado del cliente, o son complicadas de validar del lado del cliente o el usuario logra por algún medio pasar el primer filtro de validaciones del cliente con la información errónea, sin embargo, este filtro de validaciones detiene una solicitud con datos inválidos.
+  La siguiente imagen ilustra errores en validaciones del lado del servidor, en la cual se logró enviar el formulario pero al momento de recibirlo se encontraron errores en los datos de la solicitud, por lo cual no pudo ser procesada correctamente:
 
-    La siguiente imagen ilustra errores en validaciones del lado del servidor, en la cual se logró enviar el formulario pero al momento de recibirlo se encontraron errores en los datos de la solicitud, por lo cual no pudo ser procesada correctamente:
+  ![](https://wiki.placetopay.com/images/9/91/Image-issuer-error.png)    
 
-
-    ![](https://wiki.placetopay.com/images/9/91/Image-issuer-error.png)    
 
 ## ¿Cuáles son los requerimientos para crear un emisor en ACS?
 
-Para crear y configurar un emisor en ACS, este debe haber emitido tarjetas de pago con las franquicias que ya hayan sido certificadas para funcionar en ACS.
+Para crear y configurar un emisor en ACS, este debe haber emitido tarjetas de pago con las marcas que ya hayan sido certificadas para funcionar en ACS.
 
 Se requiere que el país y el idioma con el cual se vaya a crear el emisor, estén disponibles para ACS.
 
@@ -90,8 +89,7 @@ Se requiere que exista una relación entre emisor, adquiriente y comercio y que 
 
 Importante tener en cuenta habilitar todos los campos de configuración del menú *Campos de configuración* de la aplicación, antes de crear el emisor, ya que todos estos campos son requeridos para el funcionamiento básico de un emisor.
 
-> En este punto es importante recordar que la aplicación de **MPI** también implementa y pertenece al flujo propuesto por el protocolo 3-D Secure para autenticar un tarjetahabiente.
-Pertenece al dominio el adquiriente y entre sus funciones principales están:
+> En este punto es importante recordar que la aplicación de **MPI** también implementa y pertenece al flujo propuesto por el protocolo 3-D Secure para autenticar un tarjetahabiente. Pertenece al dominio el adquiriente y entre sus funciones principales están:
   >> - Recibir y responder la petición de autenticación enviada por el comercio o pasarela de pagos.
   >> - Solicitar al emisor la autorización del pago.
   >> - Responder al comercio o pasarela de pagos el estado final de la autenticación.
@@ -105,63 +103,60 @@ En esta sección se visualiza el listado o índice de emisores, la información 
 
 ### Acciones disponibles para los emisores:
 
-En el título "Acciones" ubicado en la parte lateral derecha del índice de emisores, se encuentra un menú con tres puntos,haga clic en este menú y despliegue las acciones o funcionalidades disponibles para cada emisor. En el menú se encuentran las siguientes acciones:
+En el título "Acciones" ubicado en la parte lateral derecha del índice de emisores, se encuentra un menú con tres puntos, haga clic en este menú y despliegue las acciones o funcionalidades disponibles para cada emisor. En el menú se encuentran las siguientes acciones:
 
 - **Ver:** Seleccione esta opción para visualizar los detalles del emisor, sus configuraciones y componentes.
 
   Visualizará una vista similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/c/c6/Issuer-detail2.png)
+  ![](https://wiki.placetopay.com/images/8/8f/Detalles-emisor.png)
 
-- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó el emisor. 
+- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales se creó el emisor. 
 
   Visualizará un formulario similar al de creación del emisor. Todos los datos son editables.
 
-![](https://wiki.placetopay.com/images/3/3c/Edit-issuer.png)
+  ![](https://wiki.placetopay.com/images/3/3c/Edit-issuer.png)
 
 - **Habilitar o Deshabilitar:** Deslice el botón tipo switch para habilitar el emisor si se encuentra deshabilitado o para deshabilitarlo cuando se encuentre habilitado. 
 
-![](https://wiki.placetopay.com/images/8/81/Issuer-actions-toggle.png)
+  ![](https://wiki.placetopay.com/images/8/81/Issuer-actions-toggle.png)
 
-Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirmación similar al siguiente e inmediatamente cambiará el estado del emisor editado.
+  Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirmación similar al siguiente e inmediatamente cambiará el estado del emisor editado.
 
-![](https://wiki.placetopay.com/images/c/ca/Issuer-toggle.png)
+  ![](https://wiki.placetopay.com/images/c/ca/Issuer-toggle.png)
 
 ### ¿Cómo habilitar un emisor?
 
-1. **Active los campos de configuración requeridos:** En el menú *Campos de configuración* de la aplicación, habilite todos los campos de configuración (debe habilitarlos antes de crear el emisor), ya que estos son requeridos para la habilitación del emisor. Para obtener más información de los campos de configuración, vaya al título *Campos de configuración* del presente documento.
+**1. Active los campos de configuración requeridos:** En el menú *Campos de configuración* de la aplicación, habilite todos los campos de configuración (debe habilitarlos antes de crear el emisor), ya que estos son requeridos para la habilitación del emisor. Para obtener más información de los campos de configuración, vaya al título **Campos de configuración** del presente documento.
 
-    La siguiente imagen muestra un índice de los campos de configuración donde todos los campos visibles están habilitados, así deben estar para comenzar a configurar correctamente el emisor.
+  La siguiente imagen muestra un índice de los campos de configuración donde todos los campos visibles están habilitados, así deben estar para comenzar a configurar correctamente el emisor.
 
-    ![](https://wiki.placetopay.com/images/a/a7/Settings-index-2.png)
+  ![](https://wiki.placetopay.com/images/f/f3/Campos-configuracion-indice.png)
 
-    > Si algún campo se encuentra deshabilitado, despliegue el menú de la parte lateral derecha y seleccione la opción *Habilitar*.
+  > Si algún campo se encuentra deshabilitado, despliegue el menú de la parte lateral derecha y seleccione la opción *Habilitar*.
 
-2. **Habilitar estrategias del emisor:** En los detalles del emisor, en la pestaña *Configuraciones*, y luego en la pestaña *Servicios*, encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante), debe habilitar ambas estrategias (cardholderStrategy y otpStrategy).
+**2. Habilitar estrategias del emisor:** En los detalles del emisor, en la pestaña *Configuraciones*, y luego en la pestaña *Servicios*, encontrará las estrategias disponibles para el emisor (esta funcionalidad se explica más adelante), debe habilitar tres estrategias (cardholderStrategy, otpStrategy y authStrategy).
 
-    Un ejemplo del menú *Services* es el siguiente:
+  Un ejemplo del menú *Servicios* es el siguiente:
 
-   ![](https://wiki.placetopay.com/images/c/c4/Issuer-settings-disable-services.png)
-
+   ![](https://wiki.placetopay.com/images/3/3c/Estrategias.png)
     
-    Nótese que en la imagen anterior, las estrategia se encuentran deshabilitadas. Si se intentara habilitar el emisor con una o ambas estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
+  Nótese que en la imagen anterior, las estrategias se encuentran habilitadas. Si se intentara habilitar el emisor con una o todas las estrategias deshabilitadas, arrojaría un error como el siguiente y no permitiría ejecutar la habilitación del emisor.
 
-    ![](https://wiki.placetopay.com/images/f/f6/Issuer-enable-error2.png)
+  ![](https://wiki.placetopay.com/images/8/88/Error-habilitacion.png)
 
 
-3. **Suscribir franquicia al emisor:** En la pestaña *Franquicias suscritas* del detalle del emisor, seleccione una franquicia del listado, sino hay franquicias disponibles, debe ir al menú *Franquicias* de la aplicación y crear una nueva franquicia para el emisor, para esto guíese de la sección *Configuración de franquicias* de la presente documentación.
-
-    > La franquicia seleccionada debe ser diferente a franquicias previamente suscritas a otros emisores. 
+**3. Suscribir marca al emisor:** En la pestaña **Operaciones -> Marcas suscritas** del detalle del emisor,  seleccione una marca del listado, sino hay marcas disponibles, debe ir al menú *Marcas* de la aplicación y crear una nueva marca para el emisor, para esto guíese de la sección *Configuración de marcas* de la presente documentación.
     
-4. **Configurar rangos de tarjeta para el emisor:** En la pestaña *Gestionar rangos de tarjetas* del detalle del emisor, haga clic en el botón *Crear* y cree rangos de tarjeta manuales o por importación, para ello guíese de la sección *Gestión de rangos de tarjetas* del presente documento.
+**4. Configurar rangos de tarjeta para el emisor:** En la pestaña **Operaciones -> Gestionar rangos de tarjetas** del detalle del emisor, haga clic en el botón *Crear* y cree rangos de tarjeta manuales o por importación, para ello guíese de la sección *Gestión de rangos de tarjetas* del presente documento.
     
-5. **Crear certificado tipo Cliente para las franquicias del emisor:** Para habilitar un emisor debe crear un certificado tipo *CLIENT*, en el menú de *Certificados*, y seleccionar el emisor correspondiente y una franquicia suscrita para el mismo emisor. Luego debe firmar el certificado con la entidad certificadora y en el índice de certificados, este debe registrar en el campo *Certificado* con el estado *Encontrado*, que indica que fue validado correctamente. 
+**5. Crear certificado tipo Cliente para las marcas del emisor:** Para habilitar un emisor debe crear un certificado tipo *CLIENT*, en el menú de *Certificados*, y seleccionar el emisor correspondiente y una marca suscrita para el mismo emisor. Luego debe firmar el certificado con la entidad certificadora y en el índice de certificados, este debe registrar en el campo *Certificado* con el estado *Encontrado*, que indica que fue validado correctamente. 
 
-    Para crear el certificado, guíese de la sección *Otras configuraciones* pestaña *Certificados SSL*.
+  Para crear el certificado, guíese de la sección **Otras configuraciones**, pestaña **Certificados SSL**.
 
-    Un ejemplo de la primera vista del formulario de creación de un certificado es el siguiente:
+  Un ejemplo de la primera vista del formulario de creación de un certificado es el siguiente:
 
-    ![](https://wiki.placetopay.com/images/8/8a/Client-certificate.png)
+  ![](https://wiki.placetopay.com/images/4/4a/Formulario-cert.png)
 
 ## Detalles de un emisor
 
@@ -169,41 +164,39 @@ Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirma
 
 Para ir a los detalles de un emisor, haga clic en la acción *Ver* del menú desplegable del emisor, ubicado en el índice de emisores. 
 
-En la siguiente imagen se visualiza un ejemplo de la parte superior de la vista de *Detalles de un emisor*. En la vista se encuentra la información con la cual se creó el emisor, el estado en que se encuentra el emisor (está habilitado o no),las fechas de creación del emisor y de actualización y los usuarios que hicieron la creación y/o la actualización.
-
-En la parte lateral derecha hay un recuadro en el cual se debe mostrar el logo del emisor, para este ejemplo no se cargó una imagen, por lo cual se muestra en negro.
+En la siguiente imagen se visualiza un ejemplo de la parte superior de la vista de *Detalles de un emisor*. En la vista se encuentra la información con la cual se creó el emisor, el estado en que se encuentra el emisor (está habilitado o no), las fechas de creación del emisor y de actualización y los usuarios que hicieron la creación y/o la actualización.
 
 Además, en la parte lateral derecha, hay un botón para acceder al formulario de edición en caso de requerirlo.
 
-![](https://wiki.placetopay.com/images/c/c6/Issuer-detail2.png)
+![](https://wiki.placetopay.com/images/8/8f/Detalles-emisor.png)
 
-## Gestión de franquicias:
+## Gestión de marcas:
 
-Para acceder a este menú, haga clic en el menú *Franquicias suscritas*, que actualmente se ubica al lado derecho del menú *Detalles del emisor*. 
+Para acceder a esta funcionalidad, haga clic en el menú **Operaciones -> Marcas suscritas**, que actualmente se ubica al lado derecho del menú *Detalles del emisor*. 
 
 Luego visualizará una vista similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/6/62/Issuer-franchises.png)
+![](https://wiki.placetopay.com/images/5/5f/Marcas-emisor.png)
 
-En ella encontrará el listado de franquicias agregadas para el emisor y un formulario para agregar nuevas franquicias.
+En ella encontrará el listado de marcas registradas para el emisor y un formulario para agregar nuevas marcas.
 
-> Para las franquicias solo está disponible la función de *Eliminar*, la cual se ejecuta dando clic en el botón con el mismo nombre ubicado al frente de cada franquicia.
+> Para las marcas están disponibles las funciones de *Editar* y *Eliminar*, las cuales se encuentran dando clic en el menú con tres puntos ubicado al final del registro de cada marca.
 
-### Agregar una nueva franquicia:
+### Agregar una nueva marca:
 
-Para suscribir una nueva franquicia a su emisor, dírijase a la primera sección de la vista actual, al apartado *Franquicia* y despliegue la lista de franquicias disponibles haciendo clic en la flecha hacia abajo. Seleccione una franquicia y haga clic en el botón *Agregar*.
+Para suscribir una nueva marca a su emisor, haga clic en el botón **Crear**, ubicado en la parte lateral derecha de la lista de marcas. Luego seleccione la marca de la lista disponible, la versión del protocolo y el certificado SSL correspondiente.
 
-![](https://wiki.placetopay.com/images/1/1f/Add-franchise.png)
+> Si la aplicación le arroja este mensaje *"No se ha encontrado certificados disponibles para hacer la suscripción a esta marca."*, entonces debe crear un certificado SSL para continuar con el proceso de suscripción de la marca.
 
 ## Gestión de rangos de tarjetas:
 
-Para acceder a este menú, haga clic en el menú *Gestionar rangos de tarjetas*, ubicado en la parte superior de la vista.
+Para acceder a este menú, haga clic en el menú **Operaciones -> Gestionar rangos de tarjetas**, ubicado en la parte superior de la vista.
 
 Visualizará un índice similar al siguiente:
 
-![](https://wiki.placetopay.com/images/2/22/Acs-card-ranges-index.png)
+![](https://wiki.placetopay.com/images/a/a2/Rangos-emisor.png)
 
-En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico. Puede ver la información principal de cada rango organizada en una tabla, entre los datos están: BIN del rango, Rango inicial, Rango final, Franquicia, Clase y las respectivas acciones que tienen cada uno de los rangos.
+En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico. Puede ver la información principal de cada rango organizada en una tabla,entre los datos están: BIN del rango, rango inicial, rango final, marca, clase, si acepta desafía desacoplado y las respectivas acciones que tienen cada uno de los rangos.
 
 ### Acciones de los rangos de tarjetas:
 
@@ -213,65 +206,62 @@ Las acciones disponibles para los rangos de tarjetas se encuentran ubicadas en e
 
   Visualizará una vista similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/6/6b/Card-range-detail.png)
+  ![](https://wiki.placetopay.com/images/a/ae/Detalle-rango.png)
 
-- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó el emisor. 
+- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó el rango.  Visualizará un formulario similar al de creación de un rango de tarjeta. Todos los datos son editables.
 
-  Visualizará un formulario similar al de creación de un rango de tarjeta. Todos los datos son editables.
-
-- **Eliminar:** Seleccione esta opción para eliminar un rango de tarjetas del emisor. Si elimina un rango tenga en cuenta que las solicitudes de autenticación que lleguen con un número de tarjeta que entre en este rango, no podrán ser procesadas.
+- **Eliminar:** Seleccione esta opción para eliminar un rango de tarjetas del emisor. Si elimina un rango, tenga en cuenta que las solicitudes de autenticación que lleguen con un número de tarjeta que esté en este rango, no podrán ser procesadas.
 
 
 ### ¿Cómo crear un rango de tarjetas?
 
-Al dar clic en el botón *Crear*, se desplegarán dos opciones para crear rangos:
+Al dar clic en el botón **Crear**, se desplegarán dos opciones para crear rangos:
 
   ![](https://wiki.placetopay.com/images/1/18/Create-button-card.png)
 
-1. **Crear un rango de tarjetas,** este permite crear un rango de forma manual.
+**1. Crear un rango de tarjetas,** este permite crear un rango de forma manual.
 
   Si selecciona esta opción, obtendrá un formulario similar al siguiente:
 
-  ![](https://wiki.placetopay.com/images/c/c3/Create-card-range.png)
+  ![](https://wiki.placetopay.com/images/f/f3/Crear-rango-form.png)
 
   Para diligenciar el formulario tenga en cuenta:
 
-   -  **Bin del rango:** Ingrese el bin del rango de la tarjeta a crear, este debe ser de 8 dígitos.
-
-   - **Franquicia:** Seleccione el nombre de la franquicia a la cual se le va a registrar el rango.
+   - **Marca:** Seleccione el nombre de la marca a la cual se le va a registrar el rango.
 
    - **Clase:** Ingrese el nombre de la clase del rango de tarjetas. Por ejemplo Gold, Platinium...
 
-   - **Rango inicial:** Ingrese los primeros números del BIN y adicione otros números que indiquen el inicio del rango. El valor debe tener 19 dígitos.
+   - **Rango inicial:** Ingrese los primeros números del BIN y adicione otros números que indiquen el inicio del rango. El valor debe tener mínimo 13 dígitos.
 
-  - **Rango final:** Ingrese los primeros números del BIN y adicione otros números que indiquen el final del rango y que sean mayores al rango inicial. El valor debe tener 19 dígitos.
+  - **Rango final:** Ingrese los primeros números del BIN y adicione otros números que indiquen el final del rango y que sean mayores al rango inicial. El valor debe tener mínimo 13 dígitos.
 
+  - **Desafío desacoplado:** Marque o desmarque la casilla según el criterio del rango, ¿se puede procesar desafío desacoplado o no para este rango?
 
-2. **Crear importación,** con esta opción puede importar rangos de tarjetas que tenga en un archivo.
+**2. Crear importación,** con esta opción puede importar rangos de tarjetas que tenga en un archivo CSV.
 
 Para crear una importación visualizará un formulario similar al siguiente:
 
 ![](https://wiki.placetopay.com/images/b/ba/Acs-create-import-ranges.png)
 
-Debe seleccionar la franquicia para la cual se van a cargar los rangos y un archivo de tipo CSV (archivo de valores separados por comas) que contenga la información de los rangos. Un ejemplo del archivo es este:
+Debe seleccionar la franquicia para la cual se van a cargar los rangos y un archivo de tipo CSV (archivo de valores separados por comas), que contenga la información de los rangos. Un ejemplo del archivo es este:
 
 ![](https://wiki.placetopay.com/images/8/8f/Acs-file-import-example.png)
 
 El archivo debe contener cuatro títulos separados por comas en minúscula:
 
-1. **start_range**: Indica el valor inicial para el rango de tarjetas.
+**1. start_range**: Indica el valor inicial para el rango de tarjetas.
 
-2. **end_range**: Indica el valor final para el rango de tarjetas.
+**2. end_range**: Indica el valor final para el rango de tarjetas.
 
-3. **class**: Hace referencia a la clase o tipo de tarjeta utilizada, por ejemplo si es Gold, Platinum.
+**3. class**: Hace referencia a la clase o tipo de tarjeta utilizada, por ejemplo si es Gold, Platinum.
 
-4. **action**: Debe indicar qué acción se debe ejecutar para el rango indicado, las acciones posibles y sus indicadores son los siguientes:
+**4. action**: Debe indicar qué acción se debe ejecutar para el rango indicado, las acciones posibles y sus indicadores son los siguientes:
 
-    **I**: Indicador para acción de insertar rango.
+ - **I**: Indicador para acción de insertar rango.
 
-    **U**: Indicador para acción de actualizar rango .
+ - **U**: Indicador para acción de actualizar rango .
 
-    **D**: Indicador para acción de eliminar rango.
+ - **D**: Indicador para acción de eliminar rango.
 
 
 Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, igualmente separados por comas, sin espacios.
@@ -280,32 +270,30 @@ Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, i
 
 ### Gestión de configuraciones del emisor:
 
-Para acceder a este menú, haga clic en el menú *Configuraciones*, del detalle del emisor. 
+Para acceder a este menú, haga clic en el menú **Configuraciones**, del detalle del emisor. 
 
 Luego visualizará una vista similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/7/75/Issuer-general-settings2.png)
+![](https://wiki.placetopay.com/images/f/fd/Config-general.png)
 
-En la parte inferior de la vista, encontrará tres pestañas que contienen los campos de configuración de los emisores, agrupados en tres secciones: General, Desafíos y Servicios.
+En la parte inferior de la vista, encontrará tres pestañas que contienen los campos de configuración de los emisores, agrupados en tres secciones: **General, Vistas de Desafíos y Servicios**.
 
-Ingresando a cada una de las pestañas, podrá ver la información de los campos del emisor organizada en tablas, en las cuales se muestra el nombre, el valor inicial del campo y el estado del mismo.
+Ingresando a cada una de las pestañas, podrá ver la información de los campos del emisor organizada en tablas, en las cuales se muestra el nombre, el valor inicial del campo, el estado del mismo y las acciones disponibles.
 
 #### Categorías de los campos de configuración: 
 
-  - **GENERAL:** Los campos registrados en esta categoría aplican para todos los tipos de interfaces de usuario utilizadas en autenticaciones con desafío.
+  - **General:** Los campos registrados en esta categoría permiten configurar comportamientos generales de la aplicación.
 
- - **DESAFÍOS:** Los campos registrados en esta categoría permiten configurar las interfaces de usuario para los diferentes tipos de OTP (código de un solo uso, OTP con única y múltiple opción de selección y OTP fuera de banda).
+ - **Vistas de desafíos:** Los campos registrados en esta categoría permiten configurar las interfaces de usuario para los diferentes tipos de OTP (código de un solo uso, OTP con única y múltiple opción de selección y OTP fuera de banda).
 
-  - **SERVICIOS:** Los campos registrados en esta categoría validan las estrategias a utilizar para implementar servicios del ACS como el OTP o el servicio de información del tarjetahabiente, así como, configurar las URL para los servicios de OTP y de información del tarjetahabiente.
+  - **Servicios:** Los campos registrados en esta categoría validan las estrategias a utilizar para implementar servicios del ACS como el OTP, el servicio de información del tarjetahabiente o los servicios de acceso y autorización a la aplicación. Así como los valores particulares para configurar cada una de estas estrategias.
 
 > Para una mejor comprensión del funcionamiento de los campos de configuración y de las categorías, remítase a la sección *Otras configuraciones*, pestaña *Campos de configuración* de la presente documentación.
 
 
 #### Acciones para las configuraciones del emisor:
 
-Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable con tres puntos, ubicado al final de cada campo, obtendrá un menú como el de la siguiente imagen:
-
-![](https://wiki.placetopay.com/images/6/61/Issuer-settings-actions-2.png)
+Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable con tres puntos, ubicado al final de cada campo.
 
 Las acciones disponibles son:
 
@@ -317,54 +305,79 @@ Las acciones disponibles son:
 
 - **Habilitar / Deshabilitar:** Deslice el botón tipo switch para habilitar o deshabitar el campo según corresponda con el estado actual.
 
-  > Tenga en cuenta que si deshabilita un campo de los que están por default, el emisor no podrá ser habilitado.
+  > Tenga en cuenta que si deshabilita un campo de los que están por defecto, el emisor no podrá ser habilitado.
 
 
 ## Estrategias del emisor:
 
-En la pestaña *Servicios* de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor.
-
-![](https://wiki.placetopay.com/images/9/94/Issuer-services-settings2.png)
-
-### otpStrategy
-
-Esta estrategia permite definir a través de un indicador, cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso), para el emisor específico.  Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
-
-  En el momento se dispone de las siguientes estregias:
-
-  - **PlacetoPayStrategy:** Para enviar y validar el OTP se utiliza un servicio propio de PlacetoPay.
-
-  - **DinersStrategy:** Para enviar y validar el OTP se utiliza un servicio propio de Diners.
+En la pestaña **Servicios** de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor. Estas son:
 
 ### cardholderStrategy
 
-Esta estrategia permite definir a través de un indicador, cómo se va a implementar el servicio de información del tarjetabiente. Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
+Esta estrategia permite definir cómo se va a implementar el servicio de información del tarjetabiente. Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
 
   En el momento se dispone de las siguientes estregias:
 
-  - **StandardStrategy:** Permite autenticar las solicitudes que lleguen al ACS con la estrategia estandar, mediante la cual se toma la decisión de autenticar o no, conforme a la información del tarjetahabiente recibida.
+  - **Standard Strategy:** Permite autenticar las solicitudes que lleguen al ACS con la estrategia estandar, mediante la cual se toma la decisión de autenticar o no, conforme a la información del tarjetahabiente recibida.
 
-  - **StandardNoAuthStrategyStandard:** Permite no autenticar las solicitudes que lleguen al ACS con la estrategia estandar.
+  - **Standard No Auth Strategy:** Permite no autenticar las solicitudes que lleguen al ACS con la estrategia estandar.
 
-  - **NoServiceStrategy:** No valida la información del tarjetahabiente y pasa a ejecutar las reglas de validación correspondientes para aprobar o denegar la autenticación.
+  - **No Service Strategy:** No valida la información del tarjetahabiente y pasa a ejecutar las reglas de validación correspondientes para aprobar o denegar la autenticación.
 
-> Estas estrategias deben estar en estado habilitado para que el emisor pueda ser habilitado al crearse.
+  - **SisCard Strategy:** Permite autenticar las solicitudes que lleguen al ACS mediante el servicio de SisCard.
 
-## URLs para configurar los servicios:
+  Para la estrategia seleccionada debe configurar los siguientes valores:
 
-En la sección de servicios, además se encuentran dos campos para configurar la URL para los servicios o las estrategias del OTP y del carholder, estos campos son:
+  - **cardholderInfoURL:** Ingrese una URL válida para conectar con el servicio externo para obtener la información del tarjetahabiente.
 
-### otpURL:
+  - **cardholderInfoUser:** Ingrese el usuario provisto por el servicio de cardholder con el cual se va a conectar y el cual le permitirá autenticarse.
 
-Edite este campo haciendo clic en el menú desplegable con tres puntos ubicados en la parte lateral derecha, seleccione la opción *Editar* y luego ingrese en el campo *Valor*, una URL válida para el servicio del OTP.
+  - **cardholderInfoPassword:** Ingrese la contraseña provista por el servicio de cardholder para completar la autenticación.
+
+### otpStrategy
+
+Esta estrategia permite definir cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso), para el emisor específico.  Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
+
+  En el momento se dispone de las siguientes estregias:
+
+  - **Standard Strategy:** Para enviar y validar el OTP se utiliza un servicio propio de PlacetoPay.
+
+  - **Diners Strategy:** Para enviar y validar el OTP se utiliza un servicio propio de Diners.
+
+  Para la estrategia seleccionada debe configurar los siguientes valores:
+
+  - **otpURL:** Ingrese una URL válida para consumir el servicio externo para el envío del OTP.
+
+  - **otpSize:** Ingrese un número que indique el número de dígitos que debe tener el OTP.
+
+  - **otpRuleRegex:** Ingrese la expresión regular que permitirá validar el OTP ingresado.
+  
+  - **otpAuthMethod:** Seleccione el indicador para el método de autenticación con el servicio de OTP.
 
 
-### cardholderInfoURL:
+### authStrategy
 
-Edite este campo haciendo clic en el menú desplegable con tres puntos ubicados en la parte lateral derecha, seleccione la opción *Editar* y luego ingrese en el campo *Valor*, una URL válida para el servicio del cardholder information.
+Esta estrategia permite definir cómo se va a implementar el servicio de autorización a ACS. Este servicio se utilizará cuando ACS requiera consumir un servicio externo que a su vez necesite algún tipo de autenticación o autorización mediante token. Para ello en el valor del campo, se ingresa la estrategia de autenticación OAuth correspondiente. 
+
+  En el momento se dispone solo de un tipo de estrategia:
+
+- **Standard OAuth Strategy:** Permite autorizar el acceso a un servicio consumido por ACS con una estrategia estándar, mediante la utilización de un Bearer token.
+
+ También debe configurar los siguientes valores para la estrategia:
+
+  - **authURL:** Ingrese una URL válida para consumir el servicio externo de autorización OAuth.
+
+  - **authUsername:** Ingrese el usuario provisto por el servicio de autorización OAuth con el cual se va a conectar y el cual le permitirá autenticarse.
+
+  - **cardholderInfoPassword:** Ingrese la contraseña provista por el servicio de autorización OAuth para completar la autenticación.
+  
+
+> Estas estrategias deben estar tener sus valores particulares de configuración diligenciados, para poder habilitarse posteriormente.
+
 
 ## Gestión del control de fraude:
-Estas funcionalidades están descritas detalladamente en la sección de *Motor Antifraude*. Aquí se hace la gestión de las reglas y de las lostas y grupos donde están contenidas. Las reglas permiten validar los datos que llegan al ACS y garantizar la seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
+
+Estas funcionalidades están descritas detalladamente en la sección *Motor Antifraude*. Aquí se hace la gestión de las reglas, listas y grupos donde están contenidas. Las reglas permiten validar los datos que llegan al ACS y garantizar la autenticidad y seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
 
 
 <!--
