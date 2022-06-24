@@ -20,7 +20,7 @@ La siguiente imagen muestra un ejemplo de la vista de un índice de certificados
 
 ### Acciones para los certificados:
 
-Los certificados se pueden editar, eliminar y visualizar los detalles del mismo, haciendo clic en el menú cdesplegable ubicado en la parte lateral derecha de cada certificado, se desplegará un menú como el de la siguiente imagen:
+Los certificados se pueden editar, eliminar y visualizar los detalles del mismo, haciendo clic en el menú desplegable ubicado en la parte lateral derecha de cada certificado, se desplegará un menú como el de la siguiente imagen:
 
 ![](https://wiki.placetopay.com/images/f/f2/Acciones-certificado.png)
 
