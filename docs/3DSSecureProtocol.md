@@ -9,7 +9,7 @@ El protocolo 3-D Secure es un documento que describe la infraestructura y los co
 
 El protocolo de autenticación 3-D Secure se basa en un modelo de tres dominios, en el que el Dominio del Adquirente y el Dominio del Emisor están conectados por el Dominio de Interoperabilidad a través de una serie de mensajes, con el fin de autenticar a un tarjetahabiente durante una transacción de comercio electrónico (e-commerce) o para verificar la identidad o la cuenta del tarjetahabiente en autenticaciones de no pago.
 
-El protocolo cuenta actualmente con dos versiones activas, la versión 2.10 y la versión 2.20. La principal diferencia entre ambas versiones es que en la 2.10, la autenticación del tarjetahabiente siempre va a requerir de un reto para comprobar su identidad, el cual consiste en aportar información personal adicional o en la verificación de un código o similares. Mientras que en la versión 2.20, además del flujo con reto, se implementó el flujo de autenticación sin reto, esto para los casos en los cuales el tarjetahabiente aporte datos completos y seguros o esté en listas blancas; además se creó para esta versión otro tipo de autenticación nombrada como desacoplada.
+El protocolo cuenta actualmente con dos versiones activas, la versión 2.1.0 y la versión 2.2.0. La principal diferencia entre ambas versiones es que en la 2.1.0, la autenticación del tarjetahabiente siempre va a requerir de un reto para comprobar su identidad, el cual consiste en aportar información personal adicional o en la verificación de un código o similares. Mientras que en la versión 2.2.0, además del flujo con reto, se implementó el flujo de autenticación sin reto, esto para los casos en los cuales el tarjetahabiente aporte datos completos y seguros o esté en listas blancas; además se creó para esta versión otro tipo de autenticación nombrada como desacoplada.
 
 De esta forma, el proceso de autenticación puede darse mediante un flujo sin fricción o con fricción, entendiendo la fricción como el reto para autenticarse. Siendo el componente de ACS, quien decide cual de estos flujos es el adecuado para completar una autenticación, dependiendo del nivel de legitimidad evaluado en la información provista por el tarjetabiente y de la versión utilizada del protocolo.
 
@@ -158,7 +158,7 @@ El protocolo 3-D Secure contiene dos posibles flujos para el proceso de autentic
       
   El flujo sin fricción o sin challenge, no requiere interacción adicional por parte del tarjetahabiente para lograr una autenticación exitosa con 3-D Secure, ya que se evalúa la información obtenida del tarjetahabiente como legítima, muy completa y de bajo riesgo. Se considera información de bajo riesgo por ejemplo cuando el tarjetabiente registra los mismos datos personales que suele registrar o cuando diligencia los campos opcionales de la autenticación.
       
-  Este flujo inicia el proceso de autenticación de 3-D Secure y consiste en el envío de un mensaje de petición de autenticación (AReq) y posteriormente, un mensaje de respuesta a la autenticación (ARes). El flujo sin challenge solo se presenta en la version 2.20 del protocolo.
+  Este flujo inicia el proceso de autenticación de 3-D Secure y consiste en el envío de un mensaje de petición de autenticación (AReq) y posteriormente, un mensaje de respuesta a la autenticación (ARes). El flujo sin challenge solo se presenta en la version 2.2.0 del protocolo.
 
 ---         
         
