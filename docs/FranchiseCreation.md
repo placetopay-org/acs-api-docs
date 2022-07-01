@@ -1,86 +1,82 @@
-# Franquicias en ACS
+# Marcas en ACS
 
-## ¿Qué es una franquicia?
+## ¿Qué es una marca?
 
-Una franquicia de una tarjeta de crédito, es una compañía aliada con los bancos emisores de tarjetas de crédito. Tienen como función proveer diversos beneficios bancarios a sus clientes, siendo estos los tarjetabientes. 
-Las franquicias son las que gestionan el uso y los beneficios asociados a las tarjetas emitidas por los bancos emisores.
+La marca o franquicia de una tarjeta de crédito, es una compañía aliada con los bancos emisores de tarjetas de crédito. Tienen como función proveer diversos beneficios bancarios a sus clientes, siendo éstos los tarjetabientes. 
+Las marcas son las que gestionan el uso y los beneficios asociados a las tarjetas emitidas por los bancos emisores.
 
-## ¿Cómo acceder a la gestión de franquicias de ACS?
+## ¿Cómo acceder a la gestión de marcas de ACS?
 
-Para acceder al listado de franquicias de la aplicación siga los siguientes pasos:
+Para acceder al listado de marcas de la aplicación siga los siguientes pasos:
 
-1. Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opcióón *Sistema* y luego *Franquicias*, como muestra la siguiente imagen:
+**1.** Remítase al menú lateral izquierdo dónde visualizará tres opciones, "Dashboard", "Sistema" y "Seguridad", seleccione la opción *Sistema* y luego *Marcas*, como muestra la siguiente imagen:
 
-![](https://wiki.placetopay.com/images/3/3c/Franchises-menu-2.png)
+![](https://wiki.placetopay.com/images/6/6f/Menu-marcas.png)
 
-2. Haga clic en el menú "Sistema", se desplegará un listado de opciones, haga clic en la opción "Franquicias".
+**2.** Visualizará una pantalla similar a la ilustrada en la siguiente imagen:
 
-3. Visualizará una pantalla similar a la ilustrada en la siguiente imagen:
+![](https://wiki.placetopay.com/images/8/80/Indice-marcas.png)
 
-![](https://wiki.placetopay.com/images/4/4c/Franchise-index.png)
+## ¿Cómo crear una marca en ACS?
 
-## ¿Cómo crear una franquicia en ACS?
+Para crear una marca, haga clic en el botón **Crear** ubicado en la parte lateral derecha del índice de marcas, posteriormente diligencie los datos del formulario teniendo en cuenta la siguiente información:
 
-Para crear una franquicia, haga clic en el botón *Crear* ubicado en la parte lateral derecha del índice de franquicias, posteriormente diligencia los datos del formulario teniendo en cuenta la siguiente información:
+- **Marca,** Nombre de la marca, por ejemplo Mastercard, VISA...
 
-- **Marca,** Nombre de la franquicia, por ejemplo Mastercard, VISA...
+- **Patrón,** Ingrese un patrón basado en una expresión regular, con este se valida que el número de tarjeta que llegue al ACS, sea válido según los estándares propios de cada marca.
 
-- **Patrón,** Ingrese un patrón basado en una expresión regular, con este se valida que el número de tarjeta que llegue al ACS, sea válido según los estándares propios de cada franquicia.
+- **ID de Operador ACS,** Ingrese el identificador del operador ACS para la marca.
 
-- **Algoritmo para el CAVV,** El Cardholder Authentication Verification Value (CAVV), es un valor de verificación de autenticación del titular de la tarjeta. Aquí se debe seleccionar un algoritmo que valide este valor, el cual resulta de hacer una transacción. En el momento ACS cuenta con un algoritmo para VISA y otro para MASTERCARD.
+- **Algoritmo para el CAVV,** El Cardholder Authentication Verification Value (CAVV), es un valor de verificación de autenticación del titular de la tarjeta. Aquí se debe seleccionar un algoritmo que valide este valor, el cual resulta de hacer una transacción. En el momento ACS cuenta con algoritmos para VISA, Mastercard y Discover.
 
-- **Algoritmo para el ECI,** El Electronic Commerce
-Indicator (ECI), es un valor para indicar los resultados del intento de autenticación. En ACS hay tres algoritmos disponibles, para las franquicias de VISA, MASTERCARD y JCB.
+- **Algoritmo para el ECI,** El Electronic Commerce Indicator (ECI), es un valor para indicar los resultados del intento de autenticación.En el momento ACS cuenta con algoritmos disponibles para las marcas de VISA, Mastercard, Discover y JCB.
 
-- **Logo,** Puede adjuntar una imagen con el logo de la franquicia.
+- **Logo,** Puede adjuntar una imagen con el logo de la marca.
 
-En la siguiente imagen se puede visualizar un ejemplo del formulario de creación de una franquicia:
+En la siguiente imagen se puede visualizar un ejemplo del formulario de creación de una marca:
 
-![](https://wiki.placetopay.com/images/a/a0/Acs-create-franchise.png)
+![](https://wiki.placetopay.com/images/2/27/Formulario-crear-marca.png)
 
-## ¿Cuáles son los requerimientos para crear una franquicia en ACS?
+## ¿Cuáles son los requerimientos para crear una marca en ACS?
 
-Para crear una franquicia, esta debe haber pasado por un proceso de certificación para ACS con PlacetoPay Evertec.
+Para crear una marca, esta debe haber pasado por un proceso de certificación para ACS con PlacetoPay Evertec.
 
-También, la franquicia debe proporcionar información como el tipo de tarjetas que soportan, las clases y los bines aceptados, para proceder a realizar una creación exitosa de franquicia en ACS y que esta coincida con las especificaciones y requerimientos de la franquicia en específico.
+También, la marca debe proporcionar información como el tipo de tarjetas que soportan, las clases y los bines aceptados, para proceder a realizar una creación exitosa de marca en ACS y la suscripción de los rangos de tarjetas específicos.
 
-## Listado y funciones de las franquicias
+## Listado y funciones de las marcas
 
-En esta sección se visualiza el listado o índice de franquicias en una tabla donde se muestran los datos principales de cada una, tales como: Marca, Patrón, Algoritmo para el CAVV, Algoritmo para el ECI, Estado y Acciones. Estos datos se explican más adelante. 
+En esta sección se visualiza el listado o índice de marcas en una tabla donde se muestran los datos principales de cada una, tales como: marca, patrón, algoritmo para el CAVV,algoritmo para el ECI, ID de Operador ACS, estado y acciones. Estos datos se explican más adelante. 
 
-En el título "Acciones" ubicado en la parte lateral derecha,se encuentra un menú con tres puntos, haga clic en este menú y despliegue las acciones o funcionalidades disponibles para cada franquicia. En el menú se encuentran las siguientes acciones:
+En el título "Acciones" ubicado en la parte lateral derecha, se encuentra un menú desplegable, haga clic en este menú y despliegue las acciones o funcionalidades disponibles para cada marca. Entre estas se encuentran las siguientes acciones:
 
 ![](https://wiki.placetopay.com/images/6/62/Acs-franchise-index.png)
 
-### Acciones para las franquicias:
+### Acciones para las marcas:
 
-- **Ver:** Seleccione esta opción para visualizar más detalles de la franquicia.
+- **Ver:** Seleccione esta opción para visualizar más detalles de la marca.
 
   Visualizará una vista similar a la siguiente:
 
-![](https://wiki.placetopay.com/images/7/7d/Franchise-detail.png)
+  ![](https://wiki.placetopay.com/images/b/b2/Detalle-marca.png)
 
-- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó la franquicia. 
+- **Editar:** Seleccione esta opción para actualizar o corregir los datos con los cuales creó la marca. 
 
-  Visualizará un formulario similar al de creación de la franquicia.
+  Visualizará un formulario similar al de creación de la marca.
 
-![](https://wiki.placetopay.com/images/5/5d/Edit-franchise.png)
+  ![](https://wiki.placetopay.com/images/0/0f/Editar-marca.png)
 
-- **Habilitar o Deshabilitar:** Deslice el botóntipo switch para habilitar la franquicia si se encuentra deshabilitada o para deshabilitarla cuando se encuentre habilitada. 
+- **Habilitar o Deshabilitar:** Deslice el botón tipo switch para habilitar la marca si se encuentra deshabilitada o para deshabilitarla cuando se encuentre habilitada. 
 
-![](https://wiki.placetopay.com/images/a/a9/Franchise-toggle.png)
+  ![](https://wiki.placetopay.com/images/a/a9/Franchise-toggle.png)
 
-Al habilitar o deshabilitar, la aplicación le entregará un mensaje de confirmación similar al siguiente e inmediatamente cambiará el estado en la franquicia editada.
 
-![](https://wiki.placetopay.com/images/0/09/Enable-franchise.png)
+### ¿Qué ocurre al deshabilitar una marca?
 
-### ¿Qué ocurre al deshabilitar una franquicia?
+Tenga en cuenta que si una marca se encuentra deshabilitada, no podrá hacer movimientos con ella en la aplicación. Por ejemplo no puede visualizar una marca deshabilitada en el listado de marcas disponibles, al momento de crear un certificado, un emisor o suscripción. 
 
-Tenga en cuenta que si una franquicia se encuentra deshabilitada, no podrá hacer movimientos con ella en la aplicación. Por ejemplo no puede visualizar una franquicia deshabilitada en el listado de franquicias disponibles, al momento de crear un certificado o un emisor. 
+Tampoco podrán autenticarse las transacciones cuyas tarjetas pertenezcan a una marca deshabilitada. 
 
-Tampoco podrán autenticarse las transacciones cuyas tarjetas pertenezcan a una franquicia deshabilitada. 
-
-Así mismo puede causar el fallo en los emisores que tengan suscrita tal franquicia.
+Así mismo puede causar el fallo en los emisores que tengan suscrita tal marca.
 
 
 

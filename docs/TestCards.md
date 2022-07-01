@@ -1,6 +1,6 @@
 # Tarjetas de Prueba
 
-Los siguientes números de tarjetas de crédito, le permitirán hacer peticiones al servicio y obtener las respuestas específicas que se describen para cada una.
+Los siguientes números de tarjetas de crédito, le permitirán hacer peticiones al servicio y obtener los comportamientos específicos que se describen para cada una.
 
 Franquicia | Número de Tarjeta | Indicador de estado en 3DS | Estado en 3DS | Comportamiento en 3DS | Código de autorización | Estado de autorización | Código de autorización final (opcional) | Estado de autorización final (opcional) |
 :---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
