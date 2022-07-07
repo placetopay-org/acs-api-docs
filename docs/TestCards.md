@@ -23,3 +23,5 @@ El siguiente código deberá ser ingresado en autenticaciones de prueba con desa
 Código OTP | Descripción                               |
 -----------|-------------------------------------------|
  12345     | Pasa el desafío y autentica exitosamente. |  
+
+ # Respuestas para desafíos con cuestionarios de selección simple y múltiple
