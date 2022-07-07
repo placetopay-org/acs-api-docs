@@ -16,7 +16,7 @@ Franquicia | Número de Tarjeta | Indicador de estado en 3DS | Estado en 3DS | C
   MasterCard       | 5180300000000039  |   N    | Not authenticated | Genera una transacción no autenticada por el emisor.  | 05 | GENERAL REJECTION | N/A | N/A |
 
 
-# Datos de prueba para el desafío
+# Datos de prueba para el desafío (OTP)
 
 El siguiente código deberá ser ingresado en autenticaciones de prueba con desafío.
 
@@ -24,7 +24,7 @@ Código OTP | Descripción                               |
 -----------|-------------------------------------------|
  12345     | Pasa el desafío y autentica exitosamente. |  
 
- # Respuestas para desafíos con cuestionarios de selección simple y múltiple
+ # Respuestas para desafíos con cuestionarios de selección simple y múltiple (KBA)
 
  ## Cuestionario de selección simple
 
