@@ -16,10 +16,23 @@ Franquicia | Número de Tarjeta | Indicador de estado en 3DS | Estado en 3DS | C
   MasterCard       | 5180300000000039  |   N    | Not authenticated | Genera una transacción no autenticada por el emisor.  | 05 | GENERAL REJECTION | N/A | N/A |
 
 
-# Datos de prueba para el desafío
+# Datos de prueba para el desafío (OTP)
 
 El siguiente código deberá ser ingresado en autenticaciones de prueba con desafío.
 
 Código OTP | Descripción                               |
 -----------|-------------------------------------------|
  12345     | Pasa el desafío y autentica exitosamente. |  
+
+ # Respuestas para desafíos con cuestionarios de selección simple y múltiple (KBA)
+
+ ## Cuestionario de selección simple
+
+ 1. ¿En qué banco tiene una cuenta de ahorros?. Respuesta: **Bancolombia**.
+ 2. ¿En que Banco tuvo crédito en los últimos 6 meses?. Respuesta: **Banco Davivienda**.
+
+ ## Cuestionario de selección múltiple
+
+1. Seleccione los bancos en los que ha tenido una cuenta. Respuestas: **Banco de Bogotá**, **Banco de New York**.
+2. ¿En que Bancos ha tenido crédito en los últimos 6 meses?. Respuestas: **Banco de Bogotá**, **Banco de Occidente**.
+
