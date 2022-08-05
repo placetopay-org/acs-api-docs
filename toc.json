@@ -52,12 +52,12 @@
       "items": [
         {
           "type": "item",
-          "title": "Configuración general de ACS",
+          "title": "Configuración General de ACS",
           "uri": "docs/ACSGeneralConfiguration.md"
         },
         {
           "type": "group",
-          "title": "Configuración de emisores",
+          "title": "Configuración de Emisores",
           "items": [
             {
               "type": "item",
@@ -82,7 +82,7 @@
             {
               "type": "item",
               "title": "Gestión de configuraciones",
-              "uri": "docs/IssuerConfiguration.md"
+              "uri": "docs/ConfigurationFields.md"
             },
             {
               "type": "item",
@@ -93,13 +93,49 @@
         },
         {
           "type": "item",
-          "title": "Configuración de marcas",
+          "title": "Configuración de Marcas",
           "uri": "docs/FranchiseCreation.md"
         },
         {
-          "type": "item",
-          "title": "Otras configuraciones",
-          "uri": "docs/ACSConfigurations.md"
+          "type": "group",
+          "title": "Otras Configuraciones",
+          "items": [
+            {
+              "type": "item",
+              "title": "Configuración de Certificados",
+              "uri": "docs/CertificatesConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de Códigos de Comercios",
+              "uri": "docs/MerchantCodesConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de Monedas",
+              "uri": "docs/CurrenciesConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de Países",
+              "uri": "docs/CountriesConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de Campos",
+              "uri": "docs/FieldsConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de Importes",
+              "uri": "docs/ImportsConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de Idioma",
+              "uri": "docs/LanguageConfigurations.md"
+            }
+          ]
         },
         {
           "type": "item",
