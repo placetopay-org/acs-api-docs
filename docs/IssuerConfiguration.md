@@ -1,6 +1,6 @@
 <!--
 type: tab
-title: Generalidades del emisor
+title: Detalles del emisor
 -->
 
 # Emisores en ACS
@@ -172,11 +172,38 @@ Además, en la parte lateral derecha, hay un botón para acceder al formulario d
 
 <!--
 type: tab
+title: Gestión de suscripciones por marcas
+-->
+
+# Suscripción por marcas
+
+Para acceder a esta funcionalidad, haga clic en el menú **Operaciones -> Marcas suscritas**, que actualmente se ubica al lado derecho del menú *Detalles del emisor*. 
+
+Luego visualizará una vista similar a la siguiente:
+
+![](https://wiki.placetopay.com/images/5/5f/Marcas-emisor.png)
+
+En ella encontrará el listado de marcas registradas para el emisor y un formulario para agregar nuevas marcas.
+
+> Para las marcas están disponibles las funciones de *Editar* y *Eliminar*, las cuales se encuentran dando clic en el menú desplegable ubicado al final del registro de cada marca.
+
+### ¿Cómo suscribir una nueva marca?:
+
+Para suscribir una nueva marca a su emisor, haga clic en el botón **Crear**, ubicado en la parte lateral derecha de la lista de marcas. Luego seleccione la marca de la lista disponible, la versión del protocolo y el certificado SSL correspondiente.
+
+> Si la aplicación le arroja este mensaje *"No se ha encontrado certificados disponibles para hacer la suscripción a esta marca."*, entonces debe crear un certificado SSL para continuar con el proceso de suscripción de la marca.
+
+
+<!--
+type: tab
 title: Gestión de rangos de tarjetas
 -->
 
 # Rangos de tarjetas
 
+<br>
+
+## ¿Cómo acceder a este menú?
 
 Para acceder a este menú, haga clic en el menú **Operaciones -> Gestionar rangos de tarjetas**, ubicado en la parte superior de la vista.
 
@@ -256,158 +283,10 @@ Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, i
 
 > Para visualizar el formato de un archivo CSV de ejemplo, haga clic en la opción *Descargar* que aparece en el lado izquierdo del formulario.
 
-<!--
-type: tab
-title: Gestión de configuraciones del emisor
--->
-
-# Configuraciones del emisor
-
-<br>
-
-## ¿Cómo acceder a este menú?
-
-Para acceder a este menú, haga clic en el menú **Configuraciones**, del detalle del emisor. 
-
-Luego visualizará una vista similar a la siguiente:
-
-![](https://wiki.placetopay.com/images/f/fd/Config-general.png)
-
-En la parte inferior de la vista, encontrará tres pestañas que contienen los campos de configuración de los emisores, agrupados en tres secciones: **General, Vistas de Desafíos y Servicios**.
-
-Ingresando a cada una de las pestañas, podrá ver la información de los campos del emisor organizada en tablas, en las cuales se muestra el nombre, el valor inicial del campo, el estado del mismo y las acciones disponibles.
-
-## Categorías de los campos de configuración: 
-
-  - **General:** Los campos registrados en esta categoría permiten configurar comportamientos generales de la aplicación.
-
- - **Vistas de desafíos:** Los campos registrados en esta categoría permiten configurar las interfaces de usuario para los diferentes tipos de OTP (código de un solo uso, OTP con única y múltiple opción de selección y OTP fuera de banda).
-
-  - **Servicios:** Los campos registrados en esta categoría validan las estrategias a utilizar para implementar servicios del ACS como el OTP, el servicio de información del tarjetahabiente o los servicios de acceso y autorización a la aplicación. Así como los valores particulares para configurar cada una de estas estrategias.
-
-> Para una mejor comprensión del funcionamiento de los campos de configuración y de las categorías, remítase a la sección *Otras configuraciones*, pestaña *Campos de configuración* de la presente documentación.
-
-
-## Acciones para las configuraciones del emisor:
-
-Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable ubicado al final de cada campo.
-
-Las acciones disponibles son:
-
-- **Ver:** Seleccione para visualizar los detalles de configuración del campo.
-
-- **Editar:** Seleccione para editar algún valor de la configuración con la cual se creó inicialmente el campo.
-
-    > Edite los campos de configuración teniendo en cuenta la lógica de negocio y el funcionamiento del emisor específico.
-
-- **Habilitar / Deshabilitar:** Deslice el botón tipo switch para habilitar o deshabitar el campo según corresponda con el estado actual.
-
-  > Tenga en cuenta que si deshabilita un campo de los que están por defecto, el emisor no podrá ser habilitado.
-
 
 <!--
 type: tab
-title: Gestión de servicios del emisor
--->
-
-# Servicios del emisor
-
-<br>
-
-## ¿Cómo acceder a este menú?
-
-En la pestaña **Servicios** de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor. Estas son:
-
-## cardholderStrategy
-
-Esta estrategia permite definir cómo se va a implementar el servicio de información del tarjetabiente. Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
-
-  En el momento se dispone de las siguientes estregias:
-
-  - **Standard Strategy:** Permite autenticar las solicitudes que lleguen al ACS con la estrategia estandar, mediante la cual se toma la decisión de autenticar o no, conforme a la información del tarjetahabiente recibida.
-
-  - **Standard No Auth Strategy:** Permite no autenticar las solicitudes que lleguen al ACS con la estrategia estandar.
-
-  - **No Service Strategy:** No valida la información del tarjetahabiente y pasa a ejecutar las reglas de validación correspondientes para aprobar o denegar la autenticación.
-
-  - **SisCard Strategy:** Permite autenticar las solicitudes que lleguen al ACS mediante el servicio de SisCard.
-
-  Para la estrategia seleccionada debe configurar los siguientes valores:
-
-  - **cardholderInfoURL:** Ingrese una URL válida para conectar con el servicio externo para obtener la información del tarjetahabiente.
-
-  - **cardholderInfoUser:** Ingrese el usuario provisto por el servicio de cardholder con el cual se va a conectar y el cual le permitirá autenticarse.
-
-  - **cardholderInfoPassword:** Ingrese la contraseña provista por el servicio de cardholder para completar la autenticación.
-
-## otpStrategy
-
-Esta estrategia permite definir cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso), para el emisor específico.  Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
-
-  En el momento se dispone de las siguientes estregias:
-
-  - **Standard Strategy:** Para enviar y validar el OTP se utiliza un servicio propio de PlacetoPay.
-
-  - **Diners Strategy:** Para enviar y validar el OTP se utiliza un servicio propio de Diners.
-
-  Para la estrategia seleccionada debe configurar los siguientes valores:
-
-  - **otpURL:** Ingrese una URL válida para consumir el servicio externo para el envío del OTP.
-
-  - **otpSize:** Ingrese un número que indique el número de dígitos que debe tener el OTP.
-
-  - **otpRuleRegex:** Ingrese la expresión regular que permitirá validar el OTP ingresado.
-  
-  - **otpAuthMethod:** Seleccione el indicador para el método de autenticación con el servicio de OTP.
-
-
-## authStrategy
-
-Esta estrategia permite definir cómo se va a implementar el servicio de autorización a ACS. Este servicio se utilizará cuando ACS requiera consumir un servicio externo que a su vez necesite algún tipo de autenticación o autorización mediante token. Para ello en el valor del campo, se ingresa la estrategia de autenticación OAuth correspondiente. 
-
-  En el momento se dispone solo de un tipo de estrategia:
-
-- **Standard OAuth Strategy:** Permite autorizar el acceso a un servicio consumido por ACS con una estrategia estándar, mediante la utilización de un Bearer token.
-
- También debe configurar los siguientes valores para la estrategia:
-
-  - **authURL:** Ingrese una URL válida para consumir el servicio externo de autorización OAuth.
-
-  - **authUsername:** Ingrese el usuario provisto por el servicio de autorización OAuth con el cual se va a conectar y el cual le permitirá autenticarse.
-
-  - **cardholderInfoPassword:** Ingrese la contraseña provista por el servicio de autorización OAuth para completar la autenticación.
-  
-
-> Estas estrategias deben estar tener sus valores particulares de configuración diligenciados, para poder habilitarse posteriormente.
-
-
-<!--
-type: tab
-title: Gestión de suscripciones por marcas
--->
-
-# Suscripción por marcas
-
-Para acceder a esta funcionalidad, haga clic en el menú **Operaciones -> Marcas suscritas**, que actualmente se ubica al lado derecho del menú *Detalles del emisor*. 
-
-Luego visualizará una vista similar a la siguiente:
-
-![](https://wiki.placetopay.com/images/5/5f/Marcas-emisor.png)
-
-En ella encontrará el listado de marcas registradas para el emisor y un formulario para agregar nuevas marcas.
-
-> Para las marcas están disponibles las funciones de *Editar* y *Eliminar*, las cuales se encuentran dando clic en el menú desplegable ubicado al final del registro de cada marca.
-
-### ¿Cómo suscribir una nueva marca?:
-
-Para suscribir una nueva marca a su emisor, haga clic en el botón **Crear**, ubicado en la parte lateral derecha de la lista de marcas. Luego seleccione la marca de la lista disponible, la versión del protocolo y el certificado SSL correspondiente.
-
-> Si la aplicación le arroja este mensaje *"No se ha encontrado certificados disponibles para hacer la suscripción a esta marca."*, entonces debe crear un certificado SSL para continuar con el proceso de suscripción de la marca.
-
-
-<!--
-type: tab
-title: Motor Antifraude
+title: Gestión de control de fraude
 -->
 
 # Motor de Control de Fraude
@@ -1090,5 +969,129 @@ Puede habilitarlas o deshabilitarlas, haciendo clic en el menú desplegable ubic
 Esta funcionalidad se comporta igual a la sección de solicitudes de las *Reglas de control antifraude*, con la diferencia que las solicitudes de reglas que se hagan para crear, actualizar o eliminar reglas, se guardarán exclusivamente para el grupo escogido.
 
 > Luego de crear una solicitud de regla, recuerde aprobarla y posteriormente, habilitarla en el menú de *Reglas en producción*.
+
+<!--
+type: tab
+title: Gestión de configuraciones
+-->
+
+# Configuraciones del emisor
+
+<br>
+
+## ¿Cómo acceder a este menú?
+
+Para acceder a este menú, haga clic en el menú **Configuraciones**, del detalle del emisor. 
+
+Luego visualizará una vista similar a la siguiente:
+
+![](https://wiki.placetopay.com/images/f/fd/Config-general.png)
+
+En la parte inferior de la vista, encontrará tres pestañas que contienen los campos de configuración de los emisores, agrupados en tres secciones: **General, Vistas de Desafíos y Servicios**.
+
+Ingresando a cada una de las pestañas, podrá ver la información de los campos del emisor organizada en tablas, en las cuales se muestra el nombre, el valor inicial del campo, el estado del mismo y las acciones disponibles.
+
+## Categorías de los campos de configuración: 
+
+  - **General:** Los campos registrados en esta categoría permiten configurar comportamientos generales de la aplicación.
+
+ - **Vistas de desafíos:** Los campos registrados en esta categoría permiten configurar las interfaces de usuario para los diferentes tipos de OTP (código de un solo uso, OTP con única y múltiple opción de selección y OTP fuera de banda).
+
+  - **Servicios:** Los campos registrados en esta categoría validan las estrategias a utilizar para implementar servicios del ACS como el OTP, el servicio de información del tarjetahabiente o los servicios de acceso y autorización a la aplicación. Así como los valores particulares para configurar cada una de estas estrategias.
+
+> Para una mejor comprensión del funcionamiento de los campos de configuración y de las categorías, remítase a la sección *Otras configuraciones*, pestaña *Campos de configuración* de la presente documentación.
+
+
+## Acciones para las configuraciones del emisor:
+
+Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable ubicado al final de cada campo.
+
+Las acciones disponibles son:
+
+- **Ver:** Seleccione para visualizar los detalles de configuración del campo.
+
+- **Editar:** Seleccione para editar algún valor de la configuración con la cual se creó inicialmente el campo.
+
+    > Edite los campos de configuración teniendo en cuenta la lógica de negocio y el funcionamiento del emisor específico.
+
+- **Habilitar / Deshabilitar:** Deslice el botón tipo switch para habilitar o deshabitar el campo según corresponda con el estado actual.
+
+  > Tenga en cuenta que si deshabilita un campo de los que están por defecto, el emisor no podrá ser habilitado.
+
+
+<!--
+type: tab
+title: Gestión de servicios del emisor
+-->
+
+# Servicios del emisor
+
+<br>
+
+## ¿Cómo acceder a este menú?
+
+En la pestaña **Servicios** de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor. Estas son:
+
+## cardholderStrategy
+
+Esta estrategia permite definir cómo se va a implementar el servicio de información del tarjetabiente. Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
+
+  En el momento se dispone de las siguientes estregias:
+
+  - **Standard Strategy:** Permite autenticar las solicitudes que lleguen al ACS con la estrategia estandar, mediante la cual se toma la decisión de autenticar o no, conforme a la información del tarjetahabiente recibida.
+
+  - **Standard No Auth Strategy:** Permite no autenticar las solicitudes que lleguen al ACS con la estrategia estandar.
+
+  - **No Service Strategy:** No valida la información del tarjetahabiente y pasa a ejecutar las reglas de validación correspondientes para aprobar o denegar la autenticación.
+
+  - **SisCard Strategy:** Permite autenticar las solicitudes que lleguen al ACS mediante el servicio de SisCard.
+
+  Para la estrategia seleccionada debe configurar los siguientes valores:
+
+  - **cardholderInfoURL:** Ingrese una URL válida para conectar con el servicio externo para obtener la información del tarjetahabiente.
+
+  - **cardholderInfoUser:** Ingrese el usuario provisto por el servicio de cardholder con el cual se va a conectar y el cual le permitirá autenticarse.
+
+  - **cardholderInfoPassword:** Ingrese la contraseña provista por el servicio de cardholder para completar la autenticación.
+
+## otpStrategy
+
+Esta estrategia permite definir cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso), para el emisor específico.  Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
+
+  En el momento se dispone de las siguientes estregias:
+
+  - **Standard Strategy:** Para enviar y validar el OTP se utiliza un servicio propio de PlacetoPay.
+
+  - **Diners Strategy:** Para enviar y validar el OTP se utiliza un servicio propio de Diners.
+
+  Para la estrategia seleccionada debe configurar los siguientes valores:
+
+  - **otpURL:** Ingrese una URL válida para consumir el servicio externo para el envío del OTP.
+
+  - **otpSize:** Ingrese un número que indique el número de dígitos que debe tener el OTP.
+
+  - **otpRuleRegex:** Ingrese la expresión regular que permitirá validar el OTP ingresado.
+  
+  - **otpAuthMethod:** Seleccione el indicador para el método de autenticación con el servicio de OTP.
+
+
+## authStrategy
+
+Esta estrategia permite definir cómo se va a implementar el servicio de autorización a ACS. Este servicio se utilizará cuando ACS requiera consumir un servicio externo que a su vez necesite algún tipo de autenticación o autorización mediante token. Para ello en el valor del campo, se ingresa la estrategia de autenticación OAuth correspondiente. 
+
+  En el momento se dispone solo de un tipo de estrategia:
+
+- **Standard OAuth Strategy:** Permite autorizar el acceso a un servicio consumido por ACS con una estrategia estándar, mediante la utilización de un Bearer token.
+
+ También debe configurar los siguientes valores para la estrategia:
+
+  - **authURL:** Ingrese una URL válida para consumir el servicio externo de autorización OAuth.
+
+  - **authUsername:** Ingrese el usuario provisto por el servicio de autorización OAuth con el cual se va a conectar y el cual le permitirá autenticarse.
+
+  - **cardholderInfoPassword:** Ingrese la contraseña provista por el servicio de autorización OAuth para completar la autenticación.
+  
+
+> Estas estrategias deben estar tener sus valores particulares de configuración diligenciados, para poder habilitarse posteriormente.
 
 <!-- type: tab-end -->
