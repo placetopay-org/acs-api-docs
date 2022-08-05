@@ -71,7 +71,7 @@
                 {
                   "type": "item",
                   "title": "Gestión de suscripciones por marcas",
-                  "uri": "docs/IssuerConfiguration.md"
+                  "uri": "docs/BrandsSuscriptions.md"
                 },
                 {
                   "type": "item",
@@ -91,7 +91,7 @@
                 {
                   "type": "item",
                   "title": "Gestión de servicios del emisor",
-                  "uri": "docs/IssuerConfiguration.md"
+                  "uri": "docs/IssuerServices.md"
                 }
               ]
             },
