@@ -9,7 +9,7 @@ Los valores configurados en esta categoría, definen las estrategias a utilizar 
 
 ## ¿Cómo acceder a este menú?
 
-En la pestaña **Servicios** de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor. Estas son:
+En la pestaña **Servicios** de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor. En las siguientes pestañas de esta sección de la documentación, puede visualizar cada uno de estos servicios.
 
 <!--
 type: tab
@@ -68,7 +68,7 @@ type: tab
 title: Servicio de autenticación
 -->
 
-## Auth Strategy
+# Auth Strategy
 
 Esta estrategia permite definir cómo se va a implementar el servicio de autorización a ACS. Este servicio se utilizará cuando ACS requiera consumir un servicio externo que a su vez necesite algún tipo de autenticación o autorización mediante token. Para ello en el valor del campo, se ingresa la estrategia de autenticación OAuth correspondiente. 
 
