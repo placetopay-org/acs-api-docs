@@ -46,6 +46,7 @@
         }
         ]
     },
+
     {
       "type": "group",
       "title": "Funcionamiento de ACS",
@@ -60,42 +61,6 @@
               "uri": "docs/ACSGeneralConfiguration.md"
             },
             {
-              "type": "group",
-              "title": "Configuración de emisores",
-              "items": [
-                {
-                  "type": "item",
-                  "title": "Detalles del emisor",
-                  "uri": "docs/IssuerConfiguration.md"
-                },
-                {
-                  "type": "item",
-                  "title": "Gestión de suscripciones por marcas",
-                  "uri": "docs/BrandsSuscriptions.md"
-                },
-                {
-                  "type": "item",
-                  "title": "Gestión de rangos de tarjetas",
-                  "uri": "docs/IssuerConfiguration.md"
-                },
-                {
-                  "type": "item",
-                  "title": "Gestión de control de fraude",
-                  "uri": "docs/IssuerConfiguration.md"
-                },
-                {
-                  "type": "item",
-                  "title": "Gestión de configuraciones",
-                  "uri": "docs/IssuerConfiguration.md"
-                },
-                {
-                  "type": "item",
-                  "title": "Gestión de servicios del emisor",
-                  "uri": "docs/IssuerServices.md"
-                }
-              ]
-            },
-            {
               "type": "item",
               "title": "Configuración de marcas",
               "uri": "docs/FranchiseCreation.md"
@@ -106,6 +71,42 @@
               "uri": "docs/ACSConfigurations.md"
             }
         ]
+        },
+        {
+          "type": "group",
+          "title": "Configuración de emisores",
+          "items": [
+            {
+              "type": "item",
+              "title": "Detalles del emisor",
+              "uri": "docs/IssuerConfiguration.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de suscripciones por marcas",
+              "uri": "docs/BrandsSuscriptions.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de rangos de tarjetas",
+              "uri": "docs/IssuerConfiguration.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de control de fraude",
+              "uri": "docs/IssuerConfiguration.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de configuraciones",
+              "uri": "docs/IssuerConfiguration.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de servicios del emisor",
+              "uri": "docs/IssuerServices.md"
+            }
+          ]
         },
         {
           "type": "item",
