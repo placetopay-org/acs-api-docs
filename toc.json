@@ -174,8 +174,8 @@
           "items": [
             {
               "type": "item",
-              "title": "Users",
-              "uri": "docs/Metrics.md"
+              "title": "Usuarios",
+              "uri": "docs/Users.md"
             },
             {
               "type": "item",

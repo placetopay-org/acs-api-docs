@@ -1,3 +1,8 @@
+<!--
+type: tab
+title: Autenticaciones
+-->
+
 # Autenticaciones
 
 Para acceder a la gestión de autenticaciones de la aplicación vaya al menú lateral izquierdo, seleccione la opción *Dashboard* y luego *Autenticaciones*.
@@ -77,10 +82,10 @@ Además, cada paso tiene la opción *Ver más*, la cual muestra la estructura de
 
 <!--
 type: tab
-title: Gestión de disputas
+title: Gestión de autenticaciones con disputas
 -->
 
-# Disputas:
+# Disputas
 
 Las disputas son reclamaciones que realiza el cliente registrado con una autenticación en ACS, en la cual puede existir un caso de fraude. 
 
