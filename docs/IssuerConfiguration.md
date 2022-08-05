@@ -177,6 +177,10 @@ title: Gestión de suscripciones por marcas
 
 # Suscripción por marcas
 
+<br>
+
+## ¿Cómo acceder a este menú?
+
 Para acceder a esta funcionalidad, haga clic en el menú **Operaciones -> Marcas suscritas**, que actualmente se ubica al lado derecho del menú *Detalles del emisor*. 
 
 Luego visualizará una vista similar a la siguiente:
@@ -291,9 +295,16 @@ title: Gestión de control de fraude
 
 # Motor de Control de Fraude
 
+## ¿Qué es el motor de control de fraude?
+
+Es un componente de ACS que se encarga de la gestión de las reglas, listas y grupos donde se validan los datos con los cuales se registra un autenticación. Las reglas permiten validar los datos que llegan al ACS y garantizar la autenticidad y seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
+
+## ¿Cuál es la función de este motor?
+
 La principal funcionalidad de ACS es el motor de control antifraude, este permite validar la información que se recibe en la petición de autenticación, a través de un conjunto de reglas que validan las autenticaciones de cada emisor registrado.
 
-Esta funcionalidad se gestiona desde la sección de Emisores de la aplicación.
+Esta funcionalidad se gestiona desde la sección de *Emisores* de la aplicación.
+
 
 ## Listas de control de fraude
 
