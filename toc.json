@@ -52,12 +52,12 @@
       "items": [
         {
           "type": "item",
-          "title": "Configuración General de ACS",
+          "title": "Configuración general de ACS",
           "uri": "docs/ACSGeneralConfiguration.md"
         },
         {
           "type": "group",
-          "title": "Configuración de Emisores",
+          "title": "Configuración de emisores",
           "items": [
             {
               "type": "item",
@@ -93,54 +93,80 @@
         },
         {
           "type": "item",
-          "title": "Configuración de Marcas",
+          "title": "Configuración de marcas",
           "uri": "docs/FranchiseCreation.md"
         },
         {
           "type": "group",
-          "title": "Otras Configuraciones",
+          "title": "Otras configuraciones",
           "items": [
             {
               "type": "item",
-              "title": "Configuración de Certificados",
+              "title": "Configuración de certificados",
               "uri": "docs/CertificatesConfigurations.md"
             },
             {
               "type": "item",
-              "title": "Configuración de Códigos de Comercios",
+              "title": "Configuración de códigos de comercios",
               "uri": "docs/MerchantCodesConfigurations.md"
             },
             {
               "type": "item",
-              "title": "Configuración de Monedas",
+              "title": "Configuración de monedas",
               "uri": "docs/CurrenciesConfigurations.md"
             },
             {
               "type": "item",
-              "title": "Configuración de Países",
+              "title": "Configuración de países",
               "uri": "docs/CountriesConfigurations.md"
             },
             {
               "type": "item",
-              "title": "Configuración de Campos",
+              "title": "Configuración de campos",
               "uri": "docs/FieldsConfigurations.md"
             },
             {
               "type": "item",
-              "title": "Configuración de Importes",
+              "title": "Configuración de importes",
               "uri": "docs/ImportsConfigurations.md"
             },
             {
               "type": "item",
-              "title": "Configuración de Idioma",
+              "title": "Configuración de idioma",
               "uri": "docs/LanguageConfigurations.md"
             }
           ]
         },
         {
-          "type": "item",
+          "type": "group",
           "title": "Funcionalidades",
-          "uri": "docs/ACSFunctionalities.md"
+          "items": [
+            {
+              "type": "item",
+              "title": "Métricas",
+              "uri": "docs/Metrics.md"
+            },
+            {
+              "type": "item",
+              "title": "Autenticaciones",
+              "uri": "docs/Authentications.md"
+            },
+            {
+              "type": "item",
+              "title": "Autenticaciones desacopladas",
+              "uri": "docs/DecoupledAuthentications.md"
+            },
+            {
+              "type": "item",
+              "title": "Reportes",
+              "uri": "docs/Reports.md"
+            },
+            {
+              "type": "item",
+              "title": "Disputas",
+              "uri": "docs/Disputes.md"
+            }
+          ]
         },
         {
           "type": "item",
