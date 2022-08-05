@@ -1,0 +1,19 @@
+# Usuarios
+
+Para acceder al módulo de usuarios, diríjase al menú lateral izquierdo, despliegue la opción *Seguridad* y busque la sección de *Usuarios* en los títulos.
+
+![](https://wiki.placetopay.com/images/c/c8/Users-menu-2.png)
+
+## Listado de usuarios:
+
+En este módulo se puede visualizar el listado de usuarios con acceso a ACS. El listado contiene el nombre y el correo electrónico asociado al usuario.
+
+> Es importante recordar que los usuarios se crean a través del módulo invitaciones y solo aparece en este módulo, cuando haya aceptado la invitación para unirse a ACS, creado el usuario y haya iniciado sesión sin conflicto alguno.
+
+El siguiente es un ejemplo de un índice de usuarios.
+
+![](https://wiki.placetopay.com/images/4/48/Users-index-2.png)
+
+<!-- theme: warning -->
+
+> Los usuarios no se pueden eliminar ni editar. Para hacer ediciones del correo electrónico de un usuario o la contraseña, se deben realizar en la aplicación de *Accounts*, que es quien gestiona los usuarios y accesos para ACS.

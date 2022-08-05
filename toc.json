@@ -169,9 +169,40 @@
           ]
         },
         {
-          "type": "item",
+          "type": "group",
           "title": "Seguridad",
-          "uri": "docs/ACSSecurity.md"
+          "items": [
+            {
+              "type": "item",
+              "title": "Users",
+              "uri": "docs/Metrics.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de la cuenta",
+              "uri": "docs/Account.md"
+            },
+            {
+              "type": "item",
+              "title": "Invitaciones",
+              "uri": "docs/Invitations.md"
+            },
+            {
+              "type": "item",
+              "title": "Roles",
+              "uri": "docs/Roles.md"
+            },
+            {
+              "type": "item",
+              "title": "Perfiles",
+              "uri": "docs/Profiles.md"
+            },
+            {
+              "type": "item",
+              "title": "Logs",
+              "uri": "docs/Logs.md"
+            }
+          ]
         },
         {
           "type": "item",
