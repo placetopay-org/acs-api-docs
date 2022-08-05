@@ -170,25 +170,13 @@ Además, en la parte lateral derecha, hay un botón para acceder al formulario d
 
 ![](https://wiki.placetopay.com/images/8/8f/Detalles-emisor.png)
 
-## Gestión de marcas:
+<!--
+type: tab
+title: Gestión de rangos de tarjetas
+-->
 
-Para acceder a esta funcionalidad, haga clic en el menú **Operaciones -> Marcas suscritas**, que actualmente se ubica al lado derecho del menú *Detalles del emisor*. 
+# Rangos de tarjetas
 
-Luego visualizará una vista similar a la siguiente:
-
-![](https://wiki.placetopay.com/images/5/5f/Marcas-emisor.png)
-
-En ella encontrará el listado de marcas registradas para el emisor y un formulario para agregar nuevas marcas.
-
-> Para las marcas están disponibles las funciones de *Editar* y *Eliminar*, las cuales se encuentran dando clic en el menú desplegable ubicado al final del registro de cada marca.
-
-### Agregar una nueva marca:
-
-Para suscribir una nueva marca a su emisor, haga clic en el botón **Crear**, ubicado en la parte lateral derecha de la lista de marcas. Luego seleccione la marca de la lista disponible, la versión del protocolo y el certificado SSL correspondiente.
-
-> Si la aplicación le arroja este mensaje *"No se ha encontrado certificados disponibles para hacer la suscripción a esta marca."*, entonces debe crear un certificado SSL para continuar con el proceso de suscripción de la marca.
-
-## Gestión de rangos de tarjetas:
 
 Para acceder a este menú, haga clic en el menú **Operaciones -> Gestionar rangos de tarjetas**, ubicado en la parte superior de la vista.
 
@@ -198,7 +186,7 @@ Visualizará un índice similar al siguiente:
 
 En esta sección se importan y crean los rangos de tarjetas aceptadas para un emisor específico. Puede ver la información principal de cada rango organizada en una tabla,entre los datos están: BIN del rango, rango inicial, rango final, marca, clase, si acepta desafía desacoplado y las respectivas acciones que tienen cada uno de los rangos.
 
-### Acciones de los rangos de tarjetas:
+## Acciones de los rangos de tarjetas
 
 Las acciones disponibles para los rangos de tarjetas se encuentran ubicadas en el menú desplegable ubicado al final de cada rango. Las acciones son las siguientes:
 
@@ -213,7 +201,7 @@ Las acciones disponibles para los rangos de tarjetas se encuentran ubicadas en e
 - **Eliminar:** Seleccione esta opción para eliminar un rango de tarjetas del emisor. Si elimina un rango, tenga en cuenta que las solicitudes de autenticación que lleguen con un número de tarjeta que esté en este rango, no podrán ser procesadas.
 
 
-### ¿Cómo crear un rango de tarjetas?
+## ¿Cómo crear un rango de tarjetas?
 
 Al dar clic en el botón **Crear**, se desplegarán dos opciones para crear rangos:
 
@@ -268,7 +256,16 @@ Estos títulos deben seguirse de sus respectivos valores en filas hacia abajo, i
 
 > Para visualizar el formato de un archivo CSV de ejemplo, haga clic en la opción *Descargar* que aparece en el lado izquierdo del formulario.
 
-### Gestión de configuraciones del emisor:
+<!--
+type: tab
+title: Gestión de configuraciones del emisor
+-->
+
+# Configuraciones del emisor
+
+<br>
+
+## ¿Cómo acceder a este menú?
 
 Para acceder a este menú, haga clic en el menú **Configuraciones**, del detalle del emisor. 
 
@@ -280,7 +277,7 @@ En la parte inferior de la vista, encontrará tres pestañas que contienen los c
 
 Ingresando a cada una de las pestañas, podrá ver la información de los campos del emisor organizada en tablas, en las cuales se muestra el nombre, el valor inicial del campo, el estado del mismo y las acciones disponibles.
 
-#### Categorías de los campos de configuración: 
+## Categorías de los campos de configuración: 
 
   - **General:** Los campos registrados en esta categoría permiten configurar comportamientos generales de la aplicación.
 
@@ -291,7 +288,7 @@ Ingresando a cada una de las pestañas, podrá ver la información de los campos
 > Para una mejor comprensión del funcionamiento de los campos de configuración y de las categorías, remítase a la sección *Otras configuraciones*, pestaña *Campos de configuración* de la presente documentación.
 
 
-#### Acciones para las configuraciones del emisor:
+## Acciones para las configuraciones del emisor:
 
 Para visualizar las acciones disponibles para los campos de configuración, haga clic en el menú desplegable ubicado al final de cada campo.
 
@@ -308,11 +305,20 @@ Las acciones disponibles son:
   > Tenga en cuenta que si deshabilita un campo de los que están por defecto, el emisor no podrá ser habilitado.
 
 
-## Estrategias del emisor:
+<!--
+type: tab
+title: Gestión de servicios del emisor
+-->
+
+# Servicios del emisor
+
+<br>
+
+## ¿Cómo acceder a este menú?
 
 En la pestaña **Servicios** de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor. Estas son:
 
-### cardholderStrategy
+## cardholderStrategy
 
 Esta estrategia permite definir cómo se va a implementar el servicio de información del tarjetabiente. Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
 
@@ -334,7 +340,7 @@ Esta estrategia permite definir cómo se va a implementar el servicio de informa
 
   - **cardholderInfoPassword:** Ingrese la contraseña provista por el servicio de cardholder para completar la autenticación.
 
-### otpStrategy
+## otpStrategy
 
 Esta estrategia permite definir cómo se va a implementar el servicio del OTP (Autenticación con contraseña de un solo uso), para el emisor específico.  Para ello en el valor del campo, se ingresa la estrategia correspondiente. 
 
@@ -355,7 +361,7 @@ Esta estrategia permite definir cómo se va a implementar el servicio del OTP (A
   - **otpAuthMethod:** Seleccione el indicador para el método de autenticación con el servicio de OTP.
 
 
-### authStrategy
+## authStrategy
 
 Esta estrategia permite definir cómo se va a implementar el servicio de autorización a ACS. Este servicio se utilizará cuando ACS requiera consumir un servicio externo que a su vez necesite algún tipo de autenticación o autorización mediante token. Para ello en el valor del campo, se ingresa la estrategia de autenticación OAuth correspondiente. 
 
@@ -375,9 +381,28 @@ Esta estrategia permite definir cómo se va a implementar el servicio de autoriz
 > Estas estrategias deben estar tener sus valores particulares de configuración diligenciados, para poder habilitarse posteriormente.
 
 
-## Gestión del control de fraude:
+<!--
+type: tab
+title: Gestión de suscripciones por marcas
+-->
 
-Estas funcionalidades están descritas detalladamente en la sección *Motor Antifraude*. Aquí se hace la gestión de las reglas, listas y grupos donde están contenidas. Las reglas permiten validar los datos que llegan al ACS y garantizar la autenticidad y seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
+# Suscripción por marcas
+
+Para acceder a esta funcionalidad, haga clic en el menú **Operaciones -> Marcas suscritas**, que actualmente se ubica al lado derecho del menú *Detalles del emisor*. 
+
+Luego visualizará una vista similar a la siguiente:
+
+![](https://wiki.placetopay.com/images/5/5f/Marcas-emisor.png)
+
+En ella encontrará el listado de marcas registradas para el emisor y un formulario para agregar nuevas marcas.
+
+> Para las marcas están disponibles las funciones de *Editar* y *Eliminar*, las cuales se encuentran dando clic en el menú desplegable ubicado al final del registro de cada marca.
+
+### ¿Cómo suscribir una nueva marca?:
+
+Para suscribir una nueva marca a su emisor, haga clic en el botón **Crear**, ubicado en la parte lateral derecha de la lista de marcas. Luego seleccione la marca de la lista disponible, la versión del protocolo y el certificado SSL correspondiente.
+
+> Si la aplicación le arroja este mensaje *"No se ha encontrado certificados disponibles para hacer la suscripción a esta marca."*, entonces debe crear un certificado SSL para continuar con el proceso de suscripción de la marca.
 
 
 <!--
