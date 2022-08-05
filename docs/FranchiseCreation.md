@@ -2,7 +2,7 @@
 
 ## ¿Qué es una marca?
 
-La marca o franquicia de una tarjeta de crédito, es una compañía aliada con los bancos emisores de tarjetas de crédito. Tienen como función proveer diversos beneficios bancarios a sus clientes, siendo éstos los tarjetabientes. 
+La marca de una tarjeta de crédito, es una compañía aliada con los bancos emisores de tarjetas de crédito. Tienen como función proveer diversos beneficios bancarios a sus clientes, siendo éstos los tarjetabientes. 
 Las marcas son las que gestionan el uso y los beneficios asociados a las tarjetas emitidas por los bancos emisores.
 
 ## ¿Cómo acceder a la gestión de marcas de ACS?

@@ -258,7 +258,7 @@ Para crear una importación visualizará un formulario similar al siguiente:
 
 ![](https://wiki.placetopay.com/images/b/ba/Acs-create-import-ranges.png)
 
-Debe seleccionar la franquicia para la cual se van a cargar los rangos y un archivo de tipo CSV (archivo de valores separados por comas), que contenga la información de los rangos. Un ejemplo del archivo es este:
+Debe seleccionar la marca para la cual se van a cargar los rangos y un archivo de tipo CSV (archivo de valores separados por comas), que contenga la información de los rangos. Un ejemplo del archivo es este:
 
 ![](https://wiki.placetopay.com/images/8/8f/Acs-file-import-example.png)
 

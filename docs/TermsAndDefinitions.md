@@ -10,7 +10,7 @@ Las siguientes definiciones pretenden dar claridad sobre la información present
 
 - **Emisor:** Es una institución financiera que emite tarjetas de pago y servicios relacionados con las tarjetas. Los emisores determinan la elegibilidad de los tarjetahabientes para participar en el 3-D Secure, aportando los rangos de números de tarjeta elegibles.
 
-- **Franquicia:** La franquicia de una tarjeta de crédito hace referencia a las compañías que existen en el mercado de tarjetas de crédito emitidas por parte de los bancos emisores. Cada franquicia ofrece un catálogo de servicios específicos a sus clientes.
+- **Marca:** La marca de una tarjeta de crédito hace referencia a las compañías que existen en el mercado de tarjetas de crédito emitidas por parte de los bancos emisores. Cada marca ofrece un catálogo de servicios específicos a sus clientes.
 
 - **CAVV:** Cardholder Authentication Verification Value, es un código de seguridad asociado a la información almacenada en la banda magnética de una tarjeta de pago. 
 
