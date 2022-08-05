@@ -46,31 +46,14 @@
         }
         ]
     },
-
     {
       "type": "group",
       "title": "Funcionamiento de ACS",
       "items": [
         {
-          "type": "group",
-          "title": "Configuración",
-          "items": [
-            {
-              "type": "item",
-              "title": "Configuración general de ACS",
-              "uri": "docs/ACSGeneralConfiguration.md"
-            },
-            {
-              "type": "item",
-              "title": "Configuración de marcas",
-              "uri": "docs/FranchiseCreation.md"
-            },
-            {
-              "type": "item",
-              "title": "Otras configuraciones",
-              "uri": "docs/ACSConfigurations.md"
-            }
-        ]
+          "type": "item",
+          "title": "Configuración general de ACS",
+          "uri": "docs/ACSGeneralConfiguration.md"
         },
         {
           "type": "group",
@@ -107,6 +90,16 @@
               "uri": "docs/IssuerServices.md"
             }
           ]
+        },
+        {
+          "type": "item",
+          "title": "Configuración de marcas",
+          "uri": "docs/FranchiseCreation.md"
+        },
+        {
+          "type": "item",
+          "title": "Otras configuraciones",
+          "uri": "docs/ACSConfigurations.md"
         },
         {
           "type": "item",

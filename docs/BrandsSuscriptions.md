@@ -1,7 +1,5 @@
 # Suscripción por marcas
 
-<br>
-
 ## ¿Cómo acceder a este menú?
 
 Para acceder a esta funcionalidad, haga clic en el menú **Operaciones -> Marcas suscritas**, que actualmente se ubica al lado derecho del menú *Detalles del emisor*. 

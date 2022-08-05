@@ -1,7 +1,5 @@
 # Servicios del emisor
 
-<br>
-
 ## ¿Cómo acceder a este menú?
 
 En la pestaña **Servicios** de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor. Estas son:
