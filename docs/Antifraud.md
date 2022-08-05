@@ -1,3 +1,8 @@
+<!--
+type: tab
+title: Motor Antifraude
+-->
+
 # Motor de Control de Fraude
 
 ## ¿Qué es el motor de control de fraude?
@@ -11,13 +16,18 @@ La principal funcionalidad de ACS es el motor de control antifraude, este permit
 Esta funcionalidad se gestiona desde la sección de *Emisores* de la aplicación.
 
 
-## Listas de control de fraude
+<!--
+type: tab
+title: Listas Antifraude
+-->
+
+# Listas de control de fraude
 
 Las listas de control de fraude son el primer filtro que por el cual pasan las solicitudes de autenticación de ACS. 
 
 > Las listas de control antifraude se ejecutan antes de los grupos de control antifraude y según los resultados que obtenga de sus validaciones, puede evitar que una autenticación tenga que pasar por las validaciones de los grupos de reglas.
 
-### Índice de las listas de reglas:
+## Índice de las listas de reglas:
 
 Para acceder al índice de listas de reglas, diríjase al menú **Gestionar control de fraude -> Gestionar listas de control de fraude**, en las pestañas ubicadas en la parte superior del detalle de un emisor.
 
@@ -26,7 +36,7 @@ Al dar clic en el menú, visualizará el índice de listas de reglas, similar al
 ![](https://wiki.placetopay.com/images/3/35/Listas-antifraude.png)
 
 
-### Acciones de las listas de reglas:
+## Acciones de las listas de reglas:
 
 Las acciones disponibles para las listas de reglas se encuentran ubicadas en el menú desplegable ubicado al final de cada lista. Las acciones son las siguientes:
 
@@ -38,7 +48,7 @@ Las acciones disponibles para las listas de reglas se encuentran ubicadas en el 
 
 - **Eliminar:** Seleccione esta opción para eliminar la lista.
 
-### Filtros para las listas de reglas:
+## Filtros para las listas de reglas:
 
 ACS provee para este módulo la funcionalidad de filtrar listas, esta permite hacer la búsqueda más flexible y específica cuando tiene muchos datos. 
 
@@ -48,8 +58,7 @@ Para acceder a los filtros, diríjase a la parte lateral derecha del índice de 
 
 Puede filtrar únicamente por el tipo de lista que desea buscar, seleccione la requerida y haga clic en el botón *Buscar* o en el botón *Limpiar filtros* cuando necesite hacer una nueva búsqueda.
 
-
-### Tipos de listas de reglas:
+## Tipos de listas de reglas:
 
 Estas listas son temporales, es decir, tienen una duración específica que usted le asigna al crearla, y se dividen en dos clases:
 
@@ -61,7 +70,7 @@ Estas listas son temporales, es decir, tienen una duración específica que uste
 
   > En esta lista se pueden agregar valores de clientes con historiales de riesgo. Al ser restrictiva la lista, permitirá ejercer mayor control de los filtros de validación. 
 
-### ¿Cómo crear una lista de control de fraude?
+## ¿Cómo crear una lista de control de fraude?
 
 Al dar clic en el botón *Crear*, ubicado en la parte lateral derecha del índice de listas, se desplegarán dos opciones para crear listas:
 
@@ -114,13 +123,18 @@ Si escoge esta opción, se cargará un formulario como el siguiente:
 
 > Para visualizar un ejemplo del formato de una importación, haga clic en el link *Descargar*, ubicado en la parte lateral izquierda, en el título *Información básica*.
 
-## Reglas de control de fraude
+<!--
+type: tab
+title: Reglas Antifraude
+-->
+
+# Reglas de control de fraude
 
 Las reglas permiten hacer las validaciones de los datos recibidos en las solicitudes de autenticación. Estas reglas evalúan la coincidencia de las condiciones contenidas en la regla y de los datos obtenidos en la solicitud de autenticación.
 
 > Al crear un emisor en ACS, se agregarán automáticamente una serie de reglas por defecto al emisor. Estas se encontrarán en esta sección y puede habilitarlas, editarlas o deshabilitarlas, según su necesidad.
 
-### Índice de reglas:
+## Índice de reglas:
 
 Para acceder al índice de reglas de control de fraude, diríjase al menú **Gestionar control de fraude -> Reglas de control de fraude**, ubicado en las pestañas de la parte superior del detalle de un emisor.
 
@@ -128,7 +142,7 @@ Visualizará una pantalla similar a la siguiente:
 
 ![](https://wiki.placetopay.com/images/1/18/Indice-reglas-antifraude.png)
 
-### Funciones de las reglas:
+## Funciones de las reglas:
 
 Las reglas tienen dos funciones a las cuales puede acceder haciendo clic en el menú desplegable ubicado al final de cada regla:
 
@@ -142,7 +156,7 @@ Las reglas tienen dos funciones a las cuales puede acceder haciendo clic en el m
 
   > Si deshabilita una regla, no podrá validar la autenticación con los parámetros de la regla. Además, siempre debe tener reglas habilitadas para poder hacer un proceso de autenticación exitoso y confiable.
 
-### ¿Cómo puedo cambiar el orden de ejecución de las reglas?
+## ¿Cómo puedo cambiar el orden de ejecución de las reglas?
 
 Las reglas se ejecutan y validan en el orden dado en el índice de reglas. Las nuevas reglas que cree, se ubicarán automáticamente debajo de la última creada y se ejecutarán en ese mismo orden (solo se ejecutan las que reglas que tengan estado *Activo*).
 
@@ -150,8 +164,7 @@ Para cambiar el orden de las reglas, mantenga presionada la regla que desea camb
 
 Y en la parte inferior del índice obtendrá dos botones, presione **Guardar cambios** para confirmar el cambio de lugar de la regla o **Restablecer cambios** para volver al estado anterior de ordenamiento de las reglas.
 
-
-### Solicitudes de reglas:
+## Solicitudes de reglas:
 
 Haga clic en la pestaña *Solicitudes de reglas*, ubicada en la parte superior derecha del índice de reglas. Allí se pueden visualizar las peticiones de creación, actualización o eliminación de reglas, las cuales se encuentran pendientes por aprobar o denegar.
 
@@ -159,7 +172,7 @@ Haga clic en la pestaña *Solicitudes de reglas*, ubicada en la parte superior d
 
 - **Denegar:** Para denegar una solicitud, haga clic en el botón con equis en rojo. Luego se desplegará una ventana para confirmar la eliminación, dé clic en *Confirmar* para aceptar la acción o en *Cancelar* para volver a las solicitudes.
 
-### ¿Cómo crear solicitudes de reglas?
+## ¿Cómo crear solicitudes de reglas?
 
 Para crear una petición de regla, diríjase a la pestaña **Solicitudes de reglas** y haga clic en el botón **Crear petición de regla**, ubicado en la parte lateral derecha.
 
@@ -169,7 +182,7 @@ Luego visualizará una ventana como esta, dónde le solicitan la acción que des
 
 ![](https://wiki.placetopay.com/images/c/c2/Acs-rule-create-actions.png)
 
-#### Acciones disponibles:
+## Acciones disponibles:
 
 - **Crear:** Permite crear una petición para crear una nueva regla.
 
@@ -181,7 +194,7 @@ Luego visualizará una ventana como esta, dónde le solicitan la acción que des
 
 ![](https://wiki.placetopay.com/images/f/f5/Delete-rule.png)
 
-### ¿Cómo crear nuevas reglas?
+## ¿Cómo crear nuevas reglas?
 
 Para crear una nueva regla, debe seleccionar la opción *Crear* de la lista de peticiones y se desplegará un formulario como el siguiente:
 
@@ -197,7 +210,7 @@ Los datos requeridos son:
 
 - **Valor:** Es el valor que requiere una regla para validar y comparar los datos de la regla y de la solicitud de autenticación.
 
-#### Reglas con múltiples condiciones:
+## Reglas con múltiples condiciones:
 
 Puede además agregar otras condiciones para una misma regla,haciendo clic en el botón inferior del formulario **Agregar condición**, y se desplegarán nuevos campos para ingresar otro tipo de regla y su valor correspondiente.
 
@@ -217,7 +230,7 @@ Luego de enviar la solicitud de regla, esta se agregará al listado de *Solicitu
 
 > Hasta que no acepte la solicitud de regla, esta no podrá visualizarse ni utilizarse en producción. Luego de aceptarla recuerde habilitarla.
 
-### Acciones de las reglas: 
+## Acciones de las reglas: 
 
 Al crear una regla se le define un tipo de acción específica que va a ejecutar. Estas acciones permiten definir el transStatus (estado de autenticación de la transacción). 
 
@@ -247,7 +260,7 @@ Las acciones permitidas son las siguientes:
 
 > La función de ejecutar un grupo de reglas permite crear reglas que abarquen más validaciones y también permite utilizar reglas creadas anteriormente para hacer otras validaciones o complementarlas con otras condiciones, y de esta forma agrupar funcionalidades y disminuir reglas repetidas.
 
-### Tipos de reglas: 
+## Tipos de reglas: 
 
 Al crear una regla se asigna un tipo específico. Las opciones disponibles se visualizan en el formulario de creación de la regla, en el campo *Tipo de regla*.
 
@@ -257,27 +270,27 @@ Visualizará una lista similar a esta con la lista de reglas disponibles:
 
 Los tipos de reglas disponibles actualmente son:
 
-#### Regla de rango de número de tarjeta: 
+### Regla de rango de número de tarjeta: 
 Esta regla permite validar que la tarjeta que llegue en la petición de autenticación, esté en el rango especificado. Acepta dos valores, el rango inicial que debe tener mínimo 13 dígitos y el rango final que debe ser mayor al inicial y tener máximo 19 dígitos dígitos.
 
   ![](https://wiki.placetopay.com/images/6/64/Regla-rango-tarjeta.png)
 
-#### Regla de rango de bines: 
+### Regla de rango de bines: 
 Esta regla permite validar que la tarjeta que llegue en la petición de autenticación, esté en el rango especificado. Acepta dos valores, el rango inicial que debe ser un BIN de 6 o de 8 dígitos y el rango final que debe tener los mismos dígitos.
 
   ![](https://wiki.placetopay.com/images/9/96/Bin-range-rule.png)
 
-#### Regla de número de tarjeta de transacción: 
+### Regla de número de tarjeta de transacción: 
 Esta regla permite validar que el número de tarjeta que registre en el valor, sea igual al número de tarjeta de la petición de autenticación. Esta regla recibe mínimo 13 dígitos y máximo 19, y debe coincidir con el algoritmo de Luhn, el cual comprueba mediante una secuencia de dígitos, si un número de tarjeta es válido.
 
   ![](https://wiki.placetopay.com/images/7/7f/Card-number-rule.png)
 
-#### Regla de monto de compra:
+### Regla de monto de compra:
 Esta regla permite validar el monto de la transacción a autenticar. Acepta un valor numérico que indique un monto de pago.
 
   ![](https://wiki.placetopay.com/images/1/14/Rule-total.png)
 
-#### Regla de datos de autenticación:
+### Regla de datos de autenticación:
  Esta regla valida los campos que se envían en el mensaje AReq, siendo este un tipo de mensaje del Protocolo 3-D Secure, con el cual se da inicio al proceso de autenticación. Esta regla recibe los siguientes parámetros:
 
   - **Campo**, hace referencia al campo contenido en el mensaje AReq. Se presenta una lista con todos los campos disponibles para validar. Seleccione uno.
@@ -290,7 +303,7 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
 
   ![](https://wiki.placetopay.com/images/d/d4/Areq-rule.png)
    
-##### Campos de autenticación disponibles para la regla de datos de autenticación:
+#### Campos de autenticación disponibles para la regla de datos de autenticación:
 
 - **Identificador de la cuenta del titular:** Identificador de cuenta del titular de la tarjeta: Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.   
 
@@ -576,17 +589,15 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
 
 - **Número de teléfono del trabajo del titular de la tarjeta**: El número de teléfono del trabajo proporcionado por el titular de la tarjeta. El valor recibido es de maximo 15 caracteres. 
 
-### Reglas de puntuación:
+## Reglas de puntuación:
 
-<br>
-
-#### Regla de puntuación del emisor:
+### Regla de puntuación del emisor:
 Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
 
-#### Regla de puntuación histórica:
+### Regla de puntuación histórica:
 Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el tarjetahabiente históricamente. Se evalúa a partir de transacciones anteriores. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
 
-#### Regla de puntuación RBA Master Card:
+### Regla de puntuación RBA Master Card:
 Esta regla valida la solicitud de autenticación a partir de la puntuación de riesgo evaluada para MasterCard. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
 
  Los operadores disponibles para las reglas de puntuación son:
@@ -606,31 +617,29 @@ Esta regla valida la solicitud de autenticación a partir de la puntuación de r
 
   ![](https://wiki.placetopay.com/images/8/8d/Score-rule.png)
 
-### Reglas de coincidencia o match:
+## Reglas de coincidencia o match:
 
-<br>
-
-#### Regla de coincidencia para correo electrónico: 
+### Regla de coincidencia para correo electrónico: 
 Esta regla permite validar si el correo electrónico del tarjetahabiente que llega en los datos de autenticación, coincide con el correo electrónico guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-#### Regla de coincidencia para teléfono móvil:
+### Regla de coincidencia para teléfono móvil:
 Esta regla permite validar si el teléfono móvil del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono móvil guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-#### Regla de coincidencia para teléfono fijo:
+### Regla de coincidencia para teléfono fijo:
 Esta regla permite validar si el teléfono fijo del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono fijo guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-#### Regla de coincidencia para teléfono del trabajo:
+### Regla de coincidencia para teléfono del trabajo:
 Esta regla permite validar si el teléfono del trabajo del tarjetahabiente que llega en los datos de autenticación, coincide con el número de teléfono del trabajo guardado para el mismo tarjetahabiente en transacciones anteriores. 
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
 
-#### Regla de coincidencia para el dispositivo:
+### Regla de coincidencia para el dispositivo:
 Esta regla permite validar si el fingerprint o huella digital del tarjetahabiente que se crea en la transacción, coincide con algún fingerprint guardado para el mismo tarjetahabiente en transacciones exitosas anteriores. El fingerprint es un método que registra automáticamente un identificador de un usuario, a partir de la información captada con el dispositivo usado al realizar una transacción o un movimiento digital.
 
 Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia).
@@ -641,14 +650,18 @@ Acepta uno de los siguientes dos valores: hacer match (Encontrar coincidencia) o
 
 Encontrará en el campo *Valor*, una lista con dos opciones, hacer match (Encontrar coincidencia) o no hacer match (No encontrar coincidencia) con el dato guardado en ACS.
 
+<!--
+type: tab
+title: Grupos Antifraude
+-->
 
-## Grupos de control de fraude
+# Grupos de control de fraude
 
 Los grupos de control de fraude permiten clasificar y agrupar reglas para hacer validaciones con fines específicos. 
 
 Por ejemplo, puede crear dos grupos, uno llamado *Lista blanca*, donde se podrían incluir números de tarjetas y datos de clientes con bajo riesgo de fraude y las acciones de las reglas podrían ser en su mayoría *Autenticar*. El otro grupo se llama *Lista negra*, aquí se podrían agregar los números de tarjeta e información personal asociada a clientes con historiales o reportes riesgosos y la acción de las reglas podría ser *No autenticar*.
 
-### Índice de grupos de control de fraude:
+## Índice de grupos de control de fraude:
 
 Para acceder al índice de grupos de reglas, diríjase al menú **Gestionar control de fraude -> Grupos de control de fraude**, ubicado en las pestañas de la parte superior del detalle de un emisor.
 
@@ -656,7 +669,7 @@ En la siguiente imagen se muestra un listado de grupos de control de fraude de u
 
 ![](https://wiki.placetopay.com/images/7/7b/Group-index.png)
 
-### ¿Cómo crear un nuevo grupo de reglas?
+## ¿Cómo crear un nuevo grupo de reglas?
 
 Para crear un grupo, haga clic el botón **Crear** ubicado en la parte lateral derecha del índice de grupos. Se desplegará un formulario similar al siguiente:
 
@@ -666,7 +679,7 @@ En el formulario solo debe ingresar el nombre que desea que tenga el grupo, lueg
 
 > Un grupo de reglas solo se ejecuta cuando al crear una nueva regla, se escoge la opción *Ejecutar grupo de reglas*, se selecciona el grupo específico, y posteriormente, se habilita la regla.
 
-### Detalles de un grupo:
+## Detalles de un grupo:
 
 Para visualizar los detalles de un grupo, haga clic en el botón **Ver**, ubicado en la parte lateral derecha de la tabla, al frente de cada grupo.
 
@@ -674,14 +687,16 @@ Visualizará una vista como la siguiente:
 
 ![](https://wiki.placetopay.com/images/6/68/Detalle-grupo-antifraude.png)
 
-#### Habilitar y deshabilitar un grupo:
+## Habilitar y deshabilitar un grupo:
 Para habilitar o deshabilitar un grupo, haga clic en el menú lateral derecho, en el detalle del grupo y deslice el botón tipo switch para habilitar o deshabilitar según corresponda.
 
-#### Reglas de un grupo:
+## Reglas de un grupo:
 En la parte inferior del detalle de un emisor, encontrará el listado de reglas en producción del grupo, listadas en una tabla que muestra el estado de la regla, el nombre y la acción que ejecutan al validar. 
 Puede habilitarlas o deshabilitarlas, haciendo clic en el menú desplegable ubicado al final de cada regla. También, puede visualizar los detalles de cada regla presionar el botón con la leyenda *Ver*.
 
-#### Solicitudes de reglas:
+## Solicitudes de reglas:
 Esta funcionalidad se comporta igual a la sección de solicitudes de las *Reglas de control antifraude*, con la diferencia que las solicitudes de reglas que se hagan para crear, actualizar o eliminar reglas, se guardarán exclusivamente para el grupo escogido.
 
 > Luego de crear una solicitud de regla, recuerde aprobarla y posteriormente, habilitarla en el menú de *Reglas en producción*.
+
+<!-- type: tab-end -->
