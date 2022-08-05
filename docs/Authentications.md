@@ -89,7 +89,7 @@ title: Gestión de autenticaciones con disputas
 
 Las disputas son reclamaciones que realiza el cliente registrado con una autenticación en ACS, en la cual puede existir un caso de fraude. 
 
-#### Crear una disputa:
+## ¿Cómo crear una disputa?:
 
 Para crear una disputa, al inicio del detalle de una autenticación, haga clic en el botón **Generar nueva disputa**.
 
@@ -99,7 +99,7 @@ Posterior a esto, se agregará a la autenticación un caso de disputa abierta. S
 
 ![](https://wiki.placetopay.com/images/8/86/Acs-open-dispute.png)
 
-#### Detalle de una disputa:
+## Detalle de una disputa:
 
 Para visualizar el detalle de la disputa creada, de clic en la opción **Ver más**. Se direccionará a una sección de la misma vista, donde se gestionan las disputas para esa autenticación. 
 
@@ -107,13 +107,13 @@ Un ejemplo de detalle de una disputa es el siguiente:
 
 ![](https://wiki.placetopay.com/images/7/71/Acs-dispute-detail.png)
 
-#### Historial de una disputa:
+## Historial de una disputa:
 En el detalle de la disputa, en la parte lateral derecha, se puede visualizar el historial de la disputa haciendo clic en el botón desplegable *Historial*. Se mostrarán todos los movimientos que ha tenido una disputa, con sus respectivos estados, el agente responsable, la acción, la justificación y la fecha de apertura y actualización.
 
-#### Reporte de disputas:
+## Reporte de disputas:
 Puede descargar un reporte en formarto PDF con el histórico de las disputas y toda la información relacionada con la transacción y el proceso de autenticación. Para ello, haga clic en el botón *Descargar reporte*, que se encuentra en los detalles de la disputa en la parte lateral derecha.
 
-#### Acciones para una disputa abierta:
+## Acciones para una disputa abierta:
 
 Para una disputa en estado **Abierta**, se pueden tomar estas acciones: 
 
@@ -135,7 +135,7 @@ Diligencie el formulario teniendo en cuenta los siguientes datos:
 
 - **Justificación:** En el cuadro de texto puede diligenciar las razones para la resolución de la disputa o información adicional que desee que quede registrada para el caso.
 
-#### Acciones para disputas anuladas o cerradas:
+## Acciones para disputas anuladas o cerradas:
 
 Para una disputa en estado **Cerrada** o **Anulada**, se pueden tomar la siguiente acción: 
 

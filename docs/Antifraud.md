@@ -5,6 +5,8 @@ title: Motor Antifraude
 
 # Motor de Control de Fraude
 
+<br>
+
 ## ¿Qué es el motor de control de fraude?
 
 Es un componente de ACS que se encarga de la gestión de las reglas, listas y grupos donde se validan los datos con los cuales se registra un autenticación. Las reglas permiten validar los datos que llegan al ACS y garantizar la autenticidad y seguridad de la información, lo cual permitirá aceptar las solicitudes de autenticación que sean realmente válidas y tener filtros que permitan optimizar este proceso de validación.
@@ -591,6 +593,8 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
 
 ## Reglas de puntuación:
 
+<br>
+
 ### Regla de puntuación del emisor:
 Esta regla valida la solicitud de autenticación a partir de la puntuación que tenga el emisor que procesa la transacción. La regla permite asignar el operador de comparación con el valor final que le va a asignar.
 
@@ -618,6 +622,8 @@ Esta regla valida la solicitud de autenticación a partir de la puntuación de r
   ![](https://wiki.placetopay.com/images/8/8d/Score-rule.png)
 
 ## Reglas de coincidencia o match:
+
+<br>
 
 ### Regla de coincidencia para correo electrónico: 
 Esta regla permite validar si el correo electrónico del tarjetahabiente que llega en los datos de autenticación, coincide con el correo electrónico guardado para el mismo tarjetahabiente en transacciones anteriores. 

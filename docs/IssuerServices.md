@@ -5,13 +5,15 @@ title: Servicios
 
 # Servicios del emisor
 
+Los valores configurados en esta categoría, definen las estrategias a utilizar para implementar servicios del ACS como el OTP, el servicio de información del tarjetahabiente o los servicios de acceso y autorización a la aplicación. Así como los valores particulares para configurar cada una de estas estrategias o servicios.
+
 ## ¿Cómo acceder a este menú?
 
 En la pestaña **Servicios** de las configuraciones, se encuentran las estrategias disponibles para ejecutar servicios de ACS para el emisor. Estas son:
 
 <!--
 type: tab
-title: Servicio de Información del Tarjetahabiente
+title: Servicio de información del tarjetahabiente
 -->
 
 # Cardholder Strategy
@@ -63,7 +65,7 @@ Esta estrategia permite definir cómo se va a implementar el servicio del OTP (A
 
 <!--
 type: tab
-title: Servicio de Autenticación
+title: Servicio de autenticación
 -->
 
 ## Auth Strategy
