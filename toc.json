@@ -72,12 +72,12 @@
             {
               "type": "item",
               "title": "Gestión de rangos de tarjetas",
-              "uri": "docs/IssuerConfiguration.md"
+              "uri": "docs/CardRanges.md"
             },
             {
               "type": "item",
               "title": "Gestión de control de fraude",
-              "uri": "docs/IssuerConfiguration.md"
+              "uri": "docs/Antifraud.md"
             },
             {
               "type": "item",
