@@ -60,9 +60,40 @@
               "uri": "docs/ACSGeneralConfiguration.md"
             },
             {
-              "type": "item",
+              "type": "group",
               "title": "Configuración de emisores",
-              "uri": "docs/IssuerConfiguration.md"
+              "items": [
+                {
+                  "type": "item",
+                  "title": "Detalles del emisor",
+                  "uri": "docs/IssuerConfiguration.md"
+                },
+                {
+                  "type": "item",
+                  "title": "Gestión de suscripciones por marcas",
+                  "uri": "docs/IssuerConfiguration.md"
+                },
+                {
+                  "type": "item",
+                  "title": "Gestión de rangos de tarjetas",
+                  "uri": "docs/IssuerConfiguration.md"
+                },
+                {
+                  "type": "item",
+                  "title": "Gestión de control de fraude",
+                  "uri": "docs/IssuerConfiguration.md"
+                },
+                {
+                  "type": "item",
+                  "title": "Gestión de configuraciones",
+                  "uri": "docs/IssuerConfiguration.md"
+                },
+                {
+                  "type": "item",
+                  "title": "Gestión de servicios del emisor",
+                  "uri": "docs/IssuerConfiguration.md"
+                }
+              ]
             },
             {
               "type": "item",
