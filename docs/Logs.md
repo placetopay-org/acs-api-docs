@@ -11,7 +11,7 @@ En la sección de logs se encuentra un listado de los mismos, con una descripci�
 
 Un ejemplo de un índice de logs es el siguiente:
 
-![](https://wiki.placetopay.com/images/3/3d/Acs-logs-index.png)
+![](https://wiki.placetopay.com/images/8/86/Logs-index.png)
 
 ### Acciones para los logs:
 

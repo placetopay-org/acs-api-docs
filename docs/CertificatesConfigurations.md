@@ -11,13 +11,13 @@ El certificado permite que cuando un usuario intente enviar información de las 
 
 La siguiente imagen muestra un ejemplo de la vista de un índice de certificados:
 
-![](https://wiki.placetopay.com/images/4/4a/Indice-certificados.png)
+![](https://wiki.placetopay.com/images/7/74/Certificate-index.png)
 
 ### Acciones para los certificados:
 
 Los certificados se pueden editar, eliminar y visualizar los detalles del mismo, haciendo clic en el menú desplegable ubicado en la parte lateral derecha de cada certificado, se desplegará un menú como el de la siguiente imagen:
 
-![](https://wiki.placetopay.com/images/f/f2/Acciones-certificado.png)
+![](https://wiki.placetopay.com/images/4/40/Certificate-actions.png)
 
 ## Creación de un certificado:
 
