@@ -258,7 +258,7 @@ Las acciones permitidas son las siguientes:
 
   En el apartado *Grupos de control de fraude*, se presentará una lista de los grupos disponibles, escoja uno y continúe con el diligenciamiento de las condiciones para la regla.
 
-- **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado.
+- **Ninguno:** Las reglas con esta acción, tomarán la acción por defecto y generarán un estatus N (No autenticado).
 
 > La función de ejecutar un grupo de reglas permite crear reglas que abarquen más validaciones y también permite utilizar reglas creadas anteriormente para hacer otras validaciones o complementarlas con otras condiciones, y de esta forma agrupar funcionalidades y disminuir reglas repetidas.
 
@@ -386,8 +386,7 @@ Un ejemplo de regla para datos de autenticación es el siguiente:
     
 - **ID de comerciante del adquirente**: Identificador del comerciante asignado por el adquirente. Este puede ser el mismo valor que se utiliza en las solicitudes de autorización enviadas en nombre del solicitante 3DS y está representado en los requisitos de formato ISO 8583.
     
-    El valor aceptado:
-    Los servidores de directorio individuales pueden imponer requisitos específicos de formato y carácter en el contenido de este campo. Tiene una longitud de 35 caracteres. 
+    > Los servidores de directorio individuales pueden imponer requisitos específicos de formato y carácter en el contenido de este campo. Tiene una longitud de 35 caracteres. 
 
 - **Indicador de coincidencia de direcciones**: Indica si la dirección de envío del titular de la tarjeta y la dirección de facturación del titular de la tarjeta son iguales.
     

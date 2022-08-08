@@ -7,7 +7,7 @@ Para acceder al módulo de certificados, diríjase al menú lateral izquierdo, d
 ## ¿Qué son y para qué utilizar los certificados SSL?
 
 En esta sección se crean los certificados SSL, los cuales son títulos digitales que vinculan digitalmente una clave criptográfica con los datos de una organización. Los certificados SSL permiten autenticar la identidad de un sitio web y cifrar la información que se envía al servidor.
-El certificado permite que cuando un usuario intente enviar información de las credenciales al servidor web, el navegador del usuario accederán al certificado digital del servidor para establecer una conexión segura. De esta forma,estos certificados proveen seguridad a los datos manejados en ACS.
+El certificado permite que cuando un usuario intente enviar información de las credenciales al servidor web, el navegador del usuario accederán al certificado digital del servidor para establecer una conexión segura. De esta forma, estos certificados proveen seguridad a los datos manejados en ACS.
 
 La siguiente imagen muestra un ejemplo de la vista de un índice de certificados:
 
