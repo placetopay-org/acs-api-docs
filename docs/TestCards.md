@@ -2,7 +2,7 @@
 
 Los siguientes números de tarjetas de crédito, le permitirán hacer peticiones al servicio y obtener los comportamientos específicos que se describen para cada una.
 
-Franquicia | Número de Tarjeta | Indicador de estado en 3DS | Estado en 3DS | Comportamiento en 3DS | Código de autorización | Estado de autorización | Código de autorización final (opcional) | Estado de autorización final (opcional) |
+Marca | Número de Tarjeta | Indicador de estado en 3DS | Estado en 3DS | Comportamiento en 3DS | Código de autorización | Estado de autorización | Código de autorización final (opcional) | Estado de autorización final (opcional) |
 :---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
  Visa        | 4111111111111111  |   Y    | Successful | Genera una transacción con autenticación satisfactoria y sin fricción. | 00 | APPROVED | N/A | N/A |
  MasterCard        | 5180300000000005  |   Y    | Successful | Genera una transacción con autenticación satisfactoria y sin fricción. | 00 | APPROVED | N/A | N/A |

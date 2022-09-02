@@ -36,7 +36,7 @@ Además, se recomienda verificar que estén correctas en la configuración del e
 
 ## 2. Alerta de expiración de certificados SSL:
 
-Los certificados SSL son de vital importancia para el correcto funcionamiento de ACS, ya que son utilizados para suscribir una franquicia a un emisor, de tal forma que si el certificado expirara, esta franquicia no podría procesar transacciones para ese emisor.
+Los certificados SSL son de vital importancia para el correcto funcionamiento de ACS, ya que son utilizados para suscribir una marca a un emisor, de tal forma que si el certificado expirara, esta marca no podría procesar transacciones para ese emisor.
 
 Esta alerta se envía por correo electrónico al área de operaciones con el asunto **"Se encontraron certificados próximos a expirar"**, y se visualiza como se muestra en la siguiente imagen:
 

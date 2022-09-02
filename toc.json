@@ -51,40 +51,158 @@
       "title": "Funcionamiento de ACS",
       "items": [
         {
+          "type": "item",
+          "title": "Configuración general de ACS",
+          "uri": "docs/ACSGeneralConfiguration.md"
+        },
+        {
           "type": "group",
-          "title": "Configuración",
+          "title": "Configuración de emisores",
           "items": [
             {
               "type": "item",
-              "title": "Configuración general de ACS",
-              "uri": "docs/ACSGeneralConfiguration.md"
-            },
-            {
-              "type": "item",
-              "title": "Configuración de emisores",
+              "title": "Detalles del emisor",
               "uri": "docs/IssuerConfiguration.md"
             },
             {
               "type": "item",
-              "title": "Configuración de marcas",
-              "uri": "docs/FranchiseCreation.md"
+              "title": "Gestión de suscripciones por marcas",
+              "uri": "docs/BrandsSuscriptions.md"
             },
             {
               "type": "item",
-              "title": "Otras configuraciones",
-              "uri": "docs/ACSConfigurations.md"
+              "title": "Gestión de rangos de tarjetas",
+              "uri": "docs/CardRanges.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de control de fraude",
+              "uri": "docs/Antifraud.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de configuraciones",
+              "uri": "docs/ConfigurationFields.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de servicios del emisor",
+              "uri": "docs/IssuerServices.md"
             }
-        ]
+          ]
         },
         {
           "type": "item",
+          "title": "Configuración de marcas",
+          "uri": "docs/FranchiseCreation.md"
+        },
+        {
+          "type": "group",
+          "title": "Otras configuraciones",
+          "items": [
+            {
+              "type": "item",
+              "title": "Configuración de certificados",
+              "uri": "docs/CertificatesConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de códigos de comercios",
+              "uri": "docs/MerchantCodesConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de monedas",
+              "uri": "docs/CurrenciesConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de países",
+              "uri": "docs/CountriesConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de campos",
+              "uri": "docs/FieldsConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de importes",
+              "uri": "docs/ImportsConfigurations.md"
+            },
+            {
+              "type": "item",
+              "title": "Configuración de idioma",
+              "uri": "docs/LanguageConfigurations.md"
+            }
+          ]
+        },
+        {
+          "type": "group",
           "title": "Funcionalidades",
-          "uri": "docs/ACSFunctionalities.md"
+          "items": [
+            {
+              "type": "item",
+              "title": "Métricas",
+              "uri": "docs/Metrics.md"
+            },
+            {
+              "type": "item",
+              "title": "Autenticaciones",
+              "uri": "docs/Authentications.md"
+            },
+            {
+              "type": "item",
+              "title": "Autenticaciones desacopladas",
+              "uri": "docs/DecoupledAuthentications.md"
+            },
+            {
+              "type": "item",
+              "title": "Reportes",
+              "uri": "docs/Reports.md"
+            },
+            {
+              "type": "item",
+              "title": "Disputas",
+              "uri": "docs/Disputes.md"
+            }
+          ]
         },
         {
-          "type": "item",
+          "type": "group",
           "title": "Seguridad",
-          "uri": "docs/ACSSecurity.md"
+          "items": [
+            {
+              "type": "item",
+              "title": "Usuarios",
+              "uri": "docs/Users.md"
+            },
+            {
+              "type": "item",
+              "title": "Gestión de la cuenta",
+              "uri": "docs/Account.md"
+            },
+            {
+              "type": "item",
+              "title": "Invitaciones",
+              "uri": "docs/Invitations.md"
+            },
+            {
+              "type": "item",
+              "title": "Roles",
+              "uri": "docs/Roles.md"
+            },
+            {
+              "type": "item",
+              "title": "Perfiles",
+              "uri": "docs/Profiles.md"
+            },
+            {
+              "type": "item",
+              "title": "Logs",
+              "uri": "docs/Logs.md"
+            }
+          ]
         },
         {
           "type": "item",
